@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class Utils {
+    class func safeBase64Encode(str: String!) -> String! {
+        var unsafeStr:String? = str.dataUsingEncoding(NSUTF8StringEncoding).base64EncodedString();
+        return unsafeStr!
+    }
+}

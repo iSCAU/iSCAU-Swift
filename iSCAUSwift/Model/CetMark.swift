@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Alvin. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 
 class CetMark: NSObject {
 

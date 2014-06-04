@@ -6,8 +6,11 @@
 //  Copyright (c) 2014 Alvin. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 
-class Notice: MTLModel {
-
+class Notice: NSObject {
+    var time: String?
+    var title: String?
+    var url: String?
+    var content: String?
 }

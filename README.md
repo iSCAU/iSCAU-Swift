@@ -1,8 +1,6 @@
 iSCAU-Swift
 ===========
 
-# iSCAU
-
 iOS version of "华农宝" and written in ```Swift```.
 
 # Requirements

@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */; };
 		E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB489193EC31400F8D492 /* AppDelegate.swift */; };
-		E15BB48C193EC31500F8D492 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB48B193EC31500F8D492 /* ViewController.swift */; };
 		E15BB48F193EC31500F8D492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15BB48D193EC31500F8D492 /* Main.storyboard */; };
 		E15BB491193EC31500F8D492 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15BB490193EC31500F8D492 /* Images.xcassets */; };
 		E15BB49D193EC31600F8D492 /* iSCAUSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB49C193EC31500F8D492 /* iSCAUSwiftTests.swift */; };
+		E15BB4C0193F06B500F8D492 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4BF193F06B500F8D492 /* User.swift */; };
+		E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C3193F24AB00F8D492 /* Notice.swift */; };
+		E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C7193F29ED00F8D492 /* CetMark.swift */; };
+		E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C9193F2A9C00F8D492 /* ReviewLessonInfo.swift */; };
+		E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */; };
+		E15BB4CE193F2AC800F8D492 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4CD193F2AC800F8D492 /* Lesson.swift */; };
+		E15BB4D0193F2CB500F8D492 /* EduApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4CF193F2CB500F8D492 /* EduApiClient.swift */; };
+		E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D1193F513E00F8D492 /* AppConstant.swift */; };
+		E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D3193F538F00F8D492 /* Utils.swift */; };
+		E15BB4DC193F821C00F8D492 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4DB193F821C00F8D492 /* LoginViewController.swift */; };
+		E1AD6CA5193F98120033A1EB /* EduTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6CA4193F98120033A1EB /* EduTimeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +36,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BC26C9C1B24448C8F529FB8 /* Pods-iSCAUSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.xcconfig"; path = "Pods/Pods-iSCAUSwift.xcconfig"; sourceTree = "<group>"; };
 		E15BB484193EC31400F8D492 /* iSCAUSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSCAUSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15BB488193EC31400F8D492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E15BB489193EC31400F8D492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E15BB48B193EC31500F8D492 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E15BB48E193EC31500F8D492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E15BB490193EC31500F8D492 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E15BB496193EC31500F8D492 /* iSCAUSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSCAUSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15BB49B193EC31500F8D492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E15BB49C193EC31500F8D492 /* iSCAUSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSCAUSwiftTests.swift; sourceTree = "<group>"; };
+		E15BB4BF193F06B500F8D492 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		E15BB4C1193F170900F8D492 /* iSCAUPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iSCAUPlayground.playground; sourceTree = "<group>"; };
+		E15BB4C2193F23EB00F8D492 /* iSCAUSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iSCAUSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		E15BB4C3193F24AB00F8D492 /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notice.swift; path = Model/Notice.swift; sourceTree = "<group>"; };
+		E15BB4C7193F29ED00F8D492 /* CetMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CetMark.swift; path = Model/CetMark.swift; sourceTree = "<group>"; };
+		E15BB4C9193F2A9C00F8D492 /* ReviewLessonInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewLessonInfo.swift; path = Model/ReviewLessonInfo.swift; sourceTree = "<group>"; };
+		E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewLessonComment.swift; path = Model/ReviewLessonComment.swift; sourceTree = "<group>"; };
+		E15BB4CD193F2AC800F8D492 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lesson.swift; path = Model/Lesson.swift; sourceTree = "<group>"; };
+		E15BB4CF193F2CB500F8D492 /* EduApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EduApiClient.swift; path = Model/EduApiClient.swift; sourceTree = "<group>"; };
+		E15BB4D1193F513E00F8D492 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		E15BB4D3193F538F00F8D492 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E15BB4DB193F821C00F8D492 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E1AD6CA4193F98120033A1EB /* EduTimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduTimeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63A5414A5E17465EAA51A912 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E15BB47B193EC31400F8D492 = {
 			isa = PBXGroup;
 			children = (
 				E15BB486193EC31400F8D492 /* iSCAUSwift */,
 				E15BB499193EC31500F8D492 /* iSCAUSwiftTests */,
 				E15BB485193EC31400F8D492 /* Products */,
+				4BC26C9C1B24448C8F529FB8 /* Pods-iSCAUSwift.xcconfig */,
+				63A5414A5E17465EAA51A912 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,10 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				E15BB489193EC31400F8D492 /* AppDelegate.swift */,
-				E15BB48B193EC31500F8D492 /* ViewController.swift */,
 				E15BB48D193EC31500F8D492 /* Main.storyboard */,
+				E15BB4AD193F054B00F8D492 /* Controller */,
+				E15BB4AF193F054B00F8D492 /* Helper */,
+				E15BB4B0193F054B00F8D492 /* Macro */,
+				E15BB4B7193F054B00F8D492 /* Resources */,
+				E15BB4B9193F054B00F8D492 /* Vendor */,
+				E15BB4BA193F054B00F8D492 /* View */,
+				E15BB4AA193F043E00F8D492 /* Model */,
 				E15BB490193EC31500F8D492 /* Images.xcassets */,
 				E15BB487193EC31400F8D492 /* Supporting Files */,
+				E15BB4C1193F170900F8D492 /* iSCAUPlayground.playground */,
+				E15BB4C2193F23EB00F8D492 /* iSCAUSwift-Bridging-Header.h */,
 			);
 			path = iSCAUSwift;
 			sourceTree = "<group>";
@@ -109,6 +153,90 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E15BB4AA193F043E00F8D492 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E15BB4CF193F2CB500F8D492 /* EduApiClient.swift */,
+				E15BB4BF193F06B500F8D492 /* User.swift */,
+				E15BB4C7193F29ED00F8D492 /* CetMark.swift */,
+				E15BB4CD193F2AC800F8D492 /* Lesson.swift */,
+				E15BB4C9193F2A9C00F8D492 /* ReviewLessonInfo.swift */,
+				E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */,
+				E15BB4C3193F24AB00F8D492 /* Notice.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E15BB4AD193F054B00F8D492 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E15BB4D8193F81D600F8D492 /* Common */,
+				E15BB4D5193F7C5C00F8D492 /* Edu */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E15BB4AF193F054B00F8D492 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E15BB4D3193F538F00F8D492 /* Utils.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E15BB4B0193F054B00F8D492 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				E15BB4D1193F513E00F8D492 /* AppConstant.swift */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		E15BB4B7193F054B00F8D492 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E15BB4B8193F054B00F8D492 /* img */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E15BB4B8193F054B00F8D492 /* img */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		E15BB4B9193F054B00F8D492 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		E15BB4BA193F054B00F8D492 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E15BB4D5193F7C5C00F8D492 /* Edu */ = {
+			isa = PBXGroup;
+			children = (
+				E1AD6CA4193F98120033A1EB /* EduTimeTableViewController.swift */,
+			);
+			name = Edu;
+			sourceTree = "<group>";
+		};
+		E15BB4D8193F81D600F8D492 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E15BB4DB193F821C00F8D492 /* LoginViewController.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E15BB4A0193EC31600F8D492 /* Build configuration list for PBXNativeTarget "iSCAUSwift" */;
 			buildPhases = (
+				BCE8DA9F19DD4B4780B65B57 /* Check Pods Manifest.lock */,
 				E15BB480193EC31400F8D492 /* Sources */,
 				E15BB481193EC31400F8D492 /* Frameworks */,
 				E15BB482193EC31400F8D492 /* Resources */,
+				0BA7221F5E52484EA0F08102 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,13 +333,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BA7221F5E52484EA0F08102 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-iSCAUSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCE8DA9F19DD4B4780B65B57 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E15BB480193EC31400F8D492 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15BB48C193EC31500F8D492 /* ViewController.swift in Sources */,
+				E15BB4D0193F2CB500F8D492 /* EduApiClient.swift in Sources */,
+				E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */,
+				E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */,
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
+				E15BB4CE193F2AC800F8D492 /* Lesson.swift in Sources */,
+				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
+				E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */,
+				E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */,
+				E15BB4C0193F06B500F8D492 /* User.swift in Sources */,
+				E15BB4DC193F821C00F8D492 /* LoginViewController.swift in Sources */,
+				E1AD6CA5193F98120033A1EB /* EduTimeTableViewController.swift in Sources */,
+				E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,23 +495,27 @@
 		};
 		E15BB4A1193EC31600F8D492 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BC26C9C1B24448C8F529FB8 /* Pods-iSCAUSwift.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iSCAUSwift/iSCAUSwift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		E15BB4A2193EC31600F8D492 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BC26C9C1B24448C8F529FB8 /* Pods-iSCAUSwift.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iSCAUSwift/iSCAUSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -397,6 +574,7 @@
 				E15BB4A2193EC31600F8D492 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E15BB4A3193EC31600F8D492 /* Build configuration list for PBXNativeTarget "iSCAUSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +583,7 @@
 				E15BB4A5193EC31600F8D492 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
