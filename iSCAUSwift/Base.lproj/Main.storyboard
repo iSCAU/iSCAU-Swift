@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xgO-Eg-Fxh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xgO-Eg-Fxh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6239"/>
     </dependencies>
@@ -211,6 +211,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QF0-dg-Dkk">
+                                        <rect key="frame" x="174" y="101" width="55" height="55"/>
+                                        <state key="normal" title="Button" image="10.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -379,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXy-0j-9Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="-204"/>
+            <point key="canvasLocation" x="1608" y="-204"/>
         </scene>
         <!--常用电话-->
         <scene sceneID="BUt-GQ-UQe">
@@ -836,7 +842,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAh-B6-gfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="1887"/>
+            <point key="canvasLocation" x="779" y="1859"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dtl-lP-nOS">
@@ -903,7 +909,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dih-hp-oR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="1887"/>
+            <point key="canvasLocation" x="1191" y="1859"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pxk-3D-Wuq">
@@ -1001,7 +1007,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXV-cl-N3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="1887"/>
+            <point key="canvasLocation" x="372" y="1859"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WnE-5y-muO">
@@ -1025,6 +1031,7 @@
     <resources>
         <image name="08F2E0B2-609D-4F1B-A6E7-EB3A52DA76DE" width="81" height="81"/>
         <image name="1.1.png" width="81" height="81"/>
+        <image name="10.png" width="81" height="81"/>
         <image name="12.1.png" width="81" height="81"/>
         <image name="13.1.png" width="80" height="81"/>
         <image name="2.1.png" width="81" height="81"/>

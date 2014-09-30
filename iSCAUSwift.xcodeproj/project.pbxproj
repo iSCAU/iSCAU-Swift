@@ -145,8 +145,8 @@
 /* Begin PBXFileReference section */
 		1E13F1ECD8F94B47B4C7013B /* Pods-iSCAUSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84086BA119DACB2F0048302D /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
-		84086BA219DACB2F0048302D /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabViewController.m; sourceTree = "<group>"; };
+		84086BA119DACB2F0048302D /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPTabViewController.h; path = ../JPTabViewController.h; sourceTree = "<group>"; };
+		84086BA219DACB2F0048302D /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JPTabViewController.m; path = ../JPTabViewController.m; sourceTree = "<group>"; };
 		B3441B39F695DE30B958E3E1 /* Pods-iSCAUSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E114957419D943D90087445D /* place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place.png; sourceTree = "<group>"; };
 		E114957519D943D90087445D /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
@@ -283,6 +283,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84086BA719DAF7DF0048302D /* JPTabviewController */ = {
+			isa = PBXGroup;
+			children = (
+				84086BA119DACB2F0048302D /* JPTabViewController.h */,
+				84086BA219DACB2F0048302D /* JPTabViewController.m */,
+			);
+			name = JPTabviewController;
+			sourceTree = "<group>";
+		};
 		E114957319D943D90087445D /* activity_img */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +368,7 @@
 		E14FB5D819D0609100526D45 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				84086BA719DAF7DF0048302D /* JPTabviewController */,
 				E12D4FFB19D9CE6C005F37B7 /* AZTools */,
 				E14FB61719D060E200526D45 /* Alamofire.xcodeproj */,
 			);
@@ -417,8 +427,6 @@
 		E15BB487193EC31400F8D492 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84086BA119DACB2F0048302D /* JPTabViewController.h */,
-				84086BA219DACB2F0048302D /* JPTabViewController.m */,
 				E15BB488193EC31400F8D492 /* Info.plist */,
 			);
 			name = "Supporting Files";
