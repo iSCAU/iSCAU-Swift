@@ -74,6 +74,7 @@
 		E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D3193F538F00F8D492 /* Utils.swift */; };
 		E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */; };
 		E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */; };
+		E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19F70E719DB2EF3009698D8 /* JPTabViewController.m */; };
 		E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */; };
 		E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */; };
 		E1B8347219DA619F00737E99 /* ActivityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */; };
@@ -146,6 +147,8 @@
 /* Begin PBXFileReference section */
 		1E13F1ECD8F94B47B4C7013B /* Pods-iSCAUSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84086BA119DACB2F0048302D /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
+		84086BA219DACB2F0048302D /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabViewController.m; sourceTree = "<group>"; };
 		B3441B39F695DE30B958E3E1 /* Pods-iSCAUSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E114957419D943D90087445D /* place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place.png; sourceTree = "<group>"; };
 		E114957519D943D90087445D /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 		E16262DC19D326C30024B023 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayTimeTable.swift; sourceTree = "<group>"; };
 		E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayLessionCell.swift; sourceTree = "<group>"; };
+		E19F70E619DB2EF3009698D8 /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
+		E19F70E719DB2EF3009698D8 /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabViewController.m; sourceTree = "<group>"; };
 		E1B0B9E01948BC520035B287 /* iSCAUSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSCAUSwift.xcdatamodel; sourceTree = "<group>"; };
 		E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailCell.swift; sourceTree = "<group>"; };
 		E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityInfoCell.swift; sourceTree = "<group>"; };
@@ -369,6 +374,7 @@
 		E14FB5D819D0609100526D45 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E19F70E519DB2EF3009698D8 /* JPTabViewController */,
 				E12D4FFB19D9CE6C005F37B7 /* AZTools */,
 				E14FB61719D060E200526D45 /* Alamofire.xcodeproj */,
 			);
@@ -427,6 +433,8 @@
 		E15BB487193EC31400F8D492 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84086BA119DACB2F0048302D /* JPTabViewController.h */,
+				84086BA219DACB2F0048302D /* JPTabViewController.m */,
 				E15BB488193EC31400F8D492 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -543,6 +551,15 @@
 				E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E19F70E519DB2EF3009698D8 /* JPTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E19F70E619DB2EF3009698D8 /* JPTabViewController.h */,
+				E19F70E719DB2EF3009698D8 /* JPTabViewController.m */,
+			);
+			path = JPTabViewController;
 			sourceTree = "<group>";
 		};
 		E1B0B9DE1948BC270035B287 /* File */ = {
@@ -839,6 +856,7 @@
 				E12D501B19D9CE6D005F37B7 /* UIImage+RTTint.m in Sources */,
 				E1B8347319DA619F00737E99 /* ActivityModel.swift in Sources */,
 				E12D501919D9CE6D005F37B7 /* UIImage+Blur.m in Sources */,
+				E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */,
 				E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */,
 				E12D501819D9CE6D005F37B7 /* UIColor+Addition.m in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
