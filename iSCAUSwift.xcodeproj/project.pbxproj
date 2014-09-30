@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */; };
+		84086BA319DACB2F0048302D /* JPTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84086BA219DACB2F0048302D /* JPTabViewController.m */; };
 		E114957A19D943D90087445D /* place.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957419D943D90087445D /* place.png */; };
 		E114957B19D943D90087445D /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957519D943D90087445D /* push.png */; };
 		E114957C19D943D90087445D /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957619D943D90087445D /* time.png */; };
@@ -144,6 +145,8 @@
 /* Begin PBXFileReference section */
 		1E13F1ECD8F94B47B4C7013B /* Pods-iSCAUSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84086BA119DACB2F0048302D /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
+		84086BA219DACB2F0048302D /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabViewController.m; sourceTree = "<group>"; };
 		B3441B39F695DE30B958E3E1 /* Pods-iSCAUSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E114957419D943D90087445D /* place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place.png; sourceTree = "<group>"; };
 		E114957519D943D90087445D /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
@@ -414,6 +417,8 @@
 		E15BB487193EC31400F8D492 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84086BA119DACB2F0048302D /* JPTabViewController.h */,
+				84086BA219DACB2F0048302D /* JPTabViewController.m */,
 				E15BB488193EC31400F8D492 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -811,6 +816,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84086BA319DACB2F0048302D /* JPTabViewController.m in Sources */,
 				E1B8347C19DA619F00737E99 /* EduSysDayClassCell.m in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
