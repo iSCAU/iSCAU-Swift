@@ -8,13 +8,13 @@
 
 import Foundation
 
-@objc class Utils: NSObject {
+class Utils: NSObject {
     
-    @objc class func safeBase64Encode(str: String) -> String {
+    class func safeBase64Encode(str: String) -> String {
         return str.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedString()!;
     }
     
-    @objc class func currentWeek(semesterStartDateString: String?) -> String {
+    class func currentWeek(semesterStartDateString: String?) -> String {
         if (semesterStartDateString != nil) {
             let local = NSLocale(localeIdentifier: "zh_CN")
             let formatter = NSDateFormatter()
@@ -33,7 +33,7 @@ import Foundation
         return ""
     }
     
-    @objc class func indicatorColorAtIndex(index: Int) -> UIColor {
+    class func indicatorColorAtIndex(index: Int) -> UIColor {
         let colorIndex = index % 4;
         switch colorIndex {
         case 0:
@@ -48,12 +48,13 @@ import Foundation
             return UIColor(fromHexRGB: "0x0140ca", alpha: 1)
         }
     }
+    
 }
 
 // MARK: - Account
 
 extension Utils {
-    @objc class var stuNum: String? {
+    class var stuNum: String? {
         get {
             return NSUserDefaults.standardUserDefaults().objectForKey(kStuNumKey) as String?
         }
@@ -62,7 +63,7 @@ extension Utils {
         }
     }
     
-    @objc class var server: String? {
+    class var server: String? {
         get {
             return NSUserDefaults.standardUserDefaults().objectForKey(kStuServerKey) as String?
         }
@@ -71,7 +72,7 @@ extension Utils {
         }
     }
 
-    @objc class var stuPwd: String? {
+    class var stuPwd: String? {
         get {
             if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kStuPwdKey) as String?) {
                 return safeBase64Encode(existedPwd)
@@ -83,7 +84,7 @@ extension Utils {
         }
     }
     
-    @objc class var libPwd: String? {
+    class var libPwd: String? {
         get {
             return NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as String?
         }
@@ -105,12 +106,26 @@ extension Utils {
         case Marks = "marks.data"
     }
     
-    @objc class func documentFolderPath() -> String {
+    class func documentFolderPath() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         return (paths[0] as String)
     }
     
-    @objc class func classTablePath() -> String {
+    class func classTablePath() -> String {
         return documentFolderPath().stringByAppendingPathComponent(FileName.ClassTable.rawValue)
+    }
+}
+
+// MARK: - Segue
+
+extension Utils {
+    
+    enum SegueType: String {
+        case Push = "Push"
+        case Present = "Present"
+    }
+    
+    class func segueIdentifier(type: SegueType, destinationViewControllerClass: AnyClass) -> String {
+        return "\(type.rawValue)\(NSStringFromClass(destinationViewControllerClass))"
     }
 }

@@ -21,6 +21,8 @@
 		E12D501B19D9CE6D005F37B7 /* UIImage+RTTint.m in Sources */ = {isa = PBXBuildFile; fileRef = E12D500E19D9CE6D005F37B7 /* UIImage+RTTint.m */; };
 		E12D501C19D9CE6D005F37B7 /* UIImage+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E12D501019D9CE6D005F37B7 /* UIImage+ScreenShot.m */; };
 		E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */ = {isa = PBXBuildFile; fileRef = E12D501319D9CE6D005F37B7 /* UIView+Additon.m */; };
+		E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */; };
+		E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */; };
 		E14FB63E19D0629200526D45 /* 1.1.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB62419D0629200526D45 /* 1.1.png */; };
 		E14FB63F19D0629200526D45 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB62519D0629200526D45 /* 1.png */; };
 		E14FB64019D0629200526D45 /* 2.1.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB62619D0629200526D45 /* 2.1.png */; };
@@ -165,6 +167,8 @@
 		E12D501019D9CE6D005F37B7 /* UIImage+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ScreenShot.m"; sourceTree = "<group>"; };
 		E12D501219D9CE6D005F37B7 /* UIView+Additon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additon.h"; sourceTree = "<group>"; };
 		E12D501319D9CE6D005F37B7 /* UIView+Additon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additon.m"; sourceTree = "<group>"; };
+		E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCollectionViewController.swift; path = Menu/MenuCollectionViewController.swift; sourceTree = "<group>"; };
+		E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItemCollectionViewCell.swift; path = Menu/MenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E14FB61719D060E200526D45 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		E14FB62419D0629200526D45 /* 1.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.1.png; sourceTree = "<group>"; };
 		E14FB62519D0629200526D45 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -351,6 +355,15 @@
 				E12D501319D9CE6D005F37B7 /* UIView+Additon.m */,
 			);
 			path = "UIView+Helper";
+			sourceTree = "<group>";
+		};
+		E12E1DE919DAF65B0079972A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */,
+				E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		E14FB5D819D0609100526D45 /* Vendor */ = {
@@ -543,6 +556,7 @@
 		E1B8345619DA619F00737E99 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				E12E1DE919DAF65B0079972A /* Menu */,
 				E1B8345719DA619F00737E99 /* Activity */,
 				E1B8345C19DA619F00737E99 /* Common */,
 				E1B8345F19DA619F00737E99 /* Edu */,
@@ -811,6 +825,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */,
 				E1B8347C19DA619F00737E99 /* EduSysDayClassCell.m in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
@@ -830,6 +845,7 @@
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
 				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
 				E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */,
+				E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */,
 				E1B8347A19DA619F00737E99 /* EduSysClassTableViewController.m in Sources */,
 				E1B8347819DA619F00737E99 /* EduSysClassTableEditedViewController.m in Sources */,
 				E1B8347F19DA619F00737E99 /* EduSysDayClassView.m in Sources */,

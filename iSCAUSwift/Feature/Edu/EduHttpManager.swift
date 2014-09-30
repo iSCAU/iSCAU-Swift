@@ -11,7 +11,7 @@ import Alamofire
 
 private let _SingletonEduHttpManagerSharedInstance = EduHttpManager()
 
-@objc class EduHttpManager: NSObject {
+class EduHttpManager: NSObject {
     
     @objc class var sharedInstance: EduHttpManager {
         return _SingletonEduHttpManagerSharedInstance
