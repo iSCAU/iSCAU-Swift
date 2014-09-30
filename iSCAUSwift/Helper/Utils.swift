@@ -113,5 +113,4 @@ extension Utils {
     @objc class func classTablePath() -> String {
         return documentFolderPath().stringByAppendingPathComponent(FileName.ClassTable.rawValue)
     }
-    
 }

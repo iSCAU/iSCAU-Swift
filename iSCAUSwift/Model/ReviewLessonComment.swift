@@ -9,12 +9,12 @@
 import Foundation
 
 class ReviewLessonComment: NSObject {
-    var commentId:String?
-    var lessonId:String?
-    var username:String?
-    var examType:String?
-    var comment:String?
-    var time:String?
-    var hasHomework:Bool?
-    var isCheck:Bool?
+    var commentId: String?
+    var lessonId: String?
+    var username: String?
+    var examType: String?
+    var comment: String?
+    var time: String?
+    var hasHomework: Bool?
+    var isCheck: Bool?
 }

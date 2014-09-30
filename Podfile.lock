@@ -1,5 +1,5 @@
 PODS:
-  - FRDLivelyButton (1.1.2)
+  - FRDLivelyButton (1.1.3)
   - NSData+Base64 (1.0.0)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - NSData+Base64 (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  FRDLivelyButton: 717c6907bd6bb588f775a50580e216fe83abcade
+  FRDLivelyButton: 7ef8c4f9b116b211dc64eb3c388adc65b342e63c
   NSData+Base64: aae92a2e3f0bd88b29fe6093551ded3f5c062548
 
 COCOAPODS: 0.34.1

@@ -9,11 +9,11 @@
 import Foundation
 
 class ReviewLessonInfo: NSObject {
-    var lessonId:String?
-    var name:String?
-    var teacher:String?
-    var property:String?
-    var score:String?
-    var liked:String?
-    var disliked:String?
+    var lessonId: String?
+    var name: String?
+    var teacher: String?
+    var property: String?
+    var score: String?
+    var liked: String?
+    var disliked: String?
 }

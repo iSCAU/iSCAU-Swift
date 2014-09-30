@@ -43,9 +43,9 @@ private let _SingletonEduHttpManagerSharedInstance = EduHttpManager()
     }
     
     @objc class func requestClassTable(completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-//        if !isLogined() {
-//            return;
-//        }
+        if !isLogined() {
+            return;
+        }
         println("stu:\(Utils.stuNum!) pwd:\(Utils.stuPwd!) ser:\(Utils.server!)")
         let urlStr = "\(HostName)/edusys/classtable/\(Utils.stuNum!)/\(Utils.stuPwd!)/\(Utils.server!)"
         startRequest(urlStr, completionHandler: completionHandler)
