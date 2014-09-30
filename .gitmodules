@@ -1,0 +1,4 @@
+[submodule "Alamofire"]
+	path = iSCAUSwift/Vendor/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+	branch = xcode-6.1
