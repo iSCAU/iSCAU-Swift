@@ -548,6 +548,8 @@
 		E1B0B9DE1948BC270035B287 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				84086B9A19DAC7AD0048302D /* JPTabViewController.h */,
+				84086B9B19DAC7AD0048302D /* JPTabViewController.m */,
 				E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */,
 			);
 			name = File;

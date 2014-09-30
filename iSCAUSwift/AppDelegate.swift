@@ -25,6 +25,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().selectedImageTintColor = AppTintColor
         
+        /**Rich:这里是activity的delegate中的内容，到时在Tabviewcontroller中填加进去
+        var today : UIViewController = ActivityViewController()
+        today.title = "今天"
+        var tommorraw : UIViewController = ActivityViewController()
+        tommorraw.title = "明天"
+        var future : UIViewController = ActivityViewController()
+        future.title = "未来"
+        var tab = JPTabViewController(controllers: [today,tommorraw,future])
+       */
+        
+        
+        
+        
+        
+        
+        
         return true
     }
 
