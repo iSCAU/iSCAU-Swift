@@ -10,13 +10,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var txtStuNum: UITextField!
+    @IBOutlet weak var txtStuPwd: UITextField!
+    @IBOutlet weak var txtLibPwd: UITextField!
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
 
     required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
 
     override func viewDidLoad() {
@@ -24,7 +28,17 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        var label : Void? = UILabel.initialize()
+        let btnBack = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Bordered, target: self, action: Selector("back"))
+        navigationItem.leftBarButtonItem = btnBack
+        
+        let btnSave = UIBarButtonItem(title: "保存", style: UIBarButtonItemStyle.Bordered, target: self, action: Selector("save"))
+        navigationItem.rightBarButtonItem = btnSave
+        
+        txtStuNum.text = Utils.stuNum
+        txtStuPwd.text = Utils.stuPwd
+        txtLibPwd.text = Utils.libPwd
+        
+        txtStuNum.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,15 +46,21 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    @IBAction func tryExperienceAccount(sender: AnyObject) {
+        txtStuNum.text = "ilovescau"
+        txtStuPwd.text = "1"
+        txtLibPwd.text = "1"
     }
-    */
-
+    
+    func save() {
+        Utils.stuNum = txtStuNum.text
+        Utils.stuPwd = txtStuPwd.text
+        Utils.libPwd = txtLibPwd.text
+        
+        back()
+    }
+    
+    func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

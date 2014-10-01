@@ -225,8 +225,10 @@ static NSString *TEACHER = @"teacher";
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize size = [self.classes[tableView.tag - TABLE_VIEW_TAG_BASE][indexPath.row]
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *classDict = self.classes[tableView.tag - TABLE_VIEW_TAG_BASE][indexPath.row];
+    CGSize size = [classDict[CLASSNAME]
                     boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 50, MAXFLOAT)
                     options:NSStringDrawingUsesLineFragmentOrigin
                     attributes:@{NSFontAttributeName : BoldFont(15)}
@@ -242,6 +244,7 @@ static NSString *TEACHER = @"teacher";
     if (self.isEditing) {
         NSDictionary *classDict = self.classes[tableView.tag - TABLE_VIEW_TAG_BASE][indexPath.row];
         EduSysClassTableEditedViewController *editViewController = [[EduSysClassTableEditedViewController alloc] init];
+        editViewController.hidesBottomBarWhenPushed = YES;
         [editViewController setupWithExistedClass:classDict andClassesOfTheDay:self.classes[tableView.tag - TABLE_VIEW_TAG_BASE]];
         [[self viewController].navigationController pushViewController:editViewController animated:YES];
     }

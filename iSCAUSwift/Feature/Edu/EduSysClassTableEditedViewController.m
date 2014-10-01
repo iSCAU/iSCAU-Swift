@@ -61,12 +61,7 @@ static NSString *TEACHER = @"teacher";
     [super viewDidLoad];
     // 为TitleBar添加背景
     
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    
-//    if (IS_IPHONE4) {
-//        self.view.frame = CGRectMake(0, 0, 320, 460);
-//    }
-    
+    self.navigationItem.title = @"编辑课表";
     self.classes = [NSMutableArray array];
     
     // 添加手势取消textField选中状态
@@ -358,9 +353,9 @@ static NSString *TEACHER = @"teacher";
         return;
     } else {
         if ([dsz isEqualToString:@"双周"]) {
-            dsz = @"双";
+            dsz = @"双周";
         } else if ([dsz isEqualToString:@"单周"]) {
-            dsz = @"单";
+            dsz = @"单周";
         } else {
             dsz = @"";
         }
@@ -401,6 +396,7 @@ static NSString *TEACHER = @"teacher";
             BOOL success = [data writeToFile:[Utils classTablePath] atomically:YES];
             if (success) {
                 SHOW_NOTICE_HUD(@"更新成功");
+                [self.navigationController popToRootViewControllerAnimated:YES];
             } else {
                 SHOW_NOTICE_HUD(@"更新失败");
             }
@@ -427,6 +423,7 @@ static NSString *TEACHER = @"teacher";
             BOOL success = [data writeToFile:[Utils classTablePath] atomically:YES];
             if (success) {
                 SHOW_NOTICE_HUD(@"更新成功");
+                [self.navigationController popToRootViewControllerAnimated:YES];
             } else {
                 SHOW_NOTICE_HUD(@"更新失败");
             }

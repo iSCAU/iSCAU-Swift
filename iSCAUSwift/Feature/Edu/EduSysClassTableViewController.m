@@ -13,7 +13,7 @@
 #import "AZTools.h"
 #import "iSCAUSwift-Swift.h"
 
-@interface EduSysClassTableViewController ()
+@interface EduSysClassTableViewController () <PopoverViewDelegate>
 
 @end
 
@@ -31,47 +31,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
-    UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
-//    if (IS_FLAT_UI) {
-//        btnClose.frame = CGRectMake(0, 0, 45, 44);
-//    } else {
-//        btnClose.frame = CGRectMake(0, 0, 55, 44);
-//        btnClose.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-//    }
-//    [btnClose setImage:[[UIImage imageNamed:@"BackButton.png"] imageWithTintColor:APP_DELEGATE.tintColor] forState:UIControlStateNormal];
-    [btnClose addTarget:self action:@selector(backToMenu) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *closeBarBtn = [[UIBarButtonItem alloc] initWithCustomView:btnClose];
-    self.navigationItem.leftBarButtonItem = closeBarBtn;
 
-    self.classesMon = [[NSMutableArray alloc] initWithCapacity:0];
-    self.classesTue = [[NSMutableArray alloc] initWithCapacity:0];
-    self.classesWed = [[NSMutableArray alloc] initWithCapacity:0];
-    self.classesThus = [[NSMutableArray alloc] initWithCapacity:0];
-    self.classesFri = [[NSMutableArray alloc] initWithCapacity:0];
-    self.classesSat = [[NSMutableArray alloc] initWithCapacity:0];
-    self.classesSun = [[NSMutableArray alloc] initWithCapacity:0];
-    
-//    if (IS_FLAT_UI) {
-//        self.navigationController.edgesForExtendedLayout = UIRectEdgeNone;
-//        self.automaticallyAdjustsScrollViewInsets = NO;
-//        self.dayTableView = [[EduSysDayClassTableView alloc] initWithFrame:(CGRect){
-//            0,
-//            64,
-//            self.view.size
-//        }];
-//    } else {
-//        self.dayTableView = [[EduSysDayClassTableView alloc] initWithFrame:self.view.bounds];
-//      }
+    self.classesMon = [NSMutableArray array];
+    self.classesTue = [NSMutableArray array];
+    self.classesWed = [NSMutableArray array];
+    self.classesThus = [NSMutableArray array];
+    self.classesFri = [NSMutableArray array];
+    self.classesSat = [NSMutableArray array];
+    self.classesSun = [NSMutableArray array];
+
+    self.navigationController.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.dayTableView = [[EduSysDayClassTableView alloc] initWithFrame:(CGRect){
+        0,
+        64,
+        self.view.size
+    }];
 
     [self.view addSubview:self.dayTableView];
     [self setupRightButtonState];
     
     [self reloadData];
-}
-
-- (void)backToMenu {
-//    [[AZSideMenuViewController shareMenu] openMenuAnimated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,20 +60,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
+    
     [self setupData];    
-    [self setNavTitle];
+    [self setupNavTitle];
 }
 
 #pragma mark - methods
 
-- (void)setNavTitle {
+- (void)setupNavTitle
+{
     NSString *title = [NSString stringWithFormat:@"课程表%@", [self getWeek]];
     self.title = title;
 }
 
-- (NSString *)getWeek {
+- (NSString *)getWeek
+{
     NSString *semesterStartDate = @""; //[[Tool semesterStartDate] copy];
     if (semesterStartDate) {
         NSDate *date = [NSDate date];
@@ -116,12 +100,14 @@
     return @"";
 }
 
-- (void)setupData {
+- (void)setupData
+{
     NSDictionary *classDict = [self loadLocalClassesData];
     [self parseClassesData:classDict];
 }
 
-- (void)parseClassesData:(NSDictionary *)classesInfo {
+- (void)parseClassesData:(NSDictionary *)classesInfo
+{
     if (classesInfo == nil) return;
 
     [self.classesMon removeAllObjects];
@@ -163,8 +149,8 @@
      ];
 }
 
-- (void)showPopOverView {
-    
+- (void)showPopOverView
+{
     UIButton *btnReloadData = [UIButton buttonWithType:UIButtonTypeCustom];
     btnReloadData.frame = CGRectMake(5, 0, 90, 40);
     [btnReloadData setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -183,8 +169,7 @@
     [btnEdit setTitle:@"添加" forState:UIControlStateNormal];
     btnEdit.userInteractionEnabled = NO;
     
-//    BOOL offsetY = IS_FLAT_UI ? 64 : 0;
-//    [PopoverView showPopoverAtPoint:CGPointMake(300, offsetY) inView:self.view withTitle:nil withViewArray:@[btnReloadData, btnChangeClassTableMode, btnEdit] delegate:self];
+    [PopoverView showPopoverAtPoint:CGPointMake(SCREEN_WIDTH - 20, 64) inView:self.view withViewArray:@[btnReloadData, btnChangeClassTableMode, btnEdit] delegate:self];
 }
 
 - (void)reloadData
@@ -213,7 +198,7 @@
             NSDictionary *classesInfo = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
             if (classesInfo[@"termStartDate"]) {
 //                [Tool setSemesterStartDate:classesInfo[@"termStartDate"]];
-                [self setNavTitle];
+                [self setupNavTitle];
             }
             [self parseClassesData:classesInfo];
             [self saveClassesDataToLocal:classesInfo];
@@ -221,12 +206,14 @@
     }];
 }
 
-- (void)editClassTable {        
+- (void)editClassTable
+{
     [self.dayTableView enterEditingMode];
     [self setupRightButtonState];
 }
 
-- (void)setupRightButtonState {
+- (void)setupRightButtonState
+{
     if (self.dayTableView.isEditing) {
         UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消编辑" style:UIBarButtonItemStyleBordered target:self action:@selector(endEditing)];
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
@@ -236,39 +223,44 @@
     }
 }
 
-- (void)endEditing {
+- (void)endEditing
+{
     [self.dayTableView cancleEdit];
     [self setupRightButtonState];
 }
 
-- (void)editTable {
+- (void)editTable
+{
     EduSysClassTableEditedViewController *editViewController = [[EduSysClassTableEditedViewController alloc] init];
+    editViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:editViewController animated:YES];
 }
 
-//- (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
-//    switch (index) {
-//        case 0:
-//            [self reloadData];
-//            break;
-//        case 1:
-//            [self editClassTable];
-//            break;
-//        case 2:
-//            [self editTable];
-//            break;
-//        default:
-//            break;
-//    }
-//
-//    [popoverView performSelector:@selector(dismiss) withObject:nil afterDelay:0.1f];
-//}
+- (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+            [self reloadData];
+            break;
+        case 1:
+            [self editClassTable];
+            break;
+        case 2:
+            [self editTable];
+            break;
+        default:
+            break;
+    }
 
-- (NSDictionary *)loadLocalClassesData {
+    [popoverView performSelector:@selector(dismiss) withObject:nil afterDelay:0.1f];
+}
+
+- (NSDictionary *)loadLocalClassesData
+{
     return [NSKeyedUnarchiver unarchiveObjectWithFile:[Utils classTablePath]];
 }
 
-- (void)saveClassesDataToLocal:(NSDictionary *)classesDict {
+- (void)saveClassesDataToLocal:(NSDictionary *)classesDict
+{
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:classesDict];
     [data writeToFile:[Utils classTablePath] atomically:YES];
 }

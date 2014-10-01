@@ -21,7 +21,7 @@ class PopoverView: UIView {
     let kArrowCurvature: CGFloat = 6.0
     let kArrowHorizontalPadding: CGFloat = 5.0
     let kShadowAlpha: CGFloat = 0.4
-    let kBoxAlpha: CGFloat = 0.95
+    let kBoxAlpha: CGFloat = 1
     let kTopMargin: CGFloat = 50.0
     let kHorizontalMargin: CGFloat = 10.0
     let kShowDividerBetweenViews = true
@@ -30,7 +30,7 @@ class PopoverView: UIView {
     let kGradientTopColor: UIColor
     let kGradientTitleBottomColor: UIColor
     let kGradientTitleTopColor: UIColor
-    let kTitleFont: UIFont = UIFont(name: "HelveticaNeue", size: 22.0)
+    let kTitleFont: UIFont = UIFont(name: "HelveticaNeue", size: 22.0)!
     let kTitleColor: UIColor = UIColor(red: 0.329, green: 0.341, blue: 0.353, alpha: 1)
     
     var boxFrame: CGRect = CGRectZero
@@ -45,7 +45,7 @@ class PopoverView: UIView {
     var activityIndicator: UIActivityIndicatorView? = nil
     var showDividerRects: Bool = true
     
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         kGradientBottomColor = UIColor(white: 0.98, alpha: kBoxAlpha)
         kGradientTopColor = UIColor(white: 1.0, alpha: kBoxAlpha)
         kGradientTitleBottomColor = UIColor(white: 0.93, alpha: kBoxAlpha)
@@ -55,6 +55,10 @@ class PopoverView: UIView {
         super.init(frame: frame)
         
         backgroundColor = UIColor.clearColor()
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     class func showPopoverAtPoint(point: CGPoint, inView view: UIView, withViewArray viewArray: Array<UIView>, delegate: PopoverViewDelegate?) {
@@ -123,9 +127,8 @@ class PopoverView: UIView {
         contentView = cView
         
         var keyWindow = UIApplication.sharedApplication().keyWindow
-        if !keyWindow {
-            keyWindow = UIApplication.sharedApplication().windows?[0] as UIWindow
-        }
+        keyWindow = UIApplication.sharedApplication().windows[0] as UIWindow
+
         let topView = keyWindow.subviews[0] as UIView
 
         let topPoint = topView.convertPoint(point, fromView: view)
@@ -142,7 +145,7 @@ class PopoverView: UIView {
         var boxHeight = contentHeight! + 2 * padding
         var boxWidth = contentWidth! + 2 * padding
         
-        var xOrigin: Float = 0.0
+        var xOrigin: CGFloat = 0.0
        
         if arrowPoint.x + kArrowHeight > topViewBounds.size.width - kHorizontalMargin - kBoxRadius - kArrowHorizontalPadding {
             arrowPoint.x = topViewBounds.size.width - kHorizontalMargin - kBoxRadius - kArrowHorizontalPadding - kArrowHeight
@@ -339,12 +342,13 @@ class PopoverView: UIView {
         //// Shadow Declarations
         var shadow = UIColor(white: 0.0, alpha: kShadowAlpha)
         var shadowOffset = CGSizeMake(0, 1)
-        var shadowBlurRadius: Float = 10.0
+        var shadowBlurRadius: CGFloat = 10.0
         
         //// Gradient Declarations
-        var gradientColors = [kGradientTopColor.CGColor, kGradientBottomColor.CGColor] as CFArrayRef
-        var gradientLocations: CConstPointer<CGFloat> = [0, 1]
-        var gradient = CGGradientCreateWithColors(colorSpace, gradientColors, gradientLocations)
+        let gradientColors = [ kGradientTopColor, kGradientBottomColor ].map {(color: UIColor!) -> AnyObject! in
+            return color.CGColor as AnyObject!
+            } as NSArray
+        var gradient = CGGradientCreateWithColors(colorSpace, gradientColors, [0.0, 1.0])
         
         //These floats are the top and bottom offsets for the gradient drawing so the drawing includes the arrows.
         var bottomOffset = above ? kArrowHeight : 0.0
@@ -359,8 +363,8 @@ class PopoverView: UIView {
         CGContextEndTransparencyLayer(context)
         CGContextRestoreGState(context)
         
-        var titleBGHeight: Float = -1.0
-        if titleView {
+        var titleBGHeight: CGFloat = -1.0
+        if (titleView? != nil) {
             titleBGHeight = kBoxPadding * 2.0 + titleView!.frame.size.height
         }
         
@@ -397,8 +401,8 @@ class PopoverView: UIView {
             
             //// Gradient Declarations
             var gradientColors = [kGradientTitleTopColor.CGColor, kGradientTitleBottomColor.CGColor] as CFArrayRef
-            var gradientLocations: CConstPointer<CGFloat> = [0, 1]
-            var gradient = CGGradientCreateWithColors(colorSpace, gradientColors, gradientLocations)
+//            var gradientLocations = [ CGFloat(0.0), CGFloat(1.0) ]
+            var gradient = CGGradientCreateWithColors(colorSpace, gradientColors, [0.0, 1.0])
             
             //These floats are the top and bottom offsets for the gradient drawing so the drawing includes the arrows.
             var topOffset: CGFloat = !above ? kArrowHeight : 0.0
@@ -416,7 +420,7 @@ class PopoverView: UIView {
         }
         
         if kShowDividerBetweenViews && showDividerRects {
-            if dividerRects && dividerRects?.count > 0 {
+            if dividerRects?.count > 0 {
                 for a: AnyObject in dividerRects! {
                     var r = (a as NSValue).CGRectValue()
                     r.origin.x += contentView!.frame.origin.x

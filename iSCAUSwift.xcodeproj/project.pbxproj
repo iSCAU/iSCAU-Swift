@@ -72,6 +72,7 @@
 		E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */; };
 		E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D1193F513E00F8D492 /* AppConstant.swift */; };
 		E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D3193F538F00F8D492 /* Utils.swift */; };
+		E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173B4D719DC0A5B009993C1 /* PopoverView.swift */; };
 		E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */; };
 		E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */; };
 		E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19F70E719DB2EF3009698D8 /* JPTabViewController.m */; };
@@ -229,6 +230,7 @@
 		E15BB4D1193F513E00F8D492 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		E15BB4D3193F538F00F8D492 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E16262DC19D326C30024B023 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		E173B4D719DC0A5B009993C1 /* PopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayTimeTable.swift; sourceTree = "<group>"; };
 		E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayLessionCell.swift; sourceTree = "<group>"; };
 		E19F70E619DB2EF3009698D8 /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 		E15BB4BA193F054B00F8D492 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E173B4D719DC0A5B009993C1 /* PopoverView.swift */,
 				E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */,
 				E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */,
 			);
@@ -848,6 +851,7 @@
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
 				E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */,
 				E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */,
+				E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */,
 				E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */,
 				E12D501C19D9CE6D005F37B7 /* UIImage+ScreenShot.m in Sources */,
 				E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */,
