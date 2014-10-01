@@ -193,7 +193,7 @@
 //         }
 //     } 
 //     failure:nil];
-    [EduHttpManager requestClassTable:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+    [EduHttpManager requestClassTableWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         if (response.statusCode == kStatusCodeSuccess) {
             NSDictionary *classesInfo = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
             if (classesInfo[@"termStartDate"]) {

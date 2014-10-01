@@ -8,6 +8,8 @@
 
 #import "EduSysMarksDetailViewController.h"
 #import "EduSysMarksDetailCell.h"
+#import "AZTools.h"
+#import "iSCAUSwift-Swift.h"
 
 @interface EduSysMarksDetailViewController ()
 @property (nonatomic, strong) NSArray *keyNameArray;
@@ -27,10 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    if (IS_FLAT_UI) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    }
     
     self.keyNameArray = [NSArray arrayWithObjects:@"name", @"goal", @"grade_point", @"credit", @"year", @"team", @"classify", @"college_hold", @"college_belong", @"code", nil];
     [self.tableView reloadData];

@@ -8,6 +8,8 @@
 
 #import "EduSysMarkCell.h"
 #import "UIImage+ImageWithColor.h"
+#import "Constant.h"
+#import "iSCAUSwift-Swift.h"
 
 #define IS_CH_SYMBOL(chr) ((int)(chr)>127)
 
@@ -47,7 +49,9 @@ static NSString *redColor = @"0xC0392B";
     
     NSString *className = [info objectForKey:NAME];
     
-    CGSize size = [Tool calculateSizeWithString:className font:[UIFont boldSystemFontOfSize:15] constrainWidth:270.0];
+    CGSize size = [className boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 50, MAXFLOAT)
+                                          options:NSStringDrawingUsesLineFragmentOrigin
+                                       attributes:@{NSFontAttributeName : BoldFont(15)} context:nil].size;
     self.labClassName.text = className;
     
     self.labGpa.text = [[NSString alloc] initWithFormat:@"绩点: %@", [info objectForKey:GRADE_POINT]];
@@ -72,7 +76,7 @@ static NSString *redColor = @"0xC0392B";
         self.sepView.frame = frame;
     }
     
-    self.imgIndicator.image = [UIImage imageWithColor:[Tool indicatorColorAtIndex:index]];
+    self.imgIndicator.image = [UIImage imageWithColor:[Utils indicatorColorAtIndex:index]];
     
     return self;
 }

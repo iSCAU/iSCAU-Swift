@@ -21,25 +21,25 @@ class MenuCollectionViewController: UICollectionViewController {
     let menus =
     [
         [
-            [kMenuNameKey : "查询成绩", kMenuIconNameKey : "1.png"],
+            [kMenuNameKey : "查询成绩", kMenuIconNameKey : "9.png"],
             [kMenuNameKey : "空余课室", kMenuIconNameKey : "2.png"],
-            [kMenuNameKey : "考试安排", kMenuIconNameKey : "3.png"],
-            [kMenuNameKey : "选课情况", kMenuIconNameKey : "4.png"],
+            [kMenuNameKey : "考试安排", kMenuIconNameKey : "4.png"],
+            [kMenuNameKey : "选课情况", kMenuIconNameKey : "3.png"],
         ],
         [
-            [kMenuNameKey : "搜索图书", kMenuIconNameKey : "1.png"],
-            [kMenuNameKey : "当前借阅", kMenuIconNameKey : "2.png"],
-            [kMenuNameKey : "历史借阅", kMenuIconNameKey : "3.png"],
+            [kMenuNameKey : "搜索图书", kMenuIconNameKey : "6.png"],
+            [kMenuNameKey : "当前借阅", kMenuIconNameKey : "13.png"],
+            [kMenuNameKey : "历史借阅", kMenuIconNameKey : "1.png"],
         ],
         [
-            [kMenuNameKey : "地图", kMenuIconNameKey : "1.png"],
-            [kMenuNameKey : "校历", kMenuIconNameKey : "2.png"],
-            [kMenuNameKey : "常用电话", kMenuIconNameKey : "3.png"],
-            [kMenuNameKey : "英语角", kMenuIconNameKey : "4.png"],
+            [kMenuNameKey : "地图", kMenuIconNameKey : "8.png"],
+            [kMenuNameKey : "校历", kMenuIconNameKey : "7.png"],
+            [kMenuNameKey : "常用电话", kMenuIconNameKey : "10.png"],
+            [kMenuNameKey : "英语角", kMenuIconNameKey : "5.png"],
         ],
         [
-            [kMenuNameKey : "设置", kMenuIconNameKey : "1.png"],
-            [kMenuNameKey : "意见反馈", kMenuIconNameKey : "2.png"],
+            [kMenuNameKey : "设置", kMenuIconNameKey : "settting.png"],
+            [kMenuNameKey : "意见反馈", kMenuIconNameKey : "12.png"],
         ],
     ]
 
@@ -110,10 +110,17 @@ class MenuCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.section, indexPath.row) {
-            case (3, 0):
-                self.performSegueWithIdentifier("PushSettingsTableViewController", sender: nil)
-            default:
-                return
+        case (0, 0):
+            let marksVC = EduSysMarksViewController()
+            marksVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(marksVC, animated: true)
+//        case (0, 1):
+//        case (0, 2):
+//        case (0, 3):            
+        case (3, 0):
+            performSegueWithIdentifier("PushSettingsTableViewController", sender: nil)
+        default:
+            return
         }
     }
 

@@ -7,11 +7,12 @@
 //
 
 #import "EduSysMarksViewController.h"
-#import "EduSysHttpClient.h"
+#import "iSCAUSwift-Swift.h"
 #import "EduSysMarkCell.h"
-#import "AppDelegate.h"
+#import "Constant.h"
 #import "UIButton+Bootstrap.h"
 #import "EduSysMarksDetailViewController.h"
+#import "AZTools.h"
 
 #define HEADER_HEIGHT   25
 #define CELL_HEIGHT     55
@@ -72,7 +73,7 @@ static NSString *GRADE_POINT = @"grade_point";
     frame.size.height = 162.f;
     self.selectionPicker.frame = frame;
         
-    UIWindow *applicationWindow = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
+    UIWindow *applicationWindow = [UIApplication sharedApplication].delegate.window;
     frame = self.paramsSelectorView.frame;
     frame.origin.y = applicationWindow.bounds.size.height;
     self.paramsSelectorView.frame = frame;
@@ -84,9 +85,9 @@ static NSString *GRADE_POINT = @"grade_point";
     averageCredit = 0;
     totalMarks = 0;
     
-    self.schoolYearArray = [Tool schoolYear];
+    self.schoolYearArray = [Utils schoolYear];
     self.schoolYearIndex = 0;
-    self.semesterArray = [Tool semester];
+    self.semesterArray = [Utils semester];
     self.semesterIndex = 0;
     
     if (!self.schoolYearArray || !self.semesterArray) {
@@ -105,8 +106,9 @@ static NSString *GRADE_POINT = @"grade_point";
 
 #pragma mark - 
 
-- (void)showParamsView {
-    UIWindow *applicationWindow = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
+- (void)showParamsView
+{
+    UIWindow *applicationWindow = [[UIApplication sharedApplication] keyWindow];
     if (self.paramsBackgroundView == nil) {
         self.paramsBackgroundView = [[UIControl alloc] initWithFrame:self.view.bounds];
     }
@@ -128,7 +130,7 @@ static NSString *GRADE_POINT = @"grade_point";
 
 - (void)hideParamsView {
     if (self.paramsBackgroundView != nil) {
-        UIWindow *applicationWindow = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
+        UIWindow *applicationWindow = [[UIApplication sharedApplication] keyWindow];
         [UIView animateWithDuration:0.3
                          animations:^{
                              CGRect frame = self.paramsSelectorView.frame;
@@ -146,43 +148,63 @@ static NSString *GRADE_POINT = @"grade_point";
 - (void)updateParams:(id)sender {
     [self hideParamsView];
     
-    if ([Tool stuNum].length < 1 || [Tool stuPwd].length < 1) {
+    if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
         SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
         return;
     }
     
     SHOW_NOTICE_HUD(@"努力加载参数中...");
-    [[EduSysHttpClient shareInstance]
-     eduSysGetMarksInfoSuccess:^(NSData *responseData, NSInteger httpCode){
-         if (httpCode == 200) {
-             HIDE_ALL_HUD;
-             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
-             NSArray *paramsArray = dict[kParams];
-             if (paramsArray == nil || paramsArray.count < 2) return;
-             self.schoolYearArray = paramsArray[0][kParamsValue];
-             self.semesterArray = paramsArray[1][kParamsValue];
-             
-             if (self.schoolYearArray && self.semesterArray) {
-                 [Tool setSchoolYear:self.schoolYearArray];
-                 [Tool setSemester:self.semesterArray];
-                 [self setupParams];
-             }
-         }
-     } failure:nil];
+    [EduHttpManager requestMarksInfoWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+        if (response.statusCode == kStatusCodeSuccess) {
+            HIDE_ALL_HUD;
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            NSArray *paramsArray = dict[kParams];
+            if (paramsArray == nil || paramsArray.count < 2) return;
+            self.schoolYearArray = paramsArray[0][kParamsValue];
+            self.semesterArray = paramsArray[1][kParamsValue];
+            
+            if (self.schoolYearArray && self.semesterArray) {
+                [Utils setSchoolYear:self.schoolYearArray];
+                [Utils setSemester:self.semesterArray];
+                [self setupParams];
+            }
+        }
+
+    }];
+//    [[EduSysHttpClient shareInstance]
+//     eduSysGetMarksInfoSuccess:^(NSData *responseData, NSInteger httpCode){
+//         if (httpCode == 200) {
+//             HIDE_ALL_HUD;
+//             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+//             NSArray *paramsArray = dict[kParams];
+//             if (paramsArray == nil || paramsArray.count < 2) return;
+//             self.schoolYearArray = paramsArray[0][kParamsValue];
+//             self.semesterArray = paramsArray[1][kParamsValue];
+//             
+//             if (self.schoolYearArray && self.semesterArray) {
+//                 [Tool setSchoolYear:self.schoolYearArray];
+//                 [Tool setSemester:self.semesterArray];
+//                 [self setupParams];
+//             }
+//         }
+//     } failure:nil];
 }
 
-- (void)loadLocalMarks {    
-    NSData *localMarksData = [[NSData alloc] initWithContentsOfFile:[PathHelper marksCacheFileName]];
+- (void)loadLocalMarks
+{
+    NSData *localMarksData = [[NSData alloc] initWithContentsOfFile:[Utils marksParamPath]];
     [self parseMarksInfo:localMarksData];
 }
 
-- (void)saveMarksDataToLocal:(NSData *)marksData {
-    [marksData writeToFile:[PathHelper marksCacheFileName] atomically:YES];
+- (void)saveMarksDataToLocal:(NSData *)marksData
+{
+    [marksData writeToFile:[Utils marksParamPath] atomically:YES];
 }
 
 // 请求成绩数据
-- (IBAction)getMarks:(id)sender {
-    if ([Tool stuNum].length < 1 || [Tool stuPwd].length < 1) {
+- (IBAction)getMarks:(id)sender
+{
+    if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
         SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
         return;
     }
@@ -190,23 +212,33 @@ static NSString *GRADE_POINT = @"grade_point";
     [self hideParamsView];
     if (self.schoolYearIndex < self.schoolYearArray.count &&
         self.semesterIndex < self.semesterArray.count) {
-        SHOW_WATING_HUD;
+//        SHOW_WATING_HUD;
         self.isReloading = YES;
         
-        [[EduSysHttpClient shareInstance] 
-         eduSysGetMarksWithYear:self.schoolYearArray[self.schoolYearIndex]
-         tearm:self.semesterArray[self.semesterIndex]
-         success:^(NSData *responseData, int httpCode){
-             self.isReloading = NO;
-             if (httpCode == 200) {
-                 HIDE_ALL_HUD;
-                 [self parseMarksInfo:responseData];
-                 [self saveMarksDataToLocal:responseData];
-             }
-         }
-         failure:^(NSData *responseData, int httpCode){
-             self.isReloading = NO;
-         }];
+        [EduHttpManager requestMarksWithYear:self.schoolYearArray[self.schoolYearIndex]
+                                        term:self.semesterArray[self.semesterIndex]
+                           completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+                               self.isReloading = NO;
+                               if (response.statusCode == kStatusCodeSuccess) {
+//                                   HIDE_ALL_HUD;
+                                   [self parseMarksInfo:data];
+                                   [self saveMarksDataToLocal:data];
+                               }
+                           }];
+//        [[EduSysHttpClient shareInstance] 
+//         eduSysGetMarksWithYear:self.schoolYearArray[self.schoolYearIndex]
+//         tearm:self.semesterArray[self.semesterIndex]
+//         success:^(NSData *responseData, int httpCode){
+//             self.isReloading = NO;
+//             if (httpCode == 200) {
+//                 HIDE_ALL_HUD;
+//                 [self parseMarksInfo:responseData];
+//                 [self saveMarksDataToLocal:responseData];
+//             }
+//         }
+//         failure:^(NSData *responseData, int httpCode){
+//             self.isReloading = NO;
+//         }];
     }
 }
 
@@ -300,7 +332,12 @@ static NSString *GRADE_POINT = @"grade_point";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize size = [Tool calculateSizeWithString:[self.marksArray[indexPath.row] objectForKey:@"name"] font:[UIFont boldSystemFontOfSize:15] constrainWidth:270.0];
+    CGSize size = [self.marksArray[indexPath.row][@"name"]
+                   boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 50, MAXFLOAT)
+                   options:NSStringDrawingUsesLineFragmentOrigin
+                   attributes:@{NSFontAttributeName : BoldFont(15)}
+                   context:nil].size;
+                   
     if (size.height > 20) {
         return CELL_HEIGHT + size.height / 2;
     }

@@ -7,10 +7,11 @@
 //
 
 #import "EduSysEmptyClassroomViewController.h"
-#import "EduSysHttpClient.h"
 #import "EduSysEmptyClassroomSelectionViewController.h"
 #import "UIButton+Bootstrap.h"
 #import "EduSysEmptyClassroomDetailViewController.h"
+#import "iSCAUSwift-Swift.h"
+#import "Constant.h"
 
 #define kXQ @"校区"
 #define kJSLB @"教室类别"
@@ -57,14 +58,6 @@
 {
     [super viewDidLoad];
     
-    if (IS_IPHONE4) {
-        CGRect frame = self.view.frame;
-        frame.size.height -= 88.f;
-        self.view.frame = frame;
-        
-        self.backgroundScrollView.frame = self.view.bounds;
-    }
-    
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;        
     }
@@ -78,14 +71,14 @@
     
     [self.btnSearch successStyle];
     
-    if ([Tool emptyClassroomParams]) {
-        self.selectionsDict = [NSDictionary dictionaryWithDictionary:[Tool emptyClassroomParams]];
+    if ([Utils emptyClassroomParams]) {
+        self.selectionsDict = [NSDictionary dictionaryWithDictionary:[Utils emptyClassroomParams]];
         [self setupEmptyClassroomParams];
     } else {
         [self refreshParameters];
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSelection:) name:EDU_SYS_EMPTY_CLASSROOM_SELECTED_NOTIFICATION object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSelection:) name:EDU_SYS_EMPTY_CLASSROOM_SELECTED_NOTIFICATION object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -114,8 +107,8 @@
 }
 
 - (void)refreshParameters {
-    if ([Tool stuNum].length < 1 || [Tool stuPwd].length < 1) {
-        SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
+    if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
+//        SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
         return;
     }
     
@@ -124,21 +117,33 @@
     }
     
     self.isReloading = YES;
-    SHOW_WATING_HUD;
-    [[EduSysHttpClient shareInstance] 
-     eduSysGetEmptyClassroomParamsSuccess:^(NSData *responseData, int httpCode) {
-         self.isReloading = NO;
-         if (httpCode == 200) {
-             HIDE_ALL_HUD;
-             NSDictionary *params = [NSJSONSerialization JSONObjectWithData:responseData
-                                                                   options:kNilOptions 
+    [EduHttpManager requestEmptyClassroomParamsWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+        self.isReloading = NO;
+        if (response.statusCode == kStatusCodeSuccess) {
+            NSDictionary *params = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:kNilOptions
                                                                      error:nil];
-             [self parseParams:params];
-             [self setupEmptyClassroomParams];
-         }
-     } failure:^(NSData *responseData, int httpCode) {
-         self.isReloading = NO;
-     }];
+            [self parseParams:params];
+            [self setupEmptyClassroomParams];
+        }
+    }];
+    
+//    SHOW_WATING_HUD;
+//    [[EduSysHttpClient shareInstance]
+//     eduSysGetEmptyClassroomParamsSuccess:^(NSData *responseData, int httpCode) {
+//         self.isReloading = NO;
+//         if (httpCode == 200) {
+//             HIDE_ALL_HUD;
+//             NSDictionary *params = [NSJSONSerialization JSONObjectWithData:responseData
+//                                                                   options:kNilOptions 
+//                                                                     error:nil];
+//             [self parseParams:params];
+//             [self setupEmptyClassroomParams];
+//         }
+//     } failure:^(NSData *responseData, int httpCode) {
+//         self.isReloading = NO;
+//     }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -180,7 +185,7 @@
             [dict setObject:d[@"value"] forKey:d[@"key"]];
         }
         if (dict.count > 0) {
-            [Tool setEmptyClassroomParams:dict];
+            [Utils setEmptyClassroomParams:dict];
             self.selectionsDict = dict;
         }
     }
@@ -194,7 +199,7 @@
         selectionViewController.selectionKey = kXQ;
         selectionViewController.selections = self.selectionsDict[kXQ];
     } else {
-        SHOW_NOTICE_HUD(@"请先更新参数");
+//        SHOW_NOTICE_HUD(@"请先更新参数");
     }
     [self.navigationController pushViewController:selectionViewController animated:YES];
 }
@@ -264,33 +269,53 @@
             return;
         }
         
-        if ([Tool stuNum].length < 1 || [Tool stuPwd].length < 1) {
+        if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
             SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
             return;
         }
+    
+        [EduHttpManager requestEmptyClassroomInfoWithXq:self.labXQ.text
+                                                   jslb:self.labJSLB.text
+                                                 ddlKsz:self.labKSZ.text
+                                                 ddlJsz:self.labJSZ.text
+                                                    xqj:self.labWeekday.text
+                                                    dsz:self.selectionsDict[kDSZ][self.dszSegment.selectedSegmentIndex]
+                                                    sjd:self.labSJD.text
+                                      completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+                                          NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                                          if (response.statusCode == kStatusCodeSuccess && dict) {
+                                              HIDE_ALL_HUD;
+                                              NSArray *emptyClassrooms = dict[@"classRooms"];
+                                              if (emptyClassrooms) {
+                                                  EduSysEmptyClassroomDetailViewController *detailViewController = [[EduSysEmptyClassroomDetailViewController alloc] init];
+                                                  detailViewController.emptyClassrooms = emptyClassrooms;
+                                                  [self.navigationController pushViewController:detailViewController animated:YES];
+                                              }
+                                          }
+                                      }];
 
-        SHOW_WATING_HUD;
-        
-        [[EduSysHttpClient shareInstance] 
-         eduSysGetEmptyClassroomInfoSuccessWithXQ:self.labXQ.text
-                                              jslb:self.labJSLB.text
-                                            ddlKsz:self.labKSZ.text
-                                            ddlJsz:self.labJSZ.text
-                                               xqj:self.labWeekday.text
-                                               dsz:self.selectionsDict[kDSZ][self.dszSegment.selectedSegmentIndex]
-                                               sjd:self.labSJD.text
-                                           success:^(NSData *responseData, int httpCode) {
-                                               NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
-                                               if (httpCode == 200 && dict) {
-                                                   HIDE_ALL_HUD;
-                                                   NSArray *emptyClassrooms = dict[@"classRooms"];
-                                                   if (emptyClassrooms) {
-                                                       EduSysEmptyClassroomDetailViewController *detailViewController = [[EduSysEmptyClassroomDetailViewController alloc] init];
-                                                       detailViewController.emptyClassrooms = emptyClassrooms;
-                                                       [self.navigationController pushViewController:detailViewController animated:YES];
-                                                   }
-                                               }
-                                           } failure:nil];
+//        SHOW_WATING_HUD;
+//
+//        [[EduSysHttpClient shareInstance]
+//         eduSysGetEmptyClassroomInfoSuccessWithXQ:self.labXQ.text
+//                                              jslb:self.labJSLB.text
+//                                            ddlKsz:self.labKSZ.text
+//                                            ddlJsz:self.labJSZ.text
+//                                               xqj:self.labWeekday.text
+//                                               dsz:self.selectionsDict[kDSZ][self.dszSegment.selectedSegmentIndex]
+//                                               sjd:self.labSJD.text
+//                                           success:^(NSData *responseData, int httpCode) {
+//                                               NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+//                                               if (httpCode == 200 && dict) {
+//                                                   HIDE_ALL_HUD;
+//                                                   NSArray *emptyClassrooms = dict[@"classRooms"];
+//                                                   if (emptyClassrooms) {
+//                                                       EduSysEmptyClassroomDetailViewController *detailViewController = [[EduSysEmptyClassroomDetailViewController alloc] init];
+//                                                       detailViewController.emptyClassrooms = emptyClassrooms;
+//                                                       [self.navigationController pushViewController:detailViewController animated:YES];
+//                                                   }
+//                                               }
+//                                           } failure:nil];
     }
 }
 

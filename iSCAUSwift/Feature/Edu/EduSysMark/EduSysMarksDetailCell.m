@@ -8,6 +8,7 @@
 
 #import "EduSysMarksDetailCell.h"
 #import "UIImage+ImageWithColor.h"
+#import "iSCAUSwift-Swift.h"
 
 @interface EduSysMarksDetailCell ()
 
@@ -55,7 +56,7 @@
     
     self.labInfoKey.text = [EduSysMarksDetailCell mapKeys:key];
     self.labInfoValue.text = value;
-    self.imgIndicator.image = [UIImage imageWithColor:[Tool indicatorColorAtIndex:index]];
+    self.imgIndicator.image = [UIImage imageWithColor:[Utils indicatorColorAtIndex:index]];
     
     return self;
 }

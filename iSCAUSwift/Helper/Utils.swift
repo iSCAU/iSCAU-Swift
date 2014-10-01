@@ -65,7 +65,8 @@ extension Utils {
     
     class var server: String? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(kStuServerKey) as String?
+            return "1"
+//            return NSUserDefaults.standardUserDefaults().objectForKey(kStuServerKey) as String?
         }
         set(newServer) {
             NSUserDefaults.standardUserDefaults().setObject(newServer, forKey: kStuServerKey)
@@ -92,6 +93,34 @@ extension Utils {
             NSUserDefaults.standardUserDefaults().setObject(newLibPwd, forKey: kLibPwdKey)
         }
     }
+    
+    class var emptyClassroomParams: [String : String]? {
+        get {
+        return NSUserDefaults.standardUserDefaults().objectForKey(kEmptyClassroomParamsKey) as Dictionary?
+        }
+        set(newEmptyClassroomParams) {
+            NSUserDefaults.standardUserDefaults().setObject(newEmptyClassroomParams, forKey: kEmptyClassroomParamsKey)
+        }
+    }
+    
+    class var schoolYear: [String]? {
+        get {
+        return NSUserDefaults.standardUserDefaults().objectForKey(kSchoolYearKey) as [String]?
+        }
+        set(newSchoolYear) {
+            NSUserDefaults.standardUserDefaults().setObject(newSchoolYear, forKey: kSchoolYearKey)
+        }
+    }
+
+    class var semester: [String]? {
+        get {
+        return NSUserDefaults.standardUserDefaults().objectForKey(kSemesterKey) as [String]?
+        }
+        set(newSemester) {
+            NSUserDefaults.standardUserDefaults().setObject(newSemester, forKey: kSemesterKey)
+        }
+    }
+
 }
 
 // MARK: - Path
@@ -104,6 +133,7 @@ extension Utils {
         case BorrowingBooks = "borrowingbooks.data"
         case PickedClass = "pickedclass.data"
         case Marks = "marks.data"
+        case MarksParam = "marksparam.data"
     }
     
     class func documentFolderPath() -> String {
@@ -113,6 +143,10 @@ extension Utils {
     
     class func classTablePath() -> String {
         return documentFolderPath().stringByAppendingPathComponent(FileName.ClassTable.rawValue)
+    }
+    
+    class func marksParamPath() -> String {
+        return documentFolderPath().stringByAppendingPathComponent(FileName.MarksParam.rawValue)
     }
 }
 

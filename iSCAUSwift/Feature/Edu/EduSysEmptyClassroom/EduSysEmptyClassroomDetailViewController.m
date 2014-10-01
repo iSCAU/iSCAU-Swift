@@ -27,10 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    if (IS_FLAT_UI) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    }
 }
 
 - (void)didReceiveMemoryWarning

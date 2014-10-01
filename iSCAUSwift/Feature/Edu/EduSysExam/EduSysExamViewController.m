@@ -7,8 +7,10 @@
 //
 
 #import "EduSysExamViewController.h"
-#import "EduSysHttpClient.h"
 #import "EduSysExamInfoCell.h"
+#import "AZTools.h"
+#import "Constant.h"
+#import "iSCAUSwift-Swift.h"
 #import "UIImage+Tint.h"
 
 #define CELL_HEIGHT 122
@@ -69,26 +71,36 @@
     if (self.isReloading) {
         return;
     }
-    if ([Tool stuNum].length < 1 || [Tool stuPwd].length < 1) {
+    if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
         SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
         return;
     }
     
-    SHOW_WATING_HUD;
-    self.isReloading = YES;
-    [[EduSysHttpClient shareInstance]
-     eduSysGetExamSuccess:^(NSData *responseData, int httpCode){
-         self.isReloading = NO;
-         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:NULL];
-         if (httpCode == 200) {
-             HIDE_ALL_HUD;
-             self.examInfoArray = dict[@"exam"];
-             [self.tableExamInfo reloadData];
-         }
-     }
-     failure:^(NSData *responseData, int httpCode){
-         self.isReloading = NO;
-     }];
+    [EduHttpManager requestExamWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+        self.isReloading = NO;
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
+        if (response.statusCode == kStatusCodeSuccess) {
+            HIDE_ALL_HUD;
+            self.examInfoArray = dict[@"exam"];
+            [self.tableExamInfo reloadData];
+        }
+    }];
+    
+//    SHOW_WATING_HUD;
+//    self.isReloading = YES;
+//    [[EduSysHttpClient shareInstance]
+//     eduSysGetExamSuccess:^(NSData *responseData, int httpCode){
+//         self.isReloading = NO;
+//         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:NULL];
+//         if (httpCode == 200) {
+//             HIDE_ALL_HUD;
+//             self.examInfoArray = dict[@"exam"];
+//             [self.tableExamInfo reloadData];
+//         }
+//     }
+//     failure:^(NSData *responseData, int httpCode){
+//         self.isReloading = NO;
+//     }];
 }
 
 #pragma mark - table view delegate

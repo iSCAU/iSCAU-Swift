@@ -35,6 +35,21 @@ override
         return 8
     }
 
+    override func tableView(tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0, 2, 4, 6:
+            return 20.0
+        case 1, 3, 5, 7:
+            return 44.0
+        default:
+            return 0.0
+        }
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.row) {
         case 7:

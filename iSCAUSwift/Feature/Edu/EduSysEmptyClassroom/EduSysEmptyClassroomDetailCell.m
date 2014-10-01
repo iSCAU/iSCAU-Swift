@@ -8,6 +8,7 @@
 
 #import "EduSysEmptyClassroomDetailCell.h"
 #import "UIImage+ImageWithColor.h"
+#import "iSCAUSwift-Swift.h"
 
 #define kNumber @"number"
 #define kType @"type"
@@ -48,7 +49,7 @@
     
     self.labClassroomType.text = [NSString stringWithFormat:@"教室类别: %@", classroomInfo[kType]];
     
-    self.imgIndicator.image = [UIImage imageWithColor:[Tool indicatorColorAtIndex:index]];
+    self.imgIndicator.image = [UIImage imageWithColor:[Utils indicatorColorAtIndex:index]];
 
     return self;
 }

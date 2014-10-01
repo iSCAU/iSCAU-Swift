@@ -9,7 +9,7 @@
 #ifndef iSCAU_Constant_h
 #define iSCAU_Constant_h
 
-#define APP_DELEGATE ((ASAppDelegate *)[UIApplication sharedApplication].delegate)
+#define APP_DELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
@@ -55,11 +55,12 @@ typedef void(^ErrorBlock)(NSData *responseData, NSInteger httpCode);
 [[NSNotificationCenter defaultCenter] postNotificationName:(notificationName) object:nil userInfo:(infoDict)]
 
 // HUD
-#define HIDE_ALL_HUD [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+#define HIDE_ALL_HUD \
+//[MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 
 #define SHOW_WATING_HUD \
-[MBProgressHUD hideAllHUDsForView:self.view animated:YES]; \
-[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//[MBProgressHUD hideAllHUDsForView:self.view animated:YES]; \
+//[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
 #define SHOW_NOTICE_HUD(notice) \
 //[MBProgressHUD hideAllHUDsForView:self.view animated:YES]; \

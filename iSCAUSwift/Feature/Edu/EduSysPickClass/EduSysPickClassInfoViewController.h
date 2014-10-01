@@ -6,8 +6,8 @@
 //  Copyright (c) 2013年 Alvin. All rights reserved.
 //
 
-#import "EduBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface EduSysPickClassInfoViewController : EduBaseViewController
+@interface EduSysPickClassInfoViewController : UIViewController
 
 @end

@@ -7,9 +7,10 @@
 //
 
 #import "EduSysPickClassInfoViewController.h"
-#import "EduSysHttpClient.h"
 #import "EduSysPickClassInfoCell.h"
 #import "UIImage+Tint.h"
+#import "AZTools.h"
+#import "iSCAUSwift-Swift.h"
 
 #define CELL_HEIGHT 157
 
@@ -35,12 +36,8 @@
     [super viewDidLoad];
     
     UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
-    if (IS_FLAT_UI) {
-        btnClose.frame = CGRectMake(0, 0, 45, 44);
-    } else {
-        btnClose.frame = CGRectMake(0, 0, 55, 44);
-        btnClose.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-    }
+    btnClose.frame = CGRectMake(0, 0, 55, 44);
+    btnClose.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     [btnClose setImage:[[UIImage imageNamed:@"refresh.png"] imageWithTintColor:APP_DELEGATE.tintColor] forState:UIControlStateNormal];
     [btnClose addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *closeBarBtn = [[UIBarButtonItem alloc] initWithCustomView:btnClose];
@@ -58,25 +55,25 @@
         return;
     }
 
-    if ([Tool stuNum].length < 1 || [Tool stuPwd].length < 1) {
+    if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
         SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
         return;
     }
 
     SHOW_WATING_HUD;
     self.isReloading = YES;
-    [[EduSysHttpClient shareInstance] 
-     eduSysGetPickClassInfoSuccess:^(NSData *responseData, int httpCode){
-         self.isReloading = NO;
-         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:NULL];
-         if (httpCode == 200) {
-             HIDE_ALL_HUD;
-             self.pickClassInfos = [dict objectForKey:@"pickclassinfos"];
-             [self.pickClassInfoTable reloadData];
-         }
-     } failure:^(NSData *responseData, int httpCode){
-         self.isReloading = NO;
-     }];
+//    [[EduSysHttpClient shareInstance] 
+//     eduSysGetPickClassInfoSuccess:^(NSData *responseData, int httpCode){
+//         self.isReloading = NO;
+//         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:NULL];
+//         if (httpCode == 200) {
+//             HIDE_ALL_HUD;
+//             self.pickClassInfos = [dict objectForKey:@"pickclassinfos"];
+//             [self.pickClassInfoTable reloadData];
+//         }
+//     } failure:^(NSData *responseData, int httpCode){
+//         self.isReloading = NO;
+//     }];
 }
 
 - (void)didReceiveMemoryWarning

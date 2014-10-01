@@ -61,6 +61,43 @@
 		E14FB66F19D0635900526D45 /* waimai_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66219D0635900526D45 /* waimai_on.png */; };
 		E14FB67019D0635900526D45 /* waimai.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66319D0635900526D45 /* waimai.png */; };
 		E14FB67119D0635900526D45 /* wave.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66419D0635900526D45 /* wave.png */; };
+		E1543C4F19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C2919DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m */; };
+		E1543C5019DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C2A19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib */; };
+		E1543C5119DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C2C19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m */; };
+		E1543C5219DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C2D19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.xib */; };
+		E1543C5319DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C2F19DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m */; };
+		E1543C5419DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3019DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.xib */; };
+		E1543C5519DC531F006E41A0 /* EduSysEmptyClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C3219DC531F006E41A0 /* EduSysEmptyClassroomViewController.m */; };
+		E1543C5619DC531F006E41A0 /* EduSysEmptyClassroomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3319DC531F006E41A0 /* EduSysEmptyClassroomViewController.xib */; };
+		E1543C5719DC531F006E41A0 /* EduSysExamInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C3619DC531F006E41A0 /* EduSysExamInfoCell.m */; };
+		E1543C5819DC531F006E41A0 /* EduSysExamInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3719DC531F006E41A0 /* EduSysExamInfoCell.xib */; };
+		E1543C5919DC531F006E41A0 /* EduSysExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C3919DC531F006E41A0 /* EduSysExamViewController.m */; };
+		E1543C5A19DC531F006E41A0 /* EduSysExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3A19DC531F006E41A0 /* EduSysExamViewController.xib */; };
+		E1543C5B19DC531F006E41A0 /* EduSysMarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C3D19DC531F006E41A0 /* EduSysMarkCell.m */; };
+		E1543C5C19DC531F006E41A0 /* EduSysMarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3E19DC531F006E41A0 /* EduSysMarkCell.xib */; };
+		E1543C5D19DC531F006E41A0 /* EduSysMarksDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4019DC531F006E41A0 /* EduSysMarksDetailCell.m */; };
+		E1543C5E19DC531F006E41A0 /* EduSysMarksDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4119DC531F006E41A0 /* EduSysMarksDetailCell.xib */; };
+		E1543C5F19DC531F006E41A0 /* EduSysMarksDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4319DC531F006E41A0 /* EduSysMarksDetailViewController.m */; };
+		E1543C6019DC531F006E41A0 /* EduSysMarksDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4419DC531F006E41A0 /* EduSysMarksDetailViewController.xib */; };
+		E1543C6119DC531F006E41A0 /* EduSysMarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4619DC531F006E41A0 /* EduSysMarksViewController.m */; };
+		E1543C6219DC531F006E41A0 /* EduSysMarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4719DC531F006E41A0 /* EduSysMarksViewController.xib */; };
+		E1543C6319DC531F006E41A0 /* EduSysPickClassInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4A19DC531F006E41A0 /* EduSysPickClassInfoCell.m */; };
+		E1543C6419DC531F006E41A0 /* EduSysPickClassInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4B19DC531F006E41A0 /* EduSysPickClassInfoCell.xib */; };
+		E1543C6519DC531F006E41A0 /* EduSysPickClassInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4D19DC531F006E41A0 /* EduSysPickClassInfoViewController.m */; };
+		E1543C6619DC531F006E41A0 /* EduSysPickClassInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4E19DC531F006E41A0 /* EduSysPickClassInfoViewController.xib */; };
+		E1543C7819DC5354006E41A0 /* EduSysClassTableEditedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C6919DC5354006E41A0 /* EduSysClassTableEditedViewController.m */; };
+		E1543C7919DC5354006E41A0 /* EduSysClassTableEditedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C6A19DC5354006E41A0 /* EduSysClassTableEditedViewController.xib */; };
+		E1543C7A19DC5354006E41A0 /* EduSysClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C6C19DC5354006E41A0 /* EduSysClassTableViewController.m */; };
+		E1543C7B19DC5354006E41A0 /* EduSysClassTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C6D19DC5354006E41A0 /* EduSysClassTableViewController.xib */; };
+		E1543C7C19DC5354006E41A0 /* EduSysDayClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C6F19DC5354006E41A0 /* EduSysDayClassCell.m */; };
+		E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C7019DC5354006E41A0 /* EduSysDayClassCell.xib */; };
+		E1543C7E19DC5354006E41A0 /* EduSysDayClassTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C7219DC5354006E41A0 /* EduSysDayClassTableView.m */; };
+		E1543C7F19DC5354006E41A0 /* EduSysDayClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C7419DC5354006E41A0 /* EduSysDayClassView.m */; };
+		E1543C8019DC5354006E41A0 /* EduSysWeekClassTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C7619DC5354006E41A0 /* EduSysWeekClassTableView.m */; };
+		E1543C8119DC5354006E41A0 /* EduSysWeekClassTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C7719DC5354006E41A0 /* EduSysWeekClassTableView.xib */; };
+		E1543C8419DC571B006E41A0 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C8319DC571B006E41A0 /* UIButton+Bootstrap.m */; };
+		E1543C8719DC582D006E41A0 /* CardStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C8619DC582D006E41A0 /* CardStyleView.m */; };
+		E1543C8A19DC5E31006E41A0 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C8919DC5E31006E41A0 /* UIImage+Tint.m */; };
 		E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB489193EC31400F8D492 /* AppDelegate.swift */; };
 		E15BB48F193EC31500F8D492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15BB48D193EC31500F8D492 /* Main.storyboard */; };
 		E15BB491193EC31500F8D492 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15BB490193EC31500F8D492 /* Images.xcassets */; };
@@ -84,16 +121,6 @@
 		E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345D19DA619F00737E99 /* LoginViewController.swift */; };
 		E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */; };
 		E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346019DA619F00737E99 /* EduHttpManager.swift */; };
-		E1B8347819DA619F00737E99 /* EduSysClassTableEditedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346219DA619F00737E99 /* EduSysClassTableEditedViewController.m */; };
-		E1B8347919DA619F00737E99 /* EduSysClassTableEditedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B8346319DA619F00737E99 /* EduSysClassTableEditedViewController.xib */; };
-		E1B8347A19DA619F00737E99 /* EduSysClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346519DA619F00737E99 /* EduSysClassTableViewController.m */; };
-		E1B8347B19DA619F00737E99 /* EduSysClassTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B8346619DA619F00737E99 /* EduSysClassTableViewController.xib */; };
-		E1B8347C19DA619F00737E99 /* EduSysDayClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346819DA619F00737E99 /* EduSysDayClassCell.m */; };
-		E1B8347D19DA619F00737E99 /* EduSysDayClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B8346919DA619F00737E99 /* EduSysDayClassCell.xib */; };
-		E1B8347E19DA619F00737E99 /* EduSysDayClassTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346B19DA619F00737E99 /* EduSysDayClassTableView.m */; };
-		E1B8347F19DA619F00737E99 /* EduSysDayClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346D19DA619F00737E99 /* EduSysDayClassView.m */; };
-		E1B8348019DA619F00737E99 /* EduSysWeekClassTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346F19DA619F00737E99 /* EduSysWeekClassTableView.m */; };
-		E1B8348119DA619F00737E99 /* EduSysWeekClassTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B8347019DA619F00737E99 /* EduSysWeekClassTableView.xib */; };
 		E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */; };
 		E1FDF41419D0734700CC311E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; };
 		E1FDF41519D0734700CC311E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -212,6 +239,64 @@
 		E14FB66219D0635900526D45 /* waimai_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waimai_on.png; sourceTree = "<group>"; };
 		E14FB66319D0635900526D45 /* waimai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waimai.png; sourceTree = "<group>"; };
 		E14FB66419D0635900526D45 /* wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wave.png; sourceTree = "<group>"; };
+		E1543C2819DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysEmptyClassroomDetailCell.h; sourceTree = "<group>"; };
+		E1543C2919DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysEmptyClassroomDetailCell.m; sourceTree = "<group>"; };
+		E1543C2A19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysEmptyClassroomDetailCell.xib; sourceTree = "<group>"; };
+		E1543C2B19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysEmptyClassroomDetailViewController.h; sourceTree = "<group>"; };
+		E1543C2C19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysEmptyClassroomDetailViewController.m; sourceTree = "<group>"; };
+		E1543C2D19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysEmptyClassroomDetailViewController.xib; sourceTree = "<group>"; };
+		E1543C2E19DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysEmptyClassroomSelectionViewController.h; sourceTree = "<group>"; };
+		E1543C2F19DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysEmptyClassroomSelectionViewController.m; sourceTree = "<group>"; };
+		E1543C3019DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysEmptyClassroomSelectionViewController.xib; sourceTree = "<group>"; };
+		E1543C3119DC531F006E41A0 /* EduSysEmptyClassroomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysEmptyClassroomViewController.h; sourceTree = "<group>"; };
+		E1543C3219DC531F006E41A0 /* EduSysEmptyClassroomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysEmptyClassroomViewController.m; sourceTree = "<group>"; };
+		E1543C3319DC531F006E41A0 /* EduSysEmptyClassroomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysEmptyClassroomViewController.xib; sourceTree = "<group>"; };
+		E1543C3519DC531F006E41A0 /* EduSysExamInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysExamInfoCell.h; sourceTree = "<group>"; };
+		E1543C3619DC531F006E41A0 /* EduSysExamInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysExamInfoCell.m; sourceTree = "<group>"; };
+		E1543C3719DC531F006E41A0 /* EduSysExamInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysExamInfoCell.xib; sourceTree = "<group>"; };
+		E1543C3819DC531F006E41A0 /* EduSysExamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysExamViewController.h; sourceTree = "<group>"; };
+		E1543C3919DC531F006E41A0 /* EduSysExamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysExamViewController.m; sourceTree = "<group>"; };
+		E1543C3A19DC531F006E41A0 /* EduSysExamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysExamViewController.xib; sourceTree = "<group>"; };
+		E1543C3C19DC531F006E41A0 /* EduSysMarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarkCell.h; sourceTree = "<group>"; };
+		E1543C3D19DC531F006E41A0 /* EduSysMarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarkCell.m; sourceTree = "<group>"; };
+		E1543C3E19DC531F006E41A0 /* EduSysMarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarkCell.xib; sourceTree = "<group>"; };
+		E1543C3F19DC531F006E41A0 /* EduSysMarksDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksDetailCell.h; sourceTree = "<group>"; };
+		E1543C4019DC531F006E41A0 /* EduSysMarksDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksDetailCell.m; sourceTree = "<group>"; };
+		E1543C4119DC531F006E41A0 /* EduSysMarksDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksDetailCell.xib; sourceTree = "<group>"; };
+		E1543C4219DC531F006E41A0 /* EduSysMarksDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksDetailViewController.h; sourceTree = "<group>"; };
+		E1543C4319DC531F006E41A0 /* EduSysMarksDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksDetailViewController.m; sourceTree = "<group>"; };
+		E1543C4419DC531F006E41A0 /* EduSysMarksDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksDetailViewController.xib; sourceTree = "<group>"; };
+		E1543C4519DC531F006E41A0 /* EduSysMarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksViewController.h; sourceTree = "<group>"; };
+		E1543C4619DC531F006E41A0 /* EduSysMarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksViewController.m; sourceTree = "<group>"; };
+		E1543C4719DC531F006E41A0 /* EduSysMarksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksViewController.xib; sourceTree = "<group>"; };
+		E1543C4919DC531F006E41A0 /* EduSysPickClassInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysPickClassInfoCell.h; sourceTree = "<group>"; };
+		E1543C4A19DC531F006E41A0 /* EduSysPickClassInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysPickClassInfoCell.m; sourceTree = "<group>"; };
+		E1543C4B19DC531F006E41A0 /* EduSysPickClassInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysPickClassInfoCell.xib; sourceTree = "<group>"; };
+		E1543C4C19DC531F006E41A0 /* EduSysPickClassInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysPickClassInfoViewController.h; sourceTree = "<group>"; };
+		E1543C4D19DC531F006E41A0 /* EduSysPickClassInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysPickClassInfoViewController.m; sourceTree = "<group>"; };
+		E1543C4E19DC531F006E41A0 /* EduSysPickClassInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysPickClassInfoViewController.xib; sourceTree = "<group>"; };
+		E1543C6819DC5354006E41A0 /* EduSysClassTableEditedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysClassTableEditedViewController.h; sourceTree = "<group>"; };
+		E1543C6919DC5354006E41A0 /* EduSysClassTableEditedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysClassTableEditedViewController.m; sourceTree = "<group>"; };
+		E1543C6A19DC5354006E41A0 /* EduSysClassTableEditedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysClassTableEditedViewController.xib; sourceTree = "<group>"; };
+		E1543C6B19DC5354006E41A0 /* EduSysClassTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysClassTableViewController.h; sourceTree = "<group>"; };
+		E1543C6C19DC5354006E41A0 /* EduSysClassTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysClassTableViewController.m; sourceTree = "<group>"; };
+		E1543C6D19DC5354006E41A0 /* EduSysClassTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysClassTableViewController.xib; sourceTree = "<group>"; };
+		E1543C6E19DC5354006E41A0 /* EduSysDayClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysDayClassCell.h; sourceTree = "<group>"; };
+		E1543C6F19DC5354006E41A0 /* EduSysDayClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysDayClassCell.m; sourceTree = "<group>"; };
+		E1543C7019DC5354006E41A0 /* EduSysDayClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysDayClassCell.xib; sourceTree = "<group>"; };
+		E1543C7119DC5354006E41A0 /* EduSysDayClassTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysDayClassTableView.h; sourceTree = "<group>"; };
+		E1543C7219DC5354006E41A0 /* EduSysDayClassTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysDayClassTableView.m; sourceTree = "<group>"; };
+		E1543C7319DC5354006E41A0 /* EduSysDayClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysDayClassView.h; sourceTree = "<group>"; };
+		E1543C7419DC5354006E41A0 /* EduSysDayClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysDayClassView.m; sourceTree = "<group>"; };
+		E1543C7519DC5354006E41A0 /* EduSysWeekClassTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysWeekClassTableView.h; sourceTree = "<group>"; };
+		E1543C7619DC5354006E41A0 /* EduSysWeekClassTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysWeekClassTableView.m; sourceTree = "<group>"; };
+		E1543C7719DC5354006E41A0 /* EduSysWeekClassTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysWeekClassTableView.xib; sourceTree = "<group>"; };
+		E1543C8219DC571B006E41A0 /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
+		E1543C8319DC571B006E41A0 /* UIButton+Bootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Bootstrap.m"; sourceTree = "<group>"; };
+		E1543C8519DC582D006E41A0 /* CardStyleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardStyleView.h; sourceTree = "<group>"; };
+		E1543C8619DC582D006E41A0 /* CardStyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardStyleView.m; sourceTree = "<group>"; };
+		E1543C8819DC5E31006E41A0 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		E1543C8919DC5E31006E41A0 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		E15BB484193EC31400F8D492 /* iSCAUSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSCAUSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15BB488193EC31400F8D492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E15BB489193EC31400F8D492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,22 +328,6 @@
 		E1B8345D19DA619F00737E99 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		E1B8346019DA619F00737E99 /* EduHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduHttpManager.swift; sourceTree = "<group>"; };
-		E1B8346119DA619F00737E99 /* EduSysClassTableEditedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysClassTableEditedViewController.h; sourceTree = "<group>"; };
-		E1B8346219DA619F00737E99 /* EduSysClassTableEditedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysClassTableEditedViewController.m; sourceTree = "<group>"; };
-		E1B8346319DA619F00737E99 /* EduSysClassTableEditedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysClassTableEditedViewController.xib; sourceTree = "<group>"; };
-		E1B8346419DA619F00737E99 /* EduSysClassTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysClassTableViewController.h; sourceTree = "<group>"; };
-		E1B8346519DA619F00737E99 /* EduSysClassTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysClassTableViewController.m; sourceTree = "<group>"; };
-		E1B8346619DA619F00737E99 /* EduSysClassTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysClassTableViewController.xib; sourceTree = "<group>"; };
-		E1B8346719DA619F00737E99 /* EduSysDayClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysDayClassCell.h; sourceTree = "<group>"; };
-		E1B8346819DA619F00737E99 /* EduSysDayClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysDayClassCell.m; sourceTree = "<group>"; };
-		E1B8346919DA619F00737E99 /* EduSysDayClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysDayClassCell.xib; sourceTree = "<group>"; };
-		E1B8346A19DA619F00737E99 /* EduSysDayClassTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysDayClassTableView.h; sourceTree = "<group>"; };
-		E1B8346B19DA619F00737E99 /* EduSysDayClassTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysDayClassTableView.m; sourceTree = "<group>"; };
-		E1B8346C19DA619F00737E99 /* EduSysDayClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysDayClassView.h; sourceTree = "<group>"; };
-		E1B8346D19DA619F00737E99 /* EduSysDayClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysDayClassView.m; sourceTree = "<group>"; };
-		E1B8346E19DA619F00737E99 /* EduSysWeekClassTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysWeekClassTableView.h; sourceTree = "<group>"; };
-		E1B8346F19DA619F00737E99 /* EduSysWeekClassTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysWeekClassTableView.m; sourceTree = "<group>"; };
-		E1B8347019DA619F00737E99 /* EduSysWeekClassTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysWeekClassTableView.xib; sourceTree = "<group>"; };
 		E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E1FDF41919D07D1500CC311E /* classtable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classtable.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +461,93 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E1543C2719DC531F006E41A0 /* EduSysEmptyClassroom */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C2819DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.h */,
+				E1543C2919DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m */,
+				E1543C2A19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib */,
+				E1543C2B19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.h */,
+				E1543C2C19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m */,
+				E1543C2D19DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.xib */,
+				E1543C2E19DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.h */,
+				E1543C2F19DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m */,
+				E1543C3019DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.xib */,
+				E1543C3119DC531F006E41A0 /* EduSysEmptyClassroomViewController.h */,
+				E1543C3219DC531F006E41A0 /* EduSysEmptyClassroomViewController.m */,
+				E1543C3319DC531F006E41A0 /* EduSysEmptyClassroomViewController.xib */,
+			);
+			path = EduSysEmptyClassroom;
+			sourceTree = "<group>";
+		};
+		E1543C3419DC531F006E41A0 /* EduSysExam */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C3519DC531F006E41A0 /* EduSysExamInfoCell.h */,
+				E1543C3619DC531F006E41A0 /* EduSysExamInfoCell.m */,
+				E1543C3719DC531F006E41A0 /* EduSysExamInfoCell.xib */,
+				E1543C3819DC531F006E41A0 /* EduSysExamViewController.h */,
+				E1543C3919DC531F006E41A0 /* EduSysExamViewController.m */,
+				E1543C3A19DC531F006E41A0 /* EduSysExamViewController.xib */,
+			);
+			path = EduSysExam;
+			sourceTree = "<group>";
+		};
+		E1543C3B19DC531F006E41A0 /* EduSysMark */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C3C19DC531F006E41A0 /* EduSysMarkCell.h */,
+				E1543C3D19DC531F006E41A0 /* EduSysMarkCell.m */,
+				E1543C3E19DC531F006E41A0 /* EduSysMarkCell.xib */,
+				E1543C3F19DC531F006E41A0 /* EduSysMarksDetailCell.h */,
+				E1543C4019DC531F006E41A0 /* EduSysMarksDetailCell.m */,
+				E1543C4119DC531F006E41A0 /* EduSysMarksDetailCell.xib */,
+				E1543C4219DC531F006E41A0 /* EduSysMarksDetailViewController.h */,
+				E1543C4319DC531F006E41A0 /* EduSysMarksDetailViewController.m */,
+				E1543C4419DC531F006E41A0 /* EduSysMarksDetailViewController.xib */,
+				E1543C4519DC531F006E41A0 /* EduSysMarksViewController.h */,
+				E1543C4619DC531F006E41A0 /* EduSysMarksViewController.m */,
+				E1543C4719DC531F006E41A0 /* EduSysMarksViewController.xib */,
+			);
+			path = EduSysMark;
+			sourceTree = "<group>";
+		};
+		E1543C4819DC531F006E41A0 /* EduSysPickClass */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C4919DC531F006E41A0 /* EduSysPickClassInfoCell.h */,
+				E1543C4A19DC531F006E41A0 /* EduSysPickClassInfoCell.m */,
+				E1543C4B19DC531F006E41A0 /* EduSysPickClassInfoCell.xib */,
+				E1543C4C19DC531F006E41A0 /* EduSysPickClassInfoViewController.h */,
+				E1543C4D19DC531F006E41A0 /* EduSysPickClassInfoViewController.m */,
+				E1543C4E19DC531F006E41A0 /* EduSysPickClassInfoViewController.xib */,
+			);
+			path = EduSysPickClass;
+			sourceTree = "<group>";
+		};
+		E1543C6719DC5354006E41A0 /* EduSysClassTable */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C6819DC5354006E41A0 /* EduSysClassTableEditedViewController.h */,
+				E1543C6919DC5354006E41A0 /* EduSysClassTableEditedViewController.m */,
+				E1543C6A19DC5354006E41A0 /* EduSysClassTableEditedViewController.xib */,
+				E1543C6B19DC5354006E41A0 /* EduSysClassTableViewController.h */,
+				E1543C6C19DC5354006E41A0 /* EduSysClassTableViewController.m */,
+				E1543C6D19DC5354006E41A0 /* EduSysClassTableViewController.xib */,
+				E1543C6E19DC5354006E41A0 /* EduSysDayClassCell.h */,
+				E1543C6F19DC5354006E41A0 /* EduSysDayClassCell.m */,
+				E1543C7019DC5354006E41A0 /* EduSysDayClassCell.xib */,
+				E1543C7119DC5354006E41A0 /* EduSysDayClassTableView.h */,
+				E1543C7219DC5354006E41A0 /* EduSysDayClassTableView.m */,
+				E1543C7319DC5354006E41A0 /* EduSysDayClassView.h */,
+				E1543C7419DC5354006E41A0 /* EduSysDayClassView.m */,
+				E1543C7519DC5354006E41A0 /* EduSysWeekClassTableView.h */,
+				E1543C7619DC5354006E41A0 /* EduSysWeekClassTableView.m */,
+				E1543C7719DC5354006E41A0 /* EduSysWeekClassTableView.xib */,
+			);
+			path = EduSysClassTable;
+			sourceTree = "<group>";
+		};
 		E15BB47B193EC31400F8D492 = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +634,10 @@
 				E16262DC19D326C30024B023 /* Constant.h */,
 				E15BB4D3193F538F00F8D492 /* Utils.swift */,
 				E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */,
+				E1543C8219DC571B006E41A0 /* UIButton+Bootstrap.h */,
+				E1543C8319DC571B006E41A0 /* UIButton+Bootstrap.m */,
+				E1543C8819DC5E31006E41A0 /* UIImage+Tint.h */,
+				E1543C8919DC5E31006E41A0 /* UIImage+Tint.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -552,6 +712,8 @@
 				E173B4D719DC0A5B009993C1 /* PopoverView.swift */,
 				E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */,
 				E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */,
+				E1543C8519DC582D006E41A0 /* CardStyleView.h */,
+				E1543C8619DC582D006E41A0 /* CardStyleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,22 +770,11 @@
 			isa = PBXGroup;
 			children = (
 				E1B8346019DA619F00737E99 /* EduHttpManager.swift */,
-				E1B8346119DA619F00737E99 /* EduSysClassTableEditedViewController.h */,
-				E1B8346219DA619F00737E99 /* EduSysClassTableEditedViewController.m */,
-				E1B8346319DA619F00737E99 /* EduSysClassTableEditedViewController.xib */,
-				E1B8346419DA619F00737E99 /* EduSysClassTableViewController.h */,
-				E1B8346519DA619F00737E99 /* EduSysClassTableViewController.m */,
-				E1B8346619DA619F00737E99 /* EduSysClassTableViewController.xib */,
-				E1B8346719DA619F00737E99 /* EduSysDayClassCell.h */,
-				E1B8346819DA619F00737E99 /* EduSysDayClassCell.m */,
-				E1B8346919DA619F00737E99 /* EduSysDayClassCell.xib */,
-				E1B8346A19DA619F00737E99 /* EduSysDayClassTableView.h */,
-				E1B8346B19DA619F00737E99 /* EduSysDayClassTableView.m */,
-				E1B8346C19DA619F00737E99 /* EduSysDayClassView.h */,
-				E1B8346D19DA619F00737E99 /* EduSysDayClassView.m */,
-				E1B8346E19DA619F00737E99 /* EduSysWeekClassTableView.h */,
-				E1B8346F19DA619F00737E99 /* EduSysWeekClassTableView.m */,
-				E1B8347019DA619F00737E99 /* EduSysWeekClassTableView.xib */,
+				E1543C6719DC5354006E41A0 /* EduSysClassTable */,
+				E1543C2719DC531F006E41A0 /* EduSysEmptyClassroom */,
+				E1543C3419DC531F006E41A0 /* EduSysExam */,
+				E1543C3B19DC531F006E41A0 /* EduSysMark */,
+				E1543C4819DC531F006E41A0 /* EduSysPickClass */,
 			);
 			path = Edu;
 			sourceTree = "<group>";
@@ -745,19 +896,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14FB65619D0629200526D45 /* 14.1.png in Resources */,
+				E1543C6619DC531F006E41A0 /* EduSysPickClassInfoViewController.xib in Resources */,
 				E14FB64A19D0629200526D45 /* 7.1.png in Resources */,
 				E114957E19D943D90087445D /* userName.png in Resources */,
+				E1543C5C19DC531F006E41A0 /* EduSysMarkCell.xib in Resources */,
+				E1543C5E19DC531F006E41A0 /* EduSysMarksDetailCell.xib in Resources */,
 				E14FB64919D0629200526D45 /* 6.png in Resources */,
 				E14FB65419D0629200526D45 /* 13.1.png in Resources */,
 				E14FB66A19D0635900526D45 /* huodongquan_on.png in Resources */,
 				E12D501719D9CE6D005F37B7 /* leftside_shadow_bg@2x.png in Resources */,
-				E1B8348119DA619F00737E99 /* EduSysWeekClassTableView.xib in Resources */,
 				E14FB64619D0629200526D45 /* 5.1.png in Resources */,
 				E1FDF41A19D07D1500CC311E /* classtable.png in Resources */,
+				E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */,
 				E14FB65219D0629200526D45 /* 12.1.png in Resources */,
+				E1543C5819DC531F006E41A0 /* EduSysExamInfoCell.xib in Resources */,
 				E14FB64419D0629200526D45 /* 4.1.png in Resources */,
 				E14FB64119D0629200526D45 /* 2.png in Resources */,
 				E14FB66D19D0635900526D45 /* settting.png in Resources */,
+				E1543C6019DC531F006E41A0 /* EduSysMarksDetailViewController.xib in Resources */,
+				E1543C8119DC5354006E41A0 /* EduSysWeekClassTableView.xib in Resources */,
 				E114957D19D943D90087445D /* top.png in Resources */,
 				E14FB64219D0629200526D45 /* 3.1.png in Resources */,
 				E14FB66519D0635900526D45 /* calendar.png in Resources */,
@@ -766,12 +923,16 @@
 				E14FB66C19D0635900526D45 /* map.jpg in Resources */,
 				E114957A19D943D90087445D /* place.png in Resources */,
 				E14FB64D19D0629200526D45 /* 8.png in Resources */,
+				E1543C5619DC531F006E41A0 /* EduSysEmptyClassroomViewController.xib in Resources */,
 				E14FB66B19D0635900526D45 /* huodongquan.png in Resources */,
+				E1543C6419DC531F006E41A0 /* EduSysPickClassInfoCell.xib in Resources */,
 				E14FB65719D0629200526D45 /* 14.png in Resources */,
+				E1543C5219DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.xib in Resources */,
+				E1543C5A19DC531F006E41A0 /* EduSysExamViewController.xib in Resources */,
 				E14FB67119D0635900526D45 /* wave.png in Resources */,
 				E14FB66919D0635900526D45 /* features.png in Resources */,
 				E14FB64019D0629200526D45 /* 2.1.png in Resources */,
-				E1B8347D19DA619F00737E99 /* EduSysDayClassCell.xib in Resources */,
+				E1543C6219DC531F006E41A0 /* EduSysMarksViewController.xib in Resources */,
 				E14FB64C19D0629200526D45 /* 8.1.png in Resources */,
 				E14FB66F19D0635900526D45 /* waimai_on.png in Resources */,
 				E14FB64319D0629200526D45 /* 3.png in Resources */,
@@ -780,8 +941,7 @@
 				E14FB65519D0629200526D45 /* 13.png in Resources */,
 				E14FB65319D0629200526D45 /* 12.png in Resources */,
 				E14FB66619D0635900526D45 /* classtable_on.png in Resources */,
-				E1B8347919DA619F00737E99 /* EduSysClassTableEditedViewController.xib in Resources */,
-				E1B8347B19DA619F00737E99 /* EduSysClassTableViewController.xib in Resources */,
+				E1543C5419DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.xib in Resources */,
 				E14FB65019D0629200526D45 /* 10..1png.png in Resources */,
 				E14FB63F19D0629200526D45 /* 1.png in Resources */,
 				E114957C19D943D90087445D /* time.png in Resources */,
@@ -793,8 +953,11 @@
 				E14FB64719D0629200526D45 /* 5.png in Resources */,
 				E14FB64519D0629200526D45 /* 4.png in Resources */,
 				E14FB66819D0635900526D45 /* features_on.png in Resources */,
+				E1543C5019DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib in Resources */,
 				E15BB491193EC31500F8D492 /* Images.xcassets in Resources */,
+				E1543C7919DC5354006E41A0 /* EduSysClassTableEditedViewController.xib in Resources */,
 				E14FB64B19D0629200526D45 /* 7.png in Resources */,
+				E1543C7B19DC5354006E41A0 /* EduSysClassTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,40 +1009,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */,
-				E1B8347C19DA619F00737E99 /* EduSysDayClassCell.m in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
 				E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */,
 				E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */,
 				E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */,
 				E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */,
+				E1543C8019DC5354006E41A0 /* EduSysWeekClassTableView.m in Sources */,
+				E1543C5119DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m in Sources */,
 				E12D501C19D9CE6D005F37B7 /* UIImage+ScreenShot.m in Sources */,
 				E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */,
 				E1B8347219DA619F00737E99 /* ActivityInfoCell.swift in Sources */,
+				E1543C6119DC531F006E41A0 /* EduSysMarksViewController.m in Sources */,
+				E1543C5F19DC531F006E41A0 /* EduSysMarksDetailViewController.m in Sources */,
+				E1543C7F19DC5354006E41A0 /* EduSysDayClassView.m in Sources */,
+				E1543C6319DC531F006E41A0 /* EduSysPickClassInfoCell.m in Sources */,
 				E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */,
 				E12D501B19D9CE6D005F37B7 /* UIImage+RTTint.m in Sources */,
 				E1B8347319DA619F00737E99 /* ActivityModel.swift in Sources */,
 				E12D501919D9CE6D005F37B7 /* UIImage+Blur.m in Sources */,
+				E1543C5D19DC531F006E41A0 /* EduSysMarksDetailCell.m in Sources */,
 				E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */,
 				E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */,
 				E12D501819D9CE6D005F37B7 /* UIColor+Addition.m in Sources */,
+				E1543C4F19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m in Sources */,
+				E1543C5B19DC531F006E41A0 /* EduSysMarkCell.m in Sources */,
+				E1543C7E19DC5354006E41A0 /* EduSysDayClassTableView.m in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
+				E1543C5319DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m in Sources */,
+				E1543C8A19DC5E31006E41A0 /* UIImage+Tint.m in Sources */,
 				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
 				E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */,
 				E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */,
-				E1B8347A19DA619F00737E99 /* EduSysClassTableViewController.m in Sources */,
-				E1B8347819DA619F00737E99 /* EduSysClassTableEditedViewController.m in Sources */,
-				E1B8347F19DA619F00737E99 /* EduSysDayClassView.m in Sources */,
+				E1543C7819DC5354006E41A0 /* EduSysClassTableEditedViewController.m in Sources */,
+				E1543C8719DC582D006E41A0 /* CardStyleView.m in Sources */,
+				E1543C5919DC531F006E41A0 /* EduSysExamViewController.m in Sources */,
+				E1543C5519DC531F006E41A0 /* EduSysEmptyClassroomViewController.m in Sources */,
 				E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */,
-				E1B8348019DA619F00737E99 /* EduSysWeekClassTableView.m in Sources */,
+				E1543C7A19DC5354006E41A0 /* EduSysClassTableViewController.m in Sources */,
 				E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */,
 				E122B6071949725300E90D87 /* Lession.swift in Sources */,
-				E1B8347E19DA619F00737E99 /* EduSysDayClassTableView.m in Sources */,
 				E15BB4C0193F06B500F8D492 /* User.swift in Sources */,
 				E12D501A19D9CE6D005F37B7 /* UIImage+ImageWithColor.m in Sources */,
+				E1543C6519DC531F006E41A0 /* EduSysPickClassInfoViewController.m in Sources */,
 				E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */,
+				E1543C8419DC571B006E41A0 /* UIButton+Bootstrap.m in Sources */,
 				E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */,
+				E1543C5719DC531F006E41A0 /* EduSysExamInfoCell.m in Sources */,
+				E1543C7C19DC5354006E41A0 /* EduSysDayClassCell.m in Sources */,
 				E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

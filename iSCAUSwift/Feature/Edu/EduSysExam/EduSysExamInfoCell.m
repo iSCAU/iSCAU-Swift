@@ -7,6 +7,7 @@
 //
 
 #import "EduSysExamInfoCell.h"
+#import "CardStyleView.h"
 
 #define EXAM_INFO_CAMPUS        @"campus"
 #define EXAM_INFO_FORM          @"form"

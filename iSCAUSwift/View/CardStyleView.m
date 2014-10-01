@@ -7,6 +7,7 @@
 //
 
 #import "CardStyleView.h"
+#import "AZTools.h"
 
 @implementation CardStyleView
 

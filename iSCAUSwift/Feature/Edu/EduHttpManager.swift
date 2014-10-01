@@ -13,7 +13,7 @@ private let _SingletonEduHttpManagerSharedInstance = EduHttpManager()
 
 class EduHttpManager: NSObject {
     
-    @objc class var sharedInstance: EduHttpManager {
+    class var sharedInstance: EduHttpManager {
         return _SingletonEduHttpManagerSharedInstance
     }
     
@@ -34,7 +34,7 @@ class EduHttpManager: NSObject {
         return false;
     }
     
-    @objc class func loginWith(stuNum: String, pwd: String, server: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+    class func loginWith(#stuNum: String, pwd: String, server: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if !isLogined() {
             return;
         }
@@ -42,7 +42,7 @@ class EduHttpManager: NSObject {
         startRequest(urlStr, completionHandler: completionHandler)
     }
     
-    @objc class func requestClassTable(completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+    class func requestClassTable(#completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if !isLogined() {
             return;
         }
@@ -51,7 +51,7 @@ class EduHttpManager: NSObject {
         startRequest(urlStr, completionHandler: completionHandler)
     }
     
-    @objc class func requestExam(completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+    class func requestExam(#completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if !isLogined() {
             return;
         }
@@ -59,7 +59,7 @@ class EduHttpManager: NSObject {
         startRequest(urlStr, completionHandler: completionHandler)
     }
     
-    @objc class func requestMarksInfo(completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+    class func requestMarksInfo(#completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if !isLogined() {
             return;
         }
@@ -67,15 +67,16 @@ class EduHttpManager: NSObject {
         startRequest(urlStr, completionHandler: completionHandler)
     }
 
-    @objc class func requestMarks(year: String, term: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+    class func requestMarks(#year: String, term: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if !isLogined() {
             return;
         }
-        let urlStr = "\(HostName)/edusys/goal/\(Utils.stuNum!)/\(Utils.stuPwd!)/\(Utils.server!)"
+        let urlStr = "\(HostName)/edusys/goal/\(Utils.stuNum!)/\(Utils.stuPwd!)/\(Utils.server!)/\(year)/\(term)"
+        println(urlStr)
         startRequest(urlStr, completionHandler: completionHandler)
     }
 
-    @objc class func requestPickClassInfo(completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+    class func requestPickClassInfo(#completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if !isLogined() {
             return;
         }
@@ -83,8 +84,8 @@ class EduHttpManager: NSObject {
         startRequest(urlStr, completionHandler: completionHandler)
     }
     
-    @objc class func requestEmptyClassroomInfo(
-        xq: String,
+    class func requestEmptyClassroomInfo(
+        #xq: String,
         jslb: String,
         ddlKsz: String,
         ddlJsz: String,
@@ -99,7 +100,7 @@ class EduHttpManager: NSObject {
         startRequest(urlStr, completionHandler: completionHandler)
     }
     
-    @objc class func requestEmptyClassroomParams(completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+    class func requestEmptyClassroomParams(#completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if !isLogined() {
             return;
         }
