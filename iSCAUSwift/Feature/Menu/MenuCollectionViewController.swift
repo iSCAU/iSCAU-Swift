@@ -53,15 +53,6 @@ class MenuCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-
 
     // MARK: UICollectionViewDataSource
 
@@ -110,49 +101,42 @@ class MenuCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.section, indexPath.row) {
+        // Edu
         case (0, 0):
             let marksVC = EduSysMarksViewController()
             marksVC.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(marksVC, animated: true)
-//        case (0, 1):
-//        case (0, 2):
-//        case (0, 3):            
+        case (0, 1):
+            let emptyClassroomVC = EduSysEmptyClassroomViewController()
+            emptyClassroomVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(emptyClassroomVC, animated: true)
+        case (0, 2):
+            let examInfoVC = EduSysExamViewController()
+            examInfoVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(examInfoVC, animated: true)
+        case (0, 3):
+            let pickedClassInfoVC = EduSysPickClassInfoViewController()
+            pickedClassInfoVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(pickedClassInfoVC, animated: true)
+        // Lib
+        case (1, 0):
+            let searchBooksVC = LibSearchBooksViewController()
+            searchBooksVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(searchBooksVC, animated: true)
+        case (1, 1):
+            let borrowingVC = LibListNowViewController()
+            borrowingVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(borrowingVC, animated: true)
+        case (1, 2):
+            let borrowedVC = LibListHistoryViewController()
+            borrowedVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(borrowedVC, animated: true)
+            
         case (3, 0):
             performSegueWithIdentifier("PushSettingsTableViewController", sender: nil)
         default:
             return
         }
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    func collectionView(collectionView: UICollectionView!, shouldHighlightItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    func collectionView(collectionView: UICollectionView!, shouldSelectItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    func collectionView(collectionView: UICollectionView!, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return false
-    }
-
-    func collectionView(collectionView: UICollectionView!, canPerformAction action: String!, forItemAtIndexPath indexPath: NSIndexPath!, withSender sender: AnyObject!) -> Bool {
-        return false
-    }
-
-    func collectionView(collectionView: UICollectionView!, performAction action: String!, forItemAtIndexPath indexPath: NSIndexPath!, withSender sender: AnyObject!) {
-    
-    }
-    */
 
 }

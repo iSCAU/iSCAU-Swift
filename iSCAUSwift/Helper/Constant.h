@@ -22,6 +22,23 @@ static NSInteger const kStatusCodeLibPwdError = 407;
 static NSInteger const kStatusCodeMaxRenewLimit = 408;
 static NSInteger const kStatusCodeServerError = 500;
 
+// ----- lib
+static NSString *BARCODE_NUMBER = @"barcode_number";
+static NSString *BORROW_DATE = @"borrow_date";
+static NSString *RETURN_DATE = @"return_date";
+static NSString *CHECK_CODE = @"check_code";
+static NSString *COLLECTION_PLACE = @"collection_place";
+static NSString *RENEW_TIME = @"renew_time";
+static NSString *SHOULD_RETURN_DATE = @"should_return_date";
+static NSString *TITLE = @"title";
+static NSString *BOOK_STATUS = @"books_status";
+static NSString *AUTHOR = @"author";
+static NSString *DOCUMENT_TYPE = @"document_type";
+static NSString *PRESS = @"press";
+static NSString *SERIAL_NUMBER = @"serial_number";
+static NSString *URL = @"url";
+static NSString *YEAR_TITLE = @"year_title";
+
 
 typedef void(^SuccessedBlock)(NSData *responseData, NSInteger httpCode);
 typedef void(^ErrorBlock)(NSData *responseData, NSInteger httpCode);

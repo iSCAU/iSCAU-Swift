@@ -9,20 +9,14 @@
 import UIKit
 import Alamofire
 
-private let _SingletonEduHttpManagerSharedInstance = EduHttpManager()
-
 class EduHttpManager: NSObject {
     
-    class var sharedInstance: EduHttpManager {
-        return _SingletonEduHttpManagerSharedInstance
-    }
-    
     private class func startRequest(urlStr: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-//        let escapedStr = urlStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
-        
-        Alamofire
-            .request(.GET, urlStr, parameters: nil)
-            .response(completionHandler)
+        if let escapedStr = urlStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+            Alamofire
+                .request(.GET, escapedStr, parameters: nil)
+                .response(completionHandler)
+        }
     }
     
     private class func isLogined() -> Bool {
@@ -96,7 +90,7 @@ class EduHttpManager: NSObject {
         if !isLogined() {
             return;
         }
-        let urlStr = "\(HostName)/edusys/emptyclassroom/\(Utils.stuNum!)/\(Utils.stuPwd!)/\(Utils.server!)"
+        let urlStr = "\(HostName)/edusys/emptyclassroom/\(Utils.stuNum!)/\(Utils.stuPwd!)/\(Utils.server!)/\(xq)/\(jslb)/\(ddlKsz)/\(ddlJsz)/\(xqj)/\(dsz)/\(sjd)"
         startRequest(urlStr, completionHandler: completionHandler)
     }
     
@@ -105,6 +99,7 @@ class EduHttpManager: NSObject {
             return;
         }
         let urlStr = "\(HostName)/edusys/params/emptyclassroom/\(Utils.stuNum!)/\(Utils.stuPwd!)/\(Utils.server!)"
+        println(urlStr)
         startRequest(urlStr, completionHandler: completionHandler)
     }
 }

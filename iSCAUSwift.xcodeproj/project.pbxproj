@@ -98,6 +98,23 @@
 		E1543C8419DC571B006E41A0 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C8319DC571B006E41A0 /* UIButton+Bootstrap.m */; };
 		E1543C8719DC582D006E41A0 /* CardStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C8619DC582D006E41A0 /* CardStyleView.m */; };
 		E1543C8A19DC5E31006E41A0 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C8919DC5E31006E41A0 /* UIImage+Tint.m */; };
+		E1543C8D19DD3FC8006E41A0 /* LibHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1543C8C19DD3FC8006E41A0 /* LibHttpManager.swift */; };
+		E1543CA919DD45F7006E41A0 /* LibListHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C9019DD45F7006E41A0 /* LibListHistoryCell.m */; };
+		E1543CAA19DD45F7006E41A0 /* LibListHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C9119DD45F7006E41A0 /* LibListHistoryCell.xib */; };
+		E1543CAB19DD45F7006E41A0 /* LibListHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C9319DD45F7006E41A0 /* LibListHistoryViewController.m */; };
+		E1543CAC19DD45F7006E41A0 /* LibListHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C9419DD45F7006E41A0 /* LibListHistoryViewController.xib */; };
+		E1543CAD19DD45F7006E41A0 /* LibListNowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C9719DD45F7006E41A0 /* LibListNowCell.m */; };
+		E1543CAE19DD45F7006E41A0 /* LibListNowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C9819DD45F7006E41A0 /* LibListNowCell.xib */; };
+		E1543CAF19DD45F7006E41A0 /* LibListNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C9A19DD45F7006E41A0 /* LibListNowViewController.m */; };
+		E1543CB019DD45F7006E41A0 /* LibListNowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C9B19DD45F7006E41A0 /* LibListNowViewController.xib */; };
+		E1543CB119DD45F7006E41A0 /* LibSearchBooksCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C9E19DD45F7006E41A0 /* LibSearchBooksCell.m */; };
+		E1543CB219DD45F7006E41A0 /* LibSearchBooksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C9F19DD45F7006E41A0 /* LibSearchBooksCell.xib */; };
+		E1543CB319DD45F7006E41A0 /* LibSearchBooksDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543CA119DD45F7006E41A0 /* LibSearchBooksDetailCell.m */; };
+		E1543CB419DD45F7006E41A0 /* LibSearchBooksDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543CA219DD45F7006E41A0 /* LibSearchBooksDetailCell.xib */; };
+		E1543CB519DD45F7006E41A0 /* LibSearchBooksDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543CA419DD45F7006E41A0 /* LibSearchBooksDetailViewController.m */; };
+		E1543CB619DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543CA519DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib */; };
+		E1543CB719DD45F7006E41A0 /* LibSearchBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543CA719DD45F7006E41A0 /* LibSearchBooksViewController.m */; };
+		E1543CB819DD45F7006E41A0 /* LibSearchBooksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543CA819DD45F7006E41A0 /* LibSearchBooksViewController.xib */; };
 		E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB489193EC31400F8D492 /* AppDelegate.swift */; };
 		E15BB48F193EC31500F8D492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15BB48D193EC31500F8D492 /* Main.storyboard */; };
 		E15BB491193EC31500F8D492 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15BB490193EC31500F8D492 /* Images.xcassets */; };
@@ -297,6 +314,31 @@
 		E1543C8619DC582D006E41A0 /* CardStyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardStyleView.m; sourceTree = "<group>"; };
 		E1543C8819DC5E31006E41A0 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		E1543C8919DC5E31006E41A0 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		E1543C8C19DD3FC8006E41A0 /* LibHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibHttpManager.swift; sourceTree = "<group>"; };
+		E1543C8F19DD45F7006E41A0 /* LibListHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibListHistoryCell.h; sourceTree = "<group>"; };
+		E1543C9019DD45F7006E41A0 /* LibListHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibListHistoryCell.m; sourceTree = "<group>"; };
+		E1543C9119DD45F7006E41A0 /* LibListHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibListHistoryCell.xib; sourceTree = "<group>"; };
+		E1543C9219DD45F7006E41A0 /* LibListHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibListHistoryViewController.h; sourceTree = "<group>"; };
+		E1543C9319DD45F7006E41A0 /* LibListHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibListHistoryViewController.m; sourceTree = "<group>"; };
+		E1543C9419DD45F7006E41A0 /* LibListHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibListHistoryViewController.xib; sourceTree = "<group>"; };
+		E1543C9619DD45F7006E41A0 /* LibListNowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibListNowCell.h; sourceTree = "<group>"; };
+		E1543C9719DD45F7006E41A0 /* LibListNowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibListNowCell.m; sourceTree = "<group>"; };
+		E1543C9819DD45F7006E41A0 /* LibListNowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibListNowCell.xib; sourceTree = "<group>"; };
+		E1543C9919DD45F7006E41A0 /* LibListNowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibListNowViewController.h; sourceTree = "<group>"; };
+		E1543C9A19DD45F7006E41A0 /* LibListNowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibListNowViewController.m; sourceTree = "<group>"; };
+		E1543C9B19DD45F7006E41A0 /* LibListNowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibListNowViewController.xib; sourceTree = "<group>"; };
+		E1543C9D19DD45F7006E41A0 /* LibSearchBooksCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibSearchBooksCell.h; sourceTree = "<group>"; };
+		E1543C9E19DD45F7006E41A0 /* LibSearchBooksCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibSearchBooksCell.m; sourceTree = "<group>"; };
+		E1543C9F19DD45F7006E41A0 /* LibSearchBooksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibSearchBooksCell.xib; sourceTree = "<group>"; };
+		E1543CA019DD45F7006E41A0 /* LibSearchBooksDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibSearchBooksDetailCell.h; sourceTree = "<group>"; };
+		E1543CA119DD45F7006E41A0 /* LibSearchBooksDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibSearchBooksDetailCell.m; sourceTree = "<group>"; };
+		E1543CA219DD45F7006E41A0 /* LibSearchBooksDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibSearchBooksDetailCell.xib; sourceTree = "<group>"; };
+		E1543CA319DD45F7006E41A0 /* LibSearchBooksDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibSearchBooksDetailViewController.h; sourceTree = "<group>"; };
+		E1543CA419DD45F7006E41A0 /* LibSearchBooksDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibSearchBooksDetailViewController.m; sourceTree = "<group>"; };
+		E1543CA519DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibSearchBooksDetailViewController.xib; sourceTree = "<group>"; };
+		E1543CA619DD45F7006E41A0 /* LibSearchBooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibSearchBooksViewController.h; sourceTree = "<group>"; };
+		E1543CA719DD45F7006E41A0 /* LibSearchBooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibSearchBooksViewController.m; sourceTree = "<group>"; };
+		E1543CA819DD45F7006E41A0 /* LibSearchBooksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibSearchBooksViewController.xib; sourceTree = "<group>"; };
 		E15BB484193EC31400F8D492 /* iSCAUSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSCAUSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15BB488193EC31400F8D492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E15BB489193EC31400F8D492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -548,6 +590,62 @@
 			path = EduSysClassTable;
 			sourceTree = "<group>";
 		};
+		E1543C8B19DD3FAA006E41A0 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C8C19DD3FC8006E41A0 /* LibHttpManager.swift */,
+				E1543C8E19DD45F7006E41A0 /* LibHistory */,
+				E1543C9519DD45F7006E41A0 /* LibNow */,
+				E1543C9C19DD45F7006E41A0 /* LibSearch */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E1543C8E19DD45F7006E41A0 /* LibHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C8F19DD45F7006E41A0 /* LibListHistoryCell.h */,
+				E1543C9019DD45F7006E41A0 /* LibListHistoryCell.m */,
+				E1543C9119DD45F7006E41A0 /* LibListHistoryCell.xib */,
+				E1543C9219DD45F7006E41A0 /* LibListHistoryViewController.h */,
+				E1543C9319DD45F7006E41A0 /* LibListHistoryViewController.m */,
+				E1543C9419DD45F7006E41A0 /* LibListHistoryViewController.xib */,
+			);
+			path = LibHistory;
+			sourceTree = "<group>";
+		};
+		E1543C9519DD45F7006E41A0 /* LibNow */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C9619DD45F7006E41A0 /* LibListNowCell.h */,
+				E1543C9719DD45F7006E41A0 /* LibListNowCell.m */,
+				E1543C9819DD45F7006E41A0 /* LibListNowCell.xib */,
+				E1543C9919DD45F7006E41A0 /* LibListNowViewController.h */,
+				E1543C9A19DD45F7006E41A0 /* LibListNowViewController.m */,
+				E1543C9B19DD45F7006E41A0 /* LibListNowViewController.xib */,
+			);
+			path = LibNow;
+			sourceTree = "<group>";
+		};
+		E1543C9C19DD45F7006E41A0 /* LibSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E1543C9D19DD45F7006E41A0 /* LibSearchBooksCell.h */,
+				E1543C9E19DD45F7006E41A0 /* LibSearchBooksCell.m */,
+				E1543C9F19DD45F7006E41A0 /* LibSearchBooksCell.xib */,
+				E1543CA019DD45F7006E41A0 /* LibSearchBooksDetailCell.h */,
+				E1543CA119DD45F7006E41A0 /* LibSearchBooksDetailCell.m */,
+				E1543CA219DD45F7006E41A0 /* LibSearchBooksDetailCell.xib */,
+				E1543CA319DD45F7006E41A0 /* LibSearchBooksDetailViewController.h */,
+				E1543CA419DD45F7006E41A0 /* LibSearchBooksDetailViewController.m */,
+				E1543CA519DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib */,
+				E1543CA619DD45F7006E41A0 /* LibSearchBooksViewController.h */,
+				E1543CA719DD45F7006E41A0 /* LibSearchBooksViewController.m */,
+				E1543CA819DD45F7006E41A0 /* LibSearchBooksViewController.xib */,
+			);
+			path = LibSearch;
+			sourceTree = "<group>";
+		};
 		E15BB47B193EC31400F8D492 = {
 			isa = PBXGroup;
 			children = (
@@ -738,6 +836,7 @@
 		E1B8345619DA619F00737E99 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				E1543C8B19DD3FAA006E41A0 /* Lib */,
 				E12E1DE919DAF65B0079972A /* Menu */,
 				E1B8345719DA619F00737E99 /* Activity */,
 				E1B8345C19DA619F00737E99 /* Common */,
@@ -910,6 +1009,7 @@
 				E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */,
 				E14FB65219D0629200526D45 /* 12.1.png in Resources */,
 				E1543C5819DC531F006E41A0 /* EduSysExamInfoCell.xib in Resources */,
+				E1543CB419DD45F7006E41A0 /* LibSearchBooksDetailCell.xib in Resources */,
 				E14FB64419D0629200526D45 /* 4.1.png in Resources */,
 				E14FB64119D0629200526D45 /* 2.png in Resources */,
 				E14FB66D19D0635900526D45 /* settting.png in Resources */,
@@ -923,6 +1023,7 @@
 				E14FB66C19D0635900526D45 /* map.jpg in Resources */,
 				E114957A19D943D90087445D /* place.png in Resources */,
 				E14FB64D19D0629200526D45 /* 8.png in Resources */,
+				E1543CB019DD45F7006E41A0 /* LibListNowViewController.xib in Resources */,
 				E1543C5619DC531F006E41A0 /* EduSysEmptyClassroomViewController.xib in Resources */,
 				E14FB66B19D0635900526D45 /* huodongquan.png in Resources */,
 				E1543C6419DC531F006E41A0 /* EduSysPickClassInfoCell.xib in Resources */,
@@ -933,12 +1034,16 @@
 				E14FB66919D0635900526D45 /* features.png in Resources */,
 				E14FB64019D0629200526D45 /* 2.1.png in Resources */,
 				E1543C6219DC531F006E41A0 /* EduSysMarksViewController.xib in Resources */,
+				E1543CB619DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib in Resources */,
+				E1543CAE19DD45F7006E41A0 /* LibListNowCell.xib in Resources */,
 				E14FB64C19D0629200526D45 /* 8.1.png in Resources */,
 				E14FB66F19D0635900526D45 /* waimai_on.png in Resources */,
 				E14FB64319D0629200526D45 /* 3.png in Resources */,
 				E14FB63E19D0629200526D45 /* 1.1.png in Resources */,
+				E1543CAC19DD45F7006E41A0 /* LibListHistoryViewController.xib in Resources */,
 				E114957B19D943D90087445D /* push.png in Resources */,
 				E14FB65519D0629200526D45 /* 13.png in Resources */,
+				E1543CAA19DD45F7006E41A0 /* LibListHistoryCell.xib in Resources */,
 				E14FB65319D0629200526D45 /* 12.png in Resources */,
 				E14FB66619D0635900526D45 /* classtable_on.png in Resources */,
 				E1543C5419DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.xib in Resources */,
@@ -952,11 +1057,13 @@
 				E15BB48F193EC31500F8D492 /* Main.storyboard in Resources */,
 				E14FB64719D0629200526D45 /* 5.png in Resources */,
 				E14FB64519D0629200526D45 /* 4.png in Resources */,
+				E1543CB819DD45F7006E41A0 /* LibSearchBooksViewController.xib in Resources */,
 				E14FB66819D0635900526D45 /* features_on.png in Resources */,
 				E1543C5019DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib in Resources */,
 				E15BB491193EC31500F8D492 /* Images.xcassets in Resources */,
 				E1543C7919DC5354006E41A0 /* EduSysClassTableEditedViewController.xib in Resources */,
 				E14FB64B19D0629200526D45 /* 7.png in Resources */,
+				E1543CB219DD45F7006E41A0 /* LibSearchBooksCell.xib in Resources */,
 				E1543C7B19DC5354006E41A0 /* EduSysClassTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,20 +1120,25 @@
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
 				E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */,
 				E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */,
+				E1543C8D19DD3FC8006E41A0 /* LibHttpManager.swift in Sources */,
 				E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */,
 				E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */,
 				E1543C8019DC5354006E41A0 /* EduSysWeekClassTableView.m in Sources */,
+				E1543CB319DD45F7006E41A0 /* LibSearchBooksDetailCell.m in Sources */,
 				E1543C5119DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m in Sources */,
 				E12D501C19D9CE6D005F37B7 /* UIImage+ScreenShot.m in Sources */,
 				E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */,
+				E1543CA919DD45F7006E41A0 /* LibListHistoryCell.m in Sources */,
 				E1B8347219DA619F00737E99 /* ActivityInfoCell.swift in Sources */,
 				E1543C6119DC531F006E41A0 /* EduSysMarksViewController.m in Sources */,
 				E1543C5F19DC531F006E41A0 /* EduSysMarksDetailViewController.m in Sources */,
+				E1543CB119DD45F7006E41A0 /* LibSearchBooksCell.m in Sources */,
 				E1543C7F19DC5354006E41A0 /* EduSysDayClassView.m in Sources */,
 				E1543C6319DC531F006E41A0 /* EduSysPickClassInfoCell.m in Sources */,
 				E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */,
 				E12D501B19D9CE6D005F37B7 /* UIImage+RTTint.m in Sources */,
 				E1B8347319DA619F00737E99 /* ActivityModel.swift in Sources */,
+				E1543CB719DD45F7006E41A0 /* LibSearchBooksViewController.m in Sources */,
 				E12D501919D9CE6D005F37B7 /* UIImage+Blur.m in Sources */,
 				E1543C5D19DC531F006E41A0 /* EduSysMarksDetailCell.m in Sources */,
 				E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */,
@@ -1045,8 +1157,11 @@
 				E1543C7819DC5354006E41A0 /* EduSysClassTableEditedViewController.m in Sources */,
 				E1543C8719DC582D006E41A0 /* CardStyleView.m in Sources */,
 				E1543C5919DC531F006E41A0 /* EduSysExamViewController.m in Sources */,
+				E1543CAB19DD45F7006E41A0 /* LibListHistoryViewController.m in Sources */,
+				E1543CAD19DD45F7006E41A0 /* LibListNowCell.m in Sources */,
 				E1543C5519DC531F006E41A0 /* EduSysEmptyClassroomViewController.m in Sources */,
 				E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */,
+				E1543CAF19DD45F7006E41A0 /* LibListNowViewController.m in Sources */,
 				E1543C7A19DC5354006E41A0 /* EduSysClassTableViewController.m in Sources */,
 				E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */,
 				E122B6071949725300E90D87 /* Lession.swift in Sources */,
@@ -1059,6 +1174,7 @@
 				E1543C5719DC531F006E41A0 /* EduSysExamInfoCell.m in Sources */,
 				E1543C7C19DC5354006E41A0 /* EduSysDayClassCell.m in Sources */,
 				E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */,
+				E1543CB519DD45F7006E41A0 /* LibSearchBooksDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

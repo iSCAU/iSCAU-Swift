@@ -43,6 +43,7 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"考试安排";
     UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
     if (IS_FLAT_UI) {
         btnClose.frame = CGRectMake(0, 0, 45, 44);
@@ -76,6 +77,8 @@
         return;
     }
     
+    SHOW_WATING_HUD;
+    self.isReloading = YES;
     [EduHttpManager requestExamWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         self.isReloading = NO;
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
@@ -85,22 +88,6 @@
             [self.tableExamInfo reloadData];
         }
     }];
-    
-//    SHOW_WATING_HUD;
-//    self.isReloading = YES;
-//    [[EduSysHttpClient shareInstance]
-//     eduSysGetExamSuccess:^(NSData *responseData, int httpCode){
-//         self.isReloading = NO;
-//         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:NULL];
-//         if (httpCode == 200) {
-//             HIDE_ALL_HUD;
-//             self.examInfoArray = dict[@"exam"];
-//             [self.tableExamInfo reloadData];
-//         }
-//     }
-//     failure:^(NSData *responseData, int httpCode){
-//         self.isReloading = NO;
-//     }];
 }
 
 #pragma mark - table view delegate

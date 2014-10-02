@@ -16,3 +16,7 @@
 #import "EduSysExamViewController.h"
 #import "EduSysMarksDetailViewController.h"
 #import "EduSysMarksViewController.h"
+#import "EduSysPickClassInfoViewController.h"
+#import "LibListHistoryViewController.h"
+#import "LibListNowViewController.h"
+#import "LibSearchBooksViewController.h"

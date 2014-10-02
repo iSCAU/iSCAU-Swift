@@ -87,14 +87,17 @@ extension Utils {
     
     class var libPwd: String? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as String?
+            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as String?) {
+                return safeBase64Encode(existedPwd)
+            }
+            return nil
         }
         set(newLibPwd) {
             NSUserDefaults.standardUserDefaults().setObject(newLibPwd, forKey: kLibPwdKey)
         }
     }
     
-    class var emptyClassroomParams: [String : String]? {
+    class var emptyClassroomParams: [String : [String]]? {
         get {
         return NSUserDefaults.standardUserDefaults().objectForKey(kEmptyClassroomParamsKey) as Dictionary?
         }

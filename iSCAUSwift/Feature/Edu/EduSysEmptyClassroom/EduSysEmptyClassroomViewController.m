@@ -58,6 +58,7 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"空余课室";
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;        
     }
@@ -78,7 +79,7 @@
         [self refreshParameters];
     }
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSelection:) name:EDU_SYS_EMPTY_CLASSROOM_SELECTED_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSelection:) name:EDU_SYS_EMPTY_CLASSROOM_SELECTED_NOTIFICATION object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -108,7 +109,7 @@
 
 - (void)refreshParameters {
     if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
-//        SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
+        SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
         return;
     }
     
@@ -127,23 +128,6 @@
             [self setupEmptyClassroomParams];
         }
     }];
-    
-//    SHOW_WATING_HUD;
-//    [[EduSysHttpClient shareInstance]
-//     eduSysGetEmptyClassroomParamsSuccess:^(NSData *responseData, int httpCode) {
-//         self.isReloading = NO;
-//         if (httpCode == 200) {
-//             HIDE_ALL_HUD;
-//             NSDictionary *params = [NSJSONSerialization JSONObjectWithData:responseData
-//                                                                   options:kNilOptions 
-//                                                                     error:nil];
-//             [self parseParams:params];
-//             [self setupEmptyClassroomParams];
-//         }
-//     } failure:^(NSData *responseData, int httpCode) {
-//         self.isReloading = NO;
-//     }];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -274,6 +258,7 @@
             return;
         }
     
+        SHOW_WATING_HUD;
         [EduHttpManager requestEmptyClassroomInfoWithXq:self.labXQ.text
                                                    jslb:self.labJSLB.text
                                                  ddlKsz:self.labKSZ.text
@@ -293,29 +278,6 @@
                                               }
                                           }
                                       }];
-
-//        SHOW_WATING_HUD;
-//
-//        [[EduSysHttpClient shareInstance]
-//         eduSysGetEmptyClassroomInfoSuccessWithXQ:self.labXQ.text
-//                                              jslb:self.labJSLB.text
-//                                            ddlKsz:self.labKSZ.text
-//                                            ddlJsz:self.labJSZ.text
-//                                               xqj:self.labWeekday.text
-//                                               dsz:self.selectionsDict[kDSZ][self.dszSegment.selectedSegmentIndex]
-//                                               sjd:self.labSJD.text
-//                                           success:^(NSData *responseData, int httpCode) {
-//                                               NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
-//                                               if (httpCode == 200 && dict) {
-//                                                   HIDE_ALL_HUD;
-//                                                   NSArray *emptyClassrooms = dict[@"classRooms"];
-//                                                   if (emptyClassrooms) {
-//                                                       EduSysEmptyClassroomDetailViewController *detailViewController = [[EduSysEmptyClassroomDetailViewController alloc] init];
-//                                                       detailViewController.emptyClassrooms = emptyClassrooms;
-//                                                       [self.navigationController pushViewController:detailViewController animated:YES];
-//                                                   }
-//                                               }
-//                                           } failure:nil];
     }
 }
 
