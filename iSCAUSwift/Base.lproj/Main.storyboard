@@ -159,6 +159,7 @@
                     <navigationItem key="navigationItem" title="功能" id="O7M-iX-aXy"/>
                     <connections>
                         <segue destination="wwJ-TL-pQ4" kind="push" identifier="PushSettingsTableViewController" id="5Gc-IE-Uh8"/>
+                        <segue destination="BCO-I4-RTN" kind="push" identifier="PushMapViewController" id="yPW-QQ-06m"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzP-4v-c93" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,34 +169,40 @@
         <!--地图-->
         <scene sceneID="C6a-pc-TTx">
             <objects>
-                <viewController title="地图" id="BCO-I4-RTN" sceneMemberID="viewController">
+                <viewController title="地图" hidesBottomBarWhenPushed="YES" id="BCO-I4-RTN" customClass="MapViewController" customModule="iSCAUSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8lQ-1I-Y5o"/>
                         <viewControllerLayoutGuide type="bottom" id="7w6-fU-Pqb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oBk-x4-Em7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-B5-Etd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DSv-Rl-gEd">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                    </imageView>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="delegate" destination="BCO-I4-RTN" id="sda-fN-06G"/>
+                                    <outletCollection property="gestureRecognizers" destination="Mii-Fe-1x7" appends="YES" id="MFS-ke-StB"/>
                                 </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="ylA-4g-3xO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="schoolmapscroll" destination="bIn-B5-Etd" id="aUg-Lp-fLH"/>
+                        <outlet property="bgScrollView" destination="bIn-B5-Etd" id="zgk-oA-aph"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBI-k9-mpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Mii-Fe-1x7">
+                    <connections>
+                        <action selector="handleDoubleTap:" destination="BCO-I4-RTN" id="Ob5-Wu-XJN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1183" y="-708"/>
         </scene>
@@ -1020,7 +1027,6 @@
         <image name="classtable.png" width="36" height="36"/>
         <image name="features.png" width="32" height="32"/>
         <image name="huodongquan.png" width="35" height="35"/>
-        <image name="map.jpg" width="6612" height="4679"/>
         <image name="waimai.png" width="35" height="35"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

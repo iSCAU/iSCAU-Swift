@@ -115,6 +115,7 @@
 		E1543CB619DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543CA519DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib */; };
 		E1543CB719DD45F7006E41A0 /* LibSearchBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543CA719DD45F7006E41A0 /* LibSearchBooksViewController.m */; };
 		E1543CB819DD45F7006E41A0 /* LibSearchBooksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543CA819DD45F7006E41A0 /* LibSearchBooksViewController.xib */; };
+		E1543CBE19DD722C006E41A0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1543CBD19DD722C006E41A0 /* MapViewController.swift */; };
 		E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB489193EC31400F8D492 /* AppDelegate.swift */; };
 		E15BB48F193EC31500F8D492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15BB48D193EC31500F8D492 /* Main.storyboard */; };
 		E15BB491193EC31500F8D492 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15BB490193EC31500F8D492 /* Images.xcassets */; };
@@ -339,6 +340,7 @@
 		E1543CA619DD45F7006E41A0 /* LibSearchBooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibSearchBooksViewController.h; sourceTree = "<group>"; };
 		E1543CA719DD45F7006E41A0 /* LibSearchBooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibSearchBooksViewController.m; sourceTree = "<group>"; };
 		E1543CA819DD45F7006E41A0 /* LibSearchBooksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibSearchBooksViewController.xib; sourceTree = "<group>"; };
+		E1543CBD19DD722C006E41A0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Menu/MapViewController.swift; sourceTree = "<group>"; };
 		E15BB484193EC31400F8D492 /* iSCAUSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSCAUSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15BB488193EC31400F8D492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E15BB489193EC31400F8D492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			children = (
 				E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */,
 				E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */,
+				E1543CBD19DD722C006E41A0 /* MapViewController.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -1117,6 +1120,7 @@
 			files = (
 				E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
+				E1543CBE19DD722C006E41A0 /* MapViewController.swift in Sources */,
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
 				E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */,
 				E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */,
@@ -1296,6 +1300,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSCAUSwift/Vendor",
+				);
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1310,6 +1318,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSCAUSwift/Vendor",
+				);
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

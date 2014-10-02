@@ -131,7 +131,9 @@ class MenuCollectionViewController: UICollectionViewController {
             let borrowedVC = LibListHistoryViewController()
             borrowedVC.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(borrowedVC, animated: true)
-            
+        // 百宝箱
+        case (2, 0):
+            performSegueWithIdentifier("PushMapViewController", sender: nil)
         case (3, 0):
             performSegueWithIdentifier("PushSettingsTableViewController", sender: nil)
         default:
