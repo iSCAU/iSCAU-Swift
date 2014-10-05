@@ -134,6 +134,13 @@ class MenuCollectionViewController: UICollectionViewController {
         // 百宝箱
         case (2, 0):
             performSegueWithIdentifier("PushMapViewController", sender: nil)
+        // 校历
+        case (2, 1):
+            let chvc = CalendarHomeViewController()
+            chvc.calendartitle = "校历"
+            chvc.setAirPlaneToDay(365, toDateforString: nil)
+            chvc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(chvc, animated: true)
         case (3, 0):
             performSegueWithIdentifier("PushSettingsTableViewController", sender: nil)
         default:

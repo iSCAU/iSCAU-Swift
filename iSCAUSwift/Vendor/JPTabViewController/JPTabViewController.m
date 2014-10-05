@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
-@property (nonatomic, strong) NSArray *controllers;
 
 @property (nonatomic, strong) NSMutableArray *tabs;
 
@@ -36,9 +35,24 @@
     return self;
 }
 
-- (void)viewDidLoad
-{   //此处可以设置状态栏
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
     
+    _controllers = nil;
+    selectedTab = NSIntegerMax;
+    _delegate = nil;
+    _indicatorView = [[UIView alloc] init];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+- (void)setup
+{
+    //此处可以设置状态栏
     UIColor *blackGreenColor = [UIColor colorWithRed:55/255.0 green:147/255.0 blue:129/255.0 alpha:1];
     [super viewDidLoad];
     UIColor *darkGreenColor = [UIColor colorWithRed:31/255.0 green:193/255.0 blue:168/255.0 alpha:1];
@@ -47,7 +61,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     _indicatorView.backgroundColor= darkGreenColor;
     _statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
-    //
     
     UIImageView *top = [[UIImageView alloc]init];
     top.frame = CGRectMake(0, 0, self.view.bounds.size.width, 20);
@@ -71,8 +84,6 @@
     [mid addSubview:lable];
     
     [self.view addSubview:mid];
-    
-
     
     if (_controllers != nil)
     {

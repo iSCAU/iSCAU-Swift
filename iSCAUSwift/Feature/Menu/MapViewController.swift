@@ -30,9 +30,6 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
             var imgFrame = CGRectZero
             if widthScale < heightScale {
                 imgFrame = CGRectMake(0, 0, bgScrollView.width, mapSize.height * widthScale)
-            
-                imgMap?.frame = imgFrame
-                println("\(imgFrame)\(bgScrollView.width)\(mapSize.height * bgScrollView.width / mapSize.width)")
             } else {
                 imgFrame = CGRectMake(0, 0, mapSize.width * heightScale, bgScrollView.height)
             }

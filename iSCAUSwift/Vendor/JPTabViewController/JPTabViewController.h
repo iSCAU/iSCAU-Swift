@@ -23,11 +23,12 @@
 @property (nonatomic, assign) id<JPTabViewControllerDelegate> delegate;
 
 @property (nonatomic, assign) float menuHeight;
+@property (nonatomic, strong) NSArray *controllers;
 
 - (id)initWithControllers:(NSArray *)controllers;
 
 - (void)selectTabNum:(NSInteger)index;
 
 - (NSInteger)selectedTab;
-
+- (void)setup;
 @end

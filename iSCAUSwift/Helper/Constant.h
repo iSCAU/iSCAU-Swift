@@ -43,6 +43,15 @@ static NSString *YEAR_TITLE = @"year_title";
 typedef void(^SuccessedBlock)(NSData *responseData, NSInteger httpCode);
 typedef void(^ErrorBlock)(NSData *responseData, NSInteger httpCode);
 
+#if __LP64__
+#define SINT "%ld"
+#define UINT "%lu"
+#else
+#define SINT "%d"
+#define UINT "%u"
+#endif
+
+
 #define HOST_NAME @"http://115.28.144.49"
 #define LIB_DETAIL_HOST @"http://202.116.174.108:8080/opac/"
 

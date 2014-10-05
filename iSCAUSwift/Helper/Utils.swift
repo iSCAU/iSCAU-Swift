@@ -99,7 +99,7 @@ extension Utils {
     
     class var emptyClassroomParams: [String : [String]]? {
         get {
-        return NSUserDefaults.standardUserDefaults().objectForKey(kEmptyClassroomParamsKey) as Dictionary?
+            return NSUserDefaults.standardUserDefaults().objectForKey(kEmptyClassroomParamsKey) as Dictionary?
         }
         set(newEmptyClassroomParams) {
             NSUserDefaults.standardUserDefaults().setObject(newEmptyClassroomParams, forKey: kEmptyClassroomParamsKey)
@@ -108,19 +108,45 @@ extension Utils {
     
     class var schoolYear: [String]? {
         get {
-        return NSUserDefaults.standardUserDefaults().objectForKey(kSchoolYearKey) as [String]?
+            return NSUserDefaults.standardUserDefaults().objectForKey(kSchoolYearKey) as [String]?
         }
         set(newSchoolYear) {
             NSUserDefaults.standardUserDefaults().setObject(newSchoolYear, forKey: kSchoolYearKey)
         }
     }
+    
+    class var takeOutLastUpdateTimeStamp: String? {
+        get {
+            if let timeStamp = NSUserDefaults.standardUserDefaults().objectForKey(kTakeOutLastUpdateTimeStamp) as? String {
+                return timeStamp
+            } else {
+                return "0"
+            }
+        }
+        set(newTimeStamp) {
+            NSUserDefaults.standardUserDefaults().setObject(newTimeStamp, forKey: kTakeOutLastUpdateTimeStamp)
+        }
+    }
 
     class var semester: [String]? {
         get {
-        return NSUserDefaults.standardUserDefaults().objectForKey(kSemesterKey) as [String]?
+            return NSUserDefaults.standardUserDefaults().objectForKey(kSemesterKey) as [String]?
         }
         set(newSemester) {
             NSUserDefaults.standardUserDefaults().setObject(newSemester, forKey: kSemesterKey)
+        }
+    }
+    
+    class var dormitoryAddress: String {
+        get {
+            if let address =  NSUserDefaults.standardUserDefaults().objectForKey(kDormitoryAddressKey) as? String {
+                return address
+            } else {
+                return "你还未设置外卖地址"
+            }
+        }
+        set (newDormitoryAddress) {
+            NSUserDefaults.standardUserDefaults().setObject(newDormitoryAddress, forKey: kDormitoryAddressKey)
         }
     }
 

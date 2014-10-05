@@ -20,6 +20,12 @@ let kLibPwdKey = "kLibPwdKey"
 let kEmptyClassroomParamsKey = "kEmptyClassroomParamsKey"
 let kSchoolYearKey = "kSchoolYearKey"
 let kSemesterKey = "kSemesterKey"
+let kDormitoryAddressKey = "kDormitoryAddressKey"
+let kTakeOutLastUpdateTimeStamp = "kTakeOutLastUpdateTimeStamp"
+
+let kReloadRestaurantTableNotification = "kReloadRestaurantTableNotification"
 
 // Utils
 let iSCAUAppDelegate: AppDelegate = UIApplication.sharedApplication().delegate! as AppDelegate
+let ScreenWidth = UIScreen.mainScreen().bounds.width
+let ScreenHeight = UIScreen.mainScreen().bounds.height

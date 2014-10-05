@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */; };
+		E112ED1519E1A9B4001FA427 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0419E1A9B4001FA427 /* CalendarDayCell.m */; };
+		E112ED1619E1A9B4001FA427 /* CalendarDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0619E1A9B4001FA427 /* CalendarDayModel.m */; };
+		E112ED1719E1A9B4001FA427 /* CalendarHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0819E1A9B4001FA427 /* CalendarHomeViewController.m */; };
+		E112ED1819E1A9B4001FA427 /* CalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0A19E1A9B4001FA427 /* CalendarLogic.m */; };
+		E112ED1919E1A9B4001FA427 /* CalendarMonthCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0C19E1A9B4001FA427 /* CalendarMonthCollectionViewLayout.m */; };
+		E112ED1A19E1A9B4001FA427 /* CalendarMonthHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0E19E1A9B4001FA427 /* CalendarMonthHeaderView.m */; };
+		E112ED1B19E1A9B4001FA427 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED1019E1A9B4001FA427 /* CalendarViewController.m */; };
+		E112ED1C19E1A9B4001FA427 /* chack.png in Resources */ = {isa = PBXBuildFile; fileRef = E112ED1119E1A9B4001FA427 /* chack.png */; };
+		E112ED1D19E1A9B4001FA427 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED1419E1A9B4001FA427 /* NSDate+WQCalendarLogic.m */; };
 		E114957A19D943D90087445D /* place.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957419D943D90087445D /* place.png */; };
 		E114957B19D943D90087445D /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957519D943D90087445D /* push.png */; };
 		E114957C19D943D90087445D /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957619D943D90087445D /* time.png */; };
 		E114957D19D943D90087445D /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957719D943D90087445D /* top.png */; };
 		E114957E19D943D90087445D /* userName.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957819D943D90087445D /* userName.png */; };
 		E122B6071949725300E90D87 /* Lession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122B6061949725300E90D87 /* Lession.swift */; };
+		E1250BEE19DE9B2A0088AED5 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1250BED19DE9B2A0088AED5 /* Food.swift */; };
 		E12D501719D9CE6D005F37B7 /* leftside_shadow_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E12D500419D9CE6C005F37B7 /* leftside_shadow_bg@2x.png */; };
 		E12D501819D9CE6D005F37B7 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = E12D500719D9CE6C005F37B7 /* UIColor+Addition.m */; };
 		E12D501919D9CE6D005F37B7 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = E12D500A19D9CE6D005F37B7 /* UIImage+Blur.m */; };
@@ -128,8 +138,24 @@
 		E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D1193F513E00F8D492 /* AppConstant.swift */; };
 		E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D3193F538F00F8D492 /* Utils.swift */; };
 		E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173B4D719DC0A5B009993C1 /* PopoverView.swift */; };
+		E174654D19DEE208005EE1AD /* TakeOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174654C19DEE208005EE1AD /* TakeOutMenuViewController.swift */; };
+		E174654F19DEE698005EE1AD /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */; };
+		E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */; };
 		E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */; };
 		E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */; };
+		E1938AEE19DFFEE100353521 /* TakeOutOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938AED19DFFEE100353521 /* TakeOutOrderViewController.swift */; };
+		E1938AF119E0049900353521 /* FoodOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938AEF19E0049900353521 /* FoodOrderTableViewCell.swift */; };
+		E1938AF219E0049900353521 /* FoodOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1938AF019E0049900353521 /* FoodOrderTableViewCell.xib */; };
+		E1938AF519E00FE900353521 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938AF319E00FE900353521 /* RestaurantTableViewCell.swift */; };
+		E1938AF619E00FE900353521 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1938AF419E00FE900353521 /* RestaurantTableViewCell.xib */; };
+		E1938AFB19E0118A00353521 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938AF919E0118A00353521 /* AddressTableViewCell.swift */; };
+		E1938AFC19E0118A00353521 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1938AFA19E0118A00353521 /* AddressTableViewCell.xib */; };
+		E1938AFE19E0189900353521 /* ActivityDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938AFD19E0189900353521 /* ActivityDisplayViewController.swift */; };
+		E1938B0019E033A300353521 /* sep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1938AFF19E033A300353521 /* sep@2x.png */; };
+		E1938B0519E03BC900353521 /* AddressUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938B0419E03BC900353521 /* AddressUpdateView.swift */; };
+		E1995CE619DDB4AA001AB5D7 /* TakeOutHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1995CE519DDB4AA001AB5D7 /* TakeOutHttpManager.swift */; };
+		E1995CE819DDB6AE001AB5D7 /* TakeOutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1995CE719DDB6AE001AB5D7 /* TakeOutTableViewController.swift */; };
+		E1995CEA19DDC2C5001AB5D7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1995CE919DDC2C5001AB5D7 /* Restaurant.swift */; };
 		E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19F70E719DB2EF3009698D8 /* JPTabViewController.m */; };
 		E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */; };
 		E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */; };
@@ -193,15 +219,32 @@
 /* Begin PBXFileReference section */
 		1E13F1ECD8F94B47B4C7013B /* Pods-iSCAUSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84086BA119DACB2F0048302D /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
-		84086BA219DACB2F0048302D /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabViewController.m; sourceTree = "<group>"; };
 		B3441B39F695DE30B958E3E1 /* Pods-iSCAUSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.release.xcconfig"; sourceTree = "<group>"; };
+		E112ED0319E1A9B4001FA427 /* CalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayCell.h; sourceTree = "<group>"; };
+		E112ED0419E1A9B4001FA427 /* CalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
+		E112ED0519E1A9B4001FA427 /* CalendarDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayModel.h; sourceTree = "<group>"; };
+		E112ED0619E1A9B4001FA427 /* CalendarDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayModel.m; sourceTree = "<group>"; };
+		E112ED0719E1A9B4001FA427 /* CalendarHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarHomeViewController.h; sourceTree = "<group>"; };
+		E112ED0819E1A9B4001FA427 /* CalendarHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarHomeViewController.m; sourceTree = "<group>"; };
+		E112ED0919E1A9B4001FA427 /* CalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarLogic.h; sourceTree = "<group>"; };
+		E112ED0A19E1A9B4001FA427 /* CalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarLogic.m; sourceTree = "<group>"; };
+		E112ED0B19E1A9B4001FA427 /* CalendarMonthCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthCollectionViewLayout.h; sourceTree = "<group>"; };
+		E112ED0C19E1A9B4001FA427 /* CalendarMonthCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMonthCollectionViewLayout.m; sourceTree = "<group>"; };
+		E112ED0D19E1A9B4001FA427 /* CalendarMonthHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthHeaderView.h; sourceTree = "<group>"; };
+		E112ED0E19E1A9B4001FA427 /* CalendarMonthHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMonthHeaderView.m; sourceTree = "<group>"; };
+		E112ED0F19E1A9B4001FA427 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		E112ED1019E1A9B4001FA427 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		E112ED1119E1A9B4001FA427 /* chack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chack.png; sourceTree = "<group>"; };
+		E112ED1219E1A9B4001FA427 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		E112ED1319E1A9B4001FA427 /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
+		E112ED1419E1A9B4001FA427 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
 		E114957419D943D90087445D /* place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place.png; sourceTree = "<group>"; };
 		E114957519D943D90087445D /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
 		E114957619D943D90087445D /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		E114957719D943D90087445D /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
 		E114957819D943D90087445D /* userName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userName.png; sourceTree = "<group>"; };
 		E122B6061949725300E90D87 /* Lession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lession.swift; path = Model/Lession.swift; sourceTree = "<group>"; };
+		E1250BED19DE9B2A0088AED5 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food.swift; path = Model/Food.swift; sourceTree = "<group>"; };
 		E12D500019D9CE6C005F37B7 /* AZTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZTools.h; sourceTree = "<group>"; };
 		E12D500419D9CE6C005F37B7 /* leftside_shadow_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftside_shadow_bg@2x.png"; sourceTree = "<group>"; };
 		E12D500619D9CE6C005F37B7 /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
@@ -360,8 +403,24 @@
 		E15BB4D3193F538F00F8D492 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E16262DC19D326C30024B023 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		E173B4D719DC0A5B009993C1 /* PopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		E174654C19DEE208005EE1AD /* TakeOutMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeOutMenuViewController.swift; sourceTree = "<group>"; };
+		E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayTimeTable.swift; sourceTree = "<group>"; };
 		E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayLessionCell.swift; sourceTree = "<group>"; };
+		E1938AED19DFFEE100353521 /* TakeOutOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeOutOrderViewController.swift; sourceTree = "<group>"; };
+		E1938AEF19E0049900353521 /* FoodOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodOrderTableViewCell.swift; sourceTree = "<group>"; };
+		E1938AF019E0049900353521 /* FoodOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodOrderTableViewCell.xib; sourceTree = "<group>"; };
+		E1938AF319E00FE900353521 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		E1938AF419E00FE900353521 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
+		E1938AF919E0118A00353521 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
+		E1938AFA19E0118A00353521 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		E1938AFD19E0189900353521 /* ActivityDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDisplayViewController.swift; sourceTree = "<group>"; };
+		E1938AFF19E033A300353521 /* sep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sep@2x.png"; sourceTree = "<group>"; };
+		E1938B0419E03BC900353521 /* AddressUpdateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressUpdateView.swift; sourceTree = "<group>"; };
+		E1995CE519DDB4AA001AB5D7 /* TakeOutHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeOutHttpManager.swift; sourceTree = "<group>"; };
+		E1995CE719DDB6AE001AB5D7 /* TakeOutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeOutTableViewController.swift; sourceTree = "<group>"; };
+		E1995CE919DDC2C5001AB5D7 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = iSCAUSwift/Model/Restaurant.swift; sourceTree = SOURCE_ROOT; };
 		E19F70E619DB2EF3009698D8 /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
 		E19F70E719DB2EF3009698D8 /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabViewController.m; sourceTree = "<group>"; };
 		E1B0B9E01948BC520035B287 /* iSCAUSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSCAUSwift.xcdatamodel; sourceTree = "<group>"; };
@@ -402,6 +461,31 @@
 				409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E112ED0219E1A9B4001FA427 /* ZFCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				E112ED0319E1A9B4001FA427 /* CalendarDayCell.h */,
+				E112ED0419E1A9B4001FA427 /* CalendarDayCell.m */,
+				E112ED0519E1A9B4001FA427 /* CalendarDayModel.h */,
+				E112ED0619E1A9B4001FA427 /* CalendarDayModel.m */,
+				E112ED0719E1A9B4001FA427 /* CalendarHomeViewController.h */,
+				E112ED0819E1A9B4001FA427 /* CalendarHomeViewController.m */,
+				E112ED0919E1A9B4001FA427 /* CalendarLogic.h */,
+				E112ED0A19E1A9B4001FA427 /* CalendarLogic.m */,
+				E112ED0B19E1A9B4001FA427 /* CalendarMonthCollectionViewLayout.h */,
+				E112ED0C19E1A9B4001FA427 /* CalendarMonthCollectionViewLayout.m */,
+				E112ED0D19E1A9B4001FA427 /* CalendarMonthHeaderView.h */,
+				E112ED0E19E1A9B4001FA427 /* CalendarMonthHeaderView.m */,
+				E112ED0F19E1A9B4001FA427 /* CalendarViewController.h */,
+				E112ED1019E1A9B4001FA427 /* CalendarViewController.m */,
+				E112ED1119E1A9B4001FA427 /* chack.png */,
+				E112ED1219E1A9B4001FA427 /* Color.h */,
+				E112ED1319E1A9B4001FA427 /* NSDate+WQCalendarLogic.h */,
+				E112ED1419E1A9B4001FA427 /* NSDate+WQCalendarLogic.m */,
+			);
+			path = ZFCalendar;
 			sourceTree = "<group>";
 		};
 		E114957319D943D90087445D /* activity_img */ = {
@@ -490,6 +574,7 @@
 		E14FB5D819D0609100526D45 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E112ED0219E1A9B4001FA427 /* ZFCalendar */,
 				E19F70E519DB2EF3009698D8 /* JPTabViewController */,
 				E12D4FFB19D9CE6C005F37B7 /* AZTools */,
 				E14FB61719D060E200526D45 /* Alamofire.xcodeproj */,
@@ -692,8 +777,6 @@
 		E15BB487193EC31400F8D492 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84086BA119DACB2F0048302D /* JPTabViewController.h */,
-				84086BA219DACB2F0048302D /* JPTabViewController.m */,
 				E15BB488193EC31400F8D492 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -719,6 +802,8 @@
 		E15BB4AA193F043E00F8D492 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E1250BED19DE9B2A0088AED5 /* Food.swift */,
+				E1995CE919DDC2C5001AB5D7 /* Restaurant.swift */,
 				E15BB4BF193F06B500F8D492 /* User.swift */,
 				E15BB4C7193F29ED00F8D492 /* CetMark.swift */,
 				E15BB4C9193F2A9C00F8D492 /* ReviewLessonInfo.swift */,
@@ -768,6 +853,7 @@
 				E14FB65919D0635800526D45 /* classtable_on.png */,
 				E1FDF41919D07D1500CC311E /* classtable.png */,
 				E14FB65B19D0635800526D45 /* features_on.png */,
+				E1938AFF19E033A300353521 /* sep@2x.png */,
 				E14FB65C19D0635800526D45 /* features.png */,
 				E14FB65D19D0635800526D45 /* huodongquan_on.png */,
 				E14FB65E19D0635800526D45 /* huodongquan.png */,
@@ -815,8 +901,28 @@
 				E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */,
 				E1543C8519DC582D006E41A0 /* CardStyleView.h */,
 				E1543C8619DC582D006E41A0 /* CardStyleView.m */,
+				E1938B0419E03BC900353521 /* AddressUpdateView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E1995CE419DDB47F001AB5D7 /* TakeOut */ = {
+			isa = PBXGroup;
+			children = (
+				E1995CE519DDB4AA001AB5D7 /* TakeOutHttpManager.swift */,
+				E1995CE719DDB6AE001AB5D7 /* TakeOutTableViewController.swift */,
+				E174654C19DEE208005EE1AD /* TakeOutMenuViewController.swift */,
+				E1938AED19DFFEE100353521 /* TakeOutOrderViewController.swift */,
+				E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */,
+				E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */,
+				E1938AEF19E0049900353521 /* FoodOrderTableViewCell.swift */,
+				E1938AF019E0049900353521 /* FoodOrderTableViewCell.xib */,
+				E1938AF319E00FE900353521 /* RestaurantTableViewCell.swift */,
+				E1938AF419E00FE900353521 /* RestaurantTableViewCell.xib */,
+				E1938AF919E0118A00353521 /* AddressTableViewCell.swift */,
+				E1938AFA19E0118A00353521 /* AddressTableViewCell.xib */,
+			);
+			path = TakeOut;
 			sourceTree = "<group>";
 		};
 		E19F70E519DB2EF3009698D8 /* JPTabViewController */ = {
@@ -839,6 +945,7 @@
 		E1B8345619DA619F00737E99 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				E1995CE419DDB47F001AB5D7 /* TakeOut */,
 				E1543C8B19DD3FAA006E41A0 /* Lib */,
 				E12E1DE919DAF65B0079972A /* Menu */,
 				E1B8345719DA619F00737E99 /* Activity */,
@@ -855,6 +962,7 @@
 				E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */,
 				E1B8345A19DA619F00737E99 /* ActivityModel.swift */,
 				E1B8345B19DA619F00737E99 /* ActivityViewController.swift */,
+				E1938AFD19E0189900353521 /* ActivityDisplayViewController.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -1000,6 +1108,7 @@
 				E14FB65619D0629200526D45 /* 14.1.png in Resources */,
 				E1543C6619DC531F006E41A0 /* EduSysPickClassInfoViewController.xib in Resources */,
 				E14FB64A19D0629200526D45 /* 7.1.png in Resources */,
+				E1938B0019E033A300353521 /* sep@2x.png in Resources */,
 				E114957E19D943D90087445D /* userName.png in Resources */,
 				E1543C5C19DC531F006E41A0 /* EduSysMarkCell.xib in Resources */,
 				E1543C5E19DC531F006E41A0 /* EduSysMarksDetailCell.xib in Resources */,
@@ -1011,6 +1120,8 @@
 				E1FDF41A19D07D1500CC311E /* classtable.png in Resources */,
 				E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */,
 				E14FB65219D0629200526D45 /* 12.1.png in Resources */,
+				E1938AF619E00FE900353521 /* RestaurantTableViewCell.xib in Resources */,
+				E1938AF219E0049900353521 /* FoodOrderTableViewCell.xib in Resources */,
 				E1543C5819DC531F006E41A0 /* EduSysExamInfoCell.xib in Resources */,
 				E1543CB419DD45F7006E41A0 /* LibSearchBooksDetailCell.xib in Resources */,
 				E14FB64419D0629200526D45 /* 4.1.png in Resources */,
@@ -1039,8 +1150,10 @@
 				E1543C6219DC531F006E41A0 /* EduSysMarksViewController.xib in Resources */,
 				E1543CB619DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib in Resources */,
 				E1543CAE19DD45F7006E41A0 /* LibListNowCell.xib in Resources */,
+				E112ED1C19E1A9B4001FA427 /* chack.png in Resources */,
 				E14FB64C19D0629200526D45 /* 8.1.png in Resources */,
 				E14FB66F19D0635900526D45 /* waimai_on.png in Resources */,
+				E1938AFC19E0118A00353521 /* AddressTableViewCell.xib in Resources */,
 				E14FB64319D0629200526D45 /* 3.png in Resources */,
 				E14FB63E19D0629200526D45 /* 1.1.png in Resources */,
 				E1543CAC19DD45F7006E41A0 /* LibListHistoryViewController.xib in Resources */,
@@ -1054,6 +1167,7 @@
 				E14FB63F19D0629200526D45 /* 1.png in Resources */,
 				E114957C19D943D90087445D /* time.png in Resources */,
 				E14FB64819D0629200526D45 /* 6.1.png in Resources */,
+				E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */,
 				E14FB65119D0629200526D45 /* 10.png in Resources */,
 				E14FB64F19D0629200526D45 /* 9.png in Resources */,
 				E14FB64E19D0629200526D45 /* 9.1.png in Resources */,
@@ -1118,6 +1232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E112ED1519E1A9B4001FA427 /* CalendarDayCell.m in Sources */,
+				E1938AFE19E0189900353521 /* ActivityDisplayViewController.swift in Sources */,
+				E1938AFB19E0118A00353521 /* AddressTableViewCell.swift in Sources */,
 				E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
 				E1543CBE19DD722C006E41A0 /* MapViewController.swift in Sources */,
@@ -1135,10 +1252,15 @@
 				E1543CA919DD45F7006E41A0 /* LibListHistoryCell.m in Sources */,
 				E1B8347219DA619F00737E99 /* ActivityInfoCell.swift in Sources */,
 				E1543C6119DC531F006E41A0 /* EduSysMarksViewController.m in Sources */,
+				E1995CE619DDB4AA001AB5D7 /* TakeOutHttpManager.swift in Sources */,
 				E1543C5F19DC531F006E41A0 /* EduSysMarksDetailViewController.m in Sources */,
 				E1543CB119DD45F7006E41A0 /* LibSearchBooksCell.m in Sources */,
+				E1995CEA19DDC2C5001AB5D7 /* Restaurant.swift in Sources */,
 				E1543C7F19DC5354006E41A0 /* EduSysDayClassView.m in Sources */,
+				E1250BEE19DE9B2A0088AED5 /* Food.swift in Sources */,
 				E1543C6319DC531F006E41A0 /* EduSysPickClassInfoCell.m in Sources */,
+				E1938AF119E0049900353521 /* FoodOrderTableViewCell.swift in Sources */,
+				E112ED1B19E1A9B4001FA427 /* CalendarViewController.m in Sources */,
 				E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */,
 				E12D501B19D9CE6D005F37B7 /* UIImage+RTTint.m in Sources */,
 				E1B8347319DA619F00737E99 /* ActivityModel.swift in Sources */,
@@ -1150,28 +1272,40 @@
 				E12D501819D9CE6D005F37B7 /* UIColor+Addition.m in Sources */,
 				E1543C4F19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m in Sources */,
 				E1543C5B19DC531F006E41A0 /* EduSysMarkCell.m in Sources */,
+				E112ED1A19E1A9B4001FA427 /* CalendarMonthHeaderView.m in Sources */,
 				E1543C7E19DC5354006E41A0 /* EduSysDayClassTableView.m in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
+				E112ED1619E1A9B4001FA427 /* CalendarDayModel.m in Sources */,
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
+				E1938AEE19DFFEE100353521 /* TakeOutOrderViewController.swift in Sources */,
+				E1938AF519E00FE900353521 /* RestaurantTableViewCell.swift in Sources */,
 				E1543C5319DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m in Sources */,
 				E1543C8A19DC5E31006E41A0 /* UIImage+Tint.m in Sources */,
 				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
+				E174654D19DEE208005EE1AD /* TakeOutMenuViewController.swift in Sources */,
 				E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */,
 				E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */,
+				E174654F19DEE698005EE1AD /* FoodTableViewCell.swift in Sources */,
 				E1543C7819DC5354006E41A0 /* EduSysClassTableEditedViewController.m in Sources */,
+				E112ED1719E1A9B4001FA427 /* CalendarHomeViewController.m in Sources */,
 				E1543C8719DC582D006E41A0 /* CardStyleView.m in Sources */,
 				E1543C5919DC531F006E41A0 /* EduSysExamViewController.m in Sources */,
+				E112ED1D19E1A9B4001FA427 /* NSDate+WQCalendarLogic.m in Sources */,
 				E1543CAB19DD45F7006E41A0 /* LibListHistoryViewController.m in Sources */,
 				E1543CAD19DD45F7006E41A0 /* LibListNowCell.m in Sources */,
 				E1543C5519DC531F006E41A0 /* EduSysEmptyClassroomViewController.m in Sources */,
+				E112ED1919E1A9B4001FA427 /* CalendarMonthCollectionViewLayout.m in Sources */,
 				E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */,
+				E1938B0519E03BC900353521 /* AddressUpdateView.swift in Sources */,
 				E1543CAF19DD45F7006E41A0 /* LibListNowViewController.m in Sources */,
 				E1543C7A19DC5354006E41A0 /* EduSysClassTableViewController.m in Sources */,
 				E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */,
+				E112ED1819E1A9B4001FA427 /* CalendarLogic.m in Sources */,
 				E122B6071949725300E90D87 /* Lession.swift in Sources */,
 				E15BB4C0193F06B500F8D492 /* User.swift in Sources */,
 				E12D501A19D9CE6D005F37B7 /* UIImage+ImageWithColor.m in Sources */,
 				E1543C6519DC531F006E41A0 /* EduSysPickClassInfoViewController.m in Sources */,
+				E1995CE819DDB6AE001AB5D7 /* TakeOutTableViewController.swift in Sources */,
 				E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */,
 				E1543C8419DC571B006E41A0 /* UIButton+Bootstrap.m in Sources */,
 				E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */,
