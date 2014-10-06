@@ -6,6 +6,7 @@ target "iSCAUSwift" do
   pod 'NSData+Base64', '~> 1.0.0'
   pod 'FRDLivelyButton', '~> 1.1.2'
   pod 'SDWebImage'
+  pod 'MBProgressHUD'
 end
 
 target "iSCAUSwiftTests" do

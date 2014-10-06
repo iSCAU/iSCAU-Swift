@@ -165,6 +165,9 @@
 		E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345D19DA619F00737E99 /* LoginViewController.swift */; };
 		E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */; };
 		E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346019DA619F00737E99 /* EduHttpManager.swift */; };
+		E1EE006919E2C94D00CF4F15 /* SBDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE006719E2C94D00CF4F15 /* SBDropDownMenu.m */; };
+		E1EE006A19E2C94D00CF4F15 /* SBDropDownMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EE006819E2C94D00CF4F15 /* SBDropDownMenu.xib */; };
+		E1EE006C19E2CEE200CF4F15 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EE006B19E2CEE200CF4F15 /* more@2x.png */; };
 		E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */; };
 		E1FDF41419D0734700CC311E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; };
 		E1FDF41519D0734700CC311E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -431,6 +434,10 @@
 		E1B8345D19DA619F00737E99 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		E1B8346019DA619F00737E99 /* EduHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduHttpManager.swift; sourceTree = "<group>"; };
+		E1EE006619E2C94D00CF4F15 /* SBDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDropDownMenu.h; sourceTree = "<group>"; };
+		E1EE006719E2C94D00CF4F15 /* SBDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDropDownMenu.m; sourceTree = "<group>"; };
+		E1EE006819E2C94D00CF4F15 /* SBDropDownMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBDropDownMenu.xib; sourceTree = "<group>"; };
+		E1EE006B19E2CEE200CF4F15 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
 		E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E1FDF41919D07D1500CC311E /* classtable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classtable.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -848,6 +855,7 @@
 		E15BB4B8193F054B00F8D492 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				E1EE006B19E2CEE200CF4F15 /* more@2x.png */,
 				E114957319D943D90087445D /* activity_img */,
 				E14FB65819D0635800526D45 /* calendar.png */,
 				E14FB65919D0635800526D45 /* classtable_on.png */,
@@ -896,6 +904,9 @@
 		E15BB4BA193F054B00F8D492 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1EE006619E2C94D00CF4F15 /* SBDropDownMenu.h */,
+				E1EE006719E2C94D00CF4F15 /* SBDropDownMenu.m */,
+				E1EE006819E2C94D00CF4F15 /* SBDropDownMenu.xib */,
 				E173B4D719DC0A5B009993C1 /* PopoverView.swift */,
 				E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */,
 				E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */,
@@ -1159,6 +1170,7 @@
 				E1543CAC19DD45F7006E41A0 /* LibListHistoryViewController.xib in Resources */,
 				E114957B19D943D90087445D /* push.png in Resources */,
 				E14FB65519D0629200526D45 /* 13.png in Resources */,
+				E1EE006C19E2CEE200CF4F15 /* more@2x.png in Resources */,
 				E1543CAA19DD45F7006E41A0 /* LibListHistoryCell.xib in Resources */,
 				E14FB65319D0629200526D45 /* 12.png in Resources */,
 				E14FB66619D0635900526D45 /* classtable_on.png in Resources */,
@@ -1167,6 +1179,7 @@
 				E14FB63F19D0629200526D45 /* 1.png in Resources */,
 				E114957C19D943D90087445D /* time.png in Resources */,
 				E14FB64819D0629200526D45 /* 6.1.png in Resources */,
+				E1EE006A19E2C94D00CF4F15 /* SBDropDownMenu.xib in Resources */,
 				E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */,
 				E14FB65119D0629200526D45 /* 10.png in Resources */,
 				E14FB64F19D0629200526D45 /* 9.png in Resources */,
@@ -1274,6 +1287,7 @@
 				E1543C5B19DC531F006E41A0 /* EduSysMarkCell.m in Sources */,
 				E112ED1A19E1A9B4001FA427 /* CalendarMonthHeaderView.m in Sources */,
 				E1543C7E19DC5354006E41A0 /* EduSysDayClassTableView.m in Sources */,
+				E1EE006919E2C94D00CF4F15 /* SBDropDownMenu.m in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
 				E112ED1619E1A9B4001FA427 /* CalendarDayModel.m in Sources */,
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,

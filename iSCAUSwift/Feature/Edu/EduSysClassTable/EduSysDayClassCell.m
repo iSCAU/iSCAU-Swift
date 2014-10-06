@@ -11,15 +11,6 @@
 #import "Constant.h"
 #import "iSCAUSwift-Swift.h"
 
-static NSString *CLASSNAME = @"classname";
-static NSString *DAY = @"day";
-static NSString *DSZ = @"dsz";
-static NSString *END_WEEK = @"endWeek";
-static NSString *LOCATION = @"location";
-static NSString *NODE = @"node";
-static NSString *STR_WEEK = @"strWeek";
-static NSString *TEACHER = @"teacher";
-
 @interface EduSysDayClassCell ()
 
 @property (nonatomic, weak) IBOutlet UILabel *labClassName;

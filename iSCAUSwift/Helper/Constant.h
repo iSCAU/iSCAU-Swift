@@ -51,6 +51,15 @@ typedef void(^ErrorBlock)(NSData *responseData, NSInteger httpCode);
 #define UINT "%u"
 #endif
 
+static NSString *CLASSNAME = @"classname";
+static NSString *DAY = @"day";
+static NSString *DSZ = @"dsz";
+static NSString *END_WEEK = @"endWeek";
+static NSString *LOCATION = @"location";
+static NSString *NODE = @"node";
+static NSString *STR_WEEK = @"strWeek";
+static NSString *TEACHER = @"teacher";
+
 
 #define HOST_NAME @"http://115.28.144.49"
 #define LIB_DETAIL_HOST @"http://202.116.174.108:8080/opac/"

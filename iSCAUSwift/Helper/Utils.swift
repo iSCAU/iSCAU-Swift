@@ -127,6 +127,15 @@ extension Utils {
             NSUserDefaults.standardUserDefaults().setObject(newTimeStamp, forKey: kTakeOutLastUpdateTimeStamp)
         }
     }
+    
+    class var preferWeekStyleClassTable: Bool {
+        get {
+            return NSUserDefaults.standardUserDefaults().boolForKey(kPreferWeekStyleClasstableKey)
+        }
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setBool(newValue, forKey: kPreferWeekStyleClasstableKey)
+        }
+    }
 
     class var semester: [String]? {
         get {
@@ -149,7 +158,53 @@ extension Utils {
             NSUserDefaults.standardUserDefaults().setObject(newDormitoryAddress, forKey: kDormitoryAddressKey)
         }
     }
-
+    
+    class var semesterStartDate: String? {
+        get {
+            return  NSUserDefaults.standardUserDefaults().objectForKey(kSemesterStartDateKey) as String?
+        }
+        set (newSemeterStartDate) {
+            NSUserDefaults.standardUserDefaults().setObject(newSemeterStartDate, forKey: kSemesterStartDateKey)
+        }
+    }
+    
+    class func currentWeek() -> String {
+        if let startDateStr = semesterStartDate {
+            let date = NSDate()
+            let locale = NSLocale(localeIdentifier: "zh_CN")
+            let formatter = NSDateFormatter()
+            formatter.locale = locale
+            formatter.dateFormat = "yyyy-MM-dd"
+            if let startDate = formatter.dateFromString(startDateStr) {
+                let interval = date.timeIntervalSinceDate(startDate)
+                let days = Int(interval / 86400)
+                let week = Int(floor(Double(days) / 7.0)) + 1
+                if week > 0 && week <= 23 {
+                    return "第\(week)周"
+                }
+            }
+        }
+        return ""
+    }
+    
+    class func currentWeekNum() -> Int {
+        if let startDateStr = semesterStartDate {
+            let date = NSDate()
+            let locale = NSLocale(localeIdentifier: "zh_CN")
+            let formatter = NSDateFormatter()
+            formatter.locale = locale
+            formatter.dateFormat = "yyyy-MM-dd"
+            if let startDate = formatter.dateFromString(startDateStr) {
+                let interval = date.timeIntervalSinceDate(startDate)
+                let days = Int(interval / 86400)
+                let week = Int(floor(Double(days) / 7.0)) + 1
+                if week > 0 && week <= 23 {
+                    return week
+                }
+            }
+        }
+        return 0
+    }
 }
 
 // MARK: - Path

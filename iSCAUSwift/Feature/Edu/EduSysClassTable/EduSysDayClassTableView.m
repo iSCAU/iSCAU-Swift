@@ -20,14 +20,6 @@ CGFloat HEADER_DAY_SELECTER_HEIGHT = 30;
 CGFloat INDICATOR_INDEXT = 5.0f;
 CGFloat CELL_HEIGHT = 55.0f;
 
-static NSString *CLASSNAME = @"classname";
-static NSString *DAY = @"day";
-static NSString *DSZ = @"dsz";
-static NSString *END_WEEK = @"endWeek";
-static NSString *LOCATION = @"location";
-static NSString *NODE = @"node";
-static NSString *STR_WEEK = @"strWeek";
-static NSString *TEACHER = @"teacher";
 
 #define TABLE_VIEW_TAG_BASE 3000
 

@@ -11,12 +11,12 @@ import CoreData
 // About singleton: https://github.com/hpique/SwiftSingleton
 private let _SingletonCoreDataManagerSharedInstance = CoreDataManager()
 
-public class CoreDataManager {
+class CoreDataManager {
     
     private let storeName = "iSCAUSwift"
     private let storeSqliteName = "iSCAUSwift.sqlite"
 
-    public class var sharedInstance: CoreDataManager {
+    class var sharedInstance: CoreDataManager {
         return _SingletonCoreDataManagerSharedInstance
     }
     

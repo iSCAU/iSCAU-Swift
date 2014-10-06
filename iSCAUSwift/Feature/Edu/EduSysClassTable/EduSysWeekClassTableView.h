@@ -15,7 +15,11 @@
 @property (nonatomic, strong) UIScrollView *classTable;
 
 @property (nonatomic, strong) NSArray *weekdayArray;
-@property (nonatomic, strong) NSArray *classTimeArray;
+@property (nonatomic, strong) NSArray *backgroundColors;
 @property (nonatomic, strong) NSMutableArray    *classesArray;
+
+- (id)initWithFrame:(CGRect)frame classes:(NSArray *)classes;
+- (void)updateViewWithWeek:(NSInteger)theWeek;
+- (void)updateClasses:(NSArray *)classes;
 
 @end

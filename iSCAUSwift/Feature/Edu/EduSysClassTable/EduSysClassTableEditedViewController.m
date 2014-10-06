@@ -17,14 +17,6 @@
 #define WEEK_TYPE   3
 #define PICKER_HEIGHT 162
 
-static NSString *CLASSNAME = @"classname";
-static NSString *DAY = @"day";
-static NSString *DSZ = @"dsz";
-static NSString *END_WEEK = @"endWeek";
-static NSString *LOCATION = @"location";
-static NSString *NODE = @"node";
-static NSString *STR_WEEK = @"strWeek";
-static NSString *TEACHER = @"teacher";
 
 @interface EduSysClassTableEditedViewController () <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate> {
     

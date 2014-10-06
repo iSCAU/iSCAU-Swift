@@ -11,10 +11,12 @@
 #import "EduSysWeekClassTableView.h"
 #import "EduSysClassTableEditedViewController.h"
 #import "AZTools.h"
+#import "SBDropDownMenu.h"
 #import "iSCAUSwift-Swift.h"
 
-@interface EduSysClassTableViewController () <PopoverViewDelegate>
-
+@interface EduSysClassTableViewController () <PopoverViewDelegate, SBDropDownMenuDelegate>
+@property (nonatomic) BOOL weekStyle;
+@property (nonatomic, strong) SBDropDownMenu *dropDownMenu;
 @end
 
 @implementation EduSysClassTableViewController
@@ -39,19 +41,12 @@
     self.classesFri = [NSMutableArray array];
     self.classesSat = [NSMutableArray array];
     self.classesSun = [NSMutableArray array];
-
-    self.navigationController.edgesForExtendedLayout = UIRectEdgeNone;
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.dayTableView = [[EduSysDayClassTableView alloc] initWithFrame:(CGRect){
-        0,
-        64,
-        self.view.size
-    }];
-
-    [self.view addSubview:self.dayTableView];
-    [self setupRightButtonState];
     
-    [self reloadData];
+    // Data
+    self.weekStyle = [Utils preferWeekStyleClassTable];
+    [self setupData];
+    [self updateTitle];
+    [self setupRightButtonState];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,45 +55,142 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [self setupData];    
-    [self setupNavTitle];
-}
-
 #pragma mark - methods
 
-- (void)setupNavTitle
+- (void)showPopOverView
 {
-    NSString *title = [NSString stringWithFormat:@"课程表%@", [self getWeek]];
-    self.title = title;
+    UIButton *btnReloadData = [UIButton buttonWithType:UIButtonTypeCustom];
+    btnReloadData.frame = CGRectMake(5, 0, 90, 40);
+    [btnReloadData setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btnReloadData setTitle:@"更新" forState:UIControlStateNormal];
+    btnReloadData.userInteractionEnabled = NO;
+
+    if (self.weekStyle) {
+        UIButton *btnFlipToWeek = [UIButton buttonWithType:UIButtonTypeCustom];
+        btnFlipToWeek.frame = CGRectMake(5, 44, 90, 40);
+        [btnFlipToWeek setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btnFlipToWeek setTitle:@"每日视图" forState:UIControlStateNormal];
+        btnFlipToWeek.userInteractionEnabled = NO;
+        
+        [PopoverView showPopoverAtPoint:CGPointMake(SCREEN_WIDTH - 20, 0) inView:self.view withViewArray:@[btnReloadData, btnFlipToWeek] delegate:self];
+    } else {
+        UIButton *btnChangeClassTableMode = [UIButton buttonWithType:UIButtonTypeCustom];
+        btnChangeClassTableMode.frame = CGRectMake(5, 44, 90, 40);
+        [btnChangeClassTableMode setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btnChangeClassTableMode setTitle:@"编辑" forState:UIControlStateNormal];
+        btnChangeClassTableMode.userInteractionEnabled = NO;
+        
+        UIButton *btnEdit = [UIButton buttonWithType:UIButtonTypeCustom];
+        btnEdit.frame = CGRectMake(5, 88, 90, 40);
+        [btnEdit setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btnEdit setTitle:@"添加" forState:UIControlStateNormal];
+        btnEdit.userInteractionEnabled = NO;
+        
+        UIButton *btnFlipToWeek = [UIButton buttonWithType:UIButtonTypeCustom];
+        btnFlipToWeek.frame = CGRectMake(5, 132, 90, 40);
+        [btnFlipToWeek setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btnFlipToWeek setTitle:@"全周视图" forState:UIControlStateNormal];
+        btnFlipToWeek.userInteractionEnabled = NO;
+        
+        [PopoverView showPopoverAtPoint:CGPointMake(SCREEN_WIDTH - 20, 0) inView:self.view withViewArray:@[btnReloadData, btnChangeClassTableMode, btnEdit, btnFlipToWeek] delegate:self];
+    }
 }
 
-- (NSString *)getWeek
+- (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index
 {
-    NSString *semesterStartDate = @""; //[[Tool semesterStartDate] copy];
-    if (semesterStartDate) {
-        NSDate *date = [NSDate date];
-        NSLocale *local = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setLocale:local];
-        
-        [formatter setDateFormat:@"yyyy-MM-dd"];
-        NSDate *startDate = [formatter dateFromString:semesterStartDate];
-        NSTimeInterval interval = [date timeIntervalSinceDate:startDate];
-        int days = ((int) interval) / 86400;
-        int week = floor(days / 7.0) + 1;
-        
-        if (week > 0 && week < 22) { 
-            return [NSString stringWithFormat:@"(第%d周)", week];
-        } else {
-            return @"";
+    if (self.weekStyle) {
+        switch (index) {
+            case 0:
+                [self reloadData];
+                break;
+            case 1:
+                [self flipClassTable];
+        }
+    } else {
+        switch (index) {
+            case 0:
+                [self reloadData];
+                break;
+            case 1:
+                [self editClassTable];
+                break;
+            case 2:
+                [self editTable];
+                break;
+            case 3:
+                [self flipClassTable];
         }
     }
-    return @"";
+    
+    [popoverView performSelector:@selector(dismiss) withObject:nil afterDelay:0.1f];
 }
+
+#pragma mark - Style
+
+- (void)didSelectedItem:(id)item
+{
+    if (self.weekStyle) {
+        [self.weekTableView updateViewWithWeek:[item integerValue]];
+    }
+}
+
+- (void)flipClassTable
+{
+    if (!self.weekStyle) {
+        [self setupWeekClasstable];
+    } else {
+        [self setupDayClasstable];
+    }
+    
+    APP_DELEGATE.window.userInteractionEnabled = NO;
+    [UIView transitionWithView:self.view
+                      duration:1
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations:^{
+                        if (!self.weekStyle) {
+                            [self.dayTableView removeFromSuperview];
+                            self.dayTableView = nil;
+
+                            [self.view addSubview:self.weekTableView];
+                        } else {
+                            [self.weekTableView removeFromSuperview];
+                            self.weekTableView = nil;
+                            
+                            [self.view addSubview:self.dayTableView];
+                        }
+                        self.weekStyle = !self.weekStyle;
+                        [Utils setPreferWeekStyleClassTable:self.weekStyle];
+                    } completion:^(BOOL finished) {
+                        if (finished) {
+                            APP_DELEGATE.window.userInteractionEnabled = YES;
+                            [self updateTitle];
+                        }
+                    }];
+}
+
+- (void)updateTitle
+{
+    if (self.weekStyle) {
+        if (!self.dropDownMenu) {
+            // Dropdown menu
+            self.dropDownMenu = [[SBDropDownMenu alloc] init];
+            self.dropDownMenu.backgroundColor = [UIColor clearColor];
+            self.dropDownMenu.delegate = self;
+            NSMutableArray *weeks = [NSMutableArray array];
+            for (NSInteger i = 1; i <= 23; i++) {
+                [weeks addObject:@(i)];
+            }
+            [self.dropDownMenu resetDatasource:weeks];
+        }
+        [self.dropDownMenu setTitleWithWeek:[Utils currentWeekNum]];
+        self.navigationItem.titleView = self.dropDownMenu;
+    } else {
+        self.navigationItem.titleView = nil;
+        self.navigationItem.title = [NSString stringWithFormat:@"课程表 %@", [Utils currentWeek]];
+    }
+}
+
+#pragma mark - Data
 
 - (void)setupData
 {
@@ -109,7 +201,7 @@
 - (void)parseClassesData:(NSDictionary *)classesInfo
 {
     if (classesInfo == nil) return;
-
+    
     [self.classesMon removeAllObjects];
     [self.classesTue removeAllObjects];
     [self.classesWed removeAllObjects];
@@ -139,6 +231,47 @@
             [self.classesSun addObject:class];
         }
     }
+    
+    [self setupTable];
+}
+
+- (void)setupTable
+{
+    if (self.weekStyle) {
+        [self setupWeekClasstable];
+        [self.view addSubview:self.weekTableView];
+    } else {
+        [self setupDayClasstable];
+        [self.view addSubview:self.dayTableView];
+    }
+}
+
+- (void)setupWeekClasstable
+{
+    NSMutableArray *classes = [NSMutableArray array];
+    [classes addObjectsFromArray:self.classesMon];
+    [classes addObjectsFromArray:self.classesTue];
+    [classes addObjectsFromArray:self.classesWed];
+    [classes addObjectsFromArray:self.classesThus];
+    [classes addObjectsFromArray:self.classesFri];
+    [classes addObjectsFromArray:self.classesSat];
+    [classes addObjectsFromArray:self.classesSun];
+    if (!self.weekTableView) {
+        self.weekTableView = [[EduSysWeekClassTableView alloc] initWithFrame:self.view.bounds classes:classes];
+    } else {
+        [self.weekTableView updateClasses:classes];
+    }
+    [self.weekTableView updateViewWithWeek:[Utils currentWeekNum]];
+}
+
+- (void)setupDayClasstable
+{
+    if (!self.dayTableView) {
+        self.dayTableView = [[EduSysDayClassTableView alloc] initWithFrame:(CGRect){
+            CGPointZero,
+            self.view.size
+        }];
+    }
     [self.dayTableView reloadClassTableWithClasses:@[self.classesMon,
                                                      self.classesTue,
                                                      self.classesWed,
@@ -149,56 +282,20 @@
      ];
 }
 
-- (void)showPopOverView
-{
-    UIButton *btnReloadData = [UIButton buttonWithType:UIButtonTypeCustom];
-    btnReloadData.frame = CGRectMake(5, 0, 90, 40);
-    [btnReloadData setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btnReloadData setTitle:@"更新" forState:UIControlStateNormal];
-    btnReloadData.userInteractionEnabled = NO;
-    
-    UIButton *btnChangeClassTableMode = [UIButton buttonWithType:UIButtonTypeCustom];
-    btnChangeClassTableMode.frame = CGRectMake(5, 44, 90, 40);
-    [btnChangeClassTableMode setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btnChangeClassTableMode setTitle:@"编辑" forState:UIControlStateNormal];
-    btnChangeClassTableMode.userInteractionEnabled = NO;
-    
-    UIButton *btnEdit = [UIButton buttonWithType:UIButtonTypeCustom];
-    btnEdit.frame = CGRectMake(5, 88, 90, 40);
-    [btnEdit setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btnEdit setTitle:@"添加" forState:UIControlStateNormal];
-    btnEdit.userInteractionEnabled = NO;
-    
-    [PopoverView showPopoverAtPoint:CGPointMake(SCREEN_WIDTH - 20, 64) inView:self.view withViewArray:@[btnReloadData, btnChangeClassTableMode, btnEdit] delegate:self];
-}
-
 - (void)reloadData
 {
-//    if ([Tool stuNum].length < 1 || [Tool stuPwd].length < 1) {
-//        SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
-//        return;
-//    }
-//    SHOW_WATING_HUD;
-//    [[EduSysHttpClient shareInstance] 
-//     eduSysGetClassTableSuccess:^(NSData *responseData, NSInteger httpCode){
-//         NSDictionary *classesInfo = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:NULL];
-//         if (httpCode == 200) {
-//             HIDE_ALL_HUD;
-//             if (classesInfo[@"termStartDate"]) {
-//                 [Tool setSemesterStartDate:classesInfo[@"termStartDate"]];
-//                 [self setNavTitle];
-//             }
-//             [self parseClassesData:classesInfo];
-//             [self saveClassesDataToLocal:classesInfo];
-//         }
-//     } 
-//     failure:nil];
+    if ([Utils stuNum].length < 1 || [Utils stuPwd].length < 1) {
+        SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
+        return;
+    }
+    SHOW_WATING_HUD;
+
     [EduHttpManager requestClassTableWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         if (response.statusCode == kStatusCodeSuccess) {
+            HIDE_ALL_HUD;
             NSDictionary *classesInfo = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
             if (classesInfo[@"termStartDate"]) {
-//                [Tool setSemesterStartDate:classesInfo[@"termStartDate"]];
-                [self setupNavTitle];
+                [Utils setSemesterStartDate:classesInfo[@"termStartDate"]];
             }
             [self parseClassesData:classesInfo];
             [self saveClassesDataToLocal:classesInfo];
@@ -215,10 +312,10 @@
 - (void)setupRightButtonState
 {
     if (self.dayTableView.isEditing) {
-        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消编辑" style:UIBarButtonItemStyleBordered target:self action:@selector(endEditing)];
+        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消编辑" style:UIBarButtonItemStylePlain target:self action:@selector(endEditing)];
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     } else {
-        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStyleBordered target:self action:@selector(showPopOverView)];
+        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(showPopOverView)];
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     }
 }
@@ -234,24 +331,6 @@
     EduSysClassTableEditedViewController *editViewController = [[EduSysClassTableEditedViewController alloc] init];
     editViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:editViewController animated:YES];
-}
-
-- (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
-    switch (index) {
-        case 0:
-            [self reloadData];
-            break;
-        case 1:
-            [self editClassTable];
-            break;
-        case 2:
-            [self editTable];
-            break;
-        default:
-            break;
-    }
-
-    [popoverView performSelector:@selector(dismiss) withObject:nil afterDelay:0.1f];
 }
 
 - (NSDictionary *)loadLocalClassesData

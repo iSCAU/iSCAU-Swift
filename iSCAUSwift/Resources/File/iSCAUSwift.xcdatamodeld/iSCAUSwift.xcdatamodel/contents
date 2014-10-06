@@ -12,10 +12,10 @@
         <attribute name="classname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dsz" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="endWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="endWeek" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="node" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="strWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="strWeek" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Restaurant" representedClassName="iSCAUSwift.Restaurant" syncable="YES">

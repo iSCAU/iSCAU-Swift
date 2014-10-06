@@ -22,6 +22,8 @@ let kSchoolYearKey = "kSchoolYearKey"
 let kSemesterKey = "kSemesterKey"
 let kDormitoryAddressKey = "kDormitoryAddressKey"
 let kTakeOutLastUpdateTimeStamp = "kTakeOutLastUpdateTimeStamp"
+let kSemesterStartDateKey = "kSemesterStartDateKey"
+let kPreferWeekStyleClasstableKey = "kPreferWeekStyleClasstableKey"
 
 let kReloadRestaurantTableNotification = "kReloadRestaurantTableNotification"
 
