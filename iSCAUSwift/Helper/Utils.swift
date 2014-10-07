@@ -128,6 +128,19 @@ extension Utils {
         }
     }
     
+    class var activityLastUpdateTimeStamp: String? {
+        get {
+//            if let timeStamp = NSUserDefaults.standardUserDefaults().objectForKey(kActivityLastUpdateTimeStamp) as? String {
+//                return timeStamp
+//            } else {
+                return "0"
+//            }
+        }
+        set(newTimeStamp) {
+            NSUserDefaults.standardUserDefaults().setObject(newTimeStamp, forKey: kActivityLastUpdateTimeStamp)
+        }
+    }
+    
     class var preferWeekStyleClassTable: Bool {
         get {
             return NSUserDefaults.standardUserDefaults().boolForKey(kPreferWeekStyleClasstableKey)

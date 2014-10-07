@@ -30,5 +30,5 @@
 - (void)selectTabNum:(NSInteger)index;
 
 - (NSInteger)selectedTab;
-- (void)setup;
+
 @end

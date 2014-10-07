@@ -12,6 +12,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, AZDateType) {
+    AZDateTypePast,
+    AZDateTypeToday,
+    AZDateTypeTomorrow,
+    AZDateTypeFuture,
+};
+
 @interface NSDate (WQCalendarLogic)
 
 - (NSUInteger)numberOfDaysInCurrentMonth;
@@ -37,6 +44,8 @@
 - (NSDate *)dateFromString:(NSString *)dateString;//NSString转NSDate
 
 - (NSString *)stringFromDate:(NSDate *)date;//NSDate转NSString
+
+-(AZDateType)dateType;
 
 + (int)getDayNumbertoDay:(NSDate *)today beforDay:(NSDate *)beforday;
 

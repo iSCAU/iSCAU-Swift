@@ -7,9 +7,11 @@
         <!--活动圈-->
         <scene sceneID="G7a-hU-LF7">
             <objects>
-                <navigationController id="5aM-Gd-bbS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5aM-Gd-bbS" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="活动圈" image="huodongquan.png" id="obA-Ik-IDF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vqg-8V-F0W">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Vqg-8V-F0W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -24,21 +26,60 @@
         <!--活动圈-->
         <scene sceneID="0gQ-KX-GfV">
             <objects>
-                <viewController id="H3x-u9-pQs" customClass="ActivityDisplayViewController" customModule="iSCAUSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="H3x-u9-pQs" customClass="ActivityDisplayViewController" customModule="iSCAUSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eup-DC-FZ0"/>
                         <viewControllerLayoutGuide type="bottom" id="QEW-6N-I82"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yxK-j5-7kw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="活动圈" id="1ON-P9-sIo"/>
+                    <connections>
+                        <segue destination="6ZZ-P4-kat" kind="push" identifier="PushActivityDetailViewController" id="YaZ-3g-jQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6j-Vq-nnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="739" y="916"/>
+        </scene>
+        <!--活动详细-->
+        <scene sceneID="IIa-Sd-MSW">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="6ZZ-P4-kat" customClass="ActivityDetailViewController" customModule="iSCAUSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Xs-bf-fSw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Auh-W3-V4w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bfX-86-o9H">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9U7-ly-RBc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9U7-ly-RBc" firstAttribute="leading" secondItem="4Xs-bf-fSw" secondAttribute="leading" id="79f-IJ-22w"/>
+                            <constraint firstAttribute="width" secondItem="9U7-ly-RBc" secondAttribute="width" id="NDG-y0-xKb"/>
+                            <constraint firstAttribute="height" secondItem="9U7-ly-RBc" secondAttribute="height" id="SG0-O7-GrR"/>
+                            <constraint firstItem="9U7-ly-RBc" firstAttribute="top" secondItem="4Xs-bf-fSw" secondAttribute="bottom" id="sKq-24-rcC"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="活动详细" id="N9l-YS-UXi"/>
+                    <connections>
+                        <outlet property="webContent" destination="9U7-ly-RBc" id="iC4-W8-q4L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugQ-Ez-fZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="916"/>
         </scene>
         <!--功能-->
         <scene sceneID="2NF-hg-Y2k">
@@ -148,38 +189,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1183" y="-708"/>
-        </scene>
-        <!--校历-->
-        <scene sceneID="ZTh-gk-dSU">
-            <objects>
-                <viewController title="校历" id="bUR-jc-Vd1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kIy-dl-f3L"/>
-                        <viewControllerLayoutGuide type="bottom" id="QqY-BJ-jZq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zjj-Qu-ZPf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="70x-SF-k55">
-                                <rect key="frame" x="-20" y="44" width="360" height="608"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FDF79F50-4D8E-44DB-A9FB-A1C5481A8AB9" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-v9-off">
-                                        <rect key="frame" x="20" y="-39" width="320" height="568"/>
-                                    </imageView>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="calendarimage" destination="O8F-v9-off" id="rhh-5z-D5g"/>
-                        <outlet property="calendarscroll" destination="70x-SF-k55" id="eCt-vM-lBE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SXy-0j-9Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1540" y="-708"/>
         </scene>
         <!--常用电话-->
         <scene sceneID="BUt-GQ-UQe">
@@ -458,7 +467,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyg-8E-QnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="1343"/>
+            <point key="canvasLocation" x="1464" y="84"/>
         </scene>
         <!--账号设置-->
         <scene sceneID="sXD-Ze-tCH">
@@ -553,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRN-1a-InW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1918" y="1343"/>
+            <point key="canvasLocation" x="2214" y="84"/>
         </scene>
         <!--联系我们-->
         <scene sceneID="prM-3G-w0e">
@@ -572,7 +581,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMF-g4-OsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="1343"/>
+            <point key="canvasLocation" x="1822" y="84"/>
         </scene>
         <!--Take Out Menu View Controller-->
         <scene sceneID="rFD-K3-s4K">
@@ -823,7 +832,6 @@
     <resources>
         <image name="08F2E0B2-609D-4F1B-A6E7-EB3A52DA76DE" width="81" height="81"/>
         <image name="1.1.png" width="81" height="81"/>
-        <image name="FDF79F50-4D8E-44DB-A9FB-A1C5481A8AB9" width="81" height="81"/>
         <image name="classtable.png" width="36" height="36"/>
         <image name="features.png" width="32" height="32"/>
         <image name="huodongquan.png" width="35" height="35"/>

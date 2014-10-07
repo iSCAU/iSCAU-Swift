@@ -215,6 +215,46 @@
     }
 }
 
+//判断日期是今天,明天,后天,周几
+-(AZDateType)dateType
+{
+    NSDate *todate = [NSDate date];//今天
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSChineseCalendar];
+    NSDateComponents *comps_today= [calendar components:(NSYearCalendarUnit |
+                                                         NSMonthCalendarUnit |
+                                                         NSDayCalendarUnit |
+                                                         NSWeekdayCalendarUnit) fromDate:todate];
+    
+    
+    NSDateComponents *comps_other= [calendar components:(NSYearCalendarUnit |
+                                                         NSMonthCalendarUnit |
+                                                         NSDayCalendarUnit |
+                                                         NSWeekdayCalendarUnit) fromDate:self];
+    
+    
+    //获取星期对应的数字
+    int weekIntValue = [self getWeekIntValueWithDate];
+    
+    if (comps_today.year == comps_other.year &&
+        comps_today.month == comps_other.month &&
+        comps_today.day == comps_other.day) {
+        return AZDateTypeToday;
+        
+    }else if (comps_today.year == comps_other.year &&
+              comps_today.month == comps_other.month &&
+              (comps_today.day - comps_other.day) == -1){
+        return AZDateTypeTomorrow;
+        
+    }else if (comps_today.year <= comps_other.year &&
+              comps_today.month <= comps_other.month &&
+              (comps_today.day - comps_other.day) <= -2){
+        return AZDateTypeFuture;
+        
+    }else{
+        return AZDateTypePast;
+    }
+}
+
 
 
 //通过数字返回星期几

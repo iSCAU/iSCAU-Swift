@@ -9,15 +9,7 @@
 import UIKit
 import Alamofire
 
-class EduHttpManager: NSObject {
-    
-    private class func startRequest(urlStr: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-        if let escapedStr = urlStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
-            Alamofire
-                .request(.GET, escapedStr, parameters: nil)
-                .response(completionHandler)
-        }
-    }
+class EduHttpManager: BaseHttpManager {
     
     private class func isLogined() -> Bool {
         if (Utils.stuNum? != nil &&

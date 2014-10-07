@@ -22,10 +22,13 @@ let kSchoolYearKey = "kSchoolYearKey"
 let kSemesterKey = "kSemesterKey"
 let kDormitoryAddressKey = "kDormitoryAddressKey"
 let kTakeOutLastUpdateTimeStamp = "kTakeOutLastUpdateTimeStamp"
+let kActivityLastUpdateTimeStamp = "kActivityLastUpdateTimeStamp"
 let kSemesterStartDateKey = "kSemesterStartDateKey"
 let kPreferWeekStyleClasstableKey = "kPreferWeekStyleClasstableKey"
 
 let kReloadRestaurantTableNotification = "kReloadRestaurantTableNotification"
+let kRefreshActivityDataNotification = "kRefreshActivityDataNotification"
+let kCheckActivityDetailNotification = "kCheckActivityDetailNotification"
 
 // Utils
 let iSCAUAppDelegate: AppDelegate = UIApplication.sharedApplication().delegate! as AppDelegate

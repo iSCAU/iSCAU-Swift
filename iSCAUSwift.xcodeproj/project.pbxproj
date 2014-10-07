@@ -18,7 +18,7 @@
 		E112ED1C19E1A9B4001FA427 /* chack.png in Resources */ = {isa = PBXBuildFile; fileRef = E112ED1119E1A9B4001FA427 /* chack.png */; };
 		E112ED1D19E1A9B4001FA427 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED1419E1A9B4001FA427 /* NSDate+WQCalendarLogic.m */; };
 		E114957A19D943D90087445D /* place.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957419D943D90087445D /* place.png */; };
-		E114957B19D943D90087445D /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957519D943D90087445D /* push.png */; };
+		E114957B19D943D90087445D /* push@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957519D943D90087445D /* push@2x.png */; };
 		E114957C19D943D90087445D /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957619D943D90087445D /* time.png */; };
 		E114957D19D943D90087445D /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957719D943D90087445D /* top.png */; };
 		E114957E19D943D90087445D /* userName.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957819D943D90087445D /* userName.png */; };
@@ -158,16 +158,20 @@
 		E1995CEA19DDC2C5001AB5D7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1995CE919DDC2C5001AB5D7 /* Restaurant.swift */; };
 		E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19F70E719DB2EF3009698D8 /* JPTabViewController.m */; };
 		E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */; };
-		E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */; };
-		E1B8347219DA619F00737E99 /* ActivityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */; };
-		E1B8347319DA619F00737E99 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345A19DA619F00737E99 /* ActivityModel.swift */; };
-		E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345B19DA619F00737E99 /* ActivityViewController.swift */; };
 		E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345D19DA619F00737E99 /* LoginViewController.swift */; };
 		E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */; };
 		E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346019DA619F00737E99 /* EduHttpManager.swift */; };
 		E1EE006919E2C94D00CF4F15 /* SBDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE006719E2C94D00CF4F15 /* SBDropDownMenu.m */; };
 		E1EE006A19E2C94D00CF4F15 /* SBDropDownMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EE006819E2C94D00CF4F15 /* SBDropDownMenu.xib */; };
 		E1EE006C19E2CEE200CF4F15 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EE006B19E2CEE200CF4F15 /* more@2x.png */; };
+		E1EE006E19E2F7B700CF4F15 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE006D19E2F7B700CF4F15 /* Activity.swift */; };
+		E1EE007019E2FA5D00CF4F15 /* ActivityHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE006F19E2FA5D00CF4F15 /* ActivityHttpManager.swift */; };
+		E1EE007219E2FA9300CF4F15 /* BaseHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007119E2FA9300CF4F15 /* BaseHttpManager.swift */; };
+		E1EE007419E305AA00CF4F15 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE007319E305AA00CF4F15 /* Reveal.framework */; };
+		E1EE007619E395AA00CF4F15 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007519E395AA00CF4F15 /* ActivityTableViewController.swift */; };
+		E1EE007919E3979300CF4F15 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007719E3979300CF4F15 /* ActivityTableViewCell.swift */; };
+		E1EE007A19E3979300CF4F15 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */; };
+		E1EE007C19E4239E00CF4F15 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007B19E4239E00CF4F15 /* ActivityDetailViewController.swift */; };
 		E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */; };
 		E1FDF41419D0734700CC311E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; };
 		E1FDF41519D0734700CC311E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -242,7 +246,7 @@
 		E112ED1319E1A9B4001FA427 /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
 		E112ED1419E1A9B4001FA427 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
 		E114957419D943D90087445D /* place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place.png; sourceTree = "<group>"; };
-		E114957519D943D90087445D /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
+		E114957519D943D90087445D /* push@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push@2x.png"; sourceTree = "<group>"; };
 		E114957619D943D90087445D /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		E114957719D943D90087445D /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
 		E114957819D943D90087445D /* userName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userName.png; sourceTree = "<group>"; };
@@ -427,10 +431,6 @@
 		E19F70E619DB2EF3009698D8 /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabViewController.h; sourceTree = "<group>"; };
 		E19F70E719DB2EF3009698D8 /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabViewController.m; sourceTree = "<group>"; };
 		E1B0B9E01948BC520035B287 /* iSCAUSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSCAUSwift.xcdatamodel; sourceTree = "<group>"; };
-		E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailCell.swift; sourceTree = "<group>"; };
-		E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityInfoCell.swift; sourceTree = "<group>"; };
-		E1B8345A19DA619F00737E99 /* ActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
-		E1B8345B19DA619F00737E99 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		E1B8345D19DA619F00737E99 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		E1B8346019DA619F00737E99 /* EduHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduHttpManager.swift; sourceTree = "<group>"; };
@@ -438,6 +438,14 @@
 		E1EE006719E2C94D00CF4F15 /* SBDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDropDownMenu.m; sourceTree = "<group>"; };
 		E1EE006819E2C94D00CF4F15 /* SBDropDownMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBDropDownMenu.xib; sourceTree = "<group>"; };
 		E1EE006B19E2CEE200CF4F15 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		E1EE006D19E2F7B700CF4F15 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Model/Activity.swift; sourceTree = "<group>"; };
+		E1EE006F19E2FA5D00CF4F15 /* ActivityHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHttpManager.swift; sourceTree = "<group>"; };
+		E1EE007119E2FA9300CF4F15 /* BaseHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttpManager.swift; sourceTree = "<group>"; };
+		E1EE007319E305AA00CF4F15 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		E1EE007519E395AA00CF4F15 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
+		E1EE007719E3979300CF4F15 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		E1EE007B19E4239E00CF4F15 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E1FDF41919D07D1500CC311E /* classtable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classtable.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -447,6 +455,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EE007419E305AA00CF4F15 /* Reveal.framework in Frameworks */,
 				5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */,
 				E1FDF41419D0734700CC311E /* Alamofire.framework in Frameworks */,
 			);
@@ -499,7 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				E114957419D943D90087445D /* place.png */,
-				E114957519D943D90087445D /* push.png */,
+				E114957519D943D90087445D /* push@2x.png */,
 				E114957619D943D90087445D /* time.png */,
 				E114957719D943D90087445D /* top.png */,
 				E114957819D943D90087445D /* userName.png */,
@@ -581,6 +590,7 @@
 		E14FB5D819D0609100526D45 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E1EE007319E305AA00CF4F15 /* Reveal.framework */,
 				E112ED0219E1A9B4001FA427 /* ZFCalendar */,
 				E19F70E519DB2EF3009698D8 /* JPTabViewController */,
 				E12D4FFB19D9CE6C005F37B7 /* AZTools */,
@@ -817,6 +827,7 @@
 				E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */,
 				E15BB4C3193F24AB00F8D492 /* Notice.swift */,
 				E122B6061949725300E90D87 /* Lession.swift */,
+				E1EE006D19E2F7B700CF4F15 /* Activity.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -969,11 +980,12 @@
 		E1B8345719DA619F00737E99 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */,
-				E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */,
-				E1B8345A19DA619F00737E99 /* ActivityModel.swift */,
-				E1B8345B19DA619F00737E99 /* ActivityViewController.swift */,
 				E1938AFD19E0189900353521 /* ActivityDisplayViewController.swift */,
+				E1EE007519E395AA00CF4F15 /* ActivityTableViewController.swift */,
+				E1EE007719E3979300CF4F15 /* ActivityTableViewCell.swift */,
+				E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */,
+				E1EE006F19E2FA5D00CF4F15 /* ActivityHttpManager.swift */,
+				E1EE007B19E4239E00CF4F15 /* ActivityDetailViewController.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -983,6 +995,7 @@
 			children = (
 				E1B8345D19DA619F00737E99 /* LoginViewController.swift */,
 				E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */,
+				E1EE007119E2FA9300CF4F15 /* BaseHttpManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1158,6 +1171,7 @@
 				E14FB67119D0635900526D45 /* wave.png in Resources */,
 				E14FB66919D0635900526D45 /* features.png in Resources */,
 				E14FB64019D0629200526D45 /* 2.1.png in Resources */,
+				E1EE007A19E3979300CF4F15 /* ActivityTableViewCell.xib in Resources */,
 				E1543C6219DC531F006E41A0 /* EduSysMarksViewController.xib in Resources */,
 				E1543CB619DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib in Resources */,
 				E1543CAE19DD45F7006E41A0 /* LibListNowCell.xib in Resources */,
@@ -1168,7 +1182,7 @@
 				E14FB64319D0629200526D45 /* 3.png in Resources */,
 				E14FB63E19D0629200526D45 /* 1.1.png in Resources */,
 				E1543CAC19DD45F7006E41A0 /* LibListHistoryViewController.xib in Resources */,
-				E114957B19D943D90087445D /* push.png in Resources */,
+				E114957B19D943D90087445D /* push@2x.png in Resources */,
 				E14FB65519D0629200526D45 /* 13.png in Resources */,
 				E1EE006C19E2CEE200CF4F15 /* more@2x.png in Resources */,
 				E1543CAA19DD45F7006E41A0 /* LibListHistoryCell.xib in Resources */,
@@ -1251,19 +1265,19 @@
 				E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
 				E1543CBE19DD722C006E41A0 /* MapViewController.swift in Sources */,
+				E1EE006E19E2F7B700CF4F15 /* Activity.swift in Sources */,
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
 				E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */,
-				E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */,
 				E1543C8D19DD3FC8006E41A0 /* LibHttpManager.swift in Sources */,
 				E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */,
 				E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */,
 				E1543C8019DC5354006E41A0 /* EduSysWeekClassTableView.m in Sources */,
 				E1543CB319DD45F7006E41A0 /* LibSearchBooksDetailCell.m in Sources */,
 				E1543C5119DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m in Sources */,
+				E1EE007019E2FA5D00CF4F15 /* ActivityHttpManager.swift in Sources */,
 				E12D501C19D9CE6D005F37B7 /* UIImage+ScreenShot.m in Sources */,
 				E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */,
 				E1543CA919DD45F7006E41A0 /* LibListHistoryCell.m in Sources */,
-				E1B8347219DA619F00737E99 /* ActivityInfoCell.swift in Sources */,
 				E1543C6119DC531F006E41A0 /* EduSysMarksViewController.m in Sources */,
 				E1995CE619DDB4AA001AB5D7 /* TakeOutHttpManager.swift in Sources */,
 				E1543C5F19DC531F006E41A0 /* EduSysMarksDetailViewController.m in Sources */,
@@ -1276,7 +1290,6 @@
 				E112ED1B19E1A9B4001FA427 /* CalendarViewController.m in Sources */,
 				E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */,
 				E12D501B19D9CE6D005F37B7 /* UIImage+RTTint.m in Sources */,
-				E1B8347319DA619F00737E99 /* ActivityModel.swift in Sources */,
 				E1543CB719DD45F7006E41A0 /* LibSearchBooksViewController.m in Sources */,
 				E12D501919D9CE6D005F37B7 /* UIImage+Blur.m in Sources */,
 				E1543C5D19DC531F006E41A0 /* EduSysMarksDetailCell.m in Sources */,
@@ -1287,6 +1300,7 @@
 				E1543C5B19DC531F006E41A0 /* EduSysMarkCell.m in Sources */,
 				E112ED1A19E1A9B4001FA427 /* CalendarMonthHeaderView.m in Sources */,
 				E1543C7E19DC5354006E41A0 /* EduSysDayClassTableView.m in Sources */,
+				E1EE007619E395AA00CF4F15 /* ActivityTableViewController.swift in Sources */,
 				E1EE006919E2C94D00CF4F15 /* SBDropDownMenu.m in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
 				E112ED1619E1A9B4001FA427 /* CalendarDayModel.m in Sources */,
@@ -1298,7 +1312,9 @@
 				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
 				E174654D19DEE208005EE1AD /* TakeOutMenuViewController.swift in Sources */,
 				E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */,
+				E1EE007219E2FA9300CF4F15 /* BaseHttpManager.swift in Sources */,
 				E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */,
+				E1EE007919E3979300CF4F15 /* ActivityTableViewCell.swift in Sources */,
 				E174654F19DEE698005EE1AD /* FoodTableViewCell.swift in Sources */,
 				E1543C7819DC5354006E41A0 /* EduSysClassTableEditedViewController.m in Sources */,
 				E112ED1719E1A9B4001FA427 /* CalendarHomeViewController.m in Sources */,
@@ -1315,6 +1331,7 @@
 				E1543C7A19DC5354006E41A0 /* EduSysClassTableViewController.m in Sources */,
 				E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */,
 				E112ED1819E1A9B4001FA427 /* CalendarLogic.m in Sources */,
+				E1EE007C19E4239E00CF4F15 /* ActivityDetailViewController.swift in Sources */,
 				E122B6071949725300E90D87 /* Lession.swift in Sources */,
 				E15BB4C0193F06B500F8D492 /* User.swift in Sources */,
 				E12D501A19D9CE6D005F37B7 /* UIImage+ImageWithColor.m in Sources */,
@@ -1325,7 +1342,6 @@
 				E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */,
 				E1543C5719DC531F006E41A0 /* EduSysExamInfoCell.m in Sources */,
 				E1543C7C19DC5354006E41A0 /* EduSysDayClassCell.m in Sources */,
-				E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */,
 				E1543CB519DD45F7006E41A0 /* LibSearchBooksDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
