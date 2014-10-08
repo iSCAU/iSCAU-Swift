@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */; };
-		84086BA319DACB2F0048302D /* JPTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84086BA219DACB2F0048302D /* JPTabViewController.m */; };
+		84CAC9AC19E5779800680379 /* ActivityWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAC9AB19E5779800680379 /* ActivityWebViewController.swift */; };
+		84CAC9AF19E577EE00680379 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAC9AE19E577EE00680379 /* HMSegmentedControl.m */; };
 		E114957A19D943D90087445D /* place.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957419D943D90087445D /* place.png */; };
 		E114957B19D943D90087445D /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957519D943D90087445D /* push.png */; };
 		E114957C19D943D90087445D /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957619D943D90087445D /* time.png */; };
@@ -74,10 +75,9 @@
 		E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */; };
 		E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */; };
 		E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */; };
-		E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */; };
 		E1B8347219DA619F00737E99 /* ActivityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */; };
 		E1B8347319DA619F00737E99 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345A19DA619F00737E99 /* ActivityModel.swift */; };
-		E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345B19DA619F00737E99 /* ActivityViewController.swift */; };
+		E1B8347419DA619F00737E99 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345B19DA619F00737E99 /* ActivityTableViewController.swift */; };
 		E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345D19DA619F00737E99 /* LoginViewController.swift */; };
 		E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */; };
 		E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8346019DA619F00737E99 /* EduHttpManager.swift */; };
@@ -145,8 +145,9 @@
 /* Begin PBXFileReference section */
 		1E13F1ECD8F94B47B4C7013B /* Pods-iSCAUSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84086BA119DACB2F0048302D /* JPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPTabViewController.h; path = ../JPTabViewController.h; sourceTree = "<group>"; };
-		84086BA219DACB2F0048302D /* JPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JPTabViewController.m; path = ../JPTabViewController.m; sourceTree = "<group>"; };
+		84CAC9AB19E5779800680379 /* ActivityWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityWebViewController.swift; sourceTree = "<group>"; };
+		84CAC9AD19E577EE00680379 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		84CAC9AE19E577EE00680379 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		B3441B39F695DE30B958E3E1 /* Pods-iSCAUSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E114957419D943D90087445D /* place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place.png; sourceTree = "<group>"; };
 		E114957519D943D90087445D /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
@@ -228,10 +229,9 @@
 		E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayTimeTable.swift; sourceTree = "<group>"; };
 		E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayLessionCell.swift; sourceTree = "<group>"; };
 		E1B0B9E01948BC520035B287 /* iSCAUSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSCAUSwift.xcdatamodel; sourceTree = "<group>"; };
-		E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailCell.swift; sourceTree = "<group>"; };
 		E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityInfoCell.swift; sourceTree = "<group>"; };
 		E1B8345A19DA619F00737E99 /* ActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
-		E1B8345B19DA619F00737E99 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		E1B8345B19DA619F00737E99 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		E1B8345D19DA619F00737E99 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		E1B8346019DA619F00737E99 /* EduHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduHttpManager.swift; sourceTree = "<group>"; };
@@ -283,13 +283,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		84086BA719DAF7DF0048302D /* JPTabviewController */ = {
+		84086BA719DAF7DF0048302D /* HMSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				84086BA119DACB2F0048302D /* JPTabViewController.h */,
-				84086BA219DACB2F0048302D /* JPTabViewController.m */,
+				84CAC9AD19E577EE00680379 /* HMSegmentedControl.h */,
+				84CAC9AE19E577EE00680379 /* HMSegmentedControl.m */,
 			);
-			name = JPTabviewController;
+			name = HMSegmentedControl;
 			sourceTree = "<group>";
 		};
 		E114957319D943D90087445D /* activity_img */ = {
@@ -368,7 +368,7 @@
 		E14FB5D819D0609100526D45 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				84086BA719DAF7DF0048302D /* JPTabviewController */,
+				84086BA719DAF7DF0048302D /* HMSegmentedControl */,
 				E12D4FFB19D9CE6C005F37B7 /* AZTools */,
 				E14FB61719D060E200526D45 /* Alamofire.xcodeproj */,
 			);
@@ -548,8 +548,6 @@
 		E1B0B9DE1948BC270035B287 /* File */ = {
 			isa = PBXGroup;
 			children = (
-				84086B9A19DAC7AD0048302D /* JPTabViewController.h */,
-				84086B9B19DAC7AD0048302D /* JPTabViewController.m */,
 				E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */,
 			);
 			name = File;
@@ -568,10 +566,10 @@
 		E1B8345719DA619F00737E99 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				E1B8345819DA619F00737E99 /* ActivityDetailCell.swift */,
 				E1B8345919DA619F00737E99 /* ActivityInfoCell.swift */,
 				E1B8345A19DA619F00737E99 /* ActivityModel.swift */,
-				E1B8345B19DA619F00737E99 /* ActivityViewController.swift */,
+				E1B8345B19DA619F00737E99 /* ActivityTableViewController.swift */,
+				84CAC9AB19E5779800680379 /* ActivityWebViewController.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -826,12 +824,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84086BA319DACB2F0048302D /* JPTabViewController.m in Sources */,
 				E1B8347C19DA619F00737E99 /* EduSysDayClassCell.m in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
 				E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */,
-				E1B8347419DA619F00737E99 /* ActivityViewController.swift in Sources */,
+				E1B8347419DA619F00737E99 /* ActivityTableViewController.swift in Sources */,
 				E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */,
 				E12D501C19D9CE6D005F37B7 /* UIImage+ScreenShot.m in Sources */,
 				E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */,
@@ -842,8 +839,10 @@
 				E12D501919D9CE6D005F37B7 /* UIImage+Blur.m in Sources */,
 				E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */,
 				E12D501819D9CE6D005F37B7 /* UIColor+Addition.m in Sources */,
+				84CAC9AC19E5779800680379 /* ActivityWebViewController.swift in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
+				84CAC9AF19E577EE00680379 /* HMSegmentedControl.m in Sources */,
 				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
 				E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */,
 				E1B8347A19DA619F00737E99 /* EduSysClassTableViewController.m in Sources */,
@@ -858,7 +857,6 @@
 				E12D501A19D9CE6D005F37B7 /* UIImage+ImageWithColor.m in Sources */,
 				E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */,
 				E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */,
-				E1B8347119DA619F00737E99 /* ActivityDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
