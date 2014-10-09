@@ -12,11 +12,16 @@ import UIKit
 class ActivityTableViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     var ActivitydataSource = NSMutableArray()
     var IndexPath : NSIndexPath?
+    var tableview : UITableView?
+    
+    // var eHttp : HttpController = HttpController()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let tableview = UITableView(frame: CGRectMake(0, 40, self.view.bounds.width, self.view.bounds.height), style: UITableViewStyle.Plain)
+        //  eHttp.onSearch("http://iscaucms.sinaapp.com/index.php/Api/getActivities?time=1234")
         
+        tableview = UITableView(frame: CGRectMake(0, 40, self.view.bounds.width, self.view.bounds.height), style: UITableViewStyle.Plain)
         tableview?.delegate = self
         tableview?.dataSource = self
         //set title
@@ -41,31 +46,61 @@ class ActivityTableViewController: UIViewController,UITableViewDataSource,UITabl
         self.view.addSubview(activitySegment!)
         // 此处使用Alamofire进行webrequest
         
+        
+        
+        
         for index in 0..<12{
             let model = ActivityModel(iden : 1,title : "Title",place:"place",association:"asssociation",content:"content",level:1,logoUrl:"url",userName:"username",time:"time",editTime:"5566666")
             ActivitydataSource.addObject(model)
         }
-        super.viewDidLoad()
     }//segment action
     func segmentSelect(sender : UISegmentedControl!){
         
         switch sender.selectedSegmentIndex {
         case 0 :
-            for index in 0..<12{
-                let model = ActivityModel(iden : 1,title : "Title",place:"place",association:"asssociation",content:"content",level:1,logoUrl:"url",userName:"username",time:"time",editTime:"5566666")
-                ActivitydataSource.addObject(model)
-            }
-            
-            
-            
-            
+            //load today datasource
+            loadToday()
             println("今天")
+            
         case 1 :
+            //load tommorrrow datasource
+            loadTommorrow()
             println("明天")
+            
         case 2 :
+            //load future datasource
+            loadFuture()
             println("后天")
-        default:break
+            
+        default:
+            break
         }
+    }
+    
+    func loadToday(){
+        ActivitydataSource.removeAllObjects()
+        for index in 0..<12{
+            let model = ActivityModel(iden : 1,title : "今天",place:"place",association:"asssociation",content:"content",level:1,logoUrl:"url",userName:"username",time:"time",editTime:"5566666")
+            ActivitydataSource.addObject(model)
+        }
+        tableview?.reloadData()
+        
+    }
+    func  loadTommorrow(){
+        ActivitydataSource.removeAllObjects()
+        for index in 0..<12{
+            let model = ActivityModel(iden : 1,title : "明天",place:"place",association:"asssociation",content:"content",level:1,logoUrl:"url",userName:"username",time:"time",editTime:"5566666")
+            ActivitydataSource.addObject(model)
+        }
+        tableview?.reloadData()
+    }
+    func loadFuture(){
+        ActivitydataSource.removeAllObjects()
+        for index in 0..<12{
+            let model = ActivityModel(iden : 1,title : "未来",place:"place",association:"asssociation",content:"content",level:1,logoUrl:"url",userName:"username",time:"time",editTime:"5566666")
+            ActivitydataSource.addObject(model)
+        }
+        tableview?.reloadData()
     }
     
     //设置cell的高度
@@ -90,10 +125,12 @@ class ActivityTableViewController: UIViewController,UITableViewDataSource,UITabl
         cell!.configureCell(model)
         return cell!
     }
-    //
+    //点击单元格 展开、收缩 model信息
+    //点击区头按钮 修改数据源数组 展开区
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.navigationController?.pushViewController(ActivityWebViewController(), animated: true)
     }
-    //点击单元格 展开、收缩 model信息
-    //点击区头按钮 修改数据源数组 展开区
+    func didReceiveResults(results:NSDictionary) {
+        println(results)
+    }
 }

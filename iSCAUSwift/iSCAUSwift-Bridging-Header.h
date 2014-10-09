@@ -10,4 +10,4 @@
 #import <FRDLivelyButton/FRDLivelyButton.h>
 #import "AZTools.h"
 #import "Constant.h"
-#import "JPTabViewController.h"
+#import "HMSegmentedControl.h"

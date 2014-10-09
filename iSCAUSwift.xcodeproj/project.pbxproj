@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */; };
+		845D707A19E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 845D707819E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodeld */; };
 		84CAC9AC19E5779800680379 /* ActivityWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAC9AB19E5779800680379 /* ActivityWebViewController.swift */; };
 		84CAC9AF19E577EE00680379 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAC9AE19E577EE00680379 /* HMSegmentedControl.m */; };
 		E114957A19D943D90087445D /* place.png in Resources */ = {isa = PBXBuildFile; fileRef = E114957419D943D90087445D /* place.png */; };
@@ -145,6 +146,7 @@
 /* Begin PBXFileReference section */
 		1E13F1ECD8F94B47B4C7013B /* Pods-iSCAUSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		845D707919E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSCAUSwiftActivity.xcdatamodel; sourceTree = "<group>"; };
 		84CAC9AB19E5779800680379 /* ActivityWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityWebViewController.swift; sourceTree = "<group>"; };
 		84CAC9AD19E577EE00680379 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		84CAC9AE19E577EE00680379 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */,
+				845D707819E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodeld */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				84CAC9AC19E5779800680379 /* ActivityWebViewController.swift in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
+				845D707A19E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodeld in Sources */,
 				84CAC9AF19E577EE00680379 /* HMSegmentedControl.m in Sources */,
 				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
 				E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */,
@@ -978,6 +982,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -992,6 +997,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1069,6 +1075,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		845D707819E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				845D707919E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodel */,
+			);
+			currentVersion = 845D707919E690A40058B8DA /* iSCAUSwiftActivity.xcdatamodel */;
+			path = iSCAUSwiftActivity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

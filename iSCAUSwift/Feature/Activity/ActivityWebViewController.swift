@@ -10,15 +10,14 @@ import UIKit
 
 
 class ActivityWebViewController: UIViewController,UIWebViewDelegate{
-    
+     var activityWeb : UIWebView?
     override func viewDidLoad() {
         
-        var activityWeb : UIWebView = UIWebView(frame: CGRectMake(0, 0,self.view.bounds.width, self.view.bounds.height))
+        activityWeb = UIWebView(frame: CGRectMake(0, 0,self.view.bounds.width, self.view.bounds.height))
         
         self.view.addSubview(activityWeb)
-        
+        activityWeb?.loadRequest(request)
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
