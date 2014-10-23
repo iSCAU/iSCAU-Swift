@@ -52,9 +52,13 @@ override
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.row) {
+        case 5:if let nav1 = UINavigationController(rootViewController: self.storyboard?.instantiateViewControllerWithIdentifier("AboutUsViewController") as UIViewController) {
+            self.presentViewController(nav1, animated: true, completion: nil)
+            }
+            
         case 7:
-            if let nav = UINavigationController(rootViewController: self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController) {
-                self.presentViewController(nav, animated: true, completion: nil)
+            if let nav2 = UINavigationController(rootViewController: self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController) {
+                self.presentViewController(nav2, animated: true, completion: nil)
             }
         default:
             return

@@ -155,7 +155,7 @@ class AddressUpdateView: UIView {
     }
     
     func rootViewController() -> UIViewController {
-        var vc = UIApplication.sharedApplication().keyWindow.rootViewController
+        var vc = UIApplication.sharedApplication().keyWindow?.rootViewController
         while vc?.presentedViewController != nil {
             vc = vc?.presentedViewController
         }

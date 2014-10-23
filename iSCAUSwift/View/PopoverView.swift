@@ -129,7 +129,7 @@ class PopoverView: UIView {
         var keyWindow = UIApplication.sharedApplication().keyWindow
         keyWindow = UIApplication.sharedApplication().windows[0] as UIWindow
 
-        let topView = keyWindow.subviews[0] as UIView
+        let topView = keyWindow?.subviews[0] as UIView
 
         let topPoint = topView.convertPoint(point, fromView: view)
         

@@ -37,7 +37,7 @@ class ActivityTableViewCell: UITableViewCell {
         cell!.height = activity.titleHeight
         cell!.labTitle.text = activity.title
         cell!.labPlace.text = activity.place
-        cell!.labUsername.text = activity.username
+        cell!.labUsername.text = activity.association
         cell!.labTime.text = activity.time
         cell!.imgLogo.sd_setImageWithURL(NSURL(string: activity.logo_url))
         
