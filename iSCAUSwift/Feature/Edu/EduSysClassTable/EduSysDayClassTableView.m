@@ -52,7 +52,7 @@ CGFloat CELL_HEIGHT = 55.0f;
         self.dayIndicator.backgroundColor = [UIColor redColor];
         [self addSubview:self.dayIndicator];
         
-        NSArray *weekdayText = @[@"MON", @"TUE", @"WED", @"THU", @"FRI", @"SAT", @"SUN"];
+        NSArray *weekdayText = @[@"Mon", @"Tue", @"Wed", @"Thu", @"Fri", @"Sat", @"Sun"];
         for (NSInteger i = 0; i < 7; ++i) {
             UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(i * HEADER_DAY_SELECTER_WIDTH, 0, HEADER_DAY_SELECTER_WIDTH, HEADER_DAY_SELECTER_HEIGHT)];
             lab.backgroundColor = [UIColor clearColor];
@@ -82,9 +82,6 @@ CGFloat CELL_HEIGHT = 55.0f;
             classTable.separatorStyle = UITableViewCellSelectionStyleNone;
             [self.backgroundScrollView addSubview:classTable];
         }
-        
-        // 右拉返回手势
-        [self.backgroundScrollView.panGestureRecognizer addTarget:self action:@selector(handleScrollViewPan:)];
     }
     return self;
 }
@@ -341,26 +338,6 @@ CGFloat CELL_HEIGHT = 55.0f;
 - (NSMutableArray *)parseClassesData:(NSDictionary *)classesInfo {
     if (classesInfo == nil) return nil;
     return [NSMutableArray arrayWithArray:[classesInfo objectForKey:@"classes"]];
-}
-
-// 处理标题面板拉出的手势
-- (void)handleScrollViewPan:(UIPanGestureRecognizer *)panGesture {
-    switch (panGesture.state) {
-        case UIGestureRecognizerStateBegan:
-        case UIGestureRecognizerStateChanged:
-            if (!self.isScrollingWeekday && self.backgroundScrollView.contentOffset.x <= 0) {
-//                [[AZSideMenuViewController shareMenu] panGesture:panGesture];
-            }
-            break;
-        case UIGestureRecognizerStateEnded:
-        case UIGestureRecognizerStateCancelled:
-            if (!self.isScrollingWeekday) {
-//                [[AZSideMenuViewController shareMenu] panGesture:panGesture];
-            }
-            break;
-        default:
-            break;
-    }
 }
 
 @end

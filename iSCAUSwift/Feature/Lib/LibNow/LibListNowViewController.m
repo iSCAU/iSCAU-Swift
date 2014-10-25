@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.title = @"当前借阅";
     SET_DEFAULT_BACKGROUND_COLOR(self.tableListNow);
     
     self.booksArray = [[NSMutableArray alloc] initWithCapacity:10];

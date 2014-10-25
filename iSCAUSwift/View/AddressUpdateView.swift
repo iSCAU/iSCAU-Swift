@@ -31,7 +31,7 @@ class AddressUpdateView: UIView {
         notice.textColor = UIColor.lightGrayColor()
         notice.backgroundColor = UIColor.clearColor()
         notice.font = UIFont.systemFontOfSize(14)
-        notice.text = "地址不能为空"
+        notice.text = "请填入宿舍地址"
         notice.sizeToFit()
         notice.left = kCommonMarginX
         
@@ -56,26 +56,30 @@ class AddressUpdateView: UIView {
         layer.shadowRadius = 5.0
         backgroundColor = UIColor(r: 236, g: 240, b: 241, a: 1)
         
-        backgroundTxtAddress = UIView(frame: CGRectMake(kCommonMarginX, kCommonMarginX, kViewWidth - kCommonMarginX * 2, 100))
+        addSubview(labNotice!)
+        labNotice!.top = 0
+        labNotice!.height = kCommonMarginX + 20
+        
+        backgroundTxtAddress = UIView(frame: CGRectMake(kCommonMarginX, kCommonMarginX + 20, kViewWidth - kCommonMarginX * 2, 100))
         backgroundTxtAddress?.layer.cornerRadius = 3
         backgroundTxtAddress?.backgroundColor = UIColor.whiteColor()
         addSubview(backgroundTxtAddress!)
         
-        txtAddress = UITextView(frame: CGRectMake(backgroundTxtAddress!.left + kCommonMarginX / 2,  backgroundTxtAddress!.top + kCommonMarginX / 2, backgroundTxtAddress!.width - kCommonMarginX , backgroundTxtAddress!.height - kCommonMarginX))
+        txtAddress = UITextView(frame: CGRectMake(backgroundTxtAddress!.left + kCommonMarginX / 2,  backgroundTxtAddress!.top + kCommonMarginX / 2, backgroundTxtAddress!.width - kCommonMarginX, backgroundTxtAddress!.height - kCommonMarginX))
         txtAddress?.font = UIFont.systemFontOfSize(17)
         txtAddress?.backgroundColor = UIColor.clearColor()
         addSubview(txtAddress!)
 
         let horizontalBorder = UIImageView(image: UIImage(named: "sep.png"))
-        horizontalBorder.frame = CGRectMake(0, backgroundTxtAddress!.bottom + kCommonMarginX + 20, kViewWidth, 1)
+        horizontalBorder.frame = CGRectMake(0, backgroundTxtAddress!.bottom + kCommonMarginX, kViewWidth, 1)
         self.addSubview(horizontalBorder)
         
         let verticalBorder = UIImageView(image: UIImage(color: UIColor(r: 198, g: 202, b: 202, a: 0.5)))
-        verticalBorder.frame = CGRectMake(kViewWidth / 2, backgroundTxtAddress!.bottom + kCommonMarginX + 20, 1, 44)
+        verticalBorder.frame = CGRectMake(kViewWidth / 2, backgroundTxtAddress!.bottom + kCommonMarginX, 1, 44)
         addSubview(verticalBorder)
         
         btnCancle = UIButton.buttonWithType(.Custom) as? UIButton
-        btnCancle?.frame = CGRectMake(0, backgroundTxtAddress!.bottom + kCommonMarginX + 20, kViewWidth / 2, 44)
+        btnCancle?.frame = CGRectMake(0, backgroundTxtAddress!.bottom + kCommonMarginX, kViewWidth / 2, 44)
         btnCancle?.setTitle("取消", forState: .Normal)
         btnCancle?.setTitleColor(UIColor(r: 195, g: 0, b: 19, a: 1), forState: .Normal)
         btnCancle?.setBackgroundImage(UIImage(color: UIColor(white: 0, alpha: 0.1)), forState:.Highlighted)
@@ -89,7 +93,7 @@ class AddressUpdateView: UIView {
         btnCancle!.layer.mask = maskLayer
         
         btnConfirm = UIButton.buttonWithType(.Custom) as? UIButton
-        btnConfirm?.frame = CGRectMake(kViewWidth / 2, backgroundTxtAddress!.bottom + kCommonMarginX  + 20, kViewWidth / 2, 44)
+        btnConfirm?.frame = CGRectMake(kViewWidth / 2, backgroundTxtAddress!.bottom + kCommonMarginX, kViewWidth / 2, 44)
         btnConfirm?.setTitleColor(UIColor(r: 195, g: 0, b: 19, a: 1), forState: .Normal)
         btnConfirm?.setTitle("确认", forState: .Normal)
         btnConfirm?.setBackgroundImage(UIImage(color: UIColor(white: 0, alpha: 0.1)), forState:.Highlighted)
@@ -144,8 +148,9 @@ class AddressUpdateView: UIView {
     
     func confirm() {
         if countElements(txtAddress!.text) == 0 {
-            addSubview(labNotice!)
-            labNotice!.top = backgroundTxtAddress!.bottom + kCommonMarginX / 2
+            labNotice!.text = "请填入宿舍地址（不能为空）"
+            labNotice!.sizeToFit()
+            labNotice!.height = kCommonMarginX + 20
             return
         }
         
@@ -155,7 +160,7 @@ class AddressUpdateView: UIView {
     }
     
     func rootViewController() -> UIViewController {
-        var vc = UIApplication.sharedApplication().keyWindow.rootViewController
+        var vc = UIApplication.sharedApplication().keyWindow!.rootViewController
         while vc?.presentedViewController != nil {
             vc = vc?.presentedViewController
         }

@@ -18,13 +18,13 @@ var activityFetchRequest: NSFetchRequest = {
 
 class Activity: NSManagedObject {
 
-    @NSManaged var a_id: String
+    @NSManaged var aid: String
     @NSManaged var title: String
     @NSManaged var place: String
     @NSManaged var association: String
     @NSManaged var content: String
     @NSManaged var level: String
-    @NSManaged var logo_url: String
+    @NSManaged var logoURL: String
     @NSManaged var username: String
     @NSManaged var time: String
     @NSManaged var timestamp: String
@@ -32,7 +32,7 @@ class Activity: NSManagedObject {
     class func converFromDict(info: NSDictionary) -> Activity? {
         let a_id = info["id"] as String
         
-        activityFetchRequest.predicate = NSPredicate(format: "a_id = %@", a_id)
+        activityFetchRequest.predicate = NSPredicate(format: "aid = %@", a_id)
         var activity: Activity?
         if let activities = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(activityFetchRequest, error: nil) {
             for a in activities {
@@ -44,13 +44,13 @@ class Activity: NSManagedObject {
             activity = NSEntityDescription.insertNewObjectForEntityForName("Activity", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!) as? Activity
         }
         
-        activity?.a_id = info["id"] as String
+        activity?.aid = info["id"] as String
         activity?.title = info["title"] as String
         activity?.place = info["place"] as String
         activity?.association = info["association"] as String
         activity?.content = info["content"] as String
         activity?.level = info["level"] as String
-        activity?.logo_url = info["logoUrl"] as String
+        activity?.logoURL = info["logoUrl"] as String
         if let username = info["username"] as? String {
             activity?.username = username
         } else {
@@ -67,9 +67,9 @@ class Activity: NSManagedObject {
     }
     
     class func deleteActivity(info: [String : String]) {
-        let a_id = info["id"]!.toInt()!
+        let aid = info["id"]!.toInt()!
         
-        activityFetchRequest.predicate = NSPredicate(format: "a_id = %d", a_id)
+        activityFetchRequest.predicate = NSPredicate(format: "aid = %d", aid)
         var activity: Activity?
         if let activitites = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(activityFetchRequest, error: nil) {
             for a in activitites {
@@ -78,9 +78,15 @@ class Activity: NSManagedObject {
         }
     }
     
-    lazy var titleHeight: CGFloat = {
-        var title: NSString = self.title
-        var titleHeight = title.boundingRectWithSize(CGSizeMake(ScreenWidth - 80, CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.boldSystemFontOfSize(18)], context: nil).size.height
-        return titleHeight > 30.0 ? titleHeight : 30.0
-        }()
+    private var _titleHeight: CGFloat = 0.0
+    var titleHeight: CGFloat {
+        get {
+            if _titleHeight < 1.0 {
+                var title: NSString = self.title
+                var titleHeight = title.boundingRectWithSize(CGSizeMake(ScreenWidth - 80, CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.boldSystemFontOfSize(18)], context: nil).size.height
+                _titleHeight = titleHeight > 30.0 ? titleHeight : 30.0
+            }
+            return _titleHeight
+        }
+    }
 }

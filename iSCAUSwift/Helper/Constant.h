@@ -91,21 +91,21 @@ static NSString *TEACHER = @"teacher";
 
 // HUD
 #define HIDE_ALL_HUD \
-//[MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+[MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 
 #define SHOW_WATING_HUD \
-//[MBProgressHUD hideAllHUDsForView:self.view animated:YES]; \
-//[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+[MBProgressHUD hideAllHUDsForView:self.view animated:YES]; \
+[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
 #define SHOW_NOTICE_HUD(notice) \
-//[MBProgressHUD hideAllHUDsForView:self.view animated:YES]; \
-//MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES]; \
-//hud.labelText = (notice); \
-//hud.mode = MBProgressHUDModeText; \
-//dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, kDefaultHideNoticeIntervel * NSEC_PER_SEC); \
-//dispatch_after(popTime, dispatch_get_main_queue(), ^(void){ \
-//    [MBProgressHUD hideHUDForView:self.view animated:YES]; \
-//});
+[MBProgressHUD hideAllHUDsForView:self.view animated:YES]; \
+MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES]; \
+hud.labelText = (notice); \
+hud.mode = MBProgressHUDModeText; \
+dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, kDefaultHideNoticeIntervel * NSEC_PER_SEC); \
+dispatch_after(popTime, dispatch_get_main_queue(), ^(void){ \
+    [MBProgressHUD hideHUDForView:self.view animated:YES]; \
+});
 
 // User settings key
 #define EDU_SYS_stuNum          @"EDU_SYS_stuNum"

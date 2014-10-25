@@ -22,7 +22,9 @@ class RestaurantTableViewCell: UITableViewCell {
     }
 
     func setup(restaurant: Restaurant, totalPrice: String) {
-        labTitle.text = restaurant.shop_name
+        imgLogo.sd_setImageWithURL(NSURL(string: restaurant.logoURL))
+
+        labTitle.text = restaurant.shopName
         labTitle.width = ScreenWidth - 150
         labTitle.height = restaurant.titleHeight
         

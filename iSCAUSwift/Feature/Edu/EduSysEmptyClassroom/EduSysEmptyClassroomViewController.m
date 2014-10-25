@@ -62,6 +62,7 @@
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;        
     }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     UIBarButtonItem *btnShowParams = [[UIBarButtonItem alloc] initWithTitle:@"更新参数" style:UIBarButtonItemStylePlain target:self action:@selector(refreshParameters)];
     self.navigationItem.rightBarButtonItem = btnShowParams;
@@ -118,6 +119,7 @@
     }
     
     self.isReloading = YES;
+    SHOW_WATING_HUD
     [EduHttpManager requestEmptyClassroomParamsWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         self.isReloading = NO;
         if (response.statusCode == kStatusCodeSuccess) {
@@ -127,6 +129,7 @@
             [self parseParams:params];
             [self setupEmptyClassroomParams];
         }
+        HIDE_ALL_HUD
     }];
 }
 
@@ -177,7 +180,8 @@
 
 #pragma mark - selection
 
-- (IBAction)xqSelection:(id)sender {
+- (IBAction)xqSelection:(id)sender
+{
     EduSysEmptyClassroomSelectionViewController *selectionViewController = [[EduSysEmptyClassroomSelectionViewController alloc] init];
     if ([self.selectionsDict[kXQ] count] > 0) {
         selectionViewController.selectionKey = kXQ;
@@ -188,7 +192,8 @@
     [self.navigationController pushViewController:selectionViewController animated:YES];
 }
 
-- (IBAction)jslbSelection:(id)sender {
+- (IBAction)jslbSelection:(id)sender
+{
     EduSysEmptyClassroomSelectionViewController *selectionViewController = [[EduSysEmptyClassroomSelectionViewController alloc] init];
     if ([self.selectionsDict[kJSLB] count] > 0) {
         selectionViewController.selectionKey = kJSLB;
@@ -199,7 +204,8 @@
 
     [self.navigationController pushViewController:selectionViewController animated:YES];
 }
-- (IBAction)kszSelection:(id)sender {
+- (IBAction)kszSelection:(id)sender
+{
     EduSysEmptyClassroomSelectionViewController *selectionViewController = [[EduSysEmptyClassroomSelectionViewController alloc] init];
     if ([self.selectionsDict[kKSZ] count] > 0) {
         selectionViewController.selectionKey = kKSZ;
@@ -210,7 +216,8 @@
 
     [self.navigationController pushViewController:selectionViewController animated:YES];
 }
-- (IBAction)jszSelection:(id)sender {
+- (IBAction)jszSelection:(id)sender
+{
     EduSysEmptyClassroomSelectionViewController *selectionViewController = [[EduSysEmptyClassroomSelectionViewController alloc] init];
     if ([self.selectionsDict[kJSZ] count] > 0) {
         selectionViewController.selectionKey = kJSZ;
@@ -221,7 +228,8 @@
 
     [self.navigationController pushViewController:selectionViewController animated:YES];
 }
-- (IBAction)sjtSelection:(id)sender {
+- (IBAction)sjtSelection:(id)sender
+{
     EduSysEmptyClassroomSelectionViewController *selectionViewController = [[EduSysEmptyClassroomSelectionViewController alloc] init];
     if ([self.selectionsDict[kSJD] count] > 0) {
         selectionViewController.selectionKey = kSJD;
@@ -232,7 +240,8 @@
 
     [self.navigationController pushViewController:selectionViewController animated:YES];
 }
-- (IBAction)weekdaySelection:(id)sender {
+- (IBAction)weekdaySelection:(id)sender
+{
     EduSysEmptyClassroomSelectionViewController *selectionViewController = [[EduSysEmptyClassroomSelectionViewController alloc] init];
     if ([self.selectionsDict[kWeekday] count] > 0) {
         selectionViewController.selectionKey = kWeekday;
@@ -241,7 +250,8 @@
     [self.navigationController pushViewController:selectionViewController animated:YES];
 }
 
-- (IBAction)searchEmptyClassroom:(id)sender {
+- (IBAction)searchEmptyClassroom:(id)sender
+{
     if (self.labXQ.text.length > 0 &&
         self.labJSZ.text.length > 0 &&
         self.labSJD.text.length > 0 &&
@@ -269,7 +279,6 @@
                                       completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
                                           NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
                                           if (response.statusCode == kStatusCodeSuccess && dict) {
-                                              HIDE_ALL_HUD;
                                               NSArray *emptyClassrooms = dict[@"classRooms"];
                                               if (emptyClassrooms) {
                                                   EduSysEmptyClassroomDetailViewController *detailViewController = [[EduSysEmptyClassroomDetailViewController alloc] init];
@@ -277,6 +286,7 @@
                                                   [self.navigationController pushViewController:detailViewController animated:YES];
                                               }
                                           }
+                                          HIDE_ALL_HUD
                                       }];
     }
 }

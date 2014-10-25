@@ -156,7 +156,6 @@ static NSString *GRADE_POINT = @"grade_point";
     SHOW_NOTICE_HUD(@"努力加载参数中...");
     [EduHttpManager requestMarksInfoWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         if (response.statusCode == kStatusCodeSuccess) {
-            HIDE_ALL_HUD;
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
             NSArray *paramsArray = dict[kParams];
             if (paramsArray == nil || paramsArray.count < 2) return;
@@ -169,25 +168,8 @@ static NSString *GRADE_POINT = @"grade_point";
                 [self setupParams];
             }
         }
-
+        HIDE_ALL_HUD
     }];
-//    [[EduSysHttpClient shareInstance]
-//     eduSysGetMarksInfoSuccess:^(NSData *responseData, NSInteger httpCode){
-//         if (httpCode == 200) {
-//             HIDE_ALL_HUD;
-//             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
-//             NSArray *paramsArray = dict[kParams];
-//             if (paramsArray == nil || paramsArray.count < 2) return;
-//             self.schoolYearArray = paramsArray[0][kParamsValue];
-//             self.semesterArray = paramsArray[1][kParamsValue];
-//             
-//             if (self.schoolYearArray && self.semesterArray) {
-//                 [Tool setSchoolYear:self.schoolYearArray];
-//                 [Tool setSemester:self.semesterArray];
-//                 [self setupParams];
-//             }
-//         }
-//     } failure:nil];
 }
 
 - (void)loadLocalMarks
@@ -212,7 +194,7 @@ static NSString *GRADE_POINT = @"grade_point";
     [self hideParamsView];
     if (self.schoolYearIndex < self.schoolYearArray.count &&
         self.semesterIndex < self.semesterArray.count) {
-//        SHOW_WATING_HUD;
+        SHOW_WATING_HUD
         self.isReloading = YES;
         
         [EduHttpManager requestMarksWithYear:self.schoolYearArray[self.schoolYearIndex]
@@ -220,25 +202,11 @@ static NSString *GRADE_POINT = @"grade_point";
                            completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
                                self.isReloading = NO;
                                if (response.statusCode == kStatusCodeSuccess) {
-//                                   HIDE_ALL_HUD;
                                    [self parseMarksInfo:data];
                                    [self saveMarksDataToLocal:data];
                                }
+                               HIDE_ALL_HUD
                            }];
-//        [[EduSysHttpClient shareInstance] 
-//         eduSysGetMarksWithYear:self.schoolYearArray[self.schoolYearIndex]
-//         tearm:self.semesterArray[self.semesterIndex]
-//         success:^(NSData *responseData, int httpCode){
-//             self.isReloading = NO;
-//             if (httpCode == 200) {
-//                 HIDE_ALL_HUD;
-//                 [self parseMarksInfo:responseData];
-//                 [self saveMarksDataToLocal:responseData];
-//             }
-//         }
-//         failure:^(NSData *responseData, int httpCode){
-//             self.isReloading = NO;
-//         }];
     }
 }
 

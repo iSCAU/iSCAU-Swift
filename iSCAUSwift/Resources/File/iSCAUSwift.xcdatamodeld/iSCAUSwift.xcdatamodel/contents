@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6248" systemVersion="14A379a" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6248" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Activity" representedClassName="iSCAUSwift.Activity" syncable="YES">
-        <attribute name="a_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="aid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="association" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="logo_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,11 +13,11 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Food" representedClassName="iSCAUSwift.Food" syncable="YES">
-        <attribute name="edit_time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="f_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="food_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="food_price" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="food_shop_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="editTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foodPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foodShopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Lession" representedClassName="iSCAUSwift.Lession" syncable="YES">
@@ -31,19 +31,19 @@
         <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Restaurant" representedClassName="iSCAUSwift.Restaurant" syncable="YES">
-        <attribute name="edit_time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="end_time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="logo_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="editTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="r_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="shop_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="start_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Activity" positionX="-63" positionY="72" width="128" height="195"/>
         <element name="Food" positionX="-63" positionY="63" width="128" height="135"/>
         <element name="Lession" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="Restaurant" positionX="-63" positionY="45" width="128" height="163"/>
-        <element name="Activity" positionX="-63" positionY="72" width="128" height="193"/>
+        <element name="Restaurant" positionX="-63" positionY="45" width="128" height="165"/>
     </elements>
 </model>

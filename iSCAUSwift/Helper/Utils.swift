@@ -34,19 +34,28 @@ class Utils: NSObject {
     }
     
     class func indicatorColorAtIndex(index: Int) -> UIColor {
-        let colorIndex = index % 4;
-        switch colorIndex {
-        case 0:
-            return UIColor(fromHexRGB: "0x0140ca", alpha: 1)
-        case 1:
-            return UIColor(fromHexRGB: "0x16a61e", alpha: 1)
-        case 2:
-            return UIColor(fromHexRGB: "0xdd1812", alpha: 1)
-        case 3:
-            return UIColor(fromHexRGB: "0xfcca03", alpha: 1)
-        default:
-            return UIColor(fromHexRGB: "0x0140ca", alpha: 1)
-        }
+        let colors = [
+            UIColor(r: 250, g: 120, b: 134, a: 1),
+            UIColor(r: 152, g: 169, b: 245, a: 1),
+            UIColor(r: 175, g: 146, b: 215, a: 1),
+            UIColor(r: 255, g: 213, b: 65, a: 1),
+            UIColor(r: 168, g: 210, b: 65, a: 1),
+        ]
+        let colorIndex = index % colors.count;
+        return colors[colorIndex]
+        
+//        switch colorIndex {
+//        case 0:
+//            return UIColor(fromHexRGB: "0x0140ca", alpha: 1)
+//        case 1:
+//            return UIColor(fromHexRGB: "0x16a61e", alpha: 1)
+//        case 2:
+//            return UIColor(fromHexRGB: "0xdd1812", alpha: 1)
+//        case 3:
+//            return UIColor(fromHexRGB: "0xfcca03", alpha: 1)
+//        default:
+//            return UIColor(fromHexRGB: "0x0140ca", alpha: 1)
+//        }
     }
     
 }
@@ -130,11 +139,11 @@ extension Utils {
     
     class var activityLastUpdateTimeStamp: String? {
         get {
-//            if let timeStamp = NSUserDefaults.standardUserDefaults().objectForKey(kActivityLastUpdateTimeStamp) as? String {
-//                return timeStamp
-//            } else {
+            if let timeStamp = NSUserDefaults.standardUserDefaults().objectForKey(kActivityLastUpdateTimeStamp) as? String {
+                return timeStamp
+            } else {
                 return "0"
-//            }
+            }
         }
         set(newTimeStamp) {
             NSUserDefaults.standardUserDefaults().setObject(newTimeStamp, forKey: kActivityLastUpdateTimeStamp)
@@ -159,12 +168,12 @@ extension Utils {
         }
     }
     
-    class var dormitoryAddress: String {
+    class var dormitoryAddress: String? {
         get {
             if let address =  NSUserDefaults.standardUserDefaults().objectForKey(kDormitoryAddressKey) as? String {
                 return address
             } else {
-                return "你还未设置外卖地址"
+                return nil
             }
         }
         set (newDormitoryAddress) {
@@ -174,10 +183,17 @@ extension Utils {
     
     class var semesterStartDate: String? {
         get {
-            return  NSUserDefaults.standardUserDefaults().objectForKey(kSemesterStartDateKey) as String?
+            if let defaults = NSUserDefaults(suiteName: "group.iSCAU") {
+                return defaults.stringForKey(kSemesterStartDateKey)
+            }
+            return nil
         }
         set (newSemeterStartDate) {
-            NSUserDefaults.standardUserDefaults().setObject(newSemeterStartDate, forKey: kSemesterStartDateKey)
+            if  newSemeterStartDate != nil {
+                if let sharedDefaults = NSUserDefaults(suiteName: "group.iSCAU") {
+                    sharedDefaults.setObject(newSemeterStartDate, forKey: kSemesterStartDateKey)
+                }
+            }
         }
     }
     
@@ -217,6 +233,31 @@ extension Utils {
             }
         }
         return 0
+    }
+    
+    class func showNotice(notice: String, inView view: UIView) {
+        MBProgressHUD.hideAllHUDsForView(view, animated: true)
+        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        hud.labelText = notice
+        hud.mode = MBProgressHUDModeText
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+            MBProgressHUD.hideHUDForView(view, animated: true)
+            return
+        })
+    }
+    
+    class func postNotification(notificationName: String, info: [NSObject : AnyObject]?) {
+        NSNotificationCenter.defaultCenter().postNotificationName(notificationName, object: nil, userInfo: info)
+    }
+    
+    class func showWaitingNotice(inView view: UIView) {
+        MBProgressHUD.hideAllHUDsForView(view, animated: true)
+        MBProgressHUD.showHUDAddedTo(view, animated: true)
+    }
+    
+    class func hideAllNotice(inView view: UIView) {
+        MBProgressHUD.hideAllHUDsForView(view, animated: true)
     }
 }
 

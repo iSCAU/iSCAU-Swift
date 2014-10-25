@@ -21,13 +21,13 @@ class FoodOrderTableViewCell: UITableViewCell {
     }
 
     func setup(food: Food) {
-        labFoodName.text = food.food_name
+        labFoodName.text = food.foodName
         labFoodName.width = ScreenWidth - 150
-        labFoodName.height = FoodOrderTableViewCell.heightForCell(food.food_name) - 20
+        labFoodName.height = FoodOrderTableViewCell.heightForCell(food.foodName) - 20
         
         labCount.text = "共 \(food.count) 份"
         
-        labPrice.text = "¥ \((food.food_price as NSString).floatValue * Float(food.count))"
+        labPrice.text = "¥ \((food.foodPrice as NSString).floatValue * Float(food.count))"
         
         imgSep.top = labFoodName.height + 19.0
         imgSep.width = ScreenWidth - 15

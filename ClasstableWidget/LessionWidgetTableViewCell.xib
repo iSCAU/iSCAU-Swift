@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="KGk-i7-Jjw" customClass="LessionWidgetTableViewCell" customModule="ClasstableWidget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNe-OG-Puq">
+                        <rect key="frame" x="15" y="25" width="148" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="148" id="Mdx-F6-6aw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehv-sH-B9i">
+                        <rect key="frame" x="164" y="25" width="148" height="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d87-Zh-hrn">
+                        <rect key="frame" x="15" y="6" width="297" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Ehv-sH-B9i" firstAttribute="leading" secondItem="jNe-OG-Puq" secondAttribute="trailing" constant="1" id="B0h-Ah-Uat"/>
+                    <constraint firstAttribute="bottom" secondItem="jNe-OG-Puq" secondAttribute="bottom" id="J9C-jL-qRT"/>
+                    <constraint firstItem="Ehv-sH-B9i" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="LFT-dS-2hk"/>
+                    <constraint firstItem="Ehv-sH-B9i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="17" id="QUO-uB-QmV"/>
+                    <constraint firstItem="Ehv-sH-B9i" firstAttribute="baseline" secondItem="jNe-OG-Puq" secondAttribute="baseline" id="Qgi-ZM-Qdq"/>
+                    <constraint firstItem="Ehv-sH-B9i" firstAttribute="trailing" secondItem="d87-Zh-hrn" secondAttribute="trailing" id="c8C-WC-jZc"/>
+                    <constraint firstItem="d87-Zh-hrn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="iGc-wa-9b8"/>
+                    <constraint firstItem="jNe-OG-Puq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="17" id="nzf-fj-cGo"/>
+                    <constraint firstItem="jNe-OG-Puq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="qJm-QE-3u3"/>
+                    <constraint firstItem="d87-Zh-hrn" firstAttribute="leading" secondItem="jNe-OG-Puq" secondAttribute="leading" id="tBg-CH-yDN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="labClassname" destination="d87-Zh-hrn" id="EsZ-MB-Hn6"/>
+                <outlet property="labClassroom" destination="jNe-OG-Puq" id="zlc-YZ-q3T"/>
+                <outlet property="labTime" destination="Ehv-sH-B9i" id="9Eg-Rv-qCg"/>
+            </connections>
+            <point key="canvasLocation" x="230" y="450.5"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

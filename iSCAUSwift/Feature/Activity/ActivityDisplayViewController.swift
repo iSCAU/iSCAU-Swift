@@ -11,21 +11,23 @@ import CoreData
 
 class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDelegate {
 
-    var theActivity: Activity?
+    var selectedActivity: Activity?
+    var isLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var today : UIViewController = ActivityTableViewController()
+        var today = ActivityTableViewController()
         today.title = "今天"
-        var tomorrow : UIViewController = ActivityTableViewController()
+        var tomorrow = ActivityTableViewController()
         tomorrow.title = "明天"
-        var future : UIViewController = ActivityTableViewController()
+        var future = ActivityTableViewController()
         future.title = "未来"
         
         controllers = [ today, tomorrow, future ]
         
         loadData()
+        refreshData()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("refreshData"), name: kRefreshActivityDataNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("checkActivityDetail:"), name: kCheckActivityDetailNotification, object: nil)
@@ -45,19 +47,19 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
         let dateformatter = NSDateFormatter()
         dateformatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         
+        let sortDescriptor = NSSortDescriptor(key: "level", ascending: false)
         let fetchRequest = NSFetchRequest()
         fetchRequest.entity = NSEntityDescription.entityForName("Activity", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!)
-        let sortDescriptor = NSSortDescriptor(key: "level", ascending: false)
         fetchRequest.sortDescriptors = [ sortDescriptor ]
         
         if let activities = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) {
             for activity in activities {
                 
-                // Seperate them
+                // Seperate
                 let a = activity as Activity
                 
-                if a.level.toInt() == 9 {
-                    todayActivities.append(a)
+                if a.level.toInt() == 9 {   // Put at top in today view
+                    todayActivities.insert(a, atIndex: 0)
                 } else if let date = dateformatter.dateFromString(a.time) {
                     let dateType = date.dateType()
                     switch dateType {
@@ -88,37 +90,45 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
     }
     
     func refreshData() {
+        if isLoading {
+            return
+        }
+        
+        isLoading = true
         ActivityHttpManager.activityList { (request, response, data, error) -> Void in
-            if response?.statusCode == 200 {
-                dispatch_async(dispatch_get_main_queue(), {
+            if response?.statusCode == kResponseStatusCodeSuccess {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
                     var error: NSError?
                     if let d = data as? NSData {
                         if let contentInfo = NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.AllowFragments, error: &error) as? NSDictionary {
-                            
-                            let fetchRequest = NSFetchRequest()
-                            
                             // Content
-                            let contents = contentInfo["content"] as NSArray
-                            for contentDict in contents {
-                                Activity.converFromDict(contentDict as NSDictionary)
+                            if let contents = contentInfo["content"] as? NSArray {
+                                for contentDict in contents {
+                                    Activity.converFromDict(contentDict as NSDictionary)
+                                }
+                                CoreDataManager.sharedInstance.saveContext()
+                                
+                                Utils.activityLastUpdateTimeStamp = NSString(format: "%.0lf", NSDate().timeIntervalSince1970)
                             }
-                            CoreDataManager.sharedInstance.saveContext()
-                            
-                            Utils.activityLastUpdateTimeStamp = NSString(format: "%.0lf", NSDate().timeIntervalSince1970)
                         }
                     }
                     
                     dispatch_async(dispatch_get_main_queue(), {
                         self.loadData()
                     })
+                    self.isLoading = false
                 })
+                return
             }
+            self.isLoading = false
+            Utils.activityLastUpdateTimeStamp = "0"
+            Utils.showNotice("网络错误", inView: self.view)
         }
     }
     
     func checkActivityDetail(notification: NSNotification) {
         let userInfo = notification.userInfo as [ String : Activity ]
-        theActivity = userInfo["activity"]
+        selectedActivity = userInfo["activity"]
         
         performSegueWithIdentifier("PushActivityDetailViewController", sender: nil)
     }
@@ -126,7 +136,7 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "PushActivityDetailViewController" {
             if let detailVC = (segue.destinationViewController as? ActivityDetailViewController) {
-                detailVC.content = theActivity!.content
+                detailVC.content = selectedActivity!.content
             }
         }
     }

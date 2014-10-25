@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */; };
+		E1038BBF19F5742B00C09BEB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1038BBE19F5742B00C09BEB /* Crashlytics.framework */; };
 		E112ED1519E1A9B4001FA427 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0419E1A9B4001FA427 /* CalendarDayCell.m */; };
 		E112ED1619E1A9B4001FA427 /* CalendarDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0619E1A9B4001FA427 /* CalendarDayModel.m */; };
 		E112ED1719E1A9B4001FA427 /* CalendarHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E112ED0819E1A9B4001FA427 /* CalendarHomeViewController.m */; };
@@ -33,6 +34,24 @@
 		E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */ = {isa = PBXBuildFile; fileRef = E12D501319D9CE6D005F37B7 /* UIView+Additon.m */; };
 		E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */; };
 		E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */; };
+		E148AC6419F3916B00034CEE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148AC6319F3916B00034CEE /* Launch Screen.xib */; };
+		E148AC6919F39A9E00034CEE /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E148AC6619F39A9E00034CEE /* libMobClickLibrary.a */; };
+		E148AC6D19F39C6700034CEE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E148AC6B19F39C6700034CEE /* BaseViewController.m */; };
+		E148AC6E19F39C6700034CEE /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148AC6C19F39C6700034CEE /* BaseViewController.xib */; };
+		E148AC7219F39FAD00034CEE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E148AC7119F39FAD00034CEE /* libz.dylib */; };
+		E148AC7519F3F20100034CEE /* RestaurantListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148AC7319F3F20100034CEE /* RestaurantListCell.swift */; };
+		E148AC7619F3F20100034CEE /* RestaurantListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148AC7419F3F20100034CEE /* RestaurantListCell.xib */; };
+		E148AC7B19F41A6500034CEE /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E148AC7819F41A6500034CEE /* libUMFeedback.a */; };
+		E148AC7C19F41A6500034CEE /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E148AC7919F41A6500034CEE /* umFeedback.bundle */; };
+		E148FA4519FB41BF00AA477C /* EduSysMarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E148FA3A19FB41BF00AA477C /* EduSysMarkCell.m */; };
+		E148FA4619FB41BF00AA477C /* EduSysMarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148FA3B19FB41BF00AA477C /* EduSysMarkCell.xib */; };
+		E148FA4719FB41BF00AA477C /* EduSysMarksDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E148FA3D19FB41BF00AA477C /* EduSysMarksDetailCell.m */; };
+		E148FA4819FB41BF00AA477C /* EduSysMarksDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148FA3E19FB41BF00AA477C /* EduSysMarksDetailCell.xib */; };
+		E148FA4919FB41BF00AA477C /* EduSysMarksDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E148FA4019FB41BF00AA477C /* EduSysMarksDetailViewController.m */; };
+		E148FA4A19FB41BF00AA477C /* EduSysMarksDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148FA4119FB41BF00AA477C /* EduSysMarksDetailViewController.xib */; };
+		E148FA4B19FB41BF00AA477C /* EduSysMarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E148FA4319FB41BF00AA477C /* EduSysMarksViewController.m */; };
+		E148FA4C19FB41BF00AA477C /* EduSysMarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148FA4419FB41BF00AA477C /* EduSysMarksViewController.xib */; };
+		E148FA4E19FB833900AA477C /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E148FA4D19FB833900AA477C /* map@2x.png */; };
 		E14FB63E19D0629200526D45 /* 1.1.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB62419D0629200526D45 /* 1.1.png */; };
 		E14FB63F19D0629200526D45 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB62519D0629200526D45 /* 1.png */; };
 		E14FB64019D0629200526D45 /* 2.1.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB62619D0629200526D45 /* 2.1.png */; };
@@ -83,14 +102,6 @@
 		E1543C5819DC531F006E41A0 /* EduSysExamInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3719DC531F006E41A0 /* EduSysExamInfoCell.xib */; };
 		E1543C5919DC531F006E41A0 /* EduSysExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C3919DC531F006E41A0 /* EduSysExamViewController.m */; };
 		E1543C5A19DC531F006E41A0 /* EduSysExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3A19DC531F006E41A0 /* EduSysExamViewController.xib */; };
-		E1543C5B19DC531F006E41A0 /* EduSysMarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C3D19DC531F006E41A0 /* EduSysMarkCell.m */; };
-		E1543C5C19DC531F006E41A0 /* EduSysMarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C3E19DC531F006E41A0 /* EduSysMarkCell.xib */; };
-		E1543C5D19DC531F006E41A0 /* EduSysMarksDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4019DC531F006E41A0 /* EduSysMarksDetailCell.m */; };
-		E1543C5E19DC531F006E41A0 /* EduSysMarksDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4119DC531F006E41A0 /* EduSysMarksDetailCell.xib */; };
-		E1543C5F19DC531F006E41A0 /* EduSysMarksDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4319DC531F006E41A0 /* EduSysMarksDetailViewController.m */; };
-		E1543C6019DC531F006E41A0 /* EduSysMarksDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4419DC531F006E41A0 /* EduSysMarksDetailViewController.xib */; };
-		E1543C6119DC531F006E41A0 /* EduSysMarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4619DC531F006E41A0 /* EduSysMarksViewController.m */; };
-		E1543C6219DC531F006E41A0 /* EduSysMarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4719DC531F006E41A0 /* EduSysMarksViewController.xib */; };
 		E1543C6319DC531F006E41A0 /* EduSysPickClassInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4A19DC531F006E41A0 /* EduSysPickClassInfoCell.m */; };
 		E1543C6419DC531F006E41A0 /* EduSysPickClassInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C4B19DC531F006E41A0 /* EduSysPickClassInfoCell.xib */; };
 		E1543C6519DC531F006E41A0 /* EduSysPickClassInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C4D19DC531F006E41A0 /* EduSysPickClassInfoViewController.m */; };
@@ -129,7 +140,6 @@
 		E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB489193EC31400F8D492 /* AppDelegate.swift */; };
 		E15BB48F193EC31500F8D492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15BB48D193EC31500F8D492 /* Main.storyboard */; };
 		E15BB491193EC31500F8D492 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15BB490193EC31500F8D492 /* Images.xcassets */; };
-		E15BB49D193EC31600F8D492 /* iSCAUSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB49C193EC31500F8D492 /* iSCAUSwiftTests.swift */; };
 		E15BB4C0193F06B500F8D492 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4BF193F06B500F8D492 /* User.swift */; };
 		E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C3193F24AB00F8D492 /* Notice.swift */; };
 		E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C7193F29ED00F8D492 /* CetMark.swift */; };
@@ -141,8 +151,15 @@
 		E174654D19DEE208005EE1AD /* TakeOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174654C19DEE208005EE1AD /* TakeOutMenuViewController.swift */; };
 		E174654F19DEE698005EE1AD /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */; };
 		E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */; };
+		E17AE90E19FBCB68004CAA87 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E17AE90B19FBCA76004CAA87 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */; };
 		E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */; };
+		E18F299619E5206B00D8775C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18F294D19E501BB00D8775C /* NotificationCenter.framework */; };
+		E18F299B19E5206B00D8775C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F299A19E5206B00D8775C /* TodayViewController.swift */; };
+		E18F299D19E5206B00D8775C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F299C19E5206B00D8775C /* MainInterface.storyboard */; };
+		E18F29A019E5206B00D8775C /* ClasstableWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E18F299519E5206B00D8775C /* ClasstableWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E18F29A919E5233E00D8775C /* LessionWidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F29A719E5233E00D8775C /* LessionWidgetTableViewCell.swift */; };
+		E18F29AA19E5233E00D8775C /* LessionWidgetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18F29A819E5233E00D8775C /* LessionWidgetTableViewCell.xib */; };
 		E1938AEE19DFFEE100353521 /* TakeOutOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938AED19DFFEE100353521 /* TakeOutOrderViewController.swift */; };
 		E1938AF119E0049900353521 /* FoodOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1938AEF19E0049900353521 /* FoodOrderTableViewCell.swift */; };
 		E1938AF219E0049900353521 /* FoodOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1938AF019E0049900353521 /* FoodOrderTableViewCell.xib */; };
@@ -173,26 +190,10 @@
 		E1EE007A19E3979300CF4F15 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */; };
 		E1EE007C19E4239E00CF4F15 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007B19E4239E00CF4F15 /* ActivityDetailViewController.swift */; };
 		E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */; };
-		E1FDF41419D0734700CC311E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; };
-		E1FDF41519D0734700CC311E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14FB61D19D060E200526D45 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1FDF41A19D07D1500CC311E /* classtable.png in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF41919D07D1500CC311E /* classtable.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E14FB61C19D060E200526D45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E14FB61719D060E200526D45 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		E14FB61E19D060E200526D45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E14FB61719D060E200526D45 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = AlamofireTests;
-		};
 		E15BB497193EC31500F8D492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E15BB47C193EC31400F8D492 /* Project object */;
@@ -200,23 +201,55 @@
 			remoteGlobalIDString = E15BB483193EC31400F8D492;
 			remoteInfo = iSCAUSwift;
 		};
-		E1FDF41619D0734700CC311E /* PBXContainerItemProxy */ = {
+		E17AE90A19FBCA76004CAA87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E14FB61719D060E200526D45 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			containerPortal = E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
 			remoteInfo = Alamofire;
+		};
+		E17AE90C19FBCA76004CAA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		E18F299E19E5206B00D8775C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15BB47C193EC31400F8D492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E18F299419E5206B00D8775C;
+			remoteInfo = ClasstableWidget;
+		};
+		E18F29A119E5206B00D8775C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15BB47C193EC31400F8D492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E18F299419E5206B00D8775C;
+			remoteInfo = ClasstableWidget;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		E18F295819E501BB00D8775C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E18F29A019E5206B00D8775C /* ClasstableWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1FDF41819D0734700CC311E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E1FDF41519D0734700CC311E /* Alamofire.framework in Embed Frameworks */,
+				E17AE90E19FBCB68004CAA87 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +260,7 @@
 		1E13F1ECD8F94B47B4C7013B /* Pods-iSCAUSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSCAUSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3441B39F695DE30B958E3E1 /* Pods-iSCAUSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSCAUSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSCAUSwift/Pods-iSCAUSwift.release.xcconfig"; sourceTree = "<group>"; };
+		E1038BBE19F5742B00C09BEB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E112ED0319E1A9B4001FA427 /* CalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayCell.h; sourceTree = "<group>"; };
 		E112ED0419E1A9B4001FA427 /* CalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
 		E112ED0519E1A9B4001FA427 /* CalendarDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayModel.h; sourceTree = "<group>"; };
@@ -268,7 +302,32 @@
 		E12D501319D9CE6D005F37B7 /* UIView+Additon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additon.m"; sourceTree = "<group>"; };
 		E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCollectionViewController.swift; path = Menu/MenuCollectionViewController.swift; sourceTree = "<group>"; };
 		E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItemCollectionViewCell.swift; path = Menu/MenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		E14FB61719D060E200526D45 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		E148AC6319F3916B00034CEE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		E148AC6619F39A9E00034CEE /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		E148AC6719F39A9E00034CEE /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		E148AC6819F39A9E00034CEE /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		E148AC6A19F39C6700034CEE /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E148AC6B19F39C6700034CEE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E148AC6C19F39C6700034CEE /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		E148AC7119F39FAD00034CEE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E148AC7319F3F20100034CEE /* RestaurantListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListCell.swift; sourceTree = "<group>"; };
+		E148AC7419F3F20100034CEE /* RestaurantListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantListCell.xib; sourceTree = "<group>"; };
+		E148AC7819F41A6500034CEE /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
+		E148AC7919F41A6500034CEE /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
+		E148AC7A19F41A6500034CEE /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
+		E148FA3919FB41BF00AA477C /* EduSysMarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarkCell.h; sourceTree = "<group>"; };
+		E148FA3A19FB41BF00AA477C /* EduSysMarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarkCell.m; sourceTree = "<group>"; };
+		E148FA3B19FB41BF00AA477C /* EduSysMarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarkCell.xib; sourceTree = "<group>"; };
+		E148FA3C19FB41BF00AA477C /* EduSysMarksDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksDetailCell.h; sourceTree = "<group>"; };
+		E148FA3D19FB41BF00AA477C /* EduSysMarksDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksDetailCell.m; sourceTree = "<group>"; };
+		E148FA3E19FB41BF00AA477C /* EduSysMarksDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksDetailCell.xib; sourceTree = "<group>"; };
+		E148FA3F19FB41BF00AA477C /* EduSysMarksDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksDetailViewController.h; sourceTree = "<group>"; };
+		E148FA4019FB41BF00AA477C /* EduSysMarksDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksDetailViewController.m; sourceTree = "<group>"; };
+		E148FA4119FB41BF00AA477C /* EduSysMarksDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksDetailViewController.xib; sourceTree = "<group>"; };
+		E148FA4219FB41BF00AA477C /* EduSysMarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksViewController.h; sourceTree = "<group>"; };
+		E148FA4319FB41BF00AA477C /* EduSysMarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksViewController.m; sourceTree = "<group>"; };
+		E148FA4419FB41BF00AA477C /* EduSysMarksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksViewController.xib; sourceTree = "<group>"; };
+		E148FA4D19FB833900AA477C /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
 		E14FB62419D0629200526D45 /* 1.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.1.png; sourceTree = "<group>"; };
 		E14FB62519D0629200526D45 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		E14FB62619D0629200526D45 /* 2.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.1.png; sourceTree = "<group>"; };
@@ -325,18 +384,6 @@
 		E1543C3819DC531F006E41A0 /* EduSysExamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysExamViewController.h; sourceTree = "<group>"; };
 		E1543C3919DC531F006E41A0 /* EduSysExamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysExamViewController.m; sourceTree = "<group>"; };
 		E1543C3A19DC531F006E41A0 /* EduSysExamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysExamViewController.xib; sourceTree = "<group>"; };
-		E1543C3C19DC531F006E41A0 /* EduSysMarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarkCell.h; sourceTree = "<group>"; };
-		E1543C3D19DC531F006E41A0 /* EduSysMarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarkCell.m; sourceTree = "<group>"; };
-		E1543C3E19DC531F006E41A0 /* EduSysMarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarkCell.xib; sourceTree = "<group>"; };
-		E1543C3F19DC531F006E41A0 /* EduSysMarksDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksDetailCell.h; sourceTree = "<group>"; };
-		E1543C4019DC531F006E41A0 /* EduSysMarksDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksDetailCell.m; sourceTree = "<group>"; };
-		E1543C4119DC531F006E41A0 /* EduSysMarksDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksDetailCell.xib; sourceTree = "<group>"; };
-		E1543C4219DC531F006E41A0 /* EduSysMarksDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksDetailViewController.h; sourceTree = "<group>"; };
-		E1543C4319DC531F006E41A0 /* EduSysMarksDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksDetailViewController.m; sourceTree = "<group>"; };
-		E1543C4419DC531F006E41A0 /* EduSysMarksDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksDetailViewController.xib; sourceTree = "<group>"; };
-		E1543C4519DC531F006E41A0 /* EduSysMarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysMarksViewController.h; sourceTree = "<group>"; };
-		E1543C4619DC531F006E41A0 /* EduSysMarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysMarksViewController.m; sourceTree = "<group>"; };
-		E1543C4719DC531F006E41A0 /* EduSysMarksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysMarksViewController.xib; sourceTree = "<group>"; };
 		E1543C4919DC531F006E41A0 /* EduSysPickClassInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysPickClassInfoCell.h; sourceTree = "<group>"; };
 		E1543C4A19DC531F006E41A0 /* EduSysPickClassInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysPickClassInfoCell.m; sourceTree = "<group>"; };
 		E1543C4B19DC531F006E41A0 /* EduSysPickClassInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EduSysPickClassInfoCell.xib; sourceTree = "<group>"; };
@@ -397,8 +444,6 @@
 		E15BB48E193EC31500F8D492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E15BB490193EC31500F8D492 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E15BB496193EC31500F8D492 /* iSCAUSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSCAUSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E15BB49B193EC31500F8D492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E15BB49C193EC31500F8D492 /* iSCAUSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSCAUSwiftTests.swift; sourceTree = "<group>"; };
 		E15BB4BF193F06B500F8D492 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		E15BB4C1193F170900F8D492 /* iSCAUPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iSCAUPlayground.playground; sourceTree = "<group>"; };
 		E15BB4C2193F23EB00F8D492 /* iSCAUSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iSCAUSwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -413,8 +458,18 @@
 		E174654C19DEE208005EE1AD /* TakeOutMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeOutMenuViewController.swift; sourceTree = "<group>"; };
 		E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
+		E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayTimeTable.swift; sourceTree = "<group>"; };
 		E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayLessionCell.swift; sourceTree = "<group>"; };
+		E18F294D19E501BB00D8775C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E18F296519E51F1700D8775C /* iSCAUSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = iSCAUSwift.entitlements; path = ../iSCAUSwift.entitlements; sourceTree = "<group>"; };
+		E18F299519E5206B00D8775C /* ClasstableWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClasstableWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18F299919E5206B00D8775C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E18F299A19E5206B00D8775C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E18F299C19E5206B00D8775C /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		E18F29A619E5207100D8775C /* ClasstableWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ClasstableWidget.entitlements; sourceTree = "<group>"; };
+		E18F29A719E5233E00D8775C /* LessionWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessionWidgetTableViewCell.swift; sourceTree = "<group>"; };
+		E18F29A819E5233E00D8775C /* LessionWidgetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LessionWidgetTableViewCell.xib; sourceTree = "<group>"; };
 		E1938AED19DFFEE100353521 /* TakeOutOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeOutOrderViewController.swift; sourceTree = "<group>"; };
 		E1938AEF19E0049900353521 /* FoodOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodOrderTableViewCell.swift; sourceTree = "<group>"; };
 		E1938AF019E0049900353521 /* FoodOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodOrderTableViewCell.xib; sourceTree = "<group>"; };
@@ -455,9 +510,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E148AC7B19F41A6500034CEE /* libUMFeedback.a in Frameworks */,
+				E148AC7219F39FAD00034CEE /* libz.dylib in Frameworks */,
 				E1EE007419E305AA00CF4F15 /* Reveal.framework in Frameworks */,
 				5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */,
-				E1FDF41419D0734700CC311E /* Alamofire.framework in Frameworks */,
+				E148AC6919F39A9E00034CEE /* libMobClickLibrary.a in Frameworks */,
+				E1038BBF19F5742B00C09BEB /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,13 +526,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E18F299219E5206B00D8775C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18F299619E5206B00D8775C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		63A5414A5E17465EAA51A912 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E148AC7119F39FAD00034CEE /* libz.dylib */,
 				409C958170D3418E9C17FC34 /* libPods-iSCAUSwift.a */,
+				E18F294D19E501BB00D8775C /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -587,25 +655,58 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		E148AC6519F39A9E00034CEE /* UMAnalytics_Sdk_3.1.8 */ = {
+			isa = PBXGroup;
+			children = (
+				E148AC6619F39A9E00034CEE /* libMobClickLibrary.a */,
+				E148AC6719F39A9E00034CEE /* MobClick.h */,
+				E148AC6819F39A9E00034CEE /* MobClickSocialAnalytics.h */,
+			);
+			path = UMAnalytics_Sdk_3.1.8;
+			sourceTree = "<group>";
+		};
+		E148AC7719F41A6500034CEE /* UMFeedback_iOS_1.4.2 */ = {
+			isa = PBXGroup;
+			children = (
+				E148AC7819F41A6500034CEE /* libUMFeedback.a */,
+				E148AC7919F41A6500034CEE /* umFeedback.bundle */,
+				E148AC7A19F41A6500034CEE /* UMFeedback.h */,
+			);
+			path = UMFeedback_iOS_1.4.2;
+			sourceTree = "<group>";
+		};
+		E148FA3819FB41BF00AA477C /* EduSysMark */ = {
+			isa = PBXGroup;
+			children = (
+				E148FA3919FB41BF00AA477C /* EduSysMarkCell.h */,
+				E148FA3A19FB41BF00AA477C /* EduSysMarkCell.m */,
+				E148FA3B19FB41BF00AA477C /* EduSysMarkCell.xib */,
+				E148FA3C19FB41BF00AA477C /* EduSysMarksDetailCell.h */,
+				E148FA3D19FB41BF00AA477C /* EduSysMarksDetailCell.m */,
+				E148FA3E19FB41BF00AA477C /* EduSysMarksDetailCell.xib */,
+				E148FA3F19FB41BF00AA477C /* EduSysMarksDetailViewController.h */,
+				E148FA4019FB41BF00AA477C /* EduSysMarksDetailViewController.m */,
+				E148FA4119FB41BF00AA477C /* EduSysMarksDetailViewController.xib */,
+				E148FA4219FB41BF00AA477C /* EduSysMarksViewController.h */,
+				E148FA4319FB41BF00AA477C /* EduSysMarksViewController.m */,
+				E148FA4419FB41BF00AA477C /* EduSysMarksViewController.xib */,
+			);
+			path = EduSysMark;
+			sourceTree = "<group>";
+		};
 		E14FB5D819D0609100526D45 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */,
+				E1038BBE19F5742B00C09BEB /* Crashlytics.framework */,
+				E148AC7719F41A6500034CEE /* UMFeedback_iOS_1.4.2 */,
+				E148AC6519F39A9E00034CEE /* UMAnalytics_Sdk_3.1.8 */,
 				E1EE007319E305AA00CF4F15 /* Reveal.framework */,
 				E112ED0219E1A9B4001FA427 /* ZFCalendar */,
 				E19F70E519DB2EF3009698D8 /* JPTabViewController */,
 				E12D4FFB19D9CE6C005F37B7 /* AZTools */,
-				E14FB61719D060E200526D45 /* Alamofire.xcodeproj */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		E14FB61819D060E200526D45 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E14FB61D19D060E200526D45 /* Alamofire.framework */,
-				E14FB61F19D060E200526D45 /* AlamofireTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E1543C2719DC531F006E41A0 /* EduSysEmptyClassroom */ = {
@@ -638,25 +739,6 @@
 				E1543C3A19DC531F006E41A0 /* EduSysExamViewController.xib */,
 			);
 			path = EduSysExam;
-			sourceTree = "<group>";
-		};
-		E1543C3B19DC531F006E41A0 /* EduSysMark */ = {
-			isa = PBXGroup;
-			children = (
-				E1543C3C19DC531F006E41A0 /* EduSysMarkCell.h */,
-				E1543C3D19DC531F006E41A0 /* EduSysMarkCell.m */,
-				E1543C3E19DC531F006E41A0 /* EduSysMarkCell.xib */,
-				E1543C3F19DC531F006E41A0 /* EduSysMarksDetailCell.h */,
-				E1543C4019DC531F006E41A0 /* EduSysMarksDetailCell.m */,
-				E1543C4119DC531F006E41A0 /* EduSysMarksDetailCell.xib */,
-				E1543C4219DC531F006E41A0 /* EduSysMarksDetailViewController.h */,
-				E1543C4319DC531F006E41A0 /* EduSysMarksDetailViewController.m */,
-				E1543C4419DC531F006E41A0 /* EduSysMarksDetailViewController.xib */,
-				E1543C4519DC531F006E41A0 /* EduSysMarksViewController.h */,
-				E1543C4619DC531F006E41A0 /* EduSysMarksViewController.m */,
-				E1543C4719DC531F006E41A0 /* EduSysMarksViewController.xib */,
-			);
-			path = EduSysMark;
 			sourceTree = "<group>";
 		};
 		E1543C4819DC531F006E41A0 /* EduSysPickClass */ = {
@@ -755,7 +837,7 @@
 			isa = PBXGroup;
 			children = (
 				E15BB486193EC31400F8D492 /* iSCAUSwift */,
-				E15BB499193EC31500F8D492 /* iSCAUSwiftTests */,
+				E18F299719E5206B00D8775C /* ClasstableWidget */,
 				E15BB485193EC31400F8D492 /* Products */,
 				63A5414A5E17465EAA51A912 /* Frameworks */,
 				F12A2CFC0E35229CC2B6DE15 /* Pods */,
@@ -767,6 +849,7 @@
 			children = (
 				E15BB484193EC31400F8D492 /* iSCAUSwift.app */,
 				E15BB496193EC31500F8D492 /* iSCAUSwiftTests.xctest */,
+				E18F299519E5206B00D8775C /* ClasstableWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -776,6 +859,7 @@
 			children = (
 				E15BB489193EC31400F8D492 /* AppDelegate.swift */,
 				E15BB48D193EC31500F8D492 /* Main.storyboard */,
+				E148AC6319F3916B00034CEE /* Launch Screen.xib */,
 				E1B8345619DA619F00737E99 /* Feature */,
 				E15BB4AF193F054B00F8D492 /* Helper */,
 				E15BB4B0193F054B00F8D492 /* Macro */,
@@ -795,23 +879,6 @@
 			isa = PBXGroup;
 			children = (
 				E15BB488193EC31400F8D492 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E15BB499193EC31500F8D492 /* iSCAUSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				E15BB49C193EC31500F8D492 /* iSCAUSwiftTests.swift */,
-				E15BB49A193EC31500F8D492 /* Supporting Files */,
-			);
-			path = iSCAUSwiftTests;
-			sourceTree = "<group>";
-		};
-		E15BB49A193EC31500F8D492 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E15BB49B193EC31500F8D492 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -866,6 +933,7 @@
 		E15BB4B8193F054B00F8D492 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				E148FA4D19FB833900AA477C /* map@2x.png */,
 				E1EE006B19E2CEE200CF4F15 /* more@2x.png */,
 				E114957319D943D90087445D /* activity_img */,
 				E14FB65819D0635800526D45 /* calendar.png */,
@@ -928,6 +996,36 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E17AE90619FBCA75004CAA87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E17AE90B19FBCA76004CAA87 /* Alamofire.framework */,
+				E17AE90D19FBCA76004CAA87 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E18F299719E5206B00D8775C /* ClasstableWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E18F29A619E5207100D8775C /* ClasstableWidget.entitlements */,
+				E18F299A19E5206B00D8775C /* TodayViewController.swift */,
+				E18F299C19E5206B00D8775C /* MainInterface.storyboard */,
+				E18F29A719E5233E00D8775C /* LessionWidgetTableViewCell.swift */,
+				E18F29A819E5233E00D8775C /* LessionWidgetTableViewCell.xib */,
+				E18F299819E5206B00D8775C /* Supporting Files */,
+			);
+			path = ClasstableWidget;
+			sourceTree = "<group>";
+		};
+		E18F299819E5206B00D8775C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E18F299919E5206B00D8775C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E1995CE419DDB47F001AB5D7 /* TakeOut */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +1039,8 @@
 				E1938AF019E0049900353521 /* FoodOrderTableViewCell.xib */,
 				E1938AF319E00FE900353521 /* RestaurantTableViewCell.swift */,
 				E1938AF419E00FE900353521 /* RestaurantTableViewCell.xib */,
+				E148AC7319F3F20100034CEE /* RestaurantListCell.swift */,
+				E148AC7419F3F20100034CEE /* RestaurantListCell.xib */,
 				E1938AF919E0118A00353521 /* AddressTableViewCell.swift */,
 				E1938AFA19E0118A00353521 /* AddressTableViewCell.xib */,
 			);
@@ -959,6 +1059,7 @@
 		E1B0B9DE1948BC270035B287 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				E18F296519E51F1700D8775C /* iSCAUSwift.entitlements */,
 				E1B0B9DF1948BC520035B287 /* iSCAUSwift.xcdatamodeld */,
 			);
 			name = File;
@@ -996,6 +1097,9 @@
 				E1B8345D19DA619F00737E99 /* LoginViewController.swift */,
 				E1B8345E19DA619F00737E99 /* SettingsTableViewController.swift */,
 				E1EE007119E2FA9300CF4F15 /* BaseHttpManager.swift */,
+				E148AC6A19F39C6700034CEE /* BaseViewController.h */,
+				E148AC6B19F39C6700034CEE /* BaseViewController.m */,
+				E148AC6C19F39C6700034CEE /* BaseViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1007,7 +1111,7 @@
 				E1543C6719DC5354006E41A0 /* EduSysClassTable */,
 				E1543C2719DC531F006E41A0 /* EduSysEmptyClassroom */,
 				E1543C3419DC531F006E41A0 /* EduSysExam */,
-				E1543C3B19DC531F006E41A0 /* EduSysMark */,
+				E148FA3819FB41BF00AA477C /* EduSysMark */,
 				E1543C4819DC531F006E41A0 /* EduSysPickClass */,
 			);
 			path = Edu;
@@ -1035,11 +1139,14 @@
 				E15BB482193EC31400F8D492 /* Resources */,
 				0BA7221F5E52484EA0F08102 /* Copy Pods Resources */,
 				E1FDF41819D0734700CC311E /* Embed Frameworks */,
+				E18F295819E501BB00D8775C /* Embed App Extensions */,
+				E1038BBC19F5734700C09BEB /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E1FDF41719D0734700CC311E /* PBXTargetDependency */,
+				E18F299F19E5206B00D8775C /* PBXTargetDependency */,
+				E18F29A219E5206B00D8775C /* PBXTargetDependency */,
 			);
 			name = iSCAUSwift;
 			productName = iSCAUSwift;
@@ -1064,6 +1171,23 @@
 			productReference = E15BB496193EC31500F8D492 /* iSCAUSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E18F299419E5206B00D8775C /* ClasstableWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18F29A319E5206C00D8775C /* Build configuration list for PBXNativeTarget "ClasstableWidget" */;
+			buildPhases = (
+				E18F299119E5206B00D8775C /* Sources */,
+				E18F299219E5206B00D8775C /* Frameworks */,
+				E18F299319E5206B00D8775C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClasstableWidget;
+			productName = ClasstableWidget;
+			productReference = E18F299519E5206B00D8775C /* ClasstableWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1075,10 +1199,25 @@
 				TargetAttributes = {
 					E15BB483193EC31400F8D492 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 4Y65NZLKET;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E15BB495193EC31500F8D492 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = E15BB483193EC31400F8D492;
+					};
+					E18F299419E5206B00D8775C = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4Y65NZLKET;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1095,31 +1234,32 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E14FB61819D060E200526D45 /* Products */;
-					ProjectRef = E14FB61719D060E200526D45 /* Alamofire.xcodeproj */;
+					ProductGroup = E17AE90619FBCA75004CAA87 /* Products */;
+					ProjectRef = E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				E15BB483193EC31400F8D492 /* iSCAUSwift */,
 				E15BB495193EC31500F8D492 /* iSCAUSwiftTests */,
+				E18F299419E5206B00D8775C /* ClasstableWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E14FB61D19D060E200526D45 /* Alamofire.framework */ = {
+		E17AE90B19FBCA76004CAA87 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = E14FB61C19D060E200526D45 /* PBXContainerItemProxy */;
+			remoteRef = E17AE90A19FBCA76004CAA87 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E14FB61F19D060E200526D45 /* AlamofireTests.xctest */ = {
+		E17AE90D19FBCA76004CAA87 /* AlamofireTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AlamofireTests.xctest;
-			remoteRef = E14FB61E19D060E200526D45 /* PBXContainerItemProxy */;
+			remoteRef = E17AE90C19FBCA76004CAA87 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1134,8 +1274,6 @@
 				E14FB64A19D0629200526D45 /* 7.1.png in Resources */,
 				E1938B0019E033A300353521 /* sep@2x.png in Resources */,
 				E114957E19D943D90087445D /* userName.png in Resources */,
-				E1543C5C19DC531F006E41A0 /* EduSysMarkCell.xib in Resources */,
-				E1543C5E19DC531F006E41A0 /* EduSysMarksDetailCell.xib in Resources */,
 				E14FB64919D0629200526D45 /* 6.png in Resources */,
 				E14FB65419D0629200526D45 /* 13.1.png in Resources */,
 				E14FB66A19D0635900526D45 /* huodongquan_on.png in Resources */,
@@ -1143,21 +1281,25 @@
 				E14FB64619D0629200526D45 /* 5.1.png in Resources */,
 				E1FDF41A19D07D1500CC311E /* classtable.png in Resources */,
 				E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */,
+				E148FA4E19FB833900AA477C /* map@2x.png in Resources */,
 				E14FB65219D0629200526D45 /* 12.1.png in Resources */,
+				E148AC6E19F39C6700034CEE /* BaseViewController.xib in Resources */,
 				E1938AF619E00FE900353521 /* RestaurantTableViewCell.xib in Resources */,
+				E148FA4C19FB41BF00AA477C /* EduSysMarksViewController.xib in Resources */,
 				E1938AF219E0049900353521 /* FoodOrderTableViewCell.xib in Resources */,
+				E148FA4A19FB41BF00AA477C /* EduSysMarksDetailViewController.xib in Resources */,
 				E1543C5819DC531F006E41A0 /* EduSysExamInfoCell.xib in Resources */,
 				E1543CB419DD45F7006E41A0 /* LibSearchBooksDetailCell.xib in Resources */,
 				E14FB64419D0629200526D45 /* 4.1.png in Resources */,
 				E14FB64119D0629200526D45 /* 2.png in Resources */,
 				E14FB66D19D0635900526D45 /* settting.png in Resources */,
-				E1543C6019DC531F006E41A0 /* EduSysMarksDetailViewController.xib in Resources */,
 				E1543C8119DC5354006E41A0 /* EduSysWeekClassTableView.xib in Resources */,
 				E114957D19D943D90087445D /* top.png in Resources */,
 				E14FB64219D0629200526D45 /* 3.1.png in Resources */,
 				E14FB66519D0635900526D45 /* calendar.png in Resources */,
 				E14FB67019D0635900526D45 /* waimai.png in Resources */,
 				E14FB66E19D0635900526D45 /* shopbox.png in Resources */,
+				E148AC6419F3916B00034CEE /* Launch Screen.xib in Resources */,
 				E14FB66C19D0635900526D45 /* map.jpg in Resources */,
 				E114957A19D943D90087445D /* place.png in Resources */,
 				E14FB64D19D0629200526D45 /* 8.png in Resources */,
@@ -1167,12 +1309,13 @@
 				E1543C6419DC531F006E41A0 /* EduSysPickClassInfoCell.xib in Resources */,
 				E14FB65719D0629200526D45 /* 14.png in Resources */,
 				E1543C5219DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.xib in Resources */,
+				E148AC7619F3F20100034CEE /* RestaurantListCell.xib in Resources */,
+				E148FA4819FB41BF00AA477C /* EduSysMarksDetailCell.xib in Resources */,
 				E1543C5A19DC531F006E41A0 /* EduSysExamViewController.xib in Resources */,
 				E14FB67119D0635900526D45 /* wave.png in Resources */,
 				E14FB66919D0635900526D45 /* features.png in Resources */,
 				E14FB64019D0629200526D45 /* 2.1.png in Resources */,
 				E1EE007A19E3979300CF4F15 /* ActivityTableViewCell.xib in Resources */,
-				E1543C6219DC531F006E41A0 /* EduSysMarksViewController.xib in Resources */,
 				E1543CB619DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib in Resources */,
 				E1543CAE19DD45F7006E41A0 /* LibListNowCell.xib in Resources */,
 				E112ED1C19E1A9B4001FA427 /* chack.png in Resources */,
@@ -1194,6 +1337,7 @@
 				E114957C19D943D90087445D /* time.png in Resources */,
 				E14FB64819D0629200526D45 /* 6.1.png in Resources */,
 				E1EE006A19E2C94D00CF4F15 /* SBDropDownMenu.xib in Resources */,
+				E148AC7C19F41A6500034CEE /* umFeedback.bundle in Resources */,
 				E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */,
 				E14FB65119D0629200526D45 /* 10.png in Resources */,
 				E14FB64F19D0629200526D45 /* 9.png in Resources */,
@@ -1201,6 +1345,7 @@
 				E15BB48F193EC31500F8D492 /* Main.storyboard in Resources */,
 				E14FB64719D0629200526D45 /* 5.png in Resources */,
 				E14FB64519D0629200526D45 /* 4.png in Resources */,
+				E148FA4619FB41BF00AA477C /* EduSysMarkCell.xib in Resources */,
 				E1543CB819DD45F7006E41A0 /* LibSearchBooksViewController.xib in Resources */,
 				E14FB66819D0635900526D45 /* features_on.png in Resources */,
 				E1543C5019DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib in Resources */,
@@ -1216,6 +1361,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18F299319E5206B00D8775C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18F299D19E5206B00D8775C /* MainInterface.storyboard in Resources */,
+				E18F29AA19E5233E00D8775C /* LessionWidgetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1406,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E1038BBC19F5734700C09BEB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./iSCAUSwift/Vendor/Crashlytics.framework/run 2888f0e3d016f021c4a964ee765c66087e19ab35 7ab976f543688255b2dbd46bd8e8dcf8927771299b7759351027eb05d3665d0d";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1259,6 +1426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E148FA4B19FB41BF00AA477C /* EduSysMarksViewController.m in Sources */,
 				E112ED1519E1A9B4001FA427 /* CalendarDayCell.m in Sources */,
 				E1938AFE19E0189900353521 /* ActivityDisplayViewController.swift in Sources */,
 				E1938AFB19E0118A00353521 /* AddressTableViewCell.swift in Sources */,
@@ -1271,6 +1439,7 @@
 				E1543C8D19DD3FC8006E41A0 /* LibHttpManager.swift in Sources */,
 				E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */,
 				E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */,
+				E148FA4919FB41BF00AA477C /* EduSysMarksDetailViewController.m in Sources */,
 				E1543C8019DC5354006E41A0 /* EduSysWeekClassTableView.m in Sources */,
 				E1543CB319DD45F7006E41A0 /* LibSearchBooksDetailCell.m in Sources */,
 				E1543C5119DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.m in Sources */,
@@ -1278,9 +1447,7 @@
 				E12D501C19D9CE6D005F37B7 /* UIImage+ScreenShot.m in Sources */,
 				E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */,
 				E1543CA919DD45F7006E41A0 /* LibListHistoryCell.m in Sources */,
-				E1543C6119DC531F006E41A0 /* EduSysMarksViewController.m in Sources */,
 				E1995CE619DDB4AA001AB5D7 /* TakeOutHttpManager.swift in Sources */,
-				E1543C5F19DC531F006E41A0 /* EduSysMarksDetailViewController.m in Sources */,
 				E1543CB119DD45F7006E41A0 /* LibSearchBooksCell.m in Sources */,
 				E1995CEA19DDC2C5001AB5D7 /* Restaurant.swift in Sources */,
 				E1543C7F19DC5354006E41A0 /* EduSysDayClassView.m in Sources */,
@@ -1292,14 +1459,15 @@
 				E12D501B19D9CE6D005F37B7 /* UIImage+RTTint.m in Sources */,
 				E1543CB719DD45F7006E41A0 /* LibSearchBooksViewController.m in Sources */,
 				E12D501919D9CE6D005F37B7 /* UIImage+Blur.m in Sources */,
-				E1543C5D19DC531F006E41A0 /* EduSysMarksDetailCell.m in Sources */,
 				E19F70E819DB2EF3009698D8 /* JPTabViewController.m in Sources */,
+				E148FA4719FB41BF00AA477C /* EduSysMarksDetailCell.m in Sources */,
 				E1B8347619DA619F00737E99 /* SettingsTableViewController.swift in Sources */,
 				E12D501819D9CE6D005F37B7 /* UIColor+Addition.m in Sources */,
 				E1543C4F19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m in Sources */,
-				E1543C5B19DC531F006E41A0 /* EduSysMarkCell.m in Sources */,
+				E148AC7519F3F20100034CEE /* RestaurantListCell.swift in Sources */,
 				E112ED1A19E1A9B4001FA427 /* CalendarMonthHeaderView.m in Sources */,
 				E1543C7E19DC5354006E41A0 /* EduSysDayClassTableView.m in Sources */,
+				E148AC6D19F39C6700034CEE /* BaseViewController.m in Sources */,
 				E1EE007619E395AA00CF4F15 /* ActivityTableViewController.swift in Sources */,
 				E1EE006919E2C94D00CF4F15 /* SBDropDownMenu.m in Sources */,
 				E1B8347519DA619F00737E99 /* LoginViewController.swift in Sources */,
@@ -1307,6 +1475,7 @@
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
 				E1938AEE19DFFEE100353521 /* TakeOutOrderViewController.swift in Sources */,
 				E1938AF519E00FE900353521 /* RestaurantTableViewCell.swift in Sources */,
+				E148FA4519FB41BF00AA477C /* EduSysMarkCell.m in Sources */,
 				E1543C5319DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m in Sources */,
 				E1543C8A19DC5E31006E41A0 /* UIImage+Tint.m in Sources */,
 				E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */,
@@ -1350,7 +1519,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15BB49D193EC31600F8D492 /* iSCAUSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18F299119E5206B00D8775C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18F29A919E5233E00D8775C /* LessionWidgetTableViewCell.swift in Sources */,
+				E18F299B19E5206B00D8775C /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,10 +1539,15 @@
 			target = E15BB483193EC31400F8D492 /* iSCAUSwift */;
 			targetProxy = E15BB497193EC31500F8D492 /* PBXContainerItemProxy */;
 		};
-		E1FDF41719D0734700CC311E /* PBXTargetDependency */ = {
+		E18F299F19E5206B00D8775C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = E1FDF41619D0734700CC311E /* PBXContainerItemProxy */;
+			target = E18F299419E5206B00D8775C /* ClasstableWidget */;
+			targetProxy = E18F299E19E5206B00D8775C /* PBXContainerItemProxy */;
+		};
+		E18F29A219E5206B00D8775C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E18F299419E5206B00D8775C /* ClasstableWidget */;
+			targetProxy = E18F29A119E5206B00D8775C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1415,7 +1597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1451,7 +1633,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1464,14 +1646,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iSCAUSwift/iSCAUSwift.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iSCAUSwift/Vendor",
 				);
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSCAUSwift/Vendor/UMAnalytics_Sdk_3.1.8",
+					"$(PROJECT_DIR)/iSCAUSwift/Vendor/UMFeedback_iOS_1.4.2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSCAUSwift/iSCAUSwift-Bridging-Header.h";
 			};
 			name = Debug;
@@ -1482,14 +1673,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iSCAUSwift/iSCAUSwift.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iSCAUSwift/Vendor",
 				);
 				INFOPLIST_FILE = iSCAUSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSCAUSwift/Vendor/UMAnalytics_Sdk_3.1.8",
+					"$(PROJECT_DIR)/iSCAUSwift/Vendor/UMFeedback_iOS_1.4.2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSCAUSwift/iSCAUSwift-Bridging-Header.h";
 			};
 			name = Release;
@@ -1530,6 +1730,42 @@
 			};
 			name = Release;
 		};
+		E18F29A419E5206C00D8775C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClasstableWidget/ClasstableWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ClasstableWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E18F29A519E5206C00D8775C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClasstableWidget/ClasstableWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ClasstableWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1556,6 +1792,15 @@
 			buildConfigurations = (
 				E15BB4A4193EC31600F8D492 /* Debug */,
 				E15BB4A5193EC31600F8D492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E18F29A319E5206C00D8775C /* Build configuration list for PBXNativeTarget "ClasstableWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18F29A419E5206C00D8775C /* Debug */,
+				E18F29A519E5206C00D8775C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

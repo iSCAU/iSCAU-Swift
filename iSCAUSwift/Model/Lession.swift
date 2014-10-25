@@ -27,7 +27,6 @@ class Lession: NSManagedObject {
     
     class func converFromDict(info: NSDictionary) -> Lession? {
         let lession = NSEntityDescription.insertNewObjectForEntityForName("Lession", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!) as? Lession
-        NSLog("%@", info)
         lession?.classname = info["classname"]! as String
         lession?.teacher = info["teacher"]! as String
         lession?.day = info["day"]! as String

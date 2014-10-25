@@ -13,13 +13,16 @@ let TakeOutTableViewCellIdentifier = "TakeOutTableViewCellIdentifier"
 let kTakeOutCellImgLogoTag = 1000
 let kTakeOutCellLabTitleTag = 1001
 let kTakeOutCellLabStatusTag = 1002
+let kTakeOutCellMarginHeight: CGFloat = 20.0
 
 class TakeOutTableViewController: UITableViewController {
 
-    var restaurants: [ Restaurant ]
+    var restaurants: [ Restaurant ]     // TODO: - Change to use NSFetchedResultsController
+    var isLoading = false
     
     required init(coder aDecoder: NSCoder) {
         restaurants = Array()
+        
         super.init(coder: aDecoder)
     }
     
@@ -29,16 +32,12 @@ class TakeOutTableViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: Selector("refreshData"), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
-        
-        var error: NSError?
-        let fetchRequest = NSFetchRequest()
-        fetchRequest.entity = NSEntityDescription.entityForName("Restaurant", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!)
-        if let restaurants = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) {
-            for r in restaurants {
-                self.restaurants.append(r as Restaurant)
-            }
-        }
+
+        self.tableView.registerNib(UINib(nibName: "RestaurantListCell", bundle: nil), forCellReuseIdentifier: "RestaurantListCellIdentifier")
+        self.restaurants = Restaurant.savedRestaurants()
         tableView.reloadData()
+        
+        refreshData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,131 +47,80 @@ class TakeOutTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return restaurants[indexPath.row].titleHeight + 20
+        return restaurants[indexPath.row].titleHeight + kTakeOutCellMarginHeight
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(TakeOutTableViewCellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RestaurantListCellIdentifier", forIndexPath: indexPath) as RestaurantListCell
         let restaurant = restaurants[indexPath.row]
-
-        var frame = CGRectZero
-        
-        let imgLogo = cell.viewWithTag(kTakeOutCellImgLogoTag)! as UIImageView
-        imgLogo.centerY = (restaurant.titleHeight + 20) / 2
-        
-        let labTitle = cell.viewWithTag(kTakeOutCellLabTitleTag)! as UILabel
-        labTitle.height = restaurant.titleHeight
-        labTitle.text = restaurant.shop_name
-        
-        let labStatus = cell.viewWithTag(kTakeOutCellLabStatusTag)! as UILabel
-        if restaurantIsOpening(restaurant) {
-            labStatus.text = ""
-        } else {
-            labStatus.text = "休息中"
-        }
-        labStatus.centerY = (restaurant.titleHeight + 20) / 2
-
+        cell.setup(restaurant)
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("PushTakeOutMenuViewController", sender: tableView.cellForRowAtIndexPath(indexPath))
     }
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if let menuVC = segue.destinationViewController as? TakeOutMenuViewController {
-            let cell = sender as UITableViewCell
-
-            if let indexPath = tableView.indexPathForCell(cell) {
-                let r = restaurants[indexPath.row]
-                
-                var error: NSError?
-                let fetchRequest = NSFetchRequest()
-                fetchRequest.entity = NSEntityDescription.entityForName("Food", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!)
-                fetchRequest.predicate = NSPredicate(format: "food_shop_id = %@", r.r_id)
-                
-                if let foods = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) {
-                    var menu: [Food] = []
-                    for f in foods {
-                        menu.append(f as Food)
-                    }
+            if let cell = sender as? UITableViewCell {
+                if let indexPath = tableView.indexPathForCell(cell) {
+                    let r = restaurants[indexPath.row]
                     menuVC.restaurant = r
-                    menuVC.food = menu
+                    menuVC.food = Food.foodWithRestaurantID(r.rid)
                 }
             }
         }
     }
     
-    // MARK: - Data
-    private func restaurantIsOpening(restaurant: Restaurant) -> Bool {
-        let components = NSCalendar.currentCalendar().components(NSCalendarUnit.HourCalendarUnit | NSCalendarUnit.MinuteCalendarUnit, fromDate: NSDate())
+    // MARK: - Handle data
         
-        return false
-    }
-    
     func refreshData() {
+        if isLoading {
+            return
+        }
+        
+        isLoading = true
         TakeOutHttpManager.restaurantList { (request, response, data, error) -> Void in
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-                var error: NSError?
-                if let d = data as? NSData {
-                    if let shopInfo = NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.AllowFragments, error: &error) as? [String : [[String : String]]] {
-                        
-                        let fetchRequest = NSFetchRequest()
-                        
-                        // Shop
-                        let shops = shopInfo["shop"]!
-                        for shopDict in shops {
-                            if let status = shopDict["status"] {
-                                if status == "1" {
-                                    Restaurant.converFromDict(shopDict)
-                                } else {
-                                    Restaurant.deleteRestaurant(shopDict)
-                                }
-                            }
-                        }
-                        CoreDataManager.sharedInstance.saveContext()
-                        
-                        self.restaurants.removeAll(keepCapacity: true)
-                        fetchRequest.entity = NSEntityDescription.entityForName("Restaurant", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!)
-                        if let restaurants = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) {
-                            for r in restaurants {
-                                self.restaurants.append(r as Restaurant)
-                            }
-                        }
-
-                        // Menu
-                        let food = shopInfo["menu"]!
-                        for foodDict in food {
-                            if let status = foodDict["status"] {
-                                if status == "1" {
-                                    Food.converFromDict(foodDict)
-                                } else {
-                                    Food.deleteFood(foodDict)
-                                }
-                            }
+            if response?.statusCode == kResponseStatusCodeSuccess && error == nil {
+                    var error: NSError?
+                    if let d = data as? NSData {
+                        if let shopInfo = NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.AllowFragments, error: &error) as? [String : [[String : String]]] {
                             
+                            // Update data in CoreData
+                            Restaurant.updateRestaurants(shopInfo["shop"]!)
+                            
+                            // Refresh
+                            self.restaurants.removeAll(keepCapacity: false)
+                            self.restaurants = Restaurant.savedRestaurants()
+                            
+                            // Menu
+                            Food.updateFood(shopInfo["menu"]!)
+                            
+                            Utils.takeOutLastUpdateTimeStamp = NSString(format: "%.0lf", NSDate().timeIntervalSince1970)
+                            
+                            dispatch_async(dispatch_get_main_queue(), {
+                                self.refreshControl?.endRefreshing()
+                                self.tableView.reloadData()
+                            })
+                            self.isLoading = false
                         }
-                        CoreDataManager.sharedInstance.saveContext()
-                    
-                        
-                        Utils.takeOutLastUpdateTimeStamp = NSString(format: "%.0lf", NSDate().timeIntervalSince1970)
                     }
-                }
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.refreshControl?.endRefreshing()
-                    self.tableView.reloadData()
-                })
-            })
+                return
+            }
+            
+            self.isLoading = false
+            self.refreshControl?.endRefreshing()
+            Utils.takeOutLastUpdateTimeStamp = "0"
+            Utils.showNotice("网络错误", inView: self.view)
         }
     }
 

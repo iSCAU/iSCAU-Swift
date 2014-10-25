@@ -23,5 +23,4 @@
 
 - (void)setupWithExistedClass:(NSDictionary *)dic andClassesOfTheDay:(NSArray *)classes;
 
-
 @end

@@ -35,22 +35,16 @@ class FoodTableViewCell: UITableViewCell {
         labCount.layer.cornerRadius = 3
         labCount.layer.masksToBounds = true
         labCount.hidden = true
-        
     }
     
     func setup(food: Food) {
         self.food = food
-        labFoodName.text = food.food_name
-        labPrice.text = "¥ \(food.food_price)"
+        labFoodName.text = food.foodName
+        labPrice.text = "¥ \(food.foodPrice)"
         labCount.text = "\(food.count)"
         
-        if food.count == 0 {
-            labCount.hidden = true
-            btnMinus.hidden = true
-        } else {
-            labCount.hidden = false
-            btnMinus.hidden = false
-        }
+        labCount.hidden = (food.count == 0)
+        btnMinus.hidden = (food.count == 0)
     }
     
     @IBAction func addOne(sender: AnyObject) {

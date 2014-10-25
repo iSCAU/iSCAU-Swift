@@ -28,8 +28,6 @@ NSInteger kClassesPerDay = 13;
     if (self) {
         // Initialization code
         self.weekdayArray = @[@"Mon", @"Tus", @"Wed", @"Thus", @"Fri", @"Sat", @"Sun",];
-//        self.classTimeArray = @[@"一", @"一", @"一", @"一", @"一", @"一", @"一", @"一", @"一", @"一", @"一", @"一"];
-//        [self setupView];
     }
     return self;
 }
@@ -226,13 +224,9 @@ NSInteger kClassesPerDay = 13;
     if (lession.teacher.length > 0) {
         [info appendFormat:@"\n%@", lession.teacher];
     }
-//    if (lession.strWeek.length > 0 && lession.endWeek.length > 0) {
-//        [info appendFormat:@"\n%@ - %@", lession.strWeek, lession.endWeek];
-//    }
     if (lession.dsz.length > 0) {
         [info appendFormat:@"\n%@周", lession.location];
     }
-    NSLog(@"str %@ %@ %@", lession.strWeek, lession.endWeek, lession.teacher);
     return [info copy];
 }
 

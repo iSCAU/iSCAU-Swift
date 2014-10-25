@@ -99,6 +99,7 @@
     for (NSInteger i = daysCount - partialDaysCount + 1; i < daysCount + 1; ++i) {
         
         CalendarDayModel *calendarDay = [CalendarDayModel calendarDayWithYear:components.year month:components.month day:i];
+        NSLog(@"month "SINT" day "SINT"", components.month, i);
         calendarDay.style = CellDayTypeEmpty;//不显示
         [array addObject:calendarDay];
     }
@@ -119,8 +120,9 @@
     NSUInteger partialDaysCount = 7 - weeklyOrdinality;
     NSDateComponents *components = [[date dayInTheFollowingMonth] YMDComponents];
     
-    for (int i = 1; i < partialDaysCount + 1; ++i) {
+    for (NSInteger i = 1; i < partialDaysCount + 1; ++i) {
         CalendarDayModel *calendarDay = [CalendarDayModel calendarDayWithYear:components.year month:components.month day:i];
+        NSLog(@"next month "SINT" day "SINT"", components.month, i);
         calendarDay.style = CellDayTypeEmpty;
         [array addObject:calendarDay];
     }
@@ -175,14 +177,14 @@
             calendarToDay.month >= calendarDay.month &
             calendarToDay.day > calendarDay.day) {
             
-            //            calendarDay.style = CellDayTypePast;
+            calendarDay.style = CellDayTypePast;
             
             //之后的时间时间段
         }else if (calendarbefore.year <= calendarDay.year &
                   calendarbefore.month <= calendarDay.month &
                   calendarbefore.day <= calendarDay.day) {
             
-            //            calendarDay.style = CellDayTypePast;
+            calendarDay.style = CellDayTypePast;
             
             //需要正常显示的时间段
         }else{

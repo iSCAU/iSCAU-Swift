@@ -35,23 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-//    UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
-//    if (IS_FLAT_UI) {
-//        btnClose.frame = CGRectMake(0, 0, 45, 44);
-//    } else {
-//        btnClose.frame = CGRectMake(0, 0, 55, 44);
-//        btnClose.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-//    }
-//    [btnClose setImage:[[UIImage imageNamed:@"refresh.png"] imageWithTintColor:APP_DELEGATE.tintColor] forState:UIControlStateNormal];
-//    [btnClose addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *closeBarBtn = [[UIBarButtonItem alloc] initWithCustomView:btnClose];
-//    self.navigationItem.rightBarButtonItem = closeBarBtn;
-//
-//    if (IS_IPHONE4) {
-//        self.view.frame = CGRectMake(0, 0, 320.0, 480 - 44 - 20.0);
-//    }
+    self.title = @"历史借阅";
     
     SET_DEFAULT_BACKGROUND_COLOR(self.tableListHistory);
     

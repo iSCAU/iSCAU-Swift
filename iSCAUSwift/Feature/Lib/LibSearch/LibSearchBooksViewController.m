@@ -55,6 +55,7 @@
     array = [[NSMutableArray alloc] init];
     currentPage = 0;
     totalPage = 0;
+    self.title = @"搜索图书";
     
     self.books = [[NSMutableArray alloc] initWithCapacity:10];
 }
@@ -165,14 +166,13 @@
 
     } else {
         SHOW_WATING_HUD;
-        
         [LibHttpManager bookDetailWithUri:self.books[row - 1][URL]
                         completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
                             NSDictionary *detailInfos = [NSJSONSerialization JSONObjectWithData:data
                                                                                         options:kNilOptions
                                                                                           error:nil];
+                            HIDE_ALL_HUD
                             if (response.statusCode == kStatusCodeSuccess && detailInfos && detailInfos[@"details"]) {
-                                HIDE_ALL_HUD;
                                 LibSearchBooksDetailViewController *detailViewController = [[LibSearchBooksDetailViewController alloc] init];
                                 if (detailInfos[@"details"] && [detailInfos[@"details"][0] isKindOfClass:[NSNull class]]) {
                                     SHOW_NOTICE_HUD(@"没有详细信息呢");
@@ -188,6 +188,7 @@
 
 - (void)searchBook
 {
+    SHOW_WATING_HUD
     [LibHttpManager searchBookWithTitle:bookName
                                    page:currentPage
                       completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
@@ -209,6 +210,7 @@
                           }
                           isSearchingBooks = NO;
                           isLoading = NO;
+                          HIDE_ALL_HUD
                       }];
 }
 

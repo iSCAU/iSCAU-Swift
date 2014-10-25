@@ -47,9 +47,9 @@ typedef NS_ENUM(NSUInteger, AZDateType) {
 
 -(AZDateType)dateType;
 
-+ (int)getDayNumbertoDay:(NSDate *)today beforDay:(NSDate *)beforday;
++ (NSInteger)getDayNumbertoDay:(NSDate *)today beforDay:(NSDate *)beforday;
 
--(int)getWeekIntValueWithDate;
+-(NSInteger)getWeekIntValueWithDate;
 
 
 

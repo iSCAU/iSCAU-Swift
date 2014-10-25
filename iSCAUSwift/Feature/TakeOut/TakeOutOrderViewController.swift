@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMessageComposeViewControllerDelegate, UIAlertViewDelegate {
 
     var food: [Food] = []
     var restaurant: Restaurant?
@@ -23,9 +24,9 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableOrderInfo.registerNib(UINib(nibName: "RestaurantTableViewCell", bundle: nil)!, forCellReuseIdentifier: "RestaurantTableViewCellIdentifier")
-        tableOrderInfo.registerNib(UINib(nibName: "AddressTableViewCell", bundle: nil)!, forCellReuseIdentifier: "AddressTableViewCellIdentifier")
-        tableOrderInfo.registerNib(UINib(nibName: "FoodOrderTableViewCell", bundle: nil)!, forCellReuseIdentifier: "FoodOrderTableViewCellIdentifier")
+        tableOrderInfo.registerNib(UINib(nibName: "RestaurantTableViewCell", bundle: nil), forCellReuseIdentifier: "RestaurantTableViewCellIdentifier")
+        tableOrderInfo.registerNib(UINib(nibName: "AddressTableViewCell", bundle: nil), forCellReuseIdentifier: "AddressTableViewCellIdentifier")
+        tableOrderInfo.registerNib(UINib(nibName: "FoodOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "FoodOrderTableViewCellIdentifier")
         
         NSNotificationCenter.defaultCenter().addObserver(self.tableOrderInfo, selector: Selector("reloadData"), name: kReloadRestaurantTableNotification, object: nil)
     }
@@ -43,16 +44,16 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch (indexPath.row) {
-        case 0, 2:
+        case 0, 2:      // Seperator
             return 20.0
-        case 1:
+        case 1:         // Address
             return AddressTableViewCell.cellHeight
-        case 3:
+        case 3:         // Restaurant
             return restaurant!.titleHeight + 20
-        default:
+        default:        // Food or nil
             if indexPath.row - 4 < food.count {
                 let theFood = food[indexPath.row - 4]
-                return FoodOrderTableViewCell.heightForCell(theFood.food_name)
+                return FoodOrderTableViewCell.heightForCell(theFood.foodName)
             } else {
                 return 0
             }
@@ -79,6 +80,8 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
             if indexPath.row - 4 < food.count {
                 let cell = tableView.dequeueReusableCellWithIdentifier("FoodOrderTableViewCellIdentifier") as FoodOrderTableViewCell
                 cell.setup(food[indexPath.row - 4])
+                cell.selectionStyle = .None
+
                 if indexPath.row - 4 == food.count - 1 {
                     cell.imgSep.left = 0
                     cell.imgSep.width = ScreenWidth
@@ -86,7 +89,6 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
                     cell.imgSep.left = 15
                     cell.imgSep.width = ScreenWidth - 15
                 }
-                cell.selectionStyle = .None
                 return cell
             } else {
                 return UITableViewCell()
@@ -104,22 +106,62 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    // MARK: - Cell
-    
-    
-    
     // MARK: - Order
 
     @IBAction func order(sender: AnyObject) {
+        if !MFMessageComposeViewController.canSendText() {
+            let alert = UIAlertView(title: "错误", message: "当前设备不支持发送短信", delegate: nil, cancelButtonTitle: "确定")
+            alert.show()
+            return
+        }
+        
+        if let address = Utils.dormitoryAddress {
+            if let r = restaurant {
+                var content = "[华农宝]\n"
+                for f in food {
+                    content += "\(f.foodName)  \(f.count)份\n"
+                }
+                content += address
+
+                // Change color temporary
+                UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+                UINavigationBar.appearance().tintColor = UIColor.blackColor()
+                UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.blackColor() ]
+                
+                let messageController = MFMessageComposeViewController()
+                messageController.messageComposeDelegate = self
+                messageController.recipients = [ r.phone ]
+                messageController.body = content
+                presentViewController(messageController, animated: true, completion: nil)
+            }
+        } else {
+            let alert = UIAlertView(title: "提示", message: "你还没设置送餐地址", delegate: nil, cancelButtonTitle: "确定")
+            alert.show()
+        }
     }
     
-    func totalPrice() -> String {
+    private func totalPrice() -> String {
         var price:Float = 0.0
         for f in food {
-            var c = Float(f.count) * (f.food_price as NSString).floatValue
+            var c = Float(f.count) * (f.foodPrice as NSString).floatValue
             price = price + c
         }
         return "\(price)"
+    }
+    
+    // MARK: - Message
+    
+    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+        if result.value == MessageComposeResultFailed.value {
+            let alert = UIAlertView(title: "错误", message: "发送短信失败", delegate: nil, cancelButtonTitle: "确定")
+            alert.show()
+        }
+
+        UINavigationBar.appearance().barTintColor = AppTintColor
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

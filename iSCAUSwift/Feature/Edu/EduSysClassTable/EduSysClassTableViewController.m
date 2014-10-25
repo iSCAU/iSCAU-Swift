@@ -212,23 +212,29 @@
     
     NSArray *classes = [classesInfo objectForKey:@"classes"];
     
-    for (NSDictionary *class in classes) {
-        NSString *day = [class objectForKey:@"day"];
+    for (NSMutableDictionary *lession in classes) {
+        for (NSString *key in [lession allKeys]) {
+            if ([lession[key] isEqual:[NSNull null]]) {
+                lession[key] = @"";
+            }
+        }
+        
+        NSString *day = [lession objectForKey:@"day"];
         
         if ([day isEqualToString:@"一"]) {
-            [self.classesMon addObject:class];
+            [self.classesMon addObject:lession];
         } else if ([day isEqualToString:@"二"]) {
-            [self.classesTue addObject:class];
+            [self.classesTue addObject:lession];
         } else if ([day isEqualToString:@"三"]) {
-            [self.classesWed addObject:class];
+            [self.classesWed addObject:lession];
         } else if ([day isEqualToString:@"四"]) {
-            [self.classesThus addObject:class];
+            [self.classesThus addObject:lession];
         } else if ([day isEqualToString:@"五"]) {
-            [self.classesFri addObject:class];
+            [self.classesFri addObject:lession];
         } else if ([day isEqualToString:@"六"]) {
-            [self.classesSat addObject:class];
+            [self.classesSat addObject:lession];
         } else if ([day isEqualToString:@"日"]) {
-            [self.classesSun addObject:class];
+            [self.classesSun addObject:lession];
         }
     }
     
@@ -293,7 +299,7 @@
     [EduHttpManager requestClassTableWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         if (response.statusCode == kStatusCodeSuccess) {
             HIDE_ALL_HUD;
-            NSDictionary *classesInfo = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
+            NSDictionary *classesInfo = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
             if (classesInfo[@"termStartDate"]) {
                 [Utils setSemesterStartDate:classesInfo[@"termStartDate"]];
             }
@@ -340,6 +346,10 @@
 
 - (void)saveClassesDataToLocal:(NSDictionary *)classesDict
 {
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.iSCAU"];
+    [sharedDefaults setObject:classesDict forKey:@"kClassTableDictKey"];
+    [sharedDefaults synchronize];
+
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:classesDict];
     [data writeToFile:[Utils classTablePath] atomically:YES];
 }

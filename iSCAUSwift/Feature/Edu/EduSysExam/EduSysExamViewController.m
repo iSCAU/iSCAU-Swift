@@ -83,10 +83,10 @@
         self.isReloading = NO;
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
         if (response.statusCode == kStatusCodeSuccess) {
-            HIDE_ALL_HUD;
             self.examInfoArray = dict[@"exam"];
             [self.tableExamInfo reloadData];
         }
+        HIDE_ALL_HUD
     }];
 }
 

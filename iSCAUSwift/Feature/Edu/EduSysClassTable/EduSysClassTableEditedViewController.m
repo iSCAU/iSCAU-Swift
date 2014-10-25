@@ -10,6 +10,7 @@
 #import "iSCAUSwift-Swift.h"
 #import "AZTools.h"
 #import "Constant.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #define WEEKDAY     0
 #define START_CLASS 1
@@ -82,8 +83,8 @@
     endClassIndex = 0;
     day = weekday[0];
     dsz = @"";
-    [self.btn_time setTitle:[NSString stringWithFormat:@"周%@ %d-%d节%@", day, startClassIndex+1, endClassIndex+1, dsz] forState:UIControlStateNormal];
-    [self.btn_time setTitle:[NSString stringWithFormat:@"周%@ %d-%d节%@", day, startClassIndex+1, endClassIndex+1, dsz] forState:UIControlStateHighlighted];
+    [self.btn_time setTitle:[NSString stringWithFormat:@"周%@ "SINT"-"SINT"节%@", day, startClassIndex+1, endClassIndex+1, dsz] forState:UIControlStateNormal];
+    [self.btn_time setTitle:[NSString stringWithFormat:@"周%@ "SINT"-"SINT"节%@", day, startClassIndex+1, endClassIndex+1, dsz] forState:UIControlStateHighlighted];
     [self.btn_time setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     
     if (theDic != nil) {
@@ -113,7 +114,7 @@
                 startClassIndex = [array[0] integerValue] - 1;
                 endClassIndex = [array[1] integerValue] - 1;
             }
-            temp_node = [NSString stringWithFormat:@"周%@ %d-%d节%@", temp_day, startClassIndex + 1, endClassIndex + 1, temp_node];
+            temp_node = [NSString stringWithFormat:@"周%@ "SINT"-"SINT"节%@", temp_day, startClassIndex + 1, endClassIndex + 1, temp_node];
         }
         @catch (NSException *exception) {
             NSLog(@"error");
@@ -223,7 +224,7 @@
     } else if ([dsz isEqualToString:@"双周"]) {
         temp_weekType = @"(双)";
     }
-    NSString *temp_node = [NSString stringWithFormat:@"周%@ %d-%d节%@", day, startClassIndex + 1, endClassIndex + 1, temp_weekType];
+    NSString *temp_node = [NSString stringWithFormat:@"周%@ "SINT"-"SINT"节%@", day, startClassIndex + 1, endClassIndex + 1, temp_weekType];
     [self.btn_time setTitle:temp_node forState:UIControlStateNormal];
     [self.btn_time setTitle:temp_node forState:UIControlStateHighlighted];
 }
@@ -349,7 +350,7 @@
         NSString *temp_classname = self.txtField_title.text;
         NSString *temp_teacher = [self.txtField_teacher.text length] != 0 ? self.txtField_teacher.text : @"null";
         NSString *temp_classroom = [self.txtField_classroom.text length] != 0 ? self.txtField_classroom.text : @"";
-        NSString *temp_node = [NSString stringWithFormat:@"%d,%d", startClassIndex+1, endClassIndex+1];
+        NSString *temp_node = [NSString stringWithFormat:@""SINT","SINT"", startClassIndex+1, endClassIndex+1];
         NSString *temp_strWeek = self.txtField_startWeek.text;
         NSString *temp_endWeek = self.txtField_endWeek.text;
                 

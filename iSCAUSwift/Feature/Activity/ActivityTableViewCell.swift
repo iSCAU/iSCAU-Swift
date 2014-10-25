@@ -37,13 +37,9 @@ class ActivityTableViewCell: UITableViewCell {
         cell!.height = activity.titleHeight
         cell!.labTitle.text = activity.title
         cell!.labPlace.text = activity.place
-        cell!.labUsername.text = activity.username
+        cell!.labUsername.text = activity.association
         cell!.labTime.text = activity.time
-        cell!.imgLogo.sd_setImageWithURL(NSURL(string: activity.logo_url))
-        
-        for view in [cell!.labUsername, cell!.imgUsername, cell!.labTime, cell!.imgTime, cell!.labPlace, cell!.imgPlace, cell!.imgBottomSep] {
-            
-        }
+        cell!.imgLogo.sd_setImageWithURL(NSURL(string: activity.logoURL))
         
         return cell!
     }

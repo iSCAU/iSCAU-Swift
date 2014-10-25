@@ -12,7 +12,7 @@ let FoodTalbeViewCellIdentifier = "FoodTalbeViewCellIdentifier"
 
 class TakeOutMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var food: [Food]?
+    var food: [ Food ] = []
     var restaurant: Restaurant?
 
     @IBOutlet weak var tableFood: UITableView!
@@ -21,8 +21,7 @@ class TakeOutMenuViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableFood.registerNib(UINib(nibName: "FoodTableViewCell", bundle: nil)!, forCellReuseIdentifier: FoodTalbeViewCellIdentifier)
-        
+        tableFood.registerNib(UINib(nibName: "FoodTableViewCell", bundle: nil), forCellReuseIdentifier: FoodTalbeViewCellIdentifier)
         tableFood.reloadData()
     }
 
@@ -31,12 +30,22 @@ class TakeOutMenuViewController: UIViewController, UITableViewDelegate, UITableV
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func takeOrder(sender: AnyObject) {
+        for f in food {
+            if f.count > 0 {
+                performSegueWithIdentifier("PushTakeOutOrderViewController", sender: nil)
+                return
+            }
+        }
+        Utils.showNotice("还没选择外卖", inView: view)
+    }
+    
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let orderVC = segue.destinationViewController as? TakeOutOrderViewController {
             var orderedFood: [Food] = []
-            for f in food! {
+            for f in food {
                 if f.count > 0 {
                     orderedFood.append(f)
                 }
@@ -49,24 +58,12 @@ class TakeOutMenuViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - TableView datasrouce
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return food!.count
+        return food.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(FoodTalbeViewCellIdentifier) as FoodTableViewCell
-        
-        cell.setup(food![indexPath.row])
-        
+        cell.setup(food[indexPath.row])
         return cell
-    }
-    
-    // MARK: - TableView delegate
-    
-    @IBAction func takeOrder(sender: AnyObject) {
-        for f in food! {
-            if f.count > 0 {
-                
-            }
-        }
     }
 }

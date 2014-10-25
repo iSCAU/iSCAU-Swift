@@ -16,13 +16,21 @@ class AddressTableViewCell: UITableViewCell {
     
     class var cellHeight: CGFloat {
         get {
-            let address: NSString = Utils.dormitoryAddress
+            var address = "你还没设置送餐地址"
+            if (Utils.dormitoryAddress? != nil) {
+                address = Utils.dormitoryAddress!
+            }
             return address.boundingRectWithSize(CGSizeMake(ScreenWidth - 50, CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.systemFontOfSize(16.0)], context: nil).size.height + 20
         }
     }
 
     func setup() {
-        labAddress.text = Utils.dormitoryAddress
+        if let address = Utils.dormitoryAddress {
+            labAddress.text = address
+        } else {
+            labAddress.text = "你还没设置送餐地址"
+        }
+        
         labAddress.height = AddressTableViewCell.cellHeight - 20
         labAddress.width = ScreenWidth - 50
         

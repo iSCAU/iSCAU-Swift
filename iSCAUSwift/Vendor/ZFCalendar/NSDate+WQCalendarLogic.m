@@ -147,7 +147,7 @@
 }
 
 
-+ (int)getDayNumbertoDay:(NSDate *)today beforDay:(NSDate *)beforday
++ (NSInteger)getDayNumbertoDay:(NSDate *)today beforDay:(NSDate *)beforday
 {
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];//日历控件对象
@@ -159,9 +159,9 @@
 
 
 //周日是“1”，周一是“2”...
--(int)getWeekIntValueWithDate
+-(NSInteger)getWeekIntValueWithDate
 {
-    int weekIntValue;
+    NSInteger weekIntValue;
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSChineseCalendar];
     NSDateComponents *comps= [calendar components:(NSYearCalendarUnit |
@@ -192,7 +192,7 @@
     
     
     //获取星期对应的数字
-    int weekIntValue = [self getWeekIntValueWithDate];
+    NSInteger weekIntValue = [self getWeekIntValueWithDate];
     
     if (comps_today.year == comps_other.year &&
         comps_today.month == comps_other.month &&
@@ -230,10 +230,6 @@
                                                          NSMonthCalendarUnit |
                                                          NSDayCalendarUnit |
                                                          NSWeekdayCalendarUnit) fromDate:self];
-    
-    
-    //获取星期对应的数字
-    int weekIntValue = [self getWeekIntValueWithDate];
     
     if (comps_today.year == comps_other.year &&
         comps_today.month == comps_other.month &&

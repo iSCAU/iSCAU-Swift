@@ -13,11 +13,6 @@ class SettingsTableViewController: UITableViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-override     
-    init?(style: UITableViewStyle) {
-        super.init(style: style)
-        // Custom initialization
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +48,8 @@ override
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.row) {
         case 7:
-            if let nav = UINavigationController(rootViewController: self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController) {
-                self.presentViewController(nav, animated: true, completion: nil)
-            }
+            let nav = UINavigationController(rootViewController: (self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController))
+            self.presentViewController(nav, animated: true, completion: nil)
         default:
             return
         }

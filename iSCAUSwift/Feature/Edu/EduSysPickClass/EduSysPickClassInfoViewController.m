@@ -35,6 +35,8 @@
 {
     [super viewDidLoad];
     
+    self.title= @"选课情况";
+    
     UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
     btnClose.frame = CGRectMake(0, 0, 55, 44);
     btnClose.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
@@ -62,18 +64,19 @@
 
     SHOW_WATING_HUD;
     self.isReloading = YES;
-//    [[EduSysHttpClient shareInstance] 
-//     eduSysGetPickClassInfoSuccess:^(NSData *responseData, int httpCode){
-//         self.isReloading = NO;
-//         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:NULL];
-//         if (httpCode == 200) {
-//             HIDE_ALL_HUD;
-//             self.pickClassInfos = [dict objectForKey:@"pickclassinfos"];
-//             [self.pickClassInfoTable reloadData];
-//         }
-//     } failure:^(NSData *responseData, int httpCode){
-//         self.isReloading = NO;
-//     }];
+    [EduHttpManager requestPickClassInfoWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+        if (response.statusCode == kStatusCodeSuccess) {
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
+            self.pickClassInfos = [dict objectForKey:@"pickclassinfos"];
+            [self.pickClassInfoTable reloadData];
+            
+            if (dict.count == 0) {
+                SHOW_NOTICE_HUD(@"当前没有已选课程");
+            }
+        }
+        self.isReloading = NO;
+        HIDE_ALL_HUD;
+    }];
 }
 
 - (void)didReceiveMemoryWarning

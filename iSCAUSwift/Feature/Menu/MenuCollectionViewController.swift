@@ -16,7 +16,7 @@ let kMenuIconNameKey = "kMenuIconNameKey"
 let kMenuHeaderLabelTag = 1000
 
 class MenuCollectionViewController: UICollectionViewController {
-    
+
     let menuHeader = [ "教务系统", "图书馆", "百宝箱", "其他" ]
     let menus =
     [
@@ -43,9 +43,9 @@ class MenuCollectionViewController: UICollectionViewController {
         ],
     ]
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -131,7 +131,7 @@ class MenuCollectionViewController: UICollectionViewController {
             let borrowedVC = LibListHistoryViewController()
             borrowedVC.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(borrowedVC, animated: true)
-        // 百宝箱
+        // 地图
         case (2, 0):
             performSegueWithIdentifier("PushMapViewController", sender: nil)
         // 校历
@@ -141,8 +141,15 @@ class MenuCollectionViewController: UICollectionViewController {
             chvc.setAirPlaneToDay(365, toDateforString: nil)
             chvc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(chvc, animated: true)
+        case (2, 2):
+            performSegueWithIdentifier("PushPhoneCallListViewController", sender: nil)
+        case (2, 3):
+            performSegueWithIdentifier("PushEnglishCornerViewController", sender: nil)
+        // 设置
         case (3, 0):
             performSegueWithIdentifier("PushSettingsTableViewController", sender: nil)
+        case (3, 1):
+            UMFeedback.showFeedback(self, withAppkey: kUMengAppKey)
         default:
             return
         }

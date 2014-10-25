@@ -22,7 +22,7 @@ class ActivityTableViewController: UITableViewController {
         
         tableView.backgroundColor = UIColor(white: 0, alpha: 0.02)
         tableView.separatorStyle = .None
-        tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil)!, forCellReuseIdentifier: "ActivityTableViewCellIdentifier")
+        tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "ActivityTableViewCellIdentifier")
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +41,6 @@ class ActivityTableViewController: UITableViewController {
         return activities.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let activity = activities[indexPath.row]
         let cell = ActivityTableViewCell.cellForTableView(tableView, activity: activity)
@@ -54,18 +53,6 @@ class ActivityTableViewController: UITableViewController {
         let activity = activities[indexPath.row]
         NSNotificationCenter.defaultCenter().postNotificationName(kCheckActivityDetailNotification, object: nil, userInfo: ["activity" : activity])
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: - Data
     
     func refreshData() {
         NSNotificationCenter.defaultCenter().postNotificationName(kRefreshActivityDataNotification, object: nil, userInfo: nil)

@@ -33,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.title = @"图书详情";
     SET_DEFAULT_BACKGROUND_COLOR(self.tableView);
 
     [self.tableView reloadData];
