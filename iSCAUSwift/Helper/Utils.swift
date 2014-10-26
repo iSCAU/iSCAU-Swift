@@ -14,25 +14,6 @@ class Utils: NSObject {
         return str.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedString()!;
     }
     
-    class func currentWeek(semesterStartDateString: String?) -> String {
-        if (semesterStartDateString != nil) {
-            let local = NSLocale(localeIdentifier: "zh_CN")
-            let formatter = NSDateFormatter()
-            formatter.locale = local
-            formatter.dateFormat = "yyyy-MM-dd"
-            let date =  NSDate()
-            let startDate = formatter.dateFromString(semesterStartDateString!)
-
-            let interval = date.timeIntervalSinceDate(startDate!)
-            let intervalDays = interval / 86400
-            let intervalWeek = floor(intervalDays / 7.0) + 1
-            if intervalWeek > 0 && intervalWeek < 23 {
-//                return "第\(intervalWeek)周"
-            }
-        }
-        return ""
-    }
-    
     class func indicatorColorAtIndex(index: Int) -> UIColor {
         let colors = [
             UIColor(r: 250, g: 120, b: 134, a: 1),
@@ -43,24 +24,15 @@ class Utils: NSObject {
         ]
         let colorIndex = index % colors.count;
         return colors[colorIndex]
-        
-//        switch colorIndex {
-//        case 0:
-//            return UIColor(fromHexRGB: "0x0140ca", alpha: 1)
-//        case 1:
-//            return UIColor(fromHexRGB: "0x16a61e", alpha: 1)
-//        case 2:
-//            return UIColor(fromHexRGB: "0xdd1812", alpha: 1)
-//        case 3:
-//            return UIColor(fromHexRGB: "0xfcca03", alpha: 1)
-//        default:
-//            return UIColor(fromHexRGB: "0x0140ca", alpha: 1)
-//        }
+    }
+    
+    class func localClassesInfo() -> NSDictionary? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Utils.classTablePath()) as? NSDictionary
     }
     
 }
 
-// MARK: - Account
+// MARK: - Preferences
 
 extension Utils {
     class var stuNum: String? {
@@ -94,6 +66,15 @@ extension Utils {
         }
     }
     
+    class var stuPwdRawValue: String? {
+        get {
+            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kStuPwdKey) as String?) {
+                return existedPwd
+            }
+            return nil
+        }
+    }
+    
     class var libPwd: String? {
         get {
             if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as String?) {
@@ -103,6 +84,15 @@ extension Utils {
         }
         set(newLibPwd) {
             NSUserDefaults.standardUserDefaults().setObject(newLibPwd, forKey: kLibPwdKey)
+        }
+    }
+    
+    class var libPwdRawValue: String? {
+        get {
+            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as String?) {
+                return existedPwd
+            }
+            return nil
         }
     }
     

@@ -9,14 +9,13 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +26,7 @@ class SettingsTableViewController: UITableViewController {
     // #pragma mark - Table view data source
 
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 4
     }
 
     override func tableView(tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
@@ -36,9 +35,9 @@ class SettingsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.row {
-        case 0, 2, 4, 6:
+        case 0, 2:
             return 20.0
-        case 1, 3, 5, 7:
+        case 1, 3:
             return 44.0
         default:
             return 0.0
@@ -46,8 +45,10 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         switch (indexPath.row) {
-        case 7:
+        case 3:
             let nav = UINavigationController(rootViewController: (self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController))
             self.presentViewController(nav, animated: true, completion: nil)
         default:

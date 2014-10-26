@@ -32,7 +32,6 @@ class EduHttpManager: BaseHttpManager {
         if !isLogined() {
             return;
         }
-        println("stu:\(Utils.stuNum!) pwd:\(Utils.stuPwd!) ser:\(Utils.server!)")
         let urlStr = "\(HostName)/edusys/classtable/\(Utils.stuNum!)/\(Utils.stuPwd!)/\(Utils.server!)"
         startRequest(urlStr, completionHandler: completionHandler)
     }

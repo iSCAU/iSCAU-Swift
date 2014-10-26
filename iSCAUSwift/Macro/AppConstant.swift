@@ -33,7 +33,6 @@ let kTakeOutLastUpdateTimeStamp = "kTakeOutLastUpdateTimeStamp"
 let kActivityLastUpdateTimeStamp = "kActivityLastUpdateTimeStamp"
 let kSemesterStartDateKey = "kSemesterStartDateKey"
 let kPreferWeekStyleClasstableKey = "kPreferWeekStyleClasstableKey"
-
 let kReloadRestaurantTableNotification = "kReloadRestaurantTableNotification"
 let kRefreshActivityDataNotification = "kRefreshActivityDataNotification"
 let kCheckActivityDetailNotification = "kCheckActivityDetailNotification"
@@ -44,5 +43,10 @@ let kHideNoticeNotification =  "kHideNoticeNotification"
 
 // Utils
 let iSCAUAppDelegate: AppDelegate = UIApplication.sharedApplication().delegate! as AppDelegate
+let ScreenBounds = UIScreen.mainScreen().bounds
 let ScreenWidth = UIScreen.mainScreen().bounds.width
 let ScreenHeight = UIScreen.mainScreen().bounds.height
+
+func SystemVersionFloatValue() -> Float {
+    return (UIDevice.currentDevice().systemVersion as NSString).floatValue;
+}

@@ -152,6 +152,7 @@
 		E174654F19DEE698005EE1AD /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */; };
 		E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */; };
 		E17AE90E19FBCB68004CAA87 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E17AE90B19FBCA76004CAA87 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E17AE91019FBEBF7004CAA87 /* icon-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */; };
 		E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */; };
 		E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */; };
 		E18F299619E5206B00D8775C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18F294D19E501BB00D8775C /* NotificationCenter.framework */; };
@@ -459,6 +460,7 @@
 		E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-100@2x.png"; sourceTree = "<group>"; };
 		E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayTimeTable.swift; sourceTree = "<group>"; };
 		E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayLessionCell.swift; sourceTree = "<group>"; };
 		E18F294D19E501BB00D8775C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -933,6 +935,7 @@
 		E15BB4B8193F054B00F8D492 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */,
 				E148FA4D19FB833900AA477C /* map@2x.png */,
 				E1EE006B19E2CEE200CF4F15 /* more@2x.png */,
 				E114957319D943D90087445D /* activity_img */,
@@ -1282,6 +1285,7 @@
 				E1FDF41A19D07D1500CC311E /* classtable.png in Resources */,
 				E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */,
 				E148FA4E19FB833900AA477C /* map@2x.png in Resources */,
+				E17AE91019FBEBF7004CAA87 /* icon-100@2x.png in Resources */,
 				E14FB65219D0629200526D45 /* 12.1.png in Resources */,
 				E148AC6E19F39C6700034CEE /* BaseViewController.xib in Resources */,
 				E1938AF619E00FE900353521 /* RestaurantTableViewCell.xib in Resources */,

@@ -39,10 +39,6 @@ NSInteger kClassesPerDay = 13;
         [classes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             if ([obj isKindOfClass:[NSDictionary class]]) {
                 Lession *lession = [Lession converFromDict:obj];
-                if (lession) {
-                    lession.strWeek = [obj[@"strWeek"] stringValue];
-                    lession.endWeek = [obj[@"endWeek"] stringValue];
-                }
                 [self.classesArray addObject:lession];
             }
         }];
@@ -145,10 +141,6 @@ NSInteger kClassesPerDay = 13;
     [classes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             Lession *lession = [Lession converFromDict:obj];
-            if (lession) {
-                lession.strWeek = [obj[@"strWeek"] stringValue];
-                lession.endWeek = [obj[@"endWeek"] stringValue];
-            }
             [self.classesArray addObject:lession];
         }
     }];

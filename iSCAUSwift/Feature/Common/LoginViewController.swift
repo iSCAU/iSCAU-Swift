@@ -35,8 +35,8 @@ class LoginViewController: UIViewController {
         navigationItem.rightBarButtonItem = btnSave
         
         txtStuNum.text = Utils.stuNum
-        txtStuPwd.text = Utils.stuPwd
-        txtLibPwd.text = Utils.libPwd
+        txtStuPwd.text = Utils.stuPwdRawValue
+        txtLibPwd.text = Utils.libPwdRawValue
         
         txtStuNum.becomeFirstResponder()
     }

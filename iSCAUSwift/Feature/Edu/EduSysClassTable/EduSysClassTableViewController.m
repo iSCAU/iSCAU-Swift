@@ -194,7 +194,7 @@
 
 - (void)setupData
 {
-    NSDictionary *classDict = [self loadLocalClassesData];
+    NSDictionary *classDict = [Utils localClassesInfo];
     [self parseClassesData:classDict];
 }
 
@@ -294,11 +294,9 @@
         SHOW_NOTICE_HUD(@"请先填写对应账号密码哦");
         return;
     }
-    SHOW_WATING_HUD;
-
+    SHOW_WATING_HUD
     [EduHttpManager requestClassTableWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         if (response.statusCode == kStatusCodeSuccess) {
-            HIDE_ALL_HUD;
             NSDictionary *classesInfo = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
             if (classesInfo[@"termStartDate"]) {
                 [Utils setSemesterStartDate:classesInfo[@"termStartDate"]];
@@ -306,6 +304,7 @@
             [self parseClassesData:classesInfo];
             [self saveClassesDataToLocal:classesInfo];
         }
+        HIDE_ALL_HUD
     }];
 }
 
@@ -337,11 +336,6 @@
     EduSysClassTableEditedViewController *editViewController = [[EduSysClassTableEditedViewController alloc] init];
     editViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:editViewController animated:YES];
-}
-
-- (NSDictionary *)loadLocalClassesData
-{
-    return [NSKeyedUnarchiver unarchiveObjectWithFile:[Utils classTablePath]];
 }
 
 - (void)saveClassesDataToLocal:(NSDictionary *)classesDict
