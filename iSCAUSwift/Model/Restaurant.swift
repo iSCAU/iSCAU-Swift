@@ -31,8 +31,13 @@ class Restaurant: NSManagedObject {
         var error: NSError?
         restaurantFetchRequest.predicate = nil
         if let restaurants = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(restaurantFetchRequest, error: &error) {
-            for r in restaurants {
-                savedRestaurants.append(r as Restaurant)
+            for restaurant in restaurants {
+                let r = restaurant as Restaurant
+                if r.isOpening {
+                    savedRestaurants.insert(r, atIndex: 0)
+                } else {
+                    savedRestaurants.append(r)
+                }
             }
         }
         return savedRestaurants
@@ -99,6 +104,23 @@ class Restaurant: NSManagedObject {
                 _titleHeight = shopNameHeight > 44.0 ? shopNameHeight : 44.0
             }
             return _titleHeight
+        }
+    }
+    
+    var isOpening: Bool {
+        get {
+            let currentComponents = NSCalendar.currentCalendar().components(NSCalendarUnit.HourCalendarUnit | NSCalendarUnit.MinuteCalendarUnit, fromDate: NSDate())
+            let startComponents = startTime.componentsSeparatedByString(":")
+            let endComponents = endTime.componentsSeparatedByString(":")
+            if startComponents.count == 2 && endComponents.count == 2 {
+                let currentInterval = currentComponents.hour * 60 + currentComponents.minute
+                let startTimeInterval = startComponents[0].toInt()! * 60 + startComponents[1].toInt()!
+                let endTimeInterval = endComponents[0].toInt()! * 60 + endComponents[1].toInt()!
+                if startTimeInterval <= currentInterval && currentInterval <= endTimeInterval {
+                    return true
+                }
+            }
+            return false
         }
     }
 }

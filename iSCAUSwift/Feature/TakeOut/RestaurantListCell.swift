@@ -31,27 +31,12 @@ class RestaurantListCell: UITableViewCell {
         self.labTitle.text = restaurant.shopName
         
         // Status
-        if restaurantIsOpening(restaurant) {
+        if restaurant.isOpening {
             self.labStatus.text = ""
         } else {
             self.labStatus.text = "休息中"
         }
         self.labStatus.centerY = (restaurant.titleHeight + kTakeOutCellMarginHeight) / 2
-    }
-    
-    private func restaurantIsOpening(restaurant: Restaurant) -> Bool {
-        let currentComponents = NSCalendar.currentCalendar().components(NSCalendarUnit.HourCalendarUnit | NSCalendarUnit.MinuteCalendarUnit, fromDate: NSDate())
-        let startComponents = restaurant.startTime.componentsSeparatedByString(":")
-        let endComponents = restaurant.endTime.componentsSeparatedByString(":")
-        if startComponents.count == 2 && endComponents.count == 2 {
-            let currentInterval = currentComponents.hour * 60 + currentComponents.minute
-            let startTimeInterval = startComponents[0].toInt()! * 60 + startComponents[1].toInt()!
-            let endTimeInterval = endComponents[0].toInt()! * 60 + endComponents[1].toInt()!
-            if startTimeInterval <= currentInterval && currentInterval <= endTimeInterval {
-                return true
-            }
-        }
-        return false
     }
 
 }

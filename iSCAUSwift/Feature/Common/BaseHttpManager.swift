@@ -21,7 +21,7 @@ class BaseHttpManager: NSObject {
                         response?.statusCode == kResponseStatusCodeLibPwdError {
                             Utils.postNotification(kShowNoticeNotification, info: [ kNotice : "账号或密码错误哦", kHideNoticeIntervel : kHideNoticeInter ])
                     } else if response?.statusCode == kResponseStatusCodeServerError {
-                            Utils.postNotification(kShowNoticeNotification, info: [ kNotice : "服务器暂时挂了", kHideNoticeIntervel : kHideNoticeInter ])
+                            Utils.postNotification(kShowNoticeNotification, info: [ kNotice : "服务器暂时挂了，等下再来吧", kHideNoticeIntervel : kHideNoticeInter ])
                     } else if response?.statusCode == kResponseStatusCodeNullError {
                             Utils.postNotification(kShowNoticeNotification, info: [ kNotice : "没找到相关信息哦", kHideNoticeIntervel : kHideNoticeInter ])
                     } else if response?.statusCode == kResponseStatusCodeMaxRenewLimit {

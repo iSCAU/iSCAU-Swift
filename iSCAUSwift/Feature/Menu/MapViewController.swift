@@ -16,14 +16,15 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let map = UIImage(named: "map.jpg")
+        bgScrollView.height = ScreenHeight - 64
+        let map = UIImage(named: "map.png")
         if let mapSize = map?.size {
             let widthScale: CGFloat = bgScrollView.width / mapSize.width
             let heightScale = bgScrollView.height / mapSize.height
             let minScale = widthScale < heightScale ? widthScale : heightScale
             let maxScale = UIScreen.mainScreen().scale
             
-            bgScrollView.maximumZoomScale = 1 / minScale / 3
+            bgScrollView.maximumZoomScale = 1 / minScale * 4
             bgScrollView.minimumZoomScale = 1
             bgScrollView.zoomScale = 1
             
@@ -38,8 +39,6 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
             imgMap?.center = bgScrollView.center
             imgMap?.image = map
             bgScrollView.addSubview(imgMap!)
-            
-            bgScrollView.contentSize = CGSizeMake(0, mapSize.height)
         }
     }
 

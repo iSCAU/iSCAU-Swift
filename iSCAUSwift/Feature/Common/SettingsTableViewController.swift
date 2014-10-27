@@ -50,7 +50,7 @@ class SettingsTableViewController: UITableViewController {
         switch (indexPath.row) {
         case 3:
             let nav = UINavigationController(rootViewController: (self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController))
-            self.presentViewController(nav, animated: true, completion: nil)
+            presentViewController(nav, animated: true, completion: nil)
         default:
             return
         }

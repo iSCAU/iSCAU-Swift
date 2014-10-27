@@ -45,9 +45,9 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
         var pastActivities: [Activity] = []
         
         let dateformatter = NSDateFormatter()
-        dateformatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        let sortDescriptor = NSSortDescriptor(key: "level", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "level", ascending: true)
         let fetchRequest = NSFetchRequest()
         fetchRequest.entity = NSEntityDescription.entityForName("Activity", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!)
         fetchRequest.sortDescriptors = [ sortDescriptor ]
@@ -57,18 +57,24 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
                 
                 // Seperate
                 let a = activity as Activity
-                
-                if a.level.toInt() == 9 {   // Put at top in today view
-                    todayActivities.insert(a, atIndex: 0)
-                } else if let date = dateformatter.dateFromString(a.time) {
+                if let date = dateformatter.dateFromString(a.time) {
                     let dateType = date.dateType()
                     switch dateType {
                     case AZDateType.Today:
                         todayActivities.append(a)
                     case AZDateType.Tomorrow:
-                        tomorrowActivities.append(a)
+                        if a.level.toInt() == 9 {
+                            tomorrowActivities.append(a)
+                        } else {
+                            futureActivities.append(a)
+                        }
                     case AZDateType.Future:
-                        futureActivities.append(a)
+                        if a.level.toInt() == 9 {
+                            todayActivities.insert(a, atIndex: 0)
+                        } else {
+                            futureActivities.append(a)
+                        }
+                        
                     case AZDateType.Past:
                         CoreDataManager.sharedInstance.managedObjectContext!.deleteObject(a as Activity)
                     }
@@ -97,27 +103,25 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
         isLoading = true
         ActivityHttpManager.activityList { (request, response, data, error) -> Void in
             if response?.statusCode == kResponseStatusCodeSuccess {
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-                    var error: NSError?
-                    if let d = data as? NSData {
-                        if let contentInfo = NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.AllowFragments, error: &error) as? NSDictionary {
-                            // Content
-                            if let contents = contentInfo["content"] as? NSArray {
-                                for contentDict in contents {
-                                    Activity.converFromDict(contentDict as NSDictionary)
-                                }
-                                CoreDataManager.sharedInstance.saveContext()
-                                
-                                Utils.activityLastUpdateTimeStamp = NSString(format: "%.0lf", NSDate().timeIntervalSince1970)
+                var error: NSError?
+                if let d = data as? NSData {
+                    if let contentInfo = NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.AllowFragments, error: &error) as? NSDictionary {
+                        // Content
+                        if let contents = contentInfo["content"] as? NSArray {
+                            for contentDict in contents {
+                                Activity.converFromDict(contentDict as NSDictionary)
                             }
+                            CoreDataManager.sharedInstance.saveContext()
+                            
+                            Utils.activityLastUpdateTimeStamp = NSString(format: "%.0lf", NSTimeIntervalSince1970)
                         }
                     }
-                    
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.loadData()
-                    })
-                    self.isLoading = false
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.loadData()
                 })
+                self.isLoading = false
                 return
             }
             self.isLoading = false

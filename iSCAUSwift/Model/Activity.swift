@@ -34,6 +34,7 @@ class Activity: NSManagedObject {
         
         activityFetchRequest.predicate = NSPredicate(format: "aid = %@", a_id)
         var activity: Activity?
+        
         if let activities = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(activityFetchRequest, error: nil) {
             for a in activities {
                 activity = a as? Activity
@@ -43,7 +44,7 @@ class Activity: NSManagedObject {
         if activity == nil {
             activity = NSEntityDescription.insertNewObjectForEntityForName("Activity", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!) as? Activity
         }
-        
+
         activity?.aid = info["id"] as String
         activity?.title = info["title"] as String
         activity?.place = info["place"] as String

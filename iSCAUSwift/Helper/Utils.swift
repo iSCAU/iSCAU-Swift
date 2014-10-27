@@ -37,7 +37,8 @@ class Utils: NSObject {
 extension Utils {
     class var stuNum: String? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(kStuNumKey) as String?
+            return ""
+            return NSUserDefaults.standardUserDefaults().objectForKey(kStuNumKey) as? String
         }
         set(newStuNum) {
             NSUserDefaults.standardUserDefaults().setObject(newStuNum, forKey: kStuNumKey)
@@ -56,7 +57,7 @@ extension Utils {
 
     class var stuPwd: String? {
         get {
-            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kStuPwdKey) as String?) {
+            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kStuPwdKey) as? String) {
                 return safeBase64Encode(existedPwd)
             }
             return nil
@@ -77,7 +78,7 @@ extension Utils {
     
     class var libPwd: String? {
         get {
-            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as String?) {
+            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as? String) {
                 return safeBase64Encode(existedPwd)
             }
             return nil
@@ -146,6 +147,15 @@ extension Utils {
         }
         set(newValue) {
             NSUserDefaults.standardUserDefaults().setBool(newValue, forKey: kPreferWeekStyleClasstableKey)
+        }
+    }
+    
+    class var hadLogin: Bool {
+        get {
+        return NSUserDefaults.standardUserDefaults().boolForKey(kHadLoginKey)
+        }
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setBool(newValue, forKey: kHadLoginKey)
         }
     }
 

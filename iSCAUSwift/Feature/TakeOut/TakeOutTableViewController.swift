@@ -35,9 +35,14 @@ class TakeOutTableViewController: UITableViewController {
 
         self.tableView.registerNib(UINib(nibName: "RestaurantListCell", bundle: nil), forCellReuseIdentifier: "RestaurantListCellIdentifier")
         self.restaurants = Restaurant.savedRestaurants()
-        tableView.reloadData()
         
         refreshData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,7 +69,10 @@ class TakeOutTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        performSegueWithIdentifier("PushTakeOutMenuViewController", sender: tableView.cellForRowAtIndexPath(indexPath))
+        let restaurant = restaurants[indexPath.row]
+        if restaurant.isOpening {
+            performSegueWithIdentifier("PushTakeOutMenuViewController", sender: tableView.cellForRowAtIndexPath(indexPath))
+        }
     }
 
     // MARK: - Navigation

@@ -10,6 +10,7 @@
 #import "MobClick.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "Constant.h"
+#import "iSCAUSwift-Swift.h"
 
 @interface BaseViewController ()
 

@@ -47,6 +47,22 @@
     [self setupData];
     [self updateTitle];
     [self setupRightButtonState];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if ([Utils stuNum].length == 0 &&
+        [Utils stuPwd].length == 0 &&
+        [Utils libPwd].length == 0) {
+        if (![Utils hadLogin]) {
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"]];
+            [self.navigationController presentViewController:nav animated:YES completion:nil];
+        }
+        [Utils setHadLogin:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning

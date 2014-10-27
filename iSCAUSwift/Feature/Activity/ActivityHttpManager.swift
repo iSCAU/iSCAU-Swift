@@ -13,6 +13,7 @@ class ActivityHttpManager: BaseHttpManager {
     
     class func activityList(#completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         let urlStr = "http://iscaucms.sinaapp.com/index.php/Api/getActivities?time=\(Utils.activityLastUpdateTimeStamp!)"
+        NSLog(urlStr)
         startRequest(urlStr, completionHandler: completionHandler)
     }
     

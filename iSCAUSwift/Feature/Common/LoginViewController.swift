@@ -13,15 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtStuNum: UITextField!
     @IBOutlet weak var txtStuPwd: UITextField!
     @IBOutlet weak var txtLibPwd: UITextField!
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // Custom initialization
-    }
-
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
