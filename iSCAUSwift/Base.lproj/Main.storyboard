@@ -10,7 +10,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5aM-Gd-bbS" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="活动圈" image="huodongquan.png" id="obA-Ik-IDF"/>
+                    <tabBarItem key="tabBarItem" title="活动圈" image="activity.png" id="obA-Ik-IDF"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Vqg-8V-F0W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -751,7 +751,7 @@ huanongbao@163.com
         <scene sceneID="oRC-aH-rIt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ep5-7M-le9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="应用" image="features.png" id="Ow5-tX-y5q"/>
+                    <tabBarItem key="tabBarItem" title="应用" image="func.png" id="Ow5-tX-y5q"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="u56-pa-mch">
@@ -771,7 +771,7 @@ huanongbao@163.com
         <scene sceneID="VAv-th-7fg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Acc-JY-en6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="外卖" image="waimai.png" id="Dke-tf-2ko"/>
+                    <tabBarItem key="tabBarItem" title="外卖" image="takeout.png" id="Dke-tf-2ko"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hU3-gU-IQd">
@@ -813,11 +813,11 @@ huanongbao@163.com
     </scenes>
     <resources>
         <image name="1.1.png" width="81" height="81"/>
-        <image name="classtable.png" width="36" height="36"/>
-        <image name="features.png" width="32" height="32"/>
-        <image name="huodongquan.png" width="35" height="35"/>
+        <image name="activity.png" width="25" height="25"/>
+        <image name="classtable.png" width="25" height="25"/>
+        <image name="func.png" width="25" height="25"/>
         <image name="icon-100.png" width="100" height="100"/>
-        <image name="waimai.png" width="35" height="35"/>
+        <image name="takeout.png" width="25" height="25"/>
         <image name="wave.png" width="120" height="164"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -153,6 +153,10 @@
 		E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */; };
 		E17AE90E19FBCB68004CAA87 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E17AE90B19FBCA76004CAA87 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E17AE91019FBEBF7004CAA87 /* icon-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */; };
+		E17AE92819FE9EDE004CAA87 /* activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE92419FE9EDE004CAA87 /* activity@2x.png */; };
+		E17AE92919FE9EDE004CAA87 /* classtable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE92519FE9EDE004CAA87 /* classtable@2x.png */; };
+		E17AE92A19FE9EDE004CAA87 /* func@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE92619FE9EDE004CAA87 /* func@2x.png */; };
+		E17AE92B19FE9EDE004CAA87 /* takeout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE92719FE9EDE004CAA87 /* takeout@2x.png */; };
 		E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */; };
 		E184DCDB19498FF700B0A552 /* EduDayLessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */; };
 		E18F299619E5206B00D8775C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18F294D19E501BB00D8775C /* NotificationCenter.framework */; };
@@ -191,7 +195,6 @@
 		E1EE007A19E3979300CF4F15 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */; };
 		E1EE007C19E4239E00CF4F15 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007B19E4239E00CF4F15 /* ActivityDetailViewController.swift */; };
 		E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */; };
-		E1FDF41A19D07D1500CC311E /* classtable.png in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF41919D07D1500CC311E /* classtable.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -461,6 +464,10 @@
 		E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-100@2x.png"; sourceTree = "<group>"; };
+		E17AE92419FE9EDE004CAA87 /* activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity@2x.png"; sourceTree = "<group>"; };
+		E17AE92519FE9EDE004CAA87 /* classtable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "classtable@2x.png"; sourceTree = "<group>"; };
+		E17AE92619FE9EDE004CAA87 /* func@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "func@2x.png"; sourceTree = "<group>"; };
+		E17AE92719FE9EDE004CAA87 /* takeout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takeout@2x.png"; sourceTree = "<group>"; };
 		E184DCD819498ADC00B0A552 /* EduDayTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayTimeTable.swift; sourceTree = "<group>"; };
 		E184DCDA19498FF700B0A552 /* EduDayLessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduDayLessionCell.swift; sourceTree = "<group>"; };
 		E18F294D19E501BB00D8775C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -504,7 +511,6 @@
 		E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		E1EE007B19E4239E00CF4F15 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		E1FDF3DF19D068E900CC311E /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		E1FDF41919D07D1500CC311E /* classtable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classtable.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -926,6 +932,7 @@
 		E15BB4B7193F054B00F8D492 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E17AE92319FE9EDE004CAA87 /* tab */,
 				E1B0B9DE1948BC270035B287 /* File */,
 				E15BB4B8193F054B00F8D492 /* img */,
 			);
@@ -941,7 +948,6 @@
 				E114957319D943D90087445D /* activity_img */,
 				E14FB65819D0635800526D45 /* calendar.png */,
 				E14FB65919D0635800526D45 /* classtable_on.png */,
-				E1FDF41919D07D1500CC311E /* classtable.png */,
 				E14FB65B19D0635800526D45 /* features_on.png */,
 				E1938AFF19E033A300353521 /* sep@2x.png */,
 				E14FB65C19D0635800526D45 /* features.png */,
@@ -1006,6 +1012,17 @@
 				E17AE90D19FBCA76004CAA87 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E17AE92319FE9EDE004CAA87 /* tab */ = {
+			isa = PBXGroup;
+			children = (
+				E17AE92419FE9EDE004CAA87 /* activity@2x.png */,
+				E17AE92519FE9EDE004CAA87 /* classtable@2x.png */,
+				E17AE92619FE9EDE004CAA87 /* func@2x.png */,
+				E17AE92719FE9EDE004CAA87 /* takeout@2x.png */,
+			);
+			path = tab;
 			sourceTree = "<group>";
 		};
 		E18F299719E5206B00D8775C /* ClasstableWidget */ = {
@@ -1282,7 +1299,6 @@
 				E14FB66A19D0635900526D45 /* huodongquan_on.png in Resources */,
 				E12D501719D9CE6D005F37B7 /* leftside_shadow_bg@2x.png in Resources */,
 				E14FB64619D0629200526D45 /* 5.1.png in Resources */,
-				E1FDF41A19D07D1500CC311E /* classtable.png in Resources */,
 				E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */,
 				E148FA4E19FB833900AA477C /* map@2x.png in Resources */,
 				E17AE91019FBEBF7004CAA87 /* icon-100@2x.png in Resources */,
@@ -1298,7 +1314,9 @@
 				E14FB64119D0629200526D45 /* 2.png in Resources */,
 				E14FB66D19D0635900526D45 /* settting.png in Resources */,
 				E1543C8119DC5354006E41A0 /* EduSysWeekClassTableView.xib in Resources */,
+				E17AE92B19FE9EDE004CAA87 /* takeout@2x.png in Resources */,
 				E114957D19D943D90087445D /* top.png in Resources */,
+				E17AE92819FE9EDE004CAA87 /* activity@2x.png in Resources */,
 				E14FB64219D0629200526D45 /* 3.1.png in Resources */,
 				E14FB66519D0635900526D45 /* calendar.png in Resources */,
 				E14FB67019D0635900526D45 /* waimai.png in Resources */,
@@ -1331,6 +1349,7 @@
 				E1543CAC19DD45F7006E41A0 /* LibListHistoryViewController.xib in Resources */,
 				E114957B19D943D90087445D /* push@2x.png in Resources */,
 				E14FB65519D0629200526D45 /* 13.png in Resources */,
+				E17AE92919FE9EDE004CAA87 /* classtable@2x.png in Resources */,
 				E1EE006C19E2CEE200CF4F15 /* more@2x.png in Resources */,
 				E1543CAA19DD45F7006E41A0 /* LibListHistoryCell.xib in Resources */,
 				E14FB65319D0629200526D45 /* 12.png in Resources */,
@@ -1339,6 +1358,7 @@
 				E14FB65019D0629200526D45 /* 10..1png.png in Resources */,
 				E14FB63F19D0629200526D45 /* 1.png in Resources */,
 				E114957C19D943D90087445D /* time.png in Resources */,
+				E17AE92A19FE9EDE004CAA87 /* func@2x.png in Resources */,
 				E14FB64819D0629200526D45 /* 6.1.png in Resources */,
 				E1EE006A19E2C94D00CF4F15 /* SBDropDownMenu.xib in Resources */,
 				E148AC7C19F41A6500034CEE /* umFeedback.bundle in Resources */,
