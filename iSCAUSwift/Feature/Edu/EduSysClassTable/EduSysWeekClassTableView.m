@@ -57,6 +57,10 @@ NSInteger kClassesPerDay = 13;
 
 - (void)setup
 {
+    // TODO: autolayout
+    self.height = SCREEN_HEIGHT - 64.0 - 49.0;
+    self.classTable.height = self.height;
+    
     // 星期
     self.headerWeekDay = [[UIScrollView alloc] initWithFrame:CGRectMake(VERTICAL_HEADER_ITEM_WIDTH, 0, self.width - VERTICAL_HEADER_ITEM_WIDTH, HORIZONTAL_HEADER_ITEM_HEIGHT)];
     self.headerWeekDay.contentSize = CGSizeMake(self.weekdayArray.count * HORIZONTAL_HEADER_ITEM_WIDTH, HORIZONTAL_HEADER_ITEM_HEIGHT);
@@ -99,6 +103,7 @@ NSInteger kClassesPerDay = 13;
         label.backgroundColor = [UIColor colorWithWhite:0 alpha:0.05];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = LightGrayColor;
+        label.font = Font(13);
         [self.headerClassTime addSubview:label];
         
         CALayer *bottomBorder = [CALayer layer];
@@ -158,7 +163,6 @@ NSInteger kClassesPerDay = 13;
         }
     }];
     
-    NSInteger colorIndex = 0;
     for (NSInteger i = 0; i < self.classesArray.count; i++) {
         Lession *lession = self.classesArray[i];
         if (lession) {
@@ -192,7 +196,7 @@ NSInteger kClassesPerDay = 13;
                     labClass.font = Font(14);
                     labClass.minimumScaleFactor = 0.2;
                     labClass.numberOfLines = 0;
-                    labClass.backgroundColor = self.backgroundColors[colorIndex++ % self.backgroundColors.count];
+                    labClass.backgroundColor = self.backgroundColors[(str + (NSInteger)(left / HORIZONTAL_HEADER_ITEM_WIDTH)) % self.backgroundColors.count];
                     labClass.text = [self classInfo:lession];
                     labClass.textColor = WhiteColor;
                     labClass.adjustsFontSizeToFitWidth = YES;

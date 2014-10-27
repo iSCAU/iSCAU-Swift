@@ -37,7 +37,6 @@ class Utils: NSObject {
 extension Utils {
     class var stuNum: String? {
         get {
-            return ""
             return NSUserDefaults.standardUserDefaults().objectForKey(kStuNumKey) as? String
         }
         set(newStuNum) {

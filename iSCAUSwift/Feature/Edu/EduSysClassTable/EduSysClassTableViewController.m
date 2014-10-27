@@ -280,10 +280,8 @@
     [classes addObjectsFromArray:self.classesSun];
     if (!self.weekTableView) {
         self.weekTableView = [[EduSysWeekClassTableView alloc] initWithFrame:self.view.bounds classes:classes];
-    } else {
-        [self.weekTableView updateClasses:classes];
     }
-    [self.weekTableView updateViewWithWeek:[Utils currentWeekNum]];
+    [self.weekTableView updateClasses:classes];
 }
 
 - (void)setupDayClasstable
