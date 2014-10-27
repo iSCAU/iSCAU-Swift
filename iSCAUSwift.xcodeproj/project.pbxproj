@@ -78,17 +78,8 @@
 		E14FB65519D0629200526D45 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB63B19D0629200526D45 /* 13.png */; };
 		E14FB65619D0629200526D45 /* 14.1.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB63C19D0629200526D45 /* 14.1.png */; };
 		E14FB65719D0629200526D45 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB63D19D0629200526D45 /* 14.png */; };
-		E14FB66519D0635900526D45 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB65819D0635800526D45 /* calendar.png */; };
-		E14FB66619D0635900526D45 /* classtable_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB65919D0635800526D45 /* classtable_on.png */; };
-		E14FB66819D0635900526D45 /* features_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB65B19D0635800526D45 /* features_on.png */; };
-		E14FB66919D0635900526D45 /* features.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB65C19D0635800526D45 /* features.png */; };
-		E14FB66A19D0635900526D45 /* huodongquan_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB65D19D0635800526D45 /* huodongquan_on.png */; };
-		E14FB66B19D0635900526D45 /* huodongquan.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB65E19D0635800526D45 /* huodongquan.png */; };
-		E14FB66C19D0635900526D45 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E14FB65F19D0635800526D45 /* map.jpg */; };
 		E14FB66D19D0635900526D45 /* settting.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66019D0635800526D45 /* settting.png */; };
 		E14FB66E19D0635900526D45 /* shopbox.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66119D0635800526D45 /* shopbox.png */; };
-		E14FB66F19D0635900526D45 /* waimai_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66219D0635900526D45 /* waimai_on.png */; };
-		E14FB67019D0635900526D45 /* waimai.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66319D0635900526D45 /* waimai.png */; };
 		E14FB67119D0635900526D45 /* wave.png in Resources */ = {isa = PBXBuildFile; fileRef = E14FB66419D0635900526D45 /* wave.png */; };
 		E1543C4F19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1543C2919DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m */; };
 		E1543C5019DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1543C2A19DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib */; };
@@ -358,17 +349,8 @@
 		E14FB63B19D0629200526D45 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
 		E14FB63C19D0629200526D45 /* 14.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.1.png; sourceTree = "<group>"; };
 		E14FB63D19D0629200526D45 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
-		E14FB65819D0635800526D45 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
-		E14FB65919D0635800526D45 /* classtable_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classtable_on.png; sourceTree = "<group>"; };
-		E14FB65B19D0635800526D45 /* features_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = features_on.png; sourceTree = "<group>"; };
-		E14FB65C19D0635800526D45 /* features.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = features.png; sourceTree = "<group>"; };
-		E14FB65D19D0635800526D45 /* huodongquan_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huodongquan_on.png; sourceTree = "<group>"; };
-		E14FB65E19D0635800526D45 /* huodongquan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huodongquan.png; sourceTree = "<group>"; };
-		E14FB65F19D0635800526D45 /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		E14FB66019D0635800526D45 /* settting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settting.png; sourceTree = "<group>"; };
 		E14FB66119D0635800526D45 /* shopbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopbox.png; sourceTree = "<group>"; };
-		E14FB66219D0635900526D45 /* waimai_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waimai_on.png; sourceTree = "<group>"; };
-		E14FB66319D0635900526D45 /* waimai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waimai.png; sourceTree = "<group>"; };
 		E14FB66419D0635900526D45 /* wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wave.png; sourceTree = "<group>"; };
 		E1543C2819DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EduSysEmptyClassroomDetailCell.h; sourceTree = "<group>"; };
 		E1543C2919DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EduSysEmptyClassroomDetailCell.m; sourceTree = "<group>"; };
@@ -946,18 +928,9 @@
 				E148FA4D19FB833900AA477C /* map@2x.png */,
 				E1EE006B19E2CEE200CF4F15 /* more@2x.png */,
 				E114957319D943D90087445D /* activity_img */,
-				E14FB65819D0635800526D45 /* calendar.png */,
-				E14FB65919D0635800526D45 /* classtable_on.png */,
-				E14FB65B19D0635800526D45 /* features_on.png */,
 				E1938AFF19E033A300353521 /* sep@2x.png */,
-				E14FB65C19D0635800526D45 /* features.png */,
-				E14FB65D19D0635800526D45 /* huodongquan_on.png */,
-				E14FB65E19D0635800526D45 /* huodongquan.png */,
-				E14FB65F19D0635800526D45 /* map.jpg */,
 				E14FB66019D0635800526D45 /* settting.png */,
 				E14FB66119D0635800526D45 /* shopbox.png */,
-				E14FB66219D0635900526D45 /* waimai_on.png */,
-				E14FB66319D0635900526D45 /* waimai.png */,
 				E14FB66419D0635900526D45 /* wave.png */,
 				E14FB62419D0629200526D45 /* 1.1.png */,
 				E14FB62519D0629200526D45 /* 1.png */,
@@ -1296,7 +1269,6 @@
 				E114957E19D943D90087445D /* userName.png in Resources */,
 				E14FB64919D0629200526D45 /* 6.png in Resources */,
 				E14FB65419D0629200526D45 /* 13.1.png in Resources */,
-				E14FB66A19D0635900526D45 /* huodongquan_on.png in Resources */,
 				E12D501719D9CE6D005F37B7 /* leftside_shadow_bg@2x.png in Resources */,
 				E14FB64619D0629200526D45 /* 5.1.png in Resources */,
 				E1543C7D19DC5354006E41A0 /* EduSysDayClassCell.xib in Resources */,
@@ -1318,16 +1290,12 @@
 				E114957D19D943D90087445D /* top.png in Resources */,
 				E17AE92819FE9EDE004CAA87 /* activity@2x.png in Resources */,
 				E14FB64219D0629200526D45 /* 3.1.png in Resources */,
-				E14FB66519D0635900526D45 /* calendar.png in Resources */,
-				E14FB67019D0635900526D45 /* waimai.png in Resources */,
 				E14FB66E19D0635900526D45 /* shopbox.png in Resources */,
 				E148AC6419F3916B00034CEE /* Launch Screen.xib in Resources */,
-				E14FB66C19D0635900526D45 /* map.jpg in Resources */,
 				E114957A19D943D90087445D /* place.png in Resources */,
 				E14FB64D19D0629200526D45 /* 8.png in Resources */,
 				E1543CB019DD45F7006E41A0 /* LibListNowViewController.xib in Resources */,
 				E1543C5619DC531F006E41A0 /* EduSysEmptyClassroomViewController.xib in Resources */,
-				E14FB66B19D0635900526D45 /* huodongquan.png in Resources */,
 				E1543C6419DC531F006E41A0 /* EduSysPickClassInfoCell.xib in Resources */,
 				E14FB65719D0629200526D45 /* 14.png in Resources */,
 				E1543C5219DC531F006E41A0 /* EduSysEmptyClassroomDetailViewController.xib in Resources */,
@@ -1335,14 +1303,12 @@
 				E148FA4819FB41BF00AA477C /* EduSysMarksDetailCell.xib in Resources */,
 				E1543C5A19DC531F006E41A0 /* EduSysExamViewController.xib in Resources */,
 				E14FB67119D0635900526D45 /* wave.png in Resources */,
-				E14FB66919D0635900526D45 /* features.png in Resources */,
 				E14FB64019D0629200526D45 /* 2.1.png in Resources */,
 				E1EE007A19E3979300CF4F15 /* ActivityTableViewCell.xib in Resources */,
 				E1543CB619DD45F7006E41A0 /* LibSearchBooksDetailViewController.xib in Resources */,
 				E1543CAE19DD45F7006E41A0 /* LibListNowCell.xib in Resources */,
 				E112ED1C19E1A9B4001FA427 /* chack.png in Resources */,
 				E14FB64C19D0629200526D45 /* 8.1.png in Resources */,
-				E14FB66F19D0635900526D45 /* waimai_on.png in Resources */,
 				E1938AFC19E0118A00353521 /* AddressTableViewCell.xib in Resources */,
 				E14FB64319D0629200526D45 /* 3.png in Resources */,
 				E14FB63E19D0629200526D45 /* 1.1.png in Resources */,
@@ -1353,7 +1319,6 @@
 				E1EE006C19E2CEE200CF4F15 /* more@2x.png in Resources */,
 				E1543CAA19DD45F7006E41A0 /* LibListHistoryCell.xib in Resources */,
 				E14FB65319D0629200526D45 /* 12.png in Resources */,
-				E14FB66619D0635900526D45 /* classtable_on.png in Resources */,
 				E1543C5419DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.xib in Resources */,
 				E14FB65019D0629200526D45 /* 10..1png.png in Resources */,
 				E14FB63F19D0629200526D45 /* 1.png in Resources */,
@@ -1371,7 +1336,6 @@
 				E14FB64519D0629200526D45 /* 4.png in Resources */,
 				E148FA4619FB41BF00AA477C /* EduSysMarkCell.xib in Resources */,
 				E1543CB819DD45F7006E41A0 /* LibSearchBooksViewController.xib in Resources */,
-				E14FB66819D0635900526D45 /* features_on.png in Resources */,
 				E1543C5019DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib in Resources */,
 				E15BB491193EC31500F8D492 /* Images.xcassets in Resources */,
 				E1543C7919DC5354006E41A0 /* EduSysClassTableEditedViewController.xib in Resources */,
