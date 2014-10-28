@@ -14,13 +14,13 @@ class LessionWidgetTableViewCell: UITableViewCell {
     @IBOutlet weak var labClassroom: UILabel!
     @IBOutlet weak var labTime: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func setupWithLession(lession: NSDictionary) {
+        selectedBackgroundView = selectedBackgroundView
+        
         labClassname!.text = lession["classname"] as? String
         if let classroom = lession["location"] as? String {
             labClassroom!.text = "@\(classroom)"

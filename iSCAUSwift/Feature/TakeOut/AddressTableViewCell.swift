@@ -27,8 +27,10 @@ class AddressTableViewCell: UITableViewCell {
     func setup() {
         if let address = Utils.dormitoryAddress {
             labAddress.text = address
+            labAddress.textColor = UIColor.darkTextColor()
         } else {
             labAddress.text = "你还没设置送餐地址"
+            labAddress.textColor = UIColor(r: 195, g: 0, b: 19, a: 1)
         }
         
         labAddress.height = AddressTableViewCell.cellHeight - 20

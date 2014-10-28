@@ -527,7 +527,7 @@ huanongbao@163.com
                                 <rect key="frame" x="16" y="190" width="288" height="183"/>
                                 <string key="text">微信公众号:   华农宝
 
-   官方合作:   http://www.huanongbao.com
+   官方网站:   http://www.huanongbao.com
 
    官方微博:   @华农宝工作室
 
@@ -813,7 +813,7 @@ huanongbao@163.com
     </scenes>
     <resources>
         <image name="1.1.png" width="81" height="81"/>
-        <image name="activity.png" width="25" height="25"/>
+        <image name="activity.png" width="28" height="28"/>
         <image name="classtable.png" width="25" height="25"/>
         <image name="func.png" width="25" height="25"/>
         <image name="icon-100.png" width="100" height="100"/>

@@ -113,7 +113,7 @@ class AddressUpdateView: UIView {
         let topVC = rootViewController()
         topVC.view.addSubview(background!)
         
-        let afterFrame = CGRectMake((ScreenWidth - kViewWidth) / 2, (ScreenHeight - btnCancle!.bottom - 270) / 2, kViewWidth, btnCancle!.bottom)
+        let afterFrame = CGRectMake((ScreenWidth - kViewWidth) / 2, (ScreenHeight - btnCancle!.bottom - 280) / 2, kViewWidth, btnCancle!.bottom)
         
         UIView.animateWithDuration(0.27, delay: 0, options: .CurveEaseOut, animations: {
             self.frame = afterFrame

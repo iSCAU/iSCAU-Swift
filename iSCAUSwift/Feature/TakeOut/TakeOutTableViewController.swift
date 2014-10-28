@@ -64,6 +64,8 @@ class TakeOutTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("RestaurantListCellIdentifier", forIndexPath: indexPath) as RestaurantListCell
         let restaurant = restaurants[indexPath.row]
         cell.setup(restaurant)
+        cell.backgroundColor = (indexPath.row % 2 == 0) ? UIColor.clearColor() : UIColor(white: 0.5, alpha: 0.05)
+        
         return cell
     }
     

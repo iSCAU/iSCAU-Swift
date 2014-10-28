@@ -54,7 +54,6 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
         
         if let activities = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) {
             for activity in activities {
-                
                 // Seperate
                 let a = activity as Activity
                 if let date = dateformatter.dateFromString(a.time) {
@@ -64,9 +63,9 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
                         todayActivities.append(a)
                     case AZDateType.Tomorrow:
                         if a.level.toInt() == 9 {
-                            tomorrowActivities.append(a)
+                            todayActivities.append(a)
                         } else {
-                            futureActivities.append(a)
+                            tomorrowActivities.append(a)
                         }
                     case AZDateType.Future:
                         if a.level.toInt() == 9 {
@@ -74,12 +73,12 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
                         } else {
                             futureActivities.append(a)
                         }
-                        
                     case AZDateType.Past:
-                        CoreDataManager.sharedInstance.managedObjectContext!.deleteObject(a as Activity)
+                        CoreDataManager.sharedInstance.managedObjectContext!.deleteObject(activity as Activity)
                     }
                 }
             }
+            CoreDataManager.sharedInstance.saveContext()
             
             // Today
             let today = self.controllers[0] as ActivityTableViewController
@@ -113,7 +112,7 @@ class ActivityDisplayViewController: JPTabViewController, JPTabViewControllerDel
                             }
                             CoreDataManager.sharedInstance.saveContext()
                             
-                            Utils.activityLastUpdateTimeStamp = NSString(format: "%.0lf", NSTimeIntervalSince1970)
+                            Utils.activityLastUpdateTimeStamp = NSString(format: "%.0lf", NSDate().timeIntervalSince1970)
                         }
                     }
                 }

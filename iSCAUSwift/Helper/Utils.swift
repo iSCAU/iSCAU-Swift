@@ -32,7 +32,7 @@ class Utils: NSObject {
     
 }
 
-// MARK: - Preferences
+// MARK: - Prarams
 
 extension Utils {
     class var stuNum: String? {
@@ -89,10 +89,7 @@ extension Utils {
     
     class var libPwdRawValue: String? {
         get {
-            if let existedPwd = (NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as String?) {
-                return existedPwd
-            }
-            return nil
+            return (NSUserDefaults.standardUserDefaults().objectForKey(kLibPwdKey) as? String)
         }
     }
     
@@ -116,11 +113,7 @@ extension Utils {
     
     class var takeOutLastUpdateTimeStamp: String? {
         get {
-            if let timeStamp = NSUserDefaults.standardUserDefaults().objectForKey(kTakeOutLastUpdateTimeStamp) as? String {
-                return timeStamp
-            } else {
-                return "0"
-            }
+            return NSUserDefaults.standardUserDefaults().objectForKey(kTakeOutLastUpdateTimeStamp) as? String ?? "0"
         }
         set(newTimeStamp) {
             NSUserDefaults.standardUserDefaults().setObject(newTimeStamp, forKey: kTakeOutLastUpdateTimeStamp)
@@ -129,11 +122,7 @@ extension Utils {
     
     class var activityLastUpdateTimeStamp: String? {
         get {
-            if let timeStamp = NSUserDefaults.standardUserDefaults().objectForKey(kActivityLastUpdateTimeStamp) as? String {
-                return timeStamp
-            } else {
-                return "0"
-            }
+            return NSUserDefaults.standardUserDefaults().objectForKey(kActivityLastUpdateTimeStamp) as? String ?? "0"
         }
         set(newTimeStamp) {
             NSUserDefaults.standardUserDefaults().setObject(newTimeStamp, forKey: kActivityLastUpdateTimeStamp)
@@ -151,7 +140,7 @@ extension Utils {
     
     class var hadLogin: Bool {
         get {
-        return NSUserDefaults.standardUserDefaults().boolForKey(kHadLoginKey)
+            return NSUserDefaults.standardUserDefaults().boolForKey(kHadLoginKey)
         }
         set(newValue) {
             NSUserDefaults.standardUserDefaults().setBool(newValue, forKey: kHadLoginKey)
@@ -169,11 +158,7 @@ extension Utils {
     
     class var dormitoryAddress: String? {
         get {
-            if let address =  NSUserDefaults.standardUserDefaults().objectForKey(kDormitoryAddressKey) as? String {
-                return address
-            } else {
-                return nil
-            }
+            return NSUserDefaults.standardUserDefaults().objectForKey(kDormitoryAddressKey) as? String
         }
         set (newDormitoryAddress) {
             NSUserDefaults.standardUserDefaults().setObject(newDormitoryAddress, forKey: kDormitoryAddressKey)
@@ -233,6 +218,12 @@ extension Utils {
         }
         return 0
     }
+
+}
+
+// MARK: - Notification
+
+extension Utils {
     
     class func showNotice(notice: String, inView view: UIView) {
         MBProgressHUD.hideAllHUDsForView(view, animated: true)
@@ -240,7 +231,7 @@ extension Utils {
         hud.labelText = notice
         hud.mode = MBProgressHUDModeText
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.5 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
             MBProgressHUD.hideHUDForView(view, animated: true)
             return
         })
