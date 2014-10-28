@@ -65,6 +65,7 @@
     SHOW_WATING_HUD;
     self.isReloading = YES;
     [EduHttpManager requestPickClassInfoWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+        HIDE_ALL_HUD
         if (response.statusCode == kStatusCodeSuccess) {
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
             self.pickClassInfos = [dict objectForKey:@"pickclassinfos"];
@@ -75,7 +76,6 @@
             }
         }
         self.isReloading = NO;
-        HIDE_ALL_HUD;
     }];
 }
 

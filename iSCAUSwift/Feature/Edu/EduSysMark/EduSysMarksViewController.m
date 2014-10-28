@@ -201,11 +201,11 @@ static NSString *GRADE_POINT = @"grade_point";
                                         term:self.semesterArray[self.semesterIndex]
                            completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
                                self.isReloading = NO;
+                               HIDE_ALL_HUD
                                if (response.statusCode == kStatusCodeSuccess) {
                                    [self parseMarksInfo:data];
                                    [self saveMarksDataToLocal:data];
                                }
-                               HIDE_ALL_HUD
                            }];
     }
 }

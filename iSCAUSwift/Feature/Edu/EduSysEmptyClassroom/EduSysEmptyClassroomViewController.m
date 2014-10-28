@@ -122,6 +122,7 @@
     SHOW_WATING_HUD
     [EduHttpManager requestEmptyClassroomParamsWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         self.isReloading = NO;
+        HIDE_ALL_HUD
         if (response.statusCode == kStatusCodeSuccess) {
             NSDictionary *params = [NSJSONSerialization JSONObjectWithData:data
                                                                    options:kNilOptions
@@ -129,7 +130,6 @@
             [self parseParams:params];
             [self setupEmptyClassroomParams];
         }
-        HIDE_ALL_HUD
     }];
 }
 
@@ -278,6 +278,7 @@
                                                     sjd:self.labSJD.text
                                       completionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
                                           NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                                          HIDE_ALL_HUD
                                           if (response.statusCode == kStatusCodeSuccess && dict) {
                                               NSArray *emptyClassrooms = dict[@"classRooms"];
                                               if (emptyClassrooms) {
@@ -286,7 +287,6 @@
                                                   [self.navigationController pushViewController:detailViewController animated:YES];
                                               }
                                           }
-                                          HIDE_ALL_HUD
                                       }];
     }
 }

@@ -81,12 +81,12 @@
     self.isReloading = YES;
     [EduHttpManager requestExamWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         self.isReloading = NO;
+        HIDE_ALL_HUD
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
         if (response.statusCode == kStatusCodeSuccess) {
             self.examInfoArray = dict[@"exam"];
             [self.tableExamInfo reloadData];
         }
-        HIDE_ALL_HUD
     }];
 }
 

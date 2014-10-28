@@ -24,7 +24,7 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
             let minScale = widthScale < heightScale ? widthScale : heightScale
             let maxScale = UIScreen.mainScreen().scale
             
-            bgScrollView.maximumZoomScale = 1 / minScale * 4
+            bgScrollView.maximumZoomScale = 1 / minScale * 2
             bgScrollView.minimumZoomScale = 1
             bgScrollView.zoomScale = 1
             

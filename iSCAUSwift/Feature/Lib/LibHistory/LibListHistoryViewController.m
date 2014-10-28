@@ -64,7 +64,7 @@
     [LibHttpManager borrowedBooksWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         self.isReloading = NO;
-        HIDE_ALL_HUD;
+        HIDE_ALL_HUD
         if (response.statusCode == kStatusCodeSuccess) {
             self.booksArray = [[NSMutableArray alloc] initWithArray:[dict objectForKey:@"books"]];
             [self.tableListHistory reloadData];

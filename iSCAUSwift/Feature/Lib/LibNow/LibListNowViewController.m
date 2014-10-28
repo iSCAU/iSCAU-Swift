@@ -56,9 +56,9 @@
     self.isReloading = YES;
     SHOW_WATING_HUD;
     [LibHttpManager borrowingBooksWithCompletionHandler:^(NSURLRequest *request, NSHTTPURLResponse *response, id data, NSError *error) {
+        HIDE_ALL_HUD
         if (response.statusCode == kStatusCodeSuccess) {
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            HIDE_ALL_HUD;
             NSMutableArray *temp = [[NSMutableArray alloc] initWithArray:[dict objectForKey:@"books"]];
             if (temp.count > 0) {
                 self.booksArray = temp;
