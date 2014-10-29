@@ -119,7 +119,7 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
             if let r = restaurant {
                 var content = "[华农宝]\n"
                 for f in food {
-                    content += "\(f.foodName)  \(f.count)份\n"
+                    content += "\(f.foodName) \(f.count)份\n"
                 }
                 content += address
 

@@ -34,6 +34,7 @@
 		E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */ = {isa = PBXBuildFile; fileRef = E12D501319D9CE6D005F37B7 /* UIView+Additon.m */; };
 		E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */; };
 		E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */; };
+		E13DAD761A00FD24004B85C3 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13DAD531A00FD24004B85C3 /* Alamofire.swift */; };
 		E148AC6419F3916B00034CEE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148AC6319F3916B00034CEE /* Launch Screen.xib */; };
 		E148AC6919F39A9E00034CEE /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E148AC6619F39A9E00034CEE /* libMobClickLibrary.a */; };
 		E148AC6D19F39C6700034CEE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E148AC6B19F39C6700034CEE /* BaseViewController.m */; };
@@ -138,11 +139,11 @@
 		E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */; };
 		E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D1193F513E00F8D492 /* AppConstant.swift */; };
 		E15BB4D4193F538F00F8D492 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D3193F538F00F8D492 /* Utils.swift */; };
+		E170E1351A00831D009BA1E4 /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E170E1341A00831D009BA1E4 /* plus@2x.png */; };
 		E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173B4D719DC0A5B009993C1 /* PopoverView.swift */; };
 		E174654D19DEE208005EE1AD /* TakeOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174654C19DEE208005EE1AD /* TakeOutMenuViewController.swift */; };
 		E174654F19DEE698005EE1AD /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */; };
 		E174655119DEE6A4005EE1AD /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */; };
-		E17AE90E19FBCB68004CAA87 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E17AE90B19FBCA76004CAA87 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E17AE91019FBEBF7004CAA87 /* icon-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */; };
 		E17AE92819FE9EDE004CAA87 /* activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE92419FE9EDE004CAA87 /* activity@2x.png */; };
 		E17AE92919FE9EDE004CAA87 /* classtable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E17AE92519FE9EDE004CAA87 /* classtable@2x.png */; };
@@ -180,7 +181,6 @@
 		E1EE006E19E2F7B700CF4F15 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE006D19E2F7B700CF4F15 /* Activity.swift */; };
 		E1EE007019E2FA5D00CF4F15 /* ActivityHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE006F19E2FA5D00CF4F15 /* ActivityHttpManager.swift */; };
 		E1EE007219E2FA9300CF4F15 /* BaseHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007119E2FA9300CF4F15 /* BaseHttpManager.swift */; };
-		E1EE007419E305AA00CF4F15 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE007319E305AA00CF4F15 /* Reveal.framework */; };
 		E1EE007619E395AA00CF4F15 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007519E395AA00CF4F15 /* ActivityTableViewController.swift */; };
 		E1EE007919E3979300CF4F15 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE007719E3979300CF4F15 /* ActivityTableViewCell.swift */; };
 		E1EE007A19E3979300CF4F15 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */; };
@@ -195,20 +195,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E15BB483193EC31400F8D492;
 			remoteInfo = iSCAUSwift;
-		};
-		E17AE90A19FBCA76004CAA87 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		E17AE90C19FBCA76004CAA87 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = AlamofireTests;
 		};
 		E18F299E19E5206B00D8775C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -244,7 +230,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E17AE90E19FBCB68004CAA87 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +282,7 @@
 		E12D501319D9CE6D005F37B7 /* UIView+Additon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additon.m"; sourceTree = "<group>"; };
 		E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCollectionViewController.swift; path = Menu/MenuCollectionViewController.swift; sourceTree = "<group>"; };
 		E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItemCollectionViewCell.swift; path = Menu/MenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		E13DAD531A00FD24004B85C3 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		E148AC6319F3916B00034CEE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		E148AC6619F39A9E00034CEE /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		E148AC6719F39A9E00034CEE /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
@@ -440,11 +426,11 @@
 		E15BB4D1193F513E00F8D492 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		E15BB4D3193F538F00F8D492 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E16262DC19D326C30024B023 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		E170E1341A00831D009BA1E4 /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
 		E173B4D719DC0A5B009993C1 /* PopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		E174654C19DEE208005EE1AD /* TakeOutMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeOutMenuViewController.swift; sourceTree = "<group>"; };
 		E174654E19DEE698005EE1AD /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		E174655019DEE6A4005EE1AD /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
-		E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-100@2x.png"; sourceTree = "<group>"; };
 		E17AE92419FE9EDE004CAA87 /* activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity@2x.png"; sourceTree = "<group>"; };
 		E17AE92519FE9EDE004CAA87 /* classtable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "classtable@2x.png"; sourceTree = "<group>"; };
@@ -487,7 +473,6 @@
 		E1EE006D19E2F7B700CF4F15 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Model/Activity.swift; sourceTree = "<group>"; };
 		E1EE006F19E2FA5D00CF4F15 /* ActivityHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHttpManager.swift; sourceTree = "<group>"; };
 		E1EE007119E2FA9300CF4F15 /* BaseHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttpManager.swift; sourceTree = "<group>"; };
-		E1EE007319E305AA00CF4F15 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		E1EE007519E395AA00CF4F15 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		E1EE007719E3979300CF4F15 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		E1EE007819E3979300CF4F15 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -502,7 +487,6 @@
 			files = (
 				E148AC7B19F41A6500034CEE /* libUMFeedback.a in Frameworks */,
 				E148AC7219F39FAD00034CEE /* libz.dylib in Frameworks */,
-				E1EE007419E305AA00CF4F15 /* Reveal.framework in Frameworks */,
 				5C61477BA11D4F399B34246D /* libPods-iSCAUSwift.a in Frameworks */,
 				E148AC6919F39A9E00034CEE /* libMobClickLibrary.a in Frameworks */,
 				E1038BBF19F5742B00C09BEB /* Crashlytics.framework in Frameworks */,
@@ -645,6 +629,14 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		E13DAD501A00FD24004B85C3 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				E13DAD531A00FD24004B85C3 /* Alamofire.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
 		E148AC6519F39A9E00034CEE /* UMAnalytics_Sdk_3.1.8 */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,11 +679,10 @@
 		E14FB5D819D0609100526D45 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */,
+				E13DAD501A00FD24004B85C3 /* Alamofire */,
 				E1038BBE19F5742B00C09BEB /* Crashlytics.framework */,
 				E148AC7719F41A6500034CEE /* UMFeedback_iOS_1.4.2 */,
 				E148AC6519F39A9E00034CEE /* UMAnalytics_Sdk_3.1.8 */,
-				E1EE007319E305AA00CF4F15 /* Reveal.framework */,
 				E112ED0219E1A9B4001FA427 /* ZFCalendar */,
 				E19F70E519DB2EF3009698D8 /* JPTabViewController */,
 				E12D4FFB19D9CE6C005F37B7 /* AZTools */,
@@ -924,6 +915,7 @@
 		E15BB4B8193F054B00F8D492 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				E170E1341A00831D009BA1E4 /* plus@2x.png */,
 				E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */,
 				E148FA4D19FB833900AA477C /* map@2x.png */,
 				E1EE006B19E2CEE200CF4F15 /* more@2x.png */,
@@ -976,15 +968,6 @@
 				E1938B0419E03BC900353521 /* AddressUpdateView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		E17AE90619FBCA75004CAA87 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E17AE90B19FBCA76004CAA87 /* Alamofire.framework */,
-				E17AE90D19FBCA76004CAA87 /* AlamofireTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E17AE92319FE9EDE004CAA87 /* tab */ = {
@@ -1225,12 +1208,6 @@
 			mainGroup = E15BB47B193EC31400F8D492;
 			productRefGroup = E15BB485193EC31400F8D492 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E17AE90619FBCA75004CAA87 /* Products */;
-					ProjectRef = E17AE90519FBCA75004CAA87 /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E15BB483193EC31400F8D492 /* iSCAUSwift */,
@@ -1239,23 +1216,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E17AE90B19FBCA76004CAA87 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = E17AE90A19FBCA76004CAA87 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E17AE90D19FBCA76004CAA87 /* AlamofireTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AlamofireTests.xctest;
-			remoteRef = E17AE90C19FBCA76004CAA87 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E15BB482193EC31400F8D492 /* Resources */ = {
@@ -1340,6 +1300,7 @@
 				E15BB491193EC31500F8D492 /* Images.xcassets in Resources */,
 				E1543C7919DC5354006E41A0 /* EduSysClassTableEditedViewController.xib in Resources */,
 				E14FB64B19D0629200526D45 /* 7.png in Resources */,
+				E170E1351A00831D009BA1E4 /* plus@2x.png in Resources */,
 				E1543CB219DD45F7006E41A0 /* LibSearchBooksCell.xib in Resources */,
 				E1543C7B19DC5354006E41A0 /* EduSysClassTableViewController.xib in Resources */,
 			);
@@ -1492,6 +1453,7 @@
 				E122B6071949725300E90D87 /* Lession.swift in Sources */,
 				E15BB4C0193F06B500F8D492 /* User.swift in Sources */,
 				E12D501A19D9CE6D005F37B7 /* UIImage+ImageWithColor.m in Sources */,
+				E13DAD761A00FD24004B85C3 /* Alamofire.swift in Sources */,
 				E1543C6519DC531F006E41A0 /* EduSysPickClassInfoViewController.m in Sources */,
 				E1995CE819DDB6AE001AB5D7 /* TakeOutTableViewController.swift in Sources */,
 				E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */,
@@ -1729,7 +1691,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ClasstableWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1745,7 +1707,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ClasstableWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

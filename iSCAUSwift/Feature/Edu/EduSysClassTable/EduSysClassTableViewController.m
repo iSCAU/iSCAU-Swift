@@ -13,8 +13,9 @@
 #import "AZTools.h"
 #import "SBDropDownMenu.h"
 #import "iSCAUSwift-Swift.h"
+#import <CNPPopupController/CNPPopupController.h>
 
-@interface EduSysClassTableViewController () <PopoverViewDelegate, SBDropDownMenuDelegate>
+@interface EduSysClassTableViewController () <PopoverViewDelegate, SBDropDownMenuDelegate, CNPPopupControllerDelegate>
 @property (nonatomic) BOOL weekStyle;
 @property (nonatomic, strong) SBDropDownMenu *dropDownMenu;
 @end
@@ -48,6 +49,49 @@
     [self updateTitle];
     [self setupRightButtonState];
     
+    // Update notice
+    {
+        NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+
+        if ([[Utils savedVersionString] isEqualToString:version]) {
+            [Utils setSavedVersionString:version];
+            NSMutableParagraphStyle *titleParagraphStyle = NSMutableParagraphStyle.new;
+            titleParagraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+            titleParagraphStyle.alignment = NSTextAlignmentCenter;
+            
+            NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"更新内容" attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20], NSParagraphStyleAttributeName : titleParagraphStyle}];
+            
+            NSString *update = @""
+            "1. 全新 UI，更加清爽易用；\n"
+            "2. “地图”和“校历”等数据更新；\n"
+            "3. 新增“活动”和“外卖”（这个真没收钱！）模块；\n"
+            "4. 课表除了添加“每周视图”外，还有 iOS8 通知中心小工具“Today”，更快的查看每日课程。\n\n"
+            "设置方法：\n"
+            "第一步：升级到 iOS8 系统，安装 3.0.0 以上版本 iSCAU；\n"
+            "第二步：下拉通知中心，点击底部“编辑”按钮，再点击“+iSCAU”按钮即添加成功；\n"
+            "第三步：调整 widget 到你想要的位置，随时下拉通知中心即可快速查阅课表。";
+            
+            NSMutableParagraphStyle *contentParagraphStyle = NSMutableParagraphStyle.new;
+            contentParagraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+            contentParagraphStyle.alignment = NSTextAlignmentLeft;
+            NSAttributedString *content = [[NSAttributedString alloc] initWithString:update
+                                                                          attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], NSParagraphStyleAttributeName : contentParagraphStyle}];
+            
+            NSAttributedString *buttonTitle = [[NSAttributedString alloc] initWithString:@"好的！" attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName : [UIColor whiteColor], NSParagraphStyleAttributeName : titleParagraphStyle}];
+            CNPPopupButtonItem *buttonItem = [CNPPopupButtonItem defaultButtonItemWithTitle:buttonTitle backgroundColor:[UIColor colorWithRed:0.46 green:0.8 blue:1.0 alpha:1.0]];
+            
+            CNPPopupController *popVC = [[CNPPopupController alloc] initWithTitle:title contents:@[content] buttonItems:@[buttonItem] destructiveButtonItem:nil];
+            popVC.theme = [CNPPopupTheme defaultTheme];
+            popVC.delegate = self;
+            popVC.theme.popupStyle = CNPPopupStyleCentered;
+            popVC.theme.presentationStyle = CNPPopupPresentationStyleSlideInFromBottom;
+            [popVC presentPopupControllerAnimated:YES];
+            
+            buttonItem.selectionHandler = ^(CNPPopupButtonItem *item){
+                [popVC dismissPopupControllerAnimated:YES];
+            };
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -334,7 +378,8 @@
         UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消编辑" style:UIBarButtonItemStylePlain target:self action:@selector(endEditing)];
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     } else {
-        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(showPopOverView)];
+        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:Image(@"plus.png") style:UIBarButtonItemStylePlain target:self action:@selector(showPopOverView)];
+        rightBarButtonItem.imageInsets = UIEdgeInsetsMake(3, 0, -3, 0);
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     }
 }

@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import Alamofire
 
 class BaseHttpManager: NSObject {
 
     class func startRequest(urlStr: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         if let escapedStr = urlStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
-            Alamofire
+            Manager.sharedInstance
                 .request(.GET, escapedStr, parameters: nil)
                 .response({ (request, response, data, error) -> Void in
                     if response?.statusCode == kResponseStatusCodeEduUsernameError ||

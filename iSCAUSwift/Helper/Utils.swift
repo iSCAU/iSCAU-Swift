@@ -149,7 +149,7 @@ extension Utils {
 
     class var semester: [String]? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(kSemesterKey) as [String]?
+            return NSUserDefaults.standardUserDefaults().objectForKey(kSemesterKey) as? [String]
         }
         set(newSemester) {
             NSUserDefaults.standardUserDefaults().setObject(newSemester, forKey: kSemesterKey)
@@ -178,6 +178,15 @@ extension Utils {
                     sharedDefaults.setObject(newSemeterStartDate, forKey: kSemesterStartDateKey)
                 }
             }
+        }
+    }
+    
+    class var savedVersionString: String {
+        get {
+            return NSUserDefaults.standardUserDefaults().objectForKey(kSavedVersionStringKey) as? String ?? ""
+        }
+        set (newVersionString) {
+            NSUserDefaults.standardUserDefaults().setObject(newVersionString, forKey: kSavedVersionStringKey)
         }
     }
     

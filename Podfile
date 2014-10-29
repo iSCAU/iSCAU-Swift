@@ -7,6 +7,7 @@ target "iSCAUSwift" do
   pod 'FRDLivelyButton', '~> 1.1.2'
   pod 'SDWebImage'
   pod 'MBProgressHUD'
+  pod 'CNPPopupController'
 end
 
 target "iSCAUSwiftTests" do

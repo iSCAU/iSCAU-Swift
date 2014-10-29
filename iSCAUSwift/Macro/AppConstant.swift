@@ -33,6 +33,7 @@ let kTakeOutLastUpdateTimeStamp = "kTakeOutLastUpdateTimeStamp"
 let kActivityLastUpdateTimeStamp = "kActivityLastUpdateTimeStamp"
 let kSemesterStartDateKey = "kSemesterStartDateKey"
 let kHadLoginKey = "kHadLoginKey"
+let kSavedVersionStringKey = "kSavedVersionStringKey"
 let kPreferWeekStyleClasstableKey = "kPreferWeekStyleClasstableKey"
 let kReloadRestaurantTableNotification = "kReloadRestaurantTableNotification"
 let kRefreshActivityDataNotification = "kRefreshActivityDataNotification"
@@ -50,4 +51,12 @@ let ScreenHeight = UIScreen.mainScreen().bounds.height
 
 func SystemVersionFloatValue() -> Float {
     return (UIDevice.currentDevice().systemVersion as NSString).floatValue;
+}
+
+func rootViewController() -> UIViewController {
+    var vc = UIApplication.sharedApplication().keyWindow!.rootViewController
+    while vc?.presentedViewController != nil {
+        vc = vc?.presentedViewController
+    }
+    return vc!
 }

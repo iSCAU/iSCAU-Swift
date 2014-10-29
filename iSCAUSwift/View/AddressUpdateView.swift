@@ -113,7 +113,9 @@ class AddressUpdateView: UIView {
         let topVC = rootViewController()
         topVC.view.addSubview(background!)
         
-        let afterFrame = CGRectMake((ScreenWidth - kViewWidth) / 2, (ScreenHeight - btnCancle!.bottom - 280) / 2, kViewWidth, btnCancle!.bottom)
+        txtAddress!.text = Utils.dormitoryAddress
+        
+        let afterFrame = CGRectMake((ScreenWidth - kViewWidth) / 2, (ScreenHeight - btnCancle!.bottom - 260) / 2, kViewWidth, btnCancle!.bottom)
         
         UIView.animateWithDuration(0.27, delay: 0, options: .CurveEaseOut, animations: {
             self.frame = afterFrame
@@ -157,14 +159,6 @@ class AddressUpdateView: UIView {
         Utils.dormitoryAddress = txtAddress!.text
         NSNotificationCenter.defaultCenter().postNotificationName(kReloadRestaurantTableNotification, object: nil)
         dismiss()
-    }
-    
-    func rootViewController() -> UIViewController {
-        var vc = UIApplication.sharedApplication().keyWindow!.rootViewController
-        while vc?.presentedViewController != nil {
-            vc = vc?.presentedViewController
-        }
-        return vc!
     }
     
 }
