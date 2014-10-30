@@ -53,7 +53,7 @@
     {
         NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 
-        if ([[Utils savedVersionString] isEqualToString:version]) {
+        if (![[Utils savedVersionString] isEqualToString:version]) {
             [Utils setSavedVersionString:version];
             NSMutableParagraphStyle *titleParagraphStyle = NSMutableParagraphStyle.new;
             titleParagraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
@@ -90,14 +90,14 @@
             buttonItem.selectionHandler = ^(CNPPopupButtonItem *item){
                 [popVC dismissPopupControllerAnimated:YES];
             };
+        } else {
+            [self checkLogin];
         }
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)checkLogin
 {
-    [super viewDidAppear:animated];
-    
     if ([Utils stuNum].length == 0 &&
         [Utils stuPwd].length == 0 &&
         [Utils libPwd].length == 0) {
@@ -107,6 +107,11 @@
         }
         [Utils setHadLogin:YES];
     }
+}
+
+- (void)popupController:(CNPPopupController *)controller didDismissWithButtonTitle:(NSString *)title
+{
+    [self checkLogin];
 }
 
 - (void)didReceiveMemoryWarning
@@ -304,6 +309,7 @@
 - (void)setupTable
 {
     if (self.weekStyle) {
+        [self updateTitle];
         [self setupWeekClasstable];
         [self.view addSubview:self.weekTableView];
     } else {

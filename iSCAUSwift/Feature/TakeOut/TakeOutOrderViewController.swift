@@ -122,7 +122,9 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
                     content += "\(f.foodName) \(f.count)份\n"
                 }
                 content += address
-
+                
+                Utils.showWaitingNotice(inView: view)
+                
                 // Change color temporary
                 UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
                 UINavigationBar.appearance().tintColor = UIColor.blackColor()
@@ -132,7 +134,11 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
                 messageController.messageComposeDelegate = self
                 messageController.recipients = [ r.phone ]
                 messageController.body = content
-                presentViewController(messageController, animated: true, completion: nil)
+                
+                // Delay or it complain: "timed out waiting for fence barrier from com.apple.mobilesms.compose"
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+                    self.presentViewController(messageController, animated: true, completion: nil)
+                })
             }
         } else {
             let alert = UIAlertView(title: "提示", message: "你还没设置送餐地址", delegate: nil, cancelButtonTitle: "确定")
@@ -150,8 +156,11 @@ class TakeOutOrderViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     // MARK: - Message
+        
     
     func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+        Utils.hideAllNotice(inView: view)
+        
         if result.value == MessageComposeResultFailed.value {
             let alert = UIAlertView(title: "错误", message: "发送短信失败", delegate: nil, cancelButtonTitle: "确定")
             alert.show()

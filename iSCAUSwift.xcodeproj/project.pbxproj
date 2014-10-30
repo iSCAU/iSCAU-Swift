@@ -1117,6 +1117,7 @@
 				E1FDF41819D0734700CC311E /* Embed Frameworks */,
 				E18F295819E501BB00D8775C /* Embed App Extensions */,
 				E1038BBC19F5734700C09BEB /* ShellScript */,
+				E182350B1A01DCE600B756C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1367,6 +1368,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./iSCAUSwift/Vendor/Crashlytics.framework/run 2888f0e3d016f021c4a964ee765c66087e19ab35 7ab976f543688255b2dbd46bd8e8dcf8927771299b7759351027eb05d3665d0d";
+		};
+		E182350B1A01DCE600B756C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
