@@ -85,6 +85,7 @@ static NSString *TEACHER = @"teacher";
 #define kDefaultErrorNotice @"加载失败,请稍后再试试.."
 #define NOTIFICATION @"notification"
 #define EDU_SYS_EMPTY_CLASSROOM_SELECTED_NOTIFICATION @"EDU_SYS_EMPTY_CLASSROOM_SELECTED_NOTIFICATION"
+#define EDU_SYS_DID_UPDATE_CLASSTABLE_NOTIFICATION @"EDU_SYS_DID_UPDATE_CLASSTABLE_NOTIFICATION"
 
 #define POST_NOTIFICATION(notificationName, infoDict) \
 [[NSNotificationCenter defaultCenter] postNotificationName:(notificationName) object:nil userInfo:(infoDict)]

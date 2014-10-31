@@ -45,8 +45,6 @@
     
     // Data
     self.weekStyle = [Utils preferWeekStyleClassTable];
-    [self setupData];
-    [self updateTitle];
     [self setupRightButtonState];
     
     // Update notice
@@ -94,6 +92,14 @@
             [self checkLogin];
         }
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupData) name:EDU_SYS_DID_UPDATE_CLASSTABLE_NOTIFICATION object:nil];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [self setupData];
+    [self updateTitle];
 }
 
 - (void)checkLogin

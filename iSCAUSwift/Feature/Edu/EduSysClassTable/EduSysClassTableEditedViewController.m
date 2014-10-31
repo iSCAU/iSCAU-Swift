@@ -385,6 +385,7 @@
             if (success) {
                 SHOW_NOTICE_HUD(@"更新成功");
                 [self.navigationController popToRootViewControllerAnimated:YES];
+                POST_NOTIFICATION(EDU_SYS_DID_UPDATE_CLASSTABLE_NOTIFICATION, nil);
             } else {
                 SHOW_NOTICE_HUD(@"更新失败");
             }
@@ -412,6 +413,7 @@
             if (success) {
                 SHOW_NOTICE_HUD(@"更新成功");
                 [self.navigationController popToRootViewControllerAnimated:YES];
+                POST_NOTIFICATION(EDU_SYS_DID_UPDATE_CLASSTABLE_NOTIFICATION, nil);
             } else {
                 SHOW_NOTICE_HUD(@"更新失败");
             }
