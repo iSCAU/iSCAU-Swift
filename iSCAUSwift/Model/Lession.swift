@@ -28,15 +28,16 @@ class Lession: NSManagedObject {
     class func converFromDict(info: NSDictionary) -> Lession? {
         let lession = NSEntityDescription.insertNewObjectForEntityForName("Lession", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!) as? Lession
         
-        let strWeek = info["strWeek"] as Int
-        let endWeek = info["endWeek"] as Int
-        lession?.classname = info["classname"]! as String
-        lession?.teacher = info["teacher"]! as String
-        lession?.day = info["day"]! as String
-        lession?.node = info["node"]! as String
+        let strWeek = info["strWeek"] as? Int ?? 1
+        let endWeek = info["endWeek"] as? Int ?? 2
         lession?.strWeek = "\(strWeek)"
         lession?.endWeek = "\(endWeek)"
-        lession?.location = info["location"]! as String
+        lession?.classname = info["classname"]! as? String ?? ""
+        lession?.teacher = info["teacher"]! as? String ?? ""
+        lession?.day = info["day"]! as? String ?? ""
+        lession?.node = info["node"]! as? String ?? ""
+        lession?.location = info["location"]! as? String ?? ""
+        
         return lession
     }
     

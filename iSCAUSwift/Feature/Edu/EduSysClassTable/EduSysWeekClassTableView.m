@@ -146,7 +146,9 @@ NSInteger kClassesPerDay = 13;
     [classes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             Lession *lession = [Lession converFromDict:obj];
-            [self.classesArray addObject:lession];
+            if (lession) {
+                [self.classesArray addObject:lession];
+            }
         }
     }];
     [self updateViewWithWeek:[Utils currentWeekNum]];
@@ -165,44 +167,41 @@ NSInteger kClassesPerDay = 13;
     
     for (NSInteger i = 0; i < self.classesArray.count; i++) {
         Lession *lession = self.classesArray[i];
-        if (lession) {
-            NSInteger str = 0;
-            NSInteger end = 0;
-            NSString *node = lession.node;
-            NSArray *temp = [node componentsSeparatedByString:@","];
-            if (temp && temp.count > 0) {
-                str = [temp[0] integerValue];
-            }
-            if (temp && temp.count > 0) {
-                end = [[temp lastObject] integerValue];
-            }
-            
-            if ([lession.strWeek integerValue] <= theWeek
-                && [lession.endWeek integerValue] >= theWeek) {
-                CGFloat left = [self classLabelLeftOffsetWithDay:lession.day];
-                CGFloat top = (str - 1) * VERTICAL_HEADER_ITEM_HEIGHT;
-                CGFloat height = (end - str  + 1) * VERTICAL_HEADER_ITEM_HEIGHT;
-                
-                if ((left >= 0 && left <= 6 * HORIZONTAL_HEADER_ITEM_WIDTH) &&
-                    (top >= 0 && top <= 11 * VERTICAL_HEADER_ITEM_HEIGHT) &&
-                    height >= 0) {
-                    UILabel *labClass = [[UILabel alloc] initWithFrame:(CGRect){
-                        left,
-                        top,
-                        HORIZONTAL_HEADER_ITEM_WIDTH,
-                        height
-                    }];
-                    labClass.textAlignment = NSTextAlignmentCenter;
-                    labClass.font = Font(14);
-                    labClass.minimumScaleFactor = 0.2;
-                    labClass.numberOfLines = 0;
-                    labClass.backgroundColor = self.backgroundColors[(str + (NSInteger)(left / HORIZONTAL_HEADER_ITEM_WIDTH)) % self.backgroundColors.count];
-                    labClass.text = [self classInfo:lession];
-                    labClass.textColor = WhiteColor;
-                    labClass.adjustsFontSizeToFitWidth = YES;
-                    labClass.tag = kClassLabelBaseTag + i;
-                    [self.classTable addSubview:labClass];
-                }
+        NSInteger str = 0;
+        NSInteger end = 0;
+        NSString *node = lession.node;
+        NSArray *temp = [node componentsSeparatedByString:@","];
+        if (temp && temp.count > 0) {
+            str = [temp[0] integerValue];
+        }
+        if (temp && temp.count > 0) {
+            end = [[temp lastObject] integerValue];
+        }
+        
+        if ([lession.strWeek integerValue] <= theWeek
+            && [lession.endWeek integerValue] >= theWeek) {
+            CGFloat left = [self classLabelLeftOffsetWithDay:lession.day];
+            CGFloat top = (str - 1) * VERTICAL_HEADER_ITEM_HEIGHT;
+            CGFloat height = (end - str  + 1) * VERTICAL_HEADER_ITEM_HEIGHT;
+            if ((left >= 0 && left <= 6 * HORIZONTAL_HEADER_ITEM_WIDTH) &&
+                (top >= 0 && top <= 11 * VERTICAL_HEADER_ITEM_HEIGHT) &&
+                height >= 0) {
+                UILabel *labClass = [[UILabel alloc] initWithFrame:(CGRect){
+                    left,
+                    top,
+                    HORIZONTAL_HEADER_ITEM_WIDTH,
+                    height
+                }];
+                labClass.textAlignment = NSTextAlignmentCenter;
+                labClass.font = Font(14);
+                labClass.minimumScaleFactor = 0.2;
+                labClass.numberOfLines = 0;
+                labClass.backgroundColor = self.backgroundColors[(str + (NSInteger)(left / HORIZONTAL_HEADER_ITEM_WIDTH)) % self.backgroundColors.count];
+                labClass.text = [self classInfo:lession];
+                labClass.textColor = WhiteColor;
+                labClass.adjustsFontSizeToFitWidth = YES;
+                labClass.tag = kClassLabelBaseTag + i;
+                [self.classTable addSubview:labClass];
             }
         }
     }

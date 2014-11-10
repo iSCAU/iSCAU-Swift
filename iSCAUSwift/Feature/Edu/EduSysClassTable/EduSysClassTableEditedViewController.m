@@ -351,9 +351,10 @@
         NSString *temp_teacher = [self.txtField_teacher.text length] != 0 ? self.txtField_teacher.text : @"null";
         NSString *temp_classroom = [self.txtField_classroom.text length] != 0 ? self.txtField_classroom.text : @"";
         NSString *temp_node = [NSString stringWithFormat:@""SINT","SINT"", startClassIndex+1, endClassIndex+1];
-        NSString *temp_strWeek = self.txtField_startWeek.text;
-        NSString *temp_endWeek = self.txtField_endWeek.text;
-                
+        NSInteger temp_strWeek = [self.txtField_startWeek.text integerValue];
+        NSInteger temp_endWeek = [self.txtField_endWeek.text integerValue];
+        
+        // 编辑课表
         if ([theDic count] != 0) {
             NSMutableArray *array = [self parseClassesData:[self loadLocalClassesData]];
             NSInteger index = -1;
@@ -370,8 +371,8 @@
                                                                CLASSNAME: temp_classname, 
                                                                DAY: day, 
                                                                DSZ: dsz, 
-                                                               END_WEEK: temp_endWeek, 
-                                                               STR_WEEK: temp_strWeek, 
+                                                               END_WEEK: @(temp_endWeek),
+                                                               STR_WEEK: @(temp_strWeek),
                                                                LOCATION: temp_classroom, 
                                                                NODE: temp_node, 
                                                                TEACHER: temp_teacher
@@ -389,7 +390,9 @@
             } else {
                 SHOW_NOTICE_HUD(@"更新失败");
             }
-        } else {        // 添加课程表
+        }
+        // 添加课程表
+        else {
             for (NSDictionary *c in self.classes) {
                 if (c[NODE] && [c[NODE] isEqualToString:temp_node]) {
                     SHOW_NOTICE_HUD(@"存在冲突的课程,请再确认");
@@ -401,8 +404,8 @@
                               CLASSNAME: temp_classname, 
                               DAY: day, 
                               DSZ: dsz, 
-                              END_WEEK: temp_endWeek, 
-                              STR_WEEK: temp_strWeek, 
+                              END_WEEK: @(temp_endWeek),
+                              STR_WEEK: @(temp_strWeek),
                               LOCATION: temp_classroom, 
                               NODE: temp_node, 
                               TEACHER: temp_teacher
