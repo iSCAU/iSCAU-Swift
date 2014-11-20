@@ -35,7 +35,7 @@ class MenuCollectionViewController: UICollectionViewController {
             [kMenuNameKey : "地图", kMenuIconNameKey : "8.png"],
             [kMenuNameKey : "校历", kMenuIconNameKey : "7.png"],
             [kMenuNameKey : "常用电话", kMenuIconNameKey : "10.png"],
-            [kMenuNameKey : "英语角", kMenuIconNameKey : "5.png"],
+            [kMenuNameKey : "四六级成绩", kMenuIconNameKey : "5.png"],
         ],
         [
             [kMenuNameKey : "设置", kMenuIconNameKey : "settting.png"],
@@ -75,7 +75,6 @@ class MenuCollectionViewController: UICollectionViewController {
             return 0
         }
     }
-
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(menuItemIdentifier, forIndexPath: indexPath) as MenuItemCollectionViewCell
@@ -144,7 +143,10 @@ class MenuCollectionViewController: UICollectionViewController {
         case (2, 2):
             performSegueWithIdentifier("PushPhoneCallListViewController", sender: nil)
         case (2, 3):
-            performSegueWithIdentifier("PushEnglishCornerViewController", sender: nil)
+            let cet = CETAccountViewController()
+            cet.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(cet, animated: true)
+//            performSegueWithIdentifier("PushEnglishCornerViewController", sender: nil)
         // 设置
         case (3, 0):
             performSegueWithIdentifier("PushSettingsTableViewController", sender: nil)

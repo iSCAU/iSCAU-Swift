@@ -35,6 +35,18 @@
 		E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */; };
 		E12E1DF219DAFFCC0079972A /* MenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */; };
 		E13DAD761A00FD24004B85C3 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13DAD531A00FD24004B85C3 /* Alamofire.swift */; };
+		E146DE6C1A1E157C00312D5A /* CETAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E146DE5F1A1E157C00312D5A /* CETAccountCell.m */; };
+		E146DE6D1A1E157C00312D5A /* CETAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E146DE601A1E157C00312D5A /* CETAccountCell.xib */; };
+		E146DE6E1A1E157C00312D5A /* CETAccountsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E146DE621A1E157C00312D5A /* CETAccountsListViewController.m */; };
+		E146DE6F1A1E157C00312D5A /* CETAccountsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E146DE631A1E157C00312D5A /* CETAccountsListViewController.xib */; };
+		E146DE701A1E157C00312D5A /* CETAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E146DE651A1E157C00312D5A /* CETAccountViewController.m */; };
+		E146DE711A1E157C00312D5A /* CETAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E146DE661A1E157C00312D5A /* CETAccountViewController.xib */; };
+		E146DE731A1E157C00312D5A /* CETResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E146DE6A1A1E157C00312D5A /* CETResultViewController.m */; };
+		E146DE741A1E157C00312D5A /* CETResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E146DE6B1A1E157C00312D5A /* CETResultViewController.xib */; };
+		E146DE771A1E159B00312D5A /* CetMark.m in Sources */ = {isa = PBXBuildFile; fileRef = E146DE761A1E159B00312D5A /* CetMark.m */; };
+		E146DE7A1A1E16D400312D5A /* cet_name@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E146DE781A1E16D400312D5A /* cet_name@2x.png */; };
+		E146DE7B1A1E16D400312D5A /* cet_num@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E146DE791A1E16D400312D5A /* cet_num@2x.png */; };
+		E146DE7D1A1E1C5D00312D5A /* CetHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146DE7C1A1E1C5D00312D5A /* CetHttpManager.swift */; };
 		E148AC6419F3916B00034CEE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E148AC6319F3916B00034CEE /* Launch Screen.xib */; };
 		E148AC6919F39A9E00034CEE /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E148AC6619F39A9E00034CEE /* libMobClickLibrary.a */; };
 		E148AC6D19F39C6700034CEE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E148AC6B19F39C6700034CEE /* BaseViewController.m */; };
@@ -134,7 +146,6 @@
 		E15BB491193EC31500F8D492 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15BB490193EC31500F8D492 /* Images.xcassets */; };
 		E15BB4C0193F06B500F8D492 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4BF193F06B500F8D492 /* User.swift */; };
 		E15BB4C4193F24AB00F8D492 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C3193F24AB00F8D492 /* Notice.swift */; };
-		E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C7193F29ED00F8D492 /* CetMark.swift */; };
 		E15BB4CA193F2A9C00F8D492 /* ReviewLessonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4C9193F2A9C00F8D492 /* ReviewLessonInfo.swift */; };
 		E15BB4CC193F2AB100F8D492 /* ReviewLessonComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */; };
 		E15BB4D2193F513E00F8D492 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4D1193F513E00F8D492 /* AppConstant.swift */; };
@@ -283,6 +294,23 @@
 		E12E1DEF19DAFE190079972A /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCollectionViewController.swift; path = Menu/MenuCollectionViewController.swift; sourceTree = "<group>"; };
 		E12E1DF119DAFFCC0079972A /* MenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItemCollectionViewCell.swift; path = Menu/MenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E13DAD531A00FD24004B85C3 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		E146DE5E1A1E157C00312D5A /* CETAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETAccountCell.h; sourceTree = "<group>"; };
+		E146DE5F1A1E157C00312D5A /* CETAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETAccountCell.m; sourceTree = "<group>"; };
+		E146DE601A1E157C00312D5A /* CETAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CETAccountCell.xib; sourceTree = "<group>"; };
+		E146DE611A1E157C00312D5A /* CETAccountsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETAccountsListViewController.h; sourceTree = "<group>"; };
+		E146DE621A1E157C00312D5A /* CETAccountsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETAccountsListViewController.m; sourceTree = "<group>"; };
+		E146DE631A1E157C00312D5A /* CETAccountsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CETAccountsListViewController.xib; sourceTree = "<group>"; };
+		E146DE641A1E157C00312D5A /* CETAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETAccountViewController.h; sourceTree = "<group>"; };
+		E146DE651A1E157C00312D5A /* CETAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETAccountViewController.m; sourceTree = "<group>"; };
+		E146DE661A1E157C00312D5A /* CETAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CETAccountViewController.xib; sourceTree = "<group>"; };
+		E146DE691A1E157C00312D5A /* CETResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETResultViewController.h; sourceTree = "<group>"; };
+		E146DE6A1A1E157C00312D5A /* CETResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETResultViewController.m; sourceTree = "<group>"; };
+		E146DE6B1A1E157C00312D5A /* CETResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CETResultViewController.xib; sourceTree = "<group>"; };
+		E146DE751A1E159B00312D5A /* CetMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CetMark.h; sourceTree = "<group>"; };
+		E146DE761A1E159B00312D5A /* CetMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CetMark.m; sourceTree = "<group>"; };
+		E146DE781A1E16D400312D5A /* cet_name@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cet_name@2x.png"; sourceTree = "<group>"; };
+		E146DE791A1E16D400312D5A /* cet_num@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cet_num@2x.png"; sourceTree = "<group>"; };
+		E146DE7C1A1E1C5D00312D5A /* CetHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CetHttpManager.swift; sourceTree = "<group>"; };
 		E148AC6319F3916B00034CEE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		E148AC6619F39A9E00034CEE /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		E148AC6719F39A9E00034CEE /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
@@ -420,7 +448,6 @@
 		E15BB4C1193F170900F8D492 /* iSCAUPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iSCAUPlayground.playground; sourceTree = "<group>"; };
 		E15BB4C2193F23EB00F8D492 /* iSCAUSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iSCAUSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		E15BB4C3193F24AB00F8D492 /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notice.swift; path = Model/Notice.swift; sourceTree = "<group>"; };
-		E15BB4C7193F29ED00F8D492 /* CetMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CetMark.swift; path = Model/CetMark.swift; sourceTree = "<group>"; };
 		E15BB4C9193F2A9C00F8D492 /* ReviewLessonInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewLessonInfo.swift; path = Model/ReviewLessonInfo.swift; sourceTree = "<group>"; };
 		E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewLessonComment.swift; path = Model/ReviewLessonComment.swift; sourceTree = "<group>"; };
 		E15BB4D1193F513E00F8D492 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
@@ -637,6 +664,28 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
+		E146DE5D1A1E157C00312D5A /* CET */ = {
+			isa = PBXGroup;
+			children = (
+				E146DE751A1E159B00312D5A /* CetMark.h */,
+				E146DE761A1E159B00312D5A /* CetMark.m */,
+				E146DE5E1A1E157C00312D5A /* CETAccountCell.h */,
+				E146DE5F1A1E157C00312D5A /* CETAccountCell.m */,
+				E146DE601A1E157C00312D5A /* CETAccountCell.xib */,
+				E146DE611A1E157C00312D5A /* CETAccountsListViewController.h */,
+				E146DE621A1E157C00312D5A /* CETAccountsListViewController.m */,
+				E146DE631A1E157C00312D5A /* CETAccountsListViewController.xib */,
+				E146DE641A1E157C00312D5A /* CETAccountViewController.h */,
+				E146DE651A1E157C00312D5A /* CETAccountViewController.m */,
+				E146DE661A1E157C00312D5A /* CETAccountViewController.xib */,
+				E146DE691A1E157C00312D5A /* CETResultViewController.h */,
+				E146DE6A1A1E157C00312D5A /* CETResultViewController.m */,
+				E146DE6B1A1E157C00312D5A /* CETResultViewController.xib */,
+				E146DE7C1A1E1C5D00312D5A /* CetHttpManager.swift */,
+			);
+			path = CET;
+			sourceTree = "<group>";
+		};
 		E148AC6519F39A9E00034CEE /* UMAnalytics_Sdk_3.1.8 */ = {
 			isa = PBXGroup;
 			children = (
@@ -738,12 +787,12 @@
 		E1543C6719DC5354006E41A0 /* EduSysClassTable */ = {
 			isa = PBXGroup;
 			children = (
-				E1543C6819DC5354006E41A0 /* EduSysClassTableEditedViewController.h */,
-				E1543C6919DC5354006E41A0 /* EduSysClassTableEditedViewController.m */,
-				E1543C6A19DC5354006E41A0 /* EduSysClassTableEditedViewController.xib */,
 				E1543C6B19DC5354006E41A0 /* EduSysClassTableViewController.h */,
 				E1543C6C19DC5354006E41A0 /* EduSysClassTableViewController.m */,
 				E1543C6D19DC5354006E41A0 /* EduSysClassTableViewController.xib */,
+				E1543C6819DC5354006E41A0 /* EduSysClassTableEditedViewController.h */,
+				E1543C6919DC5354006E41A0 /* EduSysClassTableEditedViewController.m */,
+				E1543C6A19DC5354006E41A0 /* EduSysClassTableEditedViewController.xib */,
 				E1543C6E19DC5354006E41A0 /* EduSysDayClassCell.h */,
 				E1543C6F19DC5354006E41A0 /* EduSysDayClassCell.m */,
 				E1543C7019DC5354006E41A0 /* EduSysDayClassCell.xib */,
@@ -870,7 +919,6 @@
 				E1250BED19DE9B2A0088AED5 /* Food.swift */,
 				E1995CE919DDC2C5001AB5D7 /* Restaurant.swift */,
 				E15BB4BF193F06B500F8D492 /* User.swift */,
-				E15BB4C7193F29ED00F8D492 /* CetMark.swift */,
 				E15BB4C9193F2A9C00F8D492 /* ReviewLessonInfo.swift */,
 				E15BB4CB193F2AB100F8D492 /* ReviewLessonComment.swift */,
 				E15BB4C3193F24AB00F8D492 /* Notice.swift */,
@@ -915,6 +963,8 @@
 		E15BB4B8193F054B00F8D492 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				E146DE781A1E16D400312D5A /* cet_name@2x.png */,
+				E146DE791A1E16D400312D5A /* cet_num@2x.png */,
 				E170E1341A00831D009BA1E4 /* plus@2x.png */,
 				E17AE90F19FBEBF7004CAA87 /* icon-100@2x.png */,
 				E148FA4D19FB833900AA477C /* map@2x.png */,
@@ -1044,6 +1094,7 @@
 		E1B8345619DA619F00737E99 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				E146DE5D1A1E157C00312D5A /* CET */,
 				E1995CE419DDB47F001AB5D7 /* TakeOut */,
 				E1543C8B19DD3FAA006E41A0 /* Lib */,
 				E12E1DE919DAF65B0079972A /* Menu */,
@@ -1227,6 +1278,7 @@
 				E1543C6619DC531F006E41A0 /* EduSysPickClassInfoViewController.xib in Resources */,
 				E14FB64A19D0629200526D45 /* 7.1.png in Resources */,
 				E1938B0019E033A300353521 /* sep@2x.png in Resources */,
+				E146DE6D1A1E157C00312D5A /* CETAccountCell.xib in Resources */,
 				E114957E19D943D90087445D /* userName.png in Resources */,
 				E14FB64919D0629200526D45 /* 6.png in Resources */,
 				E14FB65419D0629200526D45 /* 13.1.png in Resources */,
@@ -1237,6 +1289,7 @@
 				E17AE91019FBEBF7004CAA87 /* icon-100@2x.png in Resources */,
 				E14FB65219D0629200526D45 /* 12.1.png in Resources */,
 				E148AC6E19F39C6700034CEE /* BaseViewController.xib in Resources */,
+				E146DE7B1A1E16D400312D5A /* cet_num@2x.png in Resources */,
 				E1938AF619E00FE900353521 /* RestaurantTableViewCell.xib in Resources */,
 				E148FA4C19FB41BF00AA477C /* EduSysMarksViewController.xib in Resources */,
 				E1938AF219E0049900353521 /* FoodOrderTableViewCell.xib in Resources */,
@@ -1276,6 +1329,7 @@
 				E1543CAC19DD45F7006E41A0 /* LibListHistoryViewController.xib in Resources */,
 				E114957B19D943D90087445D /* push@2x.png in Resources */,
 				E14FB65519D0629200526D45 /* 13.png in Resources */,
+				E146DE7A1A1E16D400312D5A /* cet_name@2x.png in Resources */,
 				E17AE92919FE9EDE004CAA87 /* classtable@2x.png in Resources */,
 				E1EE006C19E2CEE200CF4F15 /* more@2x.png in Resources */,
 				E1543CAA19DD45F7006E41A0 /* LibListHistoryCell.xib in Resources */,
@@ -1299,9 +1353,12 @@
 				E1543CB819DD45F7006E41A0 /* LibSearchBooksViewController.xib in Resources */,
 				E1543C5019DC531F006E41A0 /* EduSysEmptyClassroomDetailCell.xib in Resources */,
 				E15BB491193EC31500F8D492 /* Images.xcassets in Resources */,
+				E146DE711A1E157C00312D5A /* CETAccountViewController.xib in Resources */,
 				E1543C7919DC5354006E41A0 /* EduSysClassTableEditedViewController.xib in Resources */,
 				E14FB64B19D0629200526D45 /* 7.png in Resources */,
 				E170E1351A00831D009BA1E4 /* plus@2x.png in Resources */,
+				E146DE741A1E157C00312D5A /* CETResultViewController.xib in Resources */,
+				E146DE6F1A1E157C00312D5A /* CETAccountsListViewController.xib in Resources */,
 				E1543CB219DD45F7006E41A0 /* LibSearchBooksCell.xib in Resources */,
 				E1543C7B19DC5354006E41A0 /* EduSysClassTableViewController.xib in Resources */,
 			);
@@ -1395,12 +1452,14 @@
 				E1938AFB19E0118A00353521 /* AddressTableViewCell.swift in Sources */,
 				E12E1DF019DAFE190079972A /* MenuCollectionViewController.swift in Sources */,
 				E1B0B9E11948BC520035B287 /* iSCAUSwift.xcdatamodeld in Sources */,
+				E146DE7D1A1E1C5D00312D5A /* CetHttpManager.swift in Sources */,
 				E1543CBE19DD722C006E41A0 /* MapViewController.swift in Sources */,
 				E1EE006E19E2F7B700CF4F15 /* Activity.swift in Sources */,
 				E1FDF3E019D068E900CC311E /* CoreDataManager.swift in Sources */,
 				E184DCD919498ADC00B0A552 /* EduDayTimeTable.swift in Sources */,
 				E1543C8D19DD3FC8006E41A0 /* LibHttpManager.swift in Sources */,
 				E173B4D819DC0A5B009993C1 /* PopoverView.swift in Sources */,
+				E146DE6C1A1E157C00312D5A /* CETAccountCell.m in Sources */,
 				E1B8347719DA619F00737E99 /* EduHttpManager.swift in Sources */,
 				E148FA4919FB41BF00AA477C /* EduSysMarksDetailViewController.m in Sources */,
 				E1543C8019DC5354006E41A0 /* EduSysWeekClassTableView.m in Sources */,
@@ -1430,6 +1489,7 @@
 				E148AC7519F3F20100034CEE /* RestaurantListCell.swift in Sources */,
 				E112ED1A19E1A9B4001FA427 /* CalendarMonthHeaderView.m in Sources */,
 				E1543C7E19DC5354006E41A0 /* EduSysDayClassTableView.m in Sources */,
+				E146DE771A1E159B00312D5A /* CetMark.m in Sources */,
 				E148AC6D19F39C6700034CEE /* BaseViewController.m in Sources */,
 				E1EE007619E395AA00CF4F15 /* ActivityTableViewController.swift in Sources */,
 				E1EE006919E2C94D00CF4F15 /* SBDropDownMenu.m in Sources */,
@@ -1437,6 +1497,7 @@
 				E112ED1619E1A9B4001FA427 /* CalendarDayModel.m in Sources */,
 				E15BB48A193EC31400F8D492 /* AppDelegate.swift in Sources */,
 				E1938AEE19DFFEE100353521 /* TakeOutOrderViewController.swift in Sources */,
+				E146DE701A1E157C00312D5A /* CETAccountViewController.m in Sources */,
 				E1938AF519E00FE900353521 /* RestaurantTableViewCell.swift in Sources */,
 				E148FA4519FB41BF00AA477C /* EduSysMarkCell.m in Sources */,
 				E1543C5319DC531F006E41A0 /* EduSysEmptyClassroomSelectionViewController.m in Sources */,
@@ -1470,7 +1531,8 @@
 				E13DAD761A00FD24004B85C3 /* Alamofire.swift in Sources */,
 				E1543C6519DC531F006E41A0 /* EduSysPickClassInfoViewController.m in Sources */,
 				E1995CE819DDB6AE001AB5D7 /* TakeOutTableViewController.swift in Sources */,
-				E15BB4C8193F29ED00F8D492 /* CetMark.swift in Sources */,
+				E146DE6E1A1E157C00312D5A /* CETAccountsListViewController.m in Sources */,
+				E146DE731A1E157C00312D5A /* CETResultViewController.m in Sources */,
 				E1543C8419DC571B006E41A0 /* UIButton+Bootstrap.m in Sources */,
 				E12D501D19D9CE6D005F37B7 /* UIView+Additon.m in Sources */,
 				E1543C5719DC531F006E41A0 /* EduSysExamInfoCell.m in Sources */,

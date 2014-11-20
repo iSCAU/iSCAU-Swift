@@ -8,6 +8,8 @@ target "iSCAUSwift" do
   pod 'SDWebImage'
   pod 'MBProgressHUD'
   pod 'CNPPopupController'
+  pod 'Mantle'
+  pod 'SSKeychain'
 end
 
 target "iSCAUSwiftTests" do
