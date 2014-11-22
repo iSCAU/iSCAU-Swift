@@ -41,17 +41,23 @@
                             <rect key="frame" x="20" y="76" width="24" height="24"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="凌通" placeholder="请填写姓名" minimumFontSize="17" id="cKb-DN-Xl1">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="凌通" placeholder="请填写姓名" minimumFontSize="17" clearButtonMode="whileEditing" id="cKb-DN-Xl1">
                             <rect key="frame" x="66" y="17" width="234" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="92U-92-g2I"/>
+                            </connections>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="440390132227501" placeholder="请填写准考号" minimumFontSize="17" id="ivm-HM-OnL">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="440390132227501" placeholder="请填写准考号" minimumFontSize="17" clearButtonMode="whileEditing" id="ivm-HM-OnL">
                             <rect key="frame" x="66" y="73" width="234" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="aUK-2Z-WMn"/>
+                            </connections>
                         </textField>
                         <view autoresizesSubviews="NO" alpha="0.20000000000000001" contentMode="scaleToFill" id="MKM-OH-l09">
                             <rect key="frame" x="0.0" y="119" width="320" height="1"/>
@@ -84,7 +90,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-            <point key="canvasLocation" x="300" y="378"/>
+            <point key="canvasLocation" x="-39" y="193"/>
         </view>
     </objects>
     <resources>

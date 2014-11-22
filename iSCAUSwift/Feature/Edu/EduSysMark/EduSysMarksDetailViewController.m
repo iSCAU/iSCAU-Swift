@@ -58,7 +58,6 @@
     if (cell == nil) {
         NSArray *cellArray = [[NSBundle mainBundle] loadNibNamed:@"EduSysMarksDetailCell" owner:self options:nil];
         cell = [cellArray objectAtIndex:0];
-
         cell.backgroundColor = [UIColor clearColor];
         cell.contentView.backgroundColor = [UIColor clearColor];
     }

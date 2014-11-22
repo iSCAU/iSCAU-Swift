@@ -14,7 +14,7 @@
 #import "Constant.h"
 #import "iSCAUSwift-Swift.h"
 
-@interface CETAccountViewController ()
+@interface CETAccountViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtCetNum;
@@ -48,6 +48,8 @@
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetAccount:) name:@"CETAccountsListViewPopNotification" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,6 +120,18 @@
         self.txtUsername.text = userInfo[CETAccountUsernameKey];
         self.txtCetNum.text = userInfo[CETAccountCetNumKey];
     }
+}
+
+#pragma mark - UITextField delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([textField isEqual:self.txtUsername]) {
+        [self.txtCetNum becomeFirstResponder];
+    } else if ([textField isEqual:self.txtCetNum]) {
+        [textField resignFirstResponder];
+    }
+    return YES;
 }
 
 @end

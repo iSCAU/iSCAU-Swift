@@ -338,13 +338,13 @@ static NSString *GRADE_POINT = @"grade_point";
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    if (component == 0 && self.schoolYearArray.count > 0) {
+    if (component == 0 && row < self.schoolYearArray.count) {
         return self.schoolYearArray[row];
     }
-    else if (component == 1 && self.semesterArray.count > 0) {
+    else if (component == 1 && row < self.semesterArray.count) {
         return self.semesterArray[row];
     }
-    return nil;
+    return @"";
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
