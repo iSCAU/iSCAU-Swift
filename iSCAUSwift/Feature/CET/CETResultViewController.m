@@ -47,6 +47,8 @@
         self.labReading.text = self.mark.reading;
         self.labWriting.text = self.mark.writing;
         self.labTime.text = [NSString stringWithFormat:@"考试时间: %@", self.mark.examTime];
+        
+        self.navigationItem.title = self.mark.type;
     }
 }
 

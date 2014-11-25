@@ -49,6 +49,12 @@
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     
+    NSArray *accounts = [SSKeychain accountsForService:CETAccountServiceName];
+    if (accounts.count > 0) {
+        self.txtUsername.text = accounts[0][kSSKeychainAccountKey];
+        self.txtCetNum.text = [SSKeychain passwordForService:CETAccountServiceName account:accounts[0][kSSKeychainAccountKey]];
+    }
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetAccount:) name:@"CETAccountsListViewPopNotification" object:nil];
 }
 
@@ -65,14 +71,32 @@
     [self.txtCetNum resignFirstResponder];
 }
 
+
+- (BOOL)checkInput
+{
+    if (self.txtUsername.text.length < 2) {
+        SHOW_NOTICE_HUD(@"请填写姓名");
+        return NO;
+    }
+    if (![self.txtCetNum.text longLongValue]) {
+        SHOW_NOTICE_HUD(@"准考号只能输入数字");
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (IBAction)rememberAccount:(id)sender 
 {
+    if (![self checkInput]) {
+        return;
+    }
+    
     BOOL success = [SSKeychain setPassword:self.txtCetNum.text
                                 forService:CETAccountServiceName 
                                    account:self.txtUsername.text];
     if (success) {
         SHOW_NOTICE_HUD(@"保存成功");
-        NSLog(@"%@", [SSKeychain passwordForService:CETAccountServiceName account:self.txtUsername.text]);
     } else {
         SHOW_NOTICE_HUD(@"保存失败");
     }
@@ -80,6 +104,10 @@
 
 - (IBAction)queryMark:(id)sender 
 {
+    if (![self checkInput]) {
+        return;
+    }
+    
     SHOW_WATING_HUD;
     [CetHttpManager queryMarksWithCetNum:self.txtCetNum.text
                                 username:self.txtUsername.text
@@ -87,11 +115,9 @@
                            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData
                                                                                 options:kNilOptions
                                                                                   error:&error];
-                           NSLog(@"dict %@", dict);
                            if (response.statusCode == kStatusCodeSuccess) {
                                NSError *error = nil;
                                if (!error && dict[@"cet_marks"]) {
-                                   NSLog(@"%@", dict);
                                    CetMark *mark = [MTLJSONAdapter modelOfClass:CetMark.class fromJSONDictionary:dict[@"cet_marks"] error:&error];
                                    if (!error) {
                                        CETResultViewController *resultViewController = [[CETResultViewController alloc] init];

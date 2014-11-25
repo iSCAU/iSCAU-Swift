@@ -11,7 +11,8 @@ import UIKit
 class CetHttpManager: BaseHttpManager {
 
     class func queryMarks(#cetNum: NSString, username: NSString, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-        let urlStr = "\(HostName)/cet/querymarks?cetnum=\(cetNum)&username=\(username))"
+        let urlStr = "\(HostName)/cet/querymarks/\(cetNum)/\(username)"
+        NSLog("url \(urlStr)")
         startRequest(urlStr, completionHandler: completionHandler)
     }
     
