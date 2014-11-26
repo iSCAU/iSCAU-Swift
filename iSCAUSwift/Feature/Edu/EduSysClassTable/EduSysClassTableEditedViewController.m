@@ -141,19 +141,14 @@
     switch (component) {
         case WEEKDAY:
             return [weekday count];
-            break;
         case START_CLASS:
             return [startClass count];
-            break;
         case END_CLASS:
             return [endClass count];
-            break;
         case WEEK_TYPE:
             return [weekType count];
-            break;
         default:
             return 0;
-            break;
     }
 }
 
@@ -161,19 +156,14 @@
     switch (component) {
         case WEEKDAY:
             return [NSString stringWithFormat:@"周%@", weekday[row]];
-            break;
         case START_CLASS:
             return startClass[row];
-            break;
         case END_CLASS:
             return endClass[row];
-            break;
         case WEEK_TYPE:
             return weekType[row];
-            break;
         default:
             return @"";
-            break;
     }
 }
 
@@ -181,19 +171,14 @@
     switch (component) {
         case WEEKDAY:
             return 60;
-            break;
         case START_CLASS:
             return 80;
-            break;
         case END_CLASS:
             return 100;
-            break;
         case WEEK_TYPE:
             return 80;
-            break;
         default:
             return 0;
-            break;
     }
 }
 

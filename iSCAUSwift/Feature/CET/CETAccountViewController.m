@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtCetNum;
 @property (weak, nonatomic) IBOutlet UIButton *btnQueryMark;
 @property (weak, nonatomic) IBOutlet UIButton *btnRememberAccount;
+@property (weak, nonatomic) IBOutlet UILabel *labNotice;
+
 @end
 
 @implementation CETAccountViewController
@@ -55,6 +57,11 @@
         self.txtCetNum.text = [SSKeychain passwordForService:CETAccountServiceName account:accounts[0][kSSKeychainAccountKey]];
     }
     
+    NSString *note = [MobClick getConfigParams:@"CetNotice"];
+    if (note.length > 0) {
+        self.labNotice.text = note;
+    }
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetAccount:) name:@"CETAccountsListViewPopNotification" object:nil];
 }
 
@@ -70,7 +77,6 @@
     [self.txtUsername resignFirstResponder];
     [self.txtCetNum resignFirstResponder];
 }
-
 
 - (BOOL)checkInput
 {

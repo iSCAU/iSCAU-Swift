@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="btnQueryMark" destination="1Xw-pf-569" id="MJj-Mn-wrj"/>
                 <outlet property="btnRememberAccount" destination="emy-fX-yuV" id="0TP-WS-O5K"/>
+                <outlet property="labNotice" destination="YGD-kL-Cf0" id="5px-nD-bQu"/>
                 <outlet property="txtCetNum" destination="ivm-HM-OnL" id="QEM-4h-1Ae"/>
                 <outlet property="txtUsername" destination="cKb-DN-Xl1" id="tdi-pg-Bk4"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -87,6 +88,13 @@
                         <action selector="queryMark:" destination="-1" eventType="touchUpInside" id="7sV-8r-RId"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="现在可以查询 2014 年 6 月的成绩" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YGD-kL-Cf0">
+                    <rect key="frame" x="8" y="1" width="304" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
